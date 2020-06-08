@@ -12,11 +12,11 @@ app.set('view engine', 'handlebars')
 
 //Uses
 app.use(express.static(__dirname + '/public'))
-app.use(methodOverride('_method', {methods: ['GET', 'POST', 'PUT', 'DELETE']} ))
-app.use(methodOverride('X-HTTP-Method-Override'))
+//app.use(methodOverride('_method', {methods: ['GET', 'POST', 'PUT', 'DELETE']} ))
+//app.use(methodOverride('X-HTTP-Method-Override'))
 app.use(bodyParser.urlencoded({extended: false}))
 
-//Rotas
+//Rota principal
 app.get('/', (req, res) => { res.render('index', {layout: null}) })
 
 //Worker do servidor
