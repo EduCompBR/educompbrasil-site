@@ -17,7 +17,9 @@ app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.urlencoded({extended: false}))
 
 //Rota principal
-app.get('/', (req, res) => { res.render('index', {layout: null}) })
+app.get('/', (req, res) => { res.render('home', {layout: null}) })
+app.get('/simposio/2021', (req, res) => { res.render('index', {layout: null}) })
+
 
 //Worker do servidor
 var porta = process.env.PORT || 3000
