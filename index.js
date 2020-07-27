@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 //Rota principal
 app.get('/', (req, res) => { res.render('home', {layout: null}) })
 app.get('/simposio/2021', (req, res) => { res.render('index', {layout: null}) })
+app.get('/simposio/2021/topicos-de-interesse', (req, res) => { res.render('topicos-de-interesse', {layout: null}) })
 
 
 //Worker do servidor
