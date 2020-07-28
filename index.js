@@ -3,6 +3,7 @@ const app = express()
 const handlebars = require('express-handlebars')
 const methodOverride = require('method-override')
 const bodyParser = require('body-parser')
+const emailServer = require('./models/emailServer')
 
 //Engine View
 app.engine('handlebars', handlebars({defaultLayout: 'main'}) )
@@ -26,6 +27,11 @@ app.get('/simposio/2021/contato', (req, res) => { res.render('contato', {layout:
 app.get('/simposio/2021/programacao', (req, res) => { res.render('programacao', {layout: null}) })
 app.get('/simposio/2021/trabalhos', (req, res) => { res.render('trabalhos', {layout: null}) })
 app.get('/simposio/2021/inscricoes', (req, res) => { res.render('inscricoes', {layout: null}) })
+
+app.post('/simposio/2021/contato/email', async (req, res) => { 
+    await emailServer.enviarEmail(req.body.email1, req.body.assunto1, req.body.mensagem1)
+    res.redirect('/simposio/2021/contato')
+})
 
 
 //Worker do servidor
