@@ -27,6 +27,7 @@ app.get('/simposio/2021/contato', (req, res) => { res.render('contato', {layout:
 app.get('/simposio/2021/programacao', (req, res) => { res.render('programacao', {layout: null}) })
 app.get('/simposio/2021/trabalhos', (req, res) => { res.render('trabalhos', {layout: null}) })
 app.get('/simposio/2021/inscricoes', (req, res) => { res.render('inscricoes', {layout: null}) })
+app.get('/simposio/2021/equipe', (req, res) => { res.render('equipe', {layout: null}) })
 
 app.post('/simposio/2021/contato/email', async (req, res) => { 
     await emailServer.enviarEmail(req.body.email1, req.body.assunto1, req.body.mensagem1)
