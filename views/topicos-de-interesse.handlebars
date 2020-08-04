@@ -14,9 +14,17 @@
   <link rel="stylesheet" href="/css/bootstrap5.min.css" />
   <link href="/css/scrolling-nav.css" rel="stylesheet">
 
+  
+  {{!-- <style>
+    .list li{ padding-left: 10px; background: #F9F9F9; height: 40px; list-style: none; line-height: 40px; }
+    .list li:hover{ background: #333; color: #FFF; }
+    .list{ padding: 0px;}
+  </style> --}}
+
 </head>
 
 <body id="page-top">
+  
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNav">
     <div class="container">
@@ -76,7 +84,10 @@
           <h2 style="margin-top: -6rem;">Tópicos de interesse</h2>
           <br>
           <p class="lead" style="font-size: 14pt">No <span style="font-weight: bold">domínio da educação em computação</span>, os artigos submetidos podem estar relacionados aos seguintes tópicos, não limitados a eles:</p>         
-          <ol style="font-size: 14pt">
+          <br>
+          <input id="search" name="search" placeholder="Filtrar lista" type="text" data-list=".list" class="form-control" />
+          <br>
+          <ol style="font-size: 14pt" class="list">
             <li class="lead">Didática de computação</li>
             <li class="lead">Ensino e/ou aprendizagem de disciplinas da computação</li>
             <li class="lead">Estratégias de ensino e/ou aprendizagem de computação</li>
@@ -150,15 +161,32 @@
   </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="/vendor/jquery/jquery.min.js"></script>
+    {{!-- <script src="/vendor/jquery/jquery.min.js"></script> --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+    {{!-- <script src="/vendor/jquery-easing/jquery.easing.min.js"></script> --}}
 
     <!-- Custom JavaScript for this theme -->
     {{!-- <script src="/js/scrolling-nav.js"></script> --}}
 
+    {{!-- Filtrar lista --}}
+    {{!-- <script type="text/javascript" src="jquery-2.0.2.min.js"> --}}
+    <script type="text/javascript" src="/js/jquery.hideseek.js"></script>
+
+    
+
 </body>
+<script>
+    $(document).ready(function() {
+    $('#search').hideseek({
+     nodata: 'Nenhum curso encontrado',
+     
+    });
+    });
+  </script>
 
 </html>
