@@ -28,19 +28,7 @@
   <!-- Navigation -->
   {{> navbar}}
 
-  <header class="bg-default text-dark" style="height: 4rem; margin-top: -4rem">
-    <div class="container">
-      <div class="row">
-        <div class="col-2">
-          <img src="/img/banner-chamada-min.jpeg" style="height: 4rem; width: 8rem"/>
-        </div>
-        <div class="col-8">
-          <h2 class="text-center">Simpósio Brasileiro de Educação em Computação</h2>
-        </div>
-      </div>
-      
-    </div>
-  </header>
+  {{> headerInterno}}
 
   <section id="topicos" style="background-color:rgb(221, 232, 243);" >
     <div class="container">
@@ -48,7 +36,7 @@
         <div class="col-lg-8 mx-auto">
           <h2 style="margin-top: -6rem;">Tópicos de interesse</h2>
           <br>
-          <p class="lead" style="font-size: 14pt">No <span style="font-weight: bold">domínio da educação em computação</span>, os artigos submetidos podem estar relacionados aos seguintes tópicos, não limitados a eles:</p>         
+          <p class="lead" style="font-size: 14pt">No domínio da <span style="font-weight: bold">Educação em Computação</span>, os artigos submetidos podem estar relacionados aos seguintes tópicos, não limitados a eles:</p>         
           <br>
           <input id="search" name="search" placeholder="Filtrar lista" type="text" data-list=".list" class="form-control" />
           <br>
