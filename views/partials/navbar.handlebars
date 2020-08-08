@@ -15,28 +15,60 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger active" href="/simposio/2021/sobre">Sobre</a>
+            <a class="nav-link js-scroll-trigger 
+            {{~#if sobre}}
+              active
+            {{/if}}
+            " href="/simposio/2021/sobre">Sobre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/simposio/2021/topicos-de-interesse">Tópicos</a>
+            <a class="nav-link js-scroll-trigger 
+            {{~#if topicos}}
+              active
+            {{/if}}
+            " href="/simposio/2021/topicos-de-interesse">Tópicos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/simposio/2021/trabalhos">Trabalhos</a>
+            <a class="nav-link js-scroll-trigger 
+            {{~#if trabalhos}}
+              active
+            {{/if}}
+            " href="/simposio/2021/trabalhos">Trabalhos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/simposio/2021/datas">Datas Importantes</a>
+            <a class="nav-link js-scroll-trigger 
+            {{~#if datas}}
+              active
+            {{/if}}
+            " href="/simposio/2021/datas">Datas Importantes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/simposio/2021/programacao">Programação</a>
+            <a class="nav-link js-scroll-trigger 
+            {{~#if prog}}
+              active
+            {{/if}}
+            " href="/simposio/2021/programacao">Programação</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/simposio/2021/inscricoes">Inscrições</a>
+            <a class="nav-link js-scroll-trigger 
+            {{~#if inscricoes}}
+              active
+            {{/if}}
+            " href="/simposio/2021/inscricoes">Inscrições</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/simposio/2021/equipe">Equipe</a>
+            <a class="nav-link js-scroll-trigger 
+            {{~#if equipe}}
+              active
+            {{/if}}
+            " href="/simposio/2021/equipe">Equipe</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/simposio/2021/contato">Contato</a>
+            <a class="nav-link js-scroll-trigger 
+            {{~#if contato}}
+              active
+            {{/if}}
+            " href="/simposio/2021/contato">Contato</a>
           </li>
         </ul>
       </div>
