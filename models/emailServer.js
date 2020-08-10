@@ -6,8 +6,8 @@ function enviarEmail(email1, assunto1, mensagem1) {
 
     const auth = {
         auth: {
-            api_key: '8d20eb9797e143d05ddb864226322193-07e45e2a-a2c32b51',
-            domain: 'sandboxc0c2fd3701a141a6b02ea799e58991c8.mailgun.org',
+            api_key: process.env.API_KEY,
+            domain: process.env.DOMAIN,
         }
     }
 
