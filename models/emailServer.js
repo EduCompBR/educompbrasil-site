@@ -1,15 +1,17 @@
 const nodemailer = require('nodemailer')
+const nodemailerMailgun = require('nodemailer-mailgun-transport')
 require('dotenv').config()
 
 function enviarEmail(email1, assunto1, mensagem1) {
-    console.log(email1, assunto1, mensagem1)
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
+
+    const auth = {
         auth: {
-            user: 'educompbr@gmail.com',
-            pass: process.env.EMAIL_PASS,
+            api_key: '8d20eb9797e143d05ddb864226322193-07e45e2a-a2c32b51',
+            domain: 'sandboxc0c2fd3701a141a6b02ea799e58991c8.mailgun.org',
         }
-    })
+    }
+
+    let transporter = nodemailer.createTransport( nodemailerMailgun(auth) )
     
     let mailOptions = {
         from: email1,
