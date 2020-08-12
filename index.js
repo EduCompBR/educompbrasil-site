@@ -25,6 +25,7 @@ app.get('/simposio/2021/sobre', (req, res) => { res.render('sobre', {layout: nul
 app.get('/simposio/2021/datas', (req, res) => { res.render('datas', {layout: null, datas: true}) })
 app.get('/simposio/2021/contato', (req, res) => { res.render('contato', {layout: null, contato: true}) })
 app.get('/simposio/2021/programacao', (req, res) => { res.render('programacao', {layout: null, prog: true}) })
+app.get('/simposio/2021/wlic', (req, res) => { res.render('wlic', {layout: null, wlic: true}) })
 app.get('/simposio/2021/trabalhos', (req, res) => { res.render('trabalhos', {layout: null, trabalhos: true}) })
 app.get('/simposio/2021/inscricoes', (req, res) => { res.render('inscricoes', {layout: null, inscricoes: true}) })
 app.get('/simposio/2021/equipe', (req, res) => { res.render('equipe', {layout: null, equipe: true}) })
