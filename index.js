@@ -17,8 +17,10 @@ app.use(express.static(__dirname + '/public'))
 //app.use(methodOverride('X-HTTP-Method-Override'))
 app.use(bodyParser.urlencoded({extended: false}))
 
-//Rota principal
+//GIEC
 app.get('/', (req, res) => { res.render('home', {layout: null}) })
+
+//EduComp 2021
 app.get('/simposio/2021', (req, res) => { res.render('sobre', {layout: null, sobre: true}) })
 app.get('/simposio/2021/topicos-de-interesse', (req, res) => { res.render('topicos-de-interesse', {layout: null, topicos: true}) })
 app.get('/simposio/2021/sobre', (req, res) => { res.render('sobre', {layout: null, sobre: true}) })
@@ -29,7 +31,6 @@ app.get('/simposio/2021/wlic', (req, res) => { res.render('wlic', {layout: null,
 app.get('/simposio/2021/trabalhos', (req, res) => { res.render('trabalhos', {layout: null, trabalhos: true}) })
 app.get('/simposio/2021/inscricoes', (req, res) => { res.render('inscricoes', {layout: null, inscricoes: true}) })
 app.get('/simposio/2021/equipe', (req, res) => { res.render('equipe', {layout: null, equipe: true}) })
-
 app.post('/simposio/2021/contato/email', async (req, res) => { 
     await emailServer.enviarEmail(req.body.email1, req.body.assunto1, req.body.mensagem1)
     res.redirect('/simposio/2021/contato')
