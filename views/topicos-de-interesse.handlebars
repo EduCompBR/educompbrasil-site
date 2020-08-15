@@ -15,29 +15,38 @@
   <link href="/css/scrolling-nav.css" rel="stylesheet">
 
   <style>
+    #topicos {
+      list-style-type: none;
+    }
+    #topicos > li {
+      
+      margin: 0.2em;
+      padding-left: 0.5em;
+    }
+
     .li_1_7 {
-      color:rgb(52, 55, 236)
+      background-color:rgb(197, 198, 245);
     }
     .li_8_15 {
-      color:rgb(238, 40, 40)
+      background-color:rgb(247, 197, 197)
     }
     .li_16_23 {
-      color:rgb(238, 165, 40)
+      background-color:rgb(241, 219, 179)
     }
     .li_24_27 {
-      color:rgb(158, 19, 218)
+      background-color:rgb(227, 187, 245)
     }
     .li_28_37 {
-      color:rgb(28, 231, 69)
+      background-color:rgb(214, 250, 221)
     }
     .li_38_46 {
-      color:rgb(230, 56, 204)
+      background-color:rgb(233, 177, 224)
     }
     .li_47_55 {
-      color:rgb(0, 0, 0)
+      background-color:rgb(190, 185, 185)
     }
     .li_56_58 {
-      color:rgb(148, 148, 148)
+      background-color:rgb(241, 227, 199)
     }
   </style>
 
@@ -50,7 +59,7 @@
 
   {{> headerInterno}}
 
-  <section id="topicos" style="background-color:rgb(221, 232, 243);" >
+  <section style="background-color:rgb(221, 232, 243);" >
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
@@ -60,7 +69,7 @@
           <br>
           <input id="search" name="search" placeholder="Filtrar lista" type="text" data-list=".list" class="form-control" />
           <br>
-          <ul style="font-size: 14pt" class="list">
+          <ul style="font-size: 14pt" class="list" id="topicos">
             <li class="lead li_1_7">Didática de computação</li>
             <li class="lead li_1_7">Ensino e/ou aprendizagem de disciplinas da computação</li>
             <li class="lead li_1_7">Estratégias de ensino e/ou aprendizagem de computação</li>
