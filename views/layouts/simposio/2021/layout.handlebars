@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>EduCompBr 2021</title>
+  <title>EduComp 2021 :: {{titulo}}</title>
 
   {{!-- <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /> --}}
   <link rel="stylesheet" href="/css/bootstrap5.min.css" />
@@ -35,6 +35,16 @@
 
     <!-- Custom JavaScript for this theme -->
     {{!-- <script src="/js/scrolling-nav.js"></script> --}}
+
+    <script type="text/javascript" src="/js/jquery.hideseek.js"></script>
+    <script>
+        $(document).ready(function() {
+          $('#search').hideseek({
+          nodata: 'Nenhum curso encontrado',
+          
+          });
+        });
+      </script>
 
 </body>
 
