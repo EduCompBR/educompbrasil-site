@@ -22,34 +22,94 @@ app.get('/', (req, res) => { res.render('giec/index', {layout: 'giec/layout'}) }
 
 //EduComp 2021
 app.get('/simposio/2021', (req, res) => { 
-    res.render('sobre', {layout: 'simposio/2021/layout', sobre: true}) 
+    res.render('sobre', 
+        {
+            layout: 'simposio/2021/layout', 
+            sobre: true, 
+            titulo: "Principal"
+        }
+    ) 
 })
 app.get('/simposio/2021/topicos-de-interesse', (req, res) => { 
-    res.render('topicos-de-interesse', {layout: 'simposio/2021/layout', topicos: true}) 
+    res.render('topicos-de-interesse', 
+        {
+            layout: 'simposio/2021/layout', 
+            topicos: true,
+            titulo: "Tópicos de Interesse"
+        }
+    ) 
 })
 app.get('/simposio/2021/sobre', (req, res) => { 
-    res.render('sobre', {layout: 'simposio/2021/layout', sobre: true}) 
+    res.render('sobre', 
+        {
+            layout: 'simposio/2021/layout', 
+            sobre: true,
+            titulo: "Principal"
+        }
+    ) 
 })
 app.get('/simposio/2021/datas', (req, res) => { 
-    res.render('datas', {layout: 'simposio/2021/layout', datas: true}) 
+    res.render('datas', 
+        {
+            layout: 'simposio/2021/layout', 
+            datas: true,
+            titulo: 'Datas Importantes'
+        }
+    ) 
 })
 app.get('/simposio/2021/contato', (req, res) => { 
-    res.render('contato', {layout: 'simposio/2021/layout', contato: true}) 
+    res.render('contato', 
+        {
+            layout: 'simposio/2021/layout', 
+            contato: true,
+            titulo: "Contato"
+        }
+    ) 
 })
 app.get('/simposio/2021/programacao', (req, res) => { 
-    res.render('programacao', {layout: 'simposio/2021/layout', prog: true}) 
+    res.render('programacao', 
+        {
+            layout: 'simposio/2021/layout', 
+            prog: true,
+            titulo: 'Programação'
+        }
+    ) 
 })
 app.get('/simposio/2021/wlic', (req, res) => { 
-    res.render('wlic', {layout: 'simposio/2021/layout', wlic: true}) 
+    res.render('wlic', 
+        {
+            layout: 'simposio/2021/layout', 
+            wlic: true,
+            titulo: 'WLIC'
+        }
+    ) 
 })
 app.get('/simposio/2021/trabalhos', (req, res) => { 
-    res.render('trabalhos', {layout: 'simposio/2021/layout', trabalhos: true}) 
+    res.render('trabalhos', 
+        {
+            layout: 'simposio/2021/layout', 
+            trabalhos: true,
+            titulo: 'Chamada de Trabalhos'
+        }
+    ) 
 })
 app.get('/simposio/2021/inscricoes', (req, res) => { 
-    res.render('inscricoes', {layout: 'simposio/2021/layout', inscricoes: true}) 
+    res.render('inscricoes', 
+        {
+            layout: 'simposio/2021/layout', 
+            inscricoes: true,
+            titulo: 'Inscrições'
+        }
+    ) 
 })
 app.get('/simposio/2021/equipe', (req, res) => { 
-    res.render('equipe', {layout: 'simposio/2021/layout', equipe: true}) 
+    res.render('equipe', 
+        {
+            layout: 'simposio/2021/layout', 
+            equipe: true,
+            titulo: 'Equipe'
+        }
+    ) 
 })
 app.post('/simposio/2021/contato/email', async (req, res) => { 
     await emailServer.enviarEmail(req.body.email1, req.body.assunto1, req.body.mensagem1)
