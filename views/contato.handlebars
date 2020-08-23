@@ -14,6 +14,16 @@
   <link rel="stylesheet" href="/css/bootstrap5.min.css" />
   <link href="/css/scrolling-nav.css" rel="stylesheet">
 
+  {{!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> --}}
+  <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LeNA8AZAAAAAJmY-6NdzECm6ZmT1l7HyGDSbIXP'
+        });
+      };
+    </script>
+
+
 </head>
 
 <body id="page-top">
@@ -28,21 +38,34 @@
         <div class="col-lg-8 mx-auto">
           <h2 style="margin-top: -6rem;">Contato</h2>
           <br>
-          <form method="POST" action="/simposio/2021/contato/email">
+          <form method="POST" action="/email2" id="form-contato">
             <div class="form-group">
-                <label for="email1">Email</label>
+                <label for="email1">Seu email:</label>
                 <input type="email" class="form-control" name="email1" id="email1">
             </div>
             <div class="form-group">
-                <label for="assunto1">Assunto</label>
+                <label for="assunto1">Assunto:</label>
                 <input type="text" class="form-control" name="assunto1" id="assunto1">
             </div>
             <div class="form-group">
-                <label for="mensagem1">Mensagem</label>
+                <label for="mensagem1">Mensagem:</label>
                 <textarea class="form-control" name="mensagem1" id="mensagem1" rows="4"></textarea>
             </div>
-            <p> <input type="submit" value="Enviar" class="btn btn-primary btn-lg" /> </p>
+
+              <div id="html_element"></div>
+
+              <br>
+              
+              <p> <input type="submit" value="Enviar"  class="btn btn-primary btn-lg"/> </p>
+            </div>
+
           </form>
+          <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+              async defer>
+          </script>
+          {{#if req.session.retorno}}
+              <p>Enviado com sucesso!</p>
+          {{/if}}
         </div>
       </div>
     </div>
@@ -56,9 +79,6 @@
 
     <!-- Plugin JavaScript -->
     <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom JavaScript for this theme -->
-    {{!-- <script src="/js/scrolling-nav.js"></script> --}}
 
 </body>
 

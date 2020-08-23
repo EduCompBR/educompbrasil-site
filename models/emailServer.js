@@ -12,10 +12,10 @@ function enviarEmail(email1, assunto1, mensagem1) {
     })
     
     let mailOptions = {
-        from: email1,
+        from: 'educompbr@gmail.com',
         to: 'educompbr@gmail.com',
         subject: assunto1,
-        text: mensagem1
+        html: `<strong>${email1}</strong><p>Mensagem:</p> <p>${mensagem1}</p> `
     }
     
     transporter.sendMail(mailOptions, function(err, data) {
