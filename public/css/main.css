@@ -1,0 +1,33 @@
+#topicos {
+    list-style-type: none;
+  }
+  #topicos > li {
+    
+    margin: 0.2em;
+    padding-left: 0.5em;
+  }
+
+  .li_1_7 {
+    background-color:rgb(197, 198, 245);
+  }
+  .li_8_15 {
+    background-color:rgb(247, 197, 197)
+  }
+  .li_16_23 {
+    background-color:rgb(241, 219, 179)
+  }
+  .li_24_27 {
+    background-color:rgb(227, 187, 245)
+  }
+  .li_28_37 {
+    background-color:rgb(214, 250, 221)
+  }
+  .li_38_46 {
+    background-color:rgb(233, 177, 224)
+  }
+  .li_47_55 {
+    background-color:rgb(190, 185, 185)
+  }
+  .li_56_58 {
+    background-color:rgb(241, 227, 199)
+  }

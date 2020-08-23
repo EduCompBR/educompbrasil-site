@@ -1,56 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>EduCompBr 2021</title>
-
-  {{!-- <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /> --}}
-  <link rel="stylesheet" href="/css/bootstrap5.min.css" />
-  <link href="/css/scrolling-nav.css" rel="stylesheet">
-
-  <style>
-    .li_1_7 {
-      color:rgb(52, 55, 236)
-    }
-    .li_8_15 {
-      color:rgb(238, 40, 40)
-    }
-    .li_16_23 {
-      color:rgb(238, 165, 40)
-    }
-    .li_24_27 {
-      color:rgb(158, 19, 218)
-    }
-    .li_28_37 {
-      color:rgb(28, 231, 69)
-    }
-    .li_38_46 {
-      color:rgb(230, 56, 204)
-    }
-    .li_47_55 {
-      color:rgb(0, 0, 0)
-    }
-    .li_56_58 {
-      color:rgb(148, 148, 148)
-    }
-  </style>
-
-</head>
-
-<body id="page-top">
-  
-  <!-- Navigation -->
-  {{> navbar}}
-
   {{> headerInterno}}
 
-  <section id="topicos" style="background-color:rgb(221, 232, 243);" >
+  <section style="background-color:rgb(221, 232, 243);" >
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
@@ -60,7 +10,7 @@
           <br>
           <input id="search" name="search" placeholder="Filtrar lista" type="text" data-list=".list" class="form-control" />
           <br>
-          <ul style="font-size: 14pt" class="list">
+          <ul style="font-size: 14pt" class="list" id="topicos">
             <li class="lead li_1_7">Didática de computação</li>
             <li class="lead li_1_7">Ensino e/ou aprendizagem de disciplinas da computação</li>
             <li class="lead li_1_7">Estratégias de ensino e/ou aprendizagem de computação</li>
@@ -124,36 +74,3 @@
       </div>
     </div>
   </section>
-
-  {{> footer}}
-
-    <!-- Bootstrap core JavaScript -->
-    {{!-- <script src="/vendor/jquery/jquery.min.js"></script> --}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    {{!-- <script src="/vendor/jquery-easing/jquery.easing.min.js"></script> --}}
-
-    <!-- Custom JavaScript for this theme -->
-    {{!-- <script src="/js/scrolling-nav.js"></script> --}}
-
-    {{!-- Filtrar lista --}}
-    {{!-- <script type="text/javascript" src="jquery-2.0.2.min.js"> --}}
-    <script type="text/javascript" src="/js/jquery.hideseek.js"></script>
-
-    
-
-</body>
-<script>
-    $(document).ready(function() {
-    $('#search').hideseek({
-     nodata: 'Nenhum curso encontrado',
-     
-    });
-    });
-  </script>
-
-</html>
