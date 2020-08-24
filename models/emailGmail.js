@@ -7,7 +7,7 @@ function enviarEmail(email, assunto, mensagem) {
     port: 587,
     auth: {
         user: 'apikey',
-        pass: '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'
+        pass: process.env.API_KEY_SENDGRID
     }
     });
 
