@@ -75,12 +75,12 @@ app.get('/simposio/2021/programacao', (req, res) => {
         }
     ) 
 })
-app.get('/simposio/2021/wlic', (req, res) => { 
-    res.render('wlic', 
+app.get('/simposio/2021/forlic', (req, res) => { 
+    res.render('forlic', 
         {
             layout: 'simposio/2021/layout', 
-            wlic: true,
-            titulo: 'WLIC'
+            forlic: true,
+            titulo: 'ForLic'
         }
     ) 
 })
