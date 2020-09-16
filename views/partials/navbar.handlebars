@@ -63,13 +63,19 @@
             {{/if}}
             " href="/simposio/2021/inscricoes">Inscrições</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger 
-            {{~#if equipe}}
-              active
-            {{/if}}
-            " href="/simposio/2021/equipe">Equipe</a>
+
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle 
+                {{~#if equipe}}
+                  active
+                {{/if}}
+            ">Equipe</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2021/equipe">Comissão Organizadora</a>
+              <a class="dropdown-item" href="/simposio/2021/comite-programa">Comitê de Programa</a>
+            </div>
           </li>
+
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger 
             {{~#if contato}}
