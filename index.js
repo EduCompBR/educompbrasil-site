@@ -111,6 +111,15 @@ app.get('/simposio/2021/equipe', (req, res) => {
         }
     ) 
 })
+app.get('/simposio/2021/comite-programa', (req, res) => { 
+    res.render('comite-programa', 
+        {
+            layout: 'simposio/2021/layout', 
+            equipe: true,
+            titulo: 'Comitê de Programa'
+        }
+    ) 
+})
 app.post('/simposio/2021/contato/email', async (req, res) => { 
     await emailServer.enviarEmail(req.body.email1, req.body.assunto1, req.body.mensagem1)
     res.redirect('/simposio/2021/contato')
