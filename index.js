@@ -120,6 +120,53 @@ app.get('/simposio/2021/comite-programa', (req, res) => {
         }
     ) 
 })
+//critérios de revisão
+app.get('/simposio/2021/trabalhos/criterios/trilha-1/ensaios', (req, res) => { 
+    res.render('criterios-de-revisao/criterio-trilha1', 
+        {
+            layout: 'simposio/2021/layout', 
+            trabalhos: true,
+            titulo: 'Critérios de Revisão (Trilha 1 - Ensaios)'
+        }
+    ) 
+})
+app.get('/simposio/2021/trabalhos/criterios/trilha-1/artigos', (req, res) => { 
+    res.render('criterios-de-revisao/criterio-trilha1-artigos', 
+        {
+            layout: 'simposio/2021/layout', 
+            trabalhos: true,
+            titulo: 'Critérios de Revisão (Trilha 1 - Artigos de Pesquisa)'
+        }
+    ) 
+})
+app.get('/simposio/2021/trabalhos/criterios/trilha-2', (req, res) => { 
+    res.render('criterios-de-revisao/criterio-trilha2', 
+        {
+            layout: 'simposio/2021/layout', 
+            trabalhos: true,
+            titulo: 'Critérios de Revisão (Trilha 2)'
+        }
+    ) 
+})
+app.get('/simposio/2021/trabalhos/criterios/trilha-3', (req, res) => { 
+    res.render('criterios-de-revisao/criterio-trilha3', 
+        {
+            layout: 'simposio/2021/layout', 
+            trabalhos: true,
+            titulo: 'Critérios de Revisão (Trilha 3)'
+        }
+    ) 
+})
+app.get('/simposio/2021/trabalhos/criterios/trilha-4', (req, res) => { 
+    res.render('criterios-de-revisao/criterio-trilha4', 
+        {
+            layout: 'simposio/2021/layout', 
+            trabalhos: true,
+            titulo: 'Critérios de Revisão (Trilha 4)'
+        }
+    ) 
+})
+//Envio de email
 app.post('/simposio/2021/contato/email', async (req, res) => { 
     await emailServer.enviarEmail(req.body.email1, req.body.assunto1, req.body.mensagem1)
     res.redirect('/simposio/2021/contato')
