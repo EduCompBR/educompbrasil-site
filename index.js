@@ -195,12 +195,12 @@ app.get('/en-US/symposium/2021/topics-of-interest', (req, res) => {
         }
     ) 
 })
-app.get('/en-US/symposium/2021/call-for-papers', (req, res) => { 
+app.get('/en-US/symposium/2021/call-for-contributions', (req, res) => { 
     res.render('simposio/2021/en-US/trabalhos', 
         {
             layout: 'simposio/2021/en-US/layout', 
             papers: true, 
-            titulo: "Call for Papers"
+            titulo: "Call for Contributions"
         }
     ) 
 })
@@ -222,12 +222,12 @@ app.get('/en-US/symposium/2021/registrations', (req, res) => {
         }
     ) 
 })
-app.get('/en-US/symposium/2021/shedule', (req, res) => { 
+app.get('/en-US/symposium/2021/program', (req, res) => { 
     res.render('simposio/2021/en-US/programacao', 
         {
             layout: 'simposio/2021/en-US/layout', 
             shedule: true,
-            titulo: 'Shedule'
+            titulo: 'Program'
         }
     ) 
 })
