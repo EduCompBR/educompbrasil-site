@@ -172,11 +172,103 @@ app.get('/en-US/symposium/2021/', (req, res) => {
     res.render('simposio/2021/en-US/sobre', 
         {
             layout: 'simposio/2021/en-US/layout', 
-            sobre: true, 
+            about: true, 
             titulo: "Home"
         }
     ) 
 })
+app.get('/en-US/symposium/2021/about', (req, res) => { 
+    res.render('simposio/2021/en-US/sobre', 
+        {
+            layout: 'simposio/2021/en-US/layout', 
+            about: true, 
+            titulo: "Home"
+        }
+    ) 
+})
+app.get('/en-US/symposium/2021/topics-of-interest', (req, res) => { 
+    res.render('simposio/2021/en-US/topicos-de-interesse', 
+        {
+            layout: 'simposio/2021/en-US/layout', 
+            topics: true, 
+            titulo: "Topics of Interest"
+        }
+    ) 
+})
+app.get('/en-US/symposium/2021/call-for-papers', (req, res) => { 
+    res.render('simposio/2021/en-US/trabalhos', 
+        {
+            layout: 'simposio/2021/en-US/layout', 
+            papers: true, 
+            titulo: "Call for Papers"
+        }
+    ) 
+})
+app.get('/en-US/symposium/2021/dates', (req, res) => { 
+    res.render('simposio/2021/en-US/datas', 
+        {
+            layout: 'simposio/2021/en-US/layout', 
+            dates: true,
+            titulo: 'Dates'
+        }
+    ) 
+})
+app.get('/en-US/symposium/2021/registrations', (req, res) => { 
+    res.render('simposio/2021/en-US/inscricoes', 
+        {
+            layout: 'simposio/2021/en-US/layout', 
+            registrations: true,
+            titulo: 'Registrations'
+        }
+    ) 
+})
+app.get('/en-US/symposium/2021/shedule', (req, res) => { 
+    res.render('simposio/2021/en-US/programacao', 
+        {
+            layout: 'simposio/2021/en-US/layout', 
+            shedule: true,
+            titulo: 'Shedule'
+        }
+    ) 
+})
+app.get('/en-US/symposium/2021/team', (req, res) => { 
+    res.render('simposio/2021/en-US/equipe', 
+        {
+            layout: 'simposio/2021/en-US/layout', 
+            team: true,
+            titulo: 'Team'
+        }
+    ) 
+})
+app.get('/en-US/symposium/2021/program-committee', (req, res) => { 
+    res.render('simposio/2021/en-US/comite-programa', 
+        {
+            layout: 'simposio/2021/en-US/layout', 
+            team: true,
+            titulo: 'Program Committee'
+        }
+    ) 
+})
+app.get('/en-US/symposium/2021/contact', (req, res) => { 
+    res.render('simposio/2021/en-US/contato', 
+        {
+            layout: 'simposio/2021/en-US/layout', 
+            contact: true,
+            titulo: 'Contact'
+        }
+    ) 
+})
+app.get('/en-US/symposium/2021/forlic', (req, res) => { 
+    res.render('simposio/2021/en-US/forlic', 
+        {
+            layout: 'simposio/2021/en-US/layout', 
+            forlic: true,
+            titulo: 'ForLic'
+        }
+    ) 
+})
+
+
 
 //Envio de email
 app.post('/simposio/2021/contato/email', async (req, res) => { 
