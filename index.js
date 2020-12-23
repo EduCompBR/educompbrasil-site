@@ -18,7 +18,24 @@ app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.urlencoded({extended: false}))
 
 //GIEC
-app.get('/', (req, res) => { res.render('giec/index', {layout: 'giec/layout'}) })
+app.get('/', (req, res) => { 
+    res.render('giec/index', 
+        {
+            layout: 'giec/layout',
+            principal: true,
+            titulo: "Principal"
+        }
+    ) 
+})
+app.get('/sobre', (req, res) => { 
+    res.render('giec/sobre', 
+        {
+            layout: 'giec/layout',
+            sobre: true,
+            titulo: "Sobre"
+        }
+    ) 
+})
 
 //EduComp 2021 - pt-BR
 app.get('/simposio/2021', (req, res) => { 

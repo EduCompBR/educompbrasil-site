@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: darkcyan">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">GIEC</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link 
+                {{~#if principal}}
+                  active
+                {{/if}}
+             " href="/"> Principal
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link 
+                {{~#if sobre}}
+                  active
+                {{/if}}
+             " href="/sobre"> Sobre
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link 
+                {{~#if quem_somos}}
+                  active
+                {{/if}}
+             " href="/quem-somos"> Quem Somos?
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link 
+                {{~#if documentos}}
+                  active
+                {{/if}}
+             " href="/documentos"> Documentos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link 
+                {{~#if contato}}
+                  active
+                {{/if}}
+             " href="/contato"> Contato
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
