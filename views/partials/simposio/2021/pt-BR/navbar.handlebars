@@ -28,12 +28,20 @@
             {{/if}}
             " href="/simposio/2021/topicos-de-interesse">Tópicos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger 
-            {{~#if trabalhos}}
-              active
-            {{/if}}
-            " href="/simposio/2021/trabalhos">Chamada de Trabalhos</a>
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle 
+                {{~#if trabalhos}}
+                  active
+                {{/if}}
+            ">Trabalhos</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2021/trabalhos">
+                Chamada de Trabalhos
+              </a>
+              <a class="dropdown-item" href="/simposio/2021/trabalhos/aceitos">
+                Trabalhos Aceitos
+              </a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger 
