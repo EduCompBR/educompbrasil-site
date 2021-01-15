@@ -102,11 +102,20 @@ app.get('/simposio/2021/forlic', (req, res) => {
     ) 
 })
 app.get('/simposio/2021/trabalhos', (req, res) => { 
-    res.render('simposio/2021/pt-BR/trabalhos', 
+    res.render('simposio/2021/pt-BR/trabalhos/chamada', 
         {
             layout: 'simposio/2021/pt-BR/layout', 
             trabalhos: true,
             titulo: 'Chamada de Trabalhos'
+        }
+    ) 
+})
+app.get('/simposio/2021/trabalhos/aceitos', (req, res) => { 
+    res.render('simposio/2021/pt-BR/trabalhos/aceitos', 
+        {
+            layout: 'simposio/2021/pt-BR/layout', 
+            trabalhos: true,
+            titulo: 'Trabalhos Aceitos'
         }
     ) 
 })
