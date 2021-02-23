@@ -84,11 +84,20 @@ app.get('/simposio/2021/contato', (req, res) => {
     ) 
 })
 app.get('/simposio/2021/programacao', (req, res) => { 
-    res.render('simposio/2021/pt-BR/programacao', 
+    res.render('simposio/2021/pt-BR/programacao/index', 
         {
             layout: 'simposio/2021/pt-BR/layout', 
             prog: true,
             titulo: 'Programação'
+        }
+    ) 
+})
+app.get('/simposio/2021/programacao/esquenta/1', (req, res) => { 
+    res.render('simposio/2021/pt-BR/programacao/esquenta/primeiro', 
+        {
+            layout: 'simposio/2021/pt-BR/layout', 
+            prog: true,
+            titulo: 'Esquenta'
         }
     ) 
 })
