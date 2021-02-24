@@ -201,6 +201,15 @@ app.get('/simposio/2021/trabalhos/criterios/trilha-4', (req, res) => {
         }
     ) 
 })
+app.get('/simposio/2021/trabalhos/criterios/lab-ideias', (req, res) => { 
+    res.render('simposio/2021/pt-BR/criterios-de-revisao/criterio-lab-ideias', 
+        {
+            layout: 'simposio/2021/pt-BR/layout', 
+            trabalhos: true,
+            titulo: 'Critérios de Revisão (Laboratório de Ideias)'
+        }
+    ) 
+})
 
 //EduComp 2021 - en-US
 app.get('/en-US/symposium/2021/', (req, res) => { 
