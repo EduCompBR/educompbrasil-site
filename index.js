@@ -303,6 +303,15 @@ app.get('/en-US/symposium/2021/forlic', (req, res) => {
     ) 
 })
 
+app.get('/simposio/2021/certificado', (req, res) => { 
+    res.render('simposio/2021/pt-BR/certificado', 
+        {
+            layout: 'simposio/2021/pt-BR/layout', 
+            certificado: true,
+            titulo: 'Certificado'
+        }
+    ) 
+})
 
 
 //Envio de email
