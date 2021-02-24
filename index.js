@@ -4,9 +4,10 @@ const handlebars = require('express-handlebars')
 const methodOverride = require('method-override')
 const bodyParser = require('body-parser')
 const emailServer = require('./models/emailServer')
-const pdfkit = require('pdfkit')
+const PDFDocument = require('pdfkit')
 const { GoogleSpreadsheet } = require('google-spreadsheet')
 const creds = require('./educomp-novo-certificado.json')
+const fs = require('fs')
 
 //Engine View
 app.engine('handlebars', handlebars({defaultLayout: 'main'}) )
@@ -316,18 +317,45 @@ app.get('/simposio/2021/certificado', (req, res) => {
     ) 
 })
 
-app.get('/simposio/2021/certificado/:email', async (req, res) => {
+app.post('/simposio/2021/certificado/obter', async (req, res) => {
     try{
         console.log('Teste certificado')
         const doc = new GoogleSpreadsheet('1xiq7o8bwgiXzkBQR3Vdja8vcFDvSRBe1cFY1FAiTiPQ')
-        await doc.useServiceAccountAuth(creds)
-        await doc.loadInfo() // loads document properties and worksheets
-        console.log(doc.name)
-        
+        await doc.useServiceAccountAuth({
+            client_email: creds.client_email,
+            private_key: creds.private_key.replace(/\\n/g, '\n'),
+        })
+        await doc.loadInfo()
+        const sheet = doc.sheetsByIndex[0]
+        const rows = await sheet.getRows()
+        let encontrado = -1
+        let posicao = -1
+        rows.forEach( (element, index) => {
+            if (element.Email === req.body.email){
+                encontrado = 1
+                posicao = index
+            }
+        })
+        console.log(req.body.email)
+        console.log(encontrado)
+        console.log(rows[posicao].Nome)
+        if (posicao !== -1) {
+            const doc = new PDFDocument()
+            doc.text('Some text with an embedded font!', 100, 100)
+            doc.end()
+            doc.pipe(fs.createWriteStream('certificado.pdf')).on('finish', () => {
+                res.download('./certificado.pdf')
+            })    
+        } else {
+            res.redirect('/simposio/2021/contato')
+        }
     } catch (error) {
         console.log(error)
     }
+
 })
+
+
 
 
 //Envio de email
