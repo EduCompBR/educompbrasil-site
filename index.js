@@ -4,6 +4,9 @@ const handlebars = require('express-handlebars')
 const methodOverride = require('method-override')
 const bodyParser = require('body-parser')
 const emailServer = require('./models/emailServer')
+const pdfkit = require('pdfkit')
+const { GoogleSpreadsheet } = require('google-spreadsheet')
+const creds = require('./educomp-novo-certificado.json')
 
 //Engine View
 app.engine('handlebars', handlebars({defaultLayout: 'main'}) )
@@ -311,6 +314,19 @@ app.get('/simposio/2021/certificado', (req, res) => {
             titulo: 'Certificado'
         }
     ) 
+})
+
+app.get('/simposio/2021/certificado/:email', async (req, res) => {
+    try{
+        console.log('Teste certificado')
+        const doc = new GoogleSpreadsheet('1xiq7o8bwgiXzkBQR3Vdja8vcFDvSRBe1cFY1FAiTiPQ')
+        await doc.useServiceAccountAuth(creds)
+        await doc.loadInfo() // loads document properties and worksheets
+        console.log(doc.name)
+        
+    } catch (error) {
+        console.log(error)
+    }
 })
 
 

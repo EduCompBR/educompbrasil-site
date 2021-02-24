@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "educomp-novo-certificado",
+  "private_key_id": "b92f1881a6a7a4145ec27f29e2fd462638b68152",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDfDkehUCLxN2u/\nrGuJgn2BzSBsiy3O2On7gleCwUcwwurcbSR5FeV13JD/JuohpQ5mq3qv6/+C2qfq\nhWGE8eeGRO91Xy4Vysm6RYX1IMBbiS2E69U60oyBkU263DvXKVAV+/DI+fDq3YSE\nF5smckuZ8agDdaA4Xfqawik+/ojLO2TWUqy3yOJdsfXJoguKoATJEjmCAE8e3gs6\n0KpYrzYbXzcC+N5SkVPZbqOxgPHAHYGJgXsciZNgRLpC5R9alaeNk/ARHzaAtLKI\nb31VeXakyOIb9gYqV3UdRvwuLnqjExs1bSWVHjsDbivvcMyzn06YbPJQNNonEwAm\nPG5W3wLJAgMBAAECggEAGBQACntOklBjurifkSP7bWAZwG3Tv5DtzR8YWD6J80sP\nNEU52zJQZ0Ush8aJHqGlKNMY9tWYauU0nB3S1ZmRXw6g9MAWBvcxiICJwdjLuvXX\napJUnbltvmzTgbjVYtgMU5szNla4uXm5HNM5hdBvtcn+04TGi18ltr//2NN8K8fl\ndY6KCyvVUrBWhq5ZAUgWpuyMnHNp0koBd/QTdy6vOgh7rib8L32FNNU90lJCgaGy\nIU4YUYelnMjvHZPskaYicSqhZuh+uj1HeoqXAjoQqueiNhcZjZP4ug53EKVX9EZf\nENy61notMd36uWMcPshkp1+ILOOCAniDCyay0+bDywKBgQDyeSI8wbJcWmz0/aXV\nY32F2IENXj2CGD5e5r0+4WF3MJbpnvQza7eakM+Q4V2wBYzgv9IVGpE5ne2IHg48\n0roIIzAz3L2tYAk3/Z1+5142cgDacZBSmOKgZKdA6VHlNQ2ASdh4x+ZknA4/+/2S\ncJUwC3Lpe1Nma7vz0PysZ5m1YwKBgQDrf9ZwOZ23ObAbVrphxVHdurJMubdR6amv\n/BZV8aTnXZNtKEloyk9k/jTFSBelreR2V11OLKvUXF2tRHJaoWFGBkcOF8LoeFS2\n0Sn6ox3gy1T4rSd986WinsetQsjEoWmqghGjHUL+qNRUaFZ9qaisAutSsNB8AErR\nEnC8ig3k4wKBgEXrLDY83IPJB3Y11iYMRFveLIiATlg/SWzwOE3zi7lk53+CeISD\nYTRO4auzcOKbFx6P8bJoMMxef+oqUIy1bzN9gh7SXleqQ75DgbDgYshsY1aaPLW0\npFT/8ULEhPsFK1l88dESQ5trbKiCr4IUuNBb3Mz65Pe5xT7vWo0UarxlAoGAHzvR\nQQkjNc3c4YNbLORyuymrxClNevu2mbShcbye1mC+0NdrBQ7wAMEGVrP9DuhFSLzF\njzy1fXDSq8xMLmEA+byTZ/cWzqZG9gg/vRItQEc3edPdTQMnkK3mZcBZyFpwHUEq\n/as/226g2qEL95as3EN22nzA6fFP+vKrKRZWSWkCgYEA1fuZycLTW5fPgVUS/EVk\nAqx99fuhkwx/DcX6+IxOn2f9lKwUJtbxbJc7ThSzc4ZawMo1TQPuooitEp+SnMKj\nubjfS1E/zJjutXX/Gn0G5+vIEly8Zd8mFeAnqVjn4jwXghSG0CV98sNGBjKqhBnf\nkhFc/fOpGRvIDpbBextw6bI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "educomp-esdras@educomp-novo-certificado.iam.gserviceaccount.com",
+  "client_id": "104427198171677785699",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/educomp-esdras%40educomp-novo-certificado.iam.gserviceaccount.com"
+}
