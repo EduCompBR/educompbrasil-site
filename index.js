@@ -336,12 +336,23 @@ app.post('/simposio/2021/certificado/obter', async (req, res) => {
                 posicao = index
             }
         })
-        console.log(req.body.email)
-        console.log(encontrado)
-        console.log(rows[posicao].Nome)
+        // console.log(req.body.email)
+        // console.log(encontrado)
+        // console.log(rows[posicao].Nome)
         if (posicao !== -1) {
-            const doc = new PDFDocument()
-            doc.text('Some text with an embedded font!', 100, 100)
+            const doc = new PDFDocument({                
+                layout: 'landscape', 
+                size: [540, 800],               
+            })
+            doc.image('./certificado-modelo.png', 0, 0,{
+                fit: [800, 600],
+
+            })
+            doc.fontSize(18)
+            doc.font('./trebuc.ttf')
+            doc.text(`Certificamos, para os devidos fins que ${rows[posicao].Nome} participou do I Simpósio Brasileiro de Educação em Computação (EduComp 2021) como membro do comitê de programa`, 200, 260, {width: 400, align: 'justify'})
+            //doc.text('do I Simpósio Brasileiro de Educação em Computação (EduComp 2021) como', 200, 280, {width: 300})
+            //doc.text('membro do comitê de programa', 200, 300)
             doc.end()
             doc.pipe(fs.createWriteStream('certificado.pdf')).on('finish', () => {
                 res.download('./certificado.pdf')
