@@ -350,7 +350,9 @@ app.post('/simposio/2021/certificado/obter', async (req, res) => {
             })
             doc.fontSize(18)
             doc.font('./trebuc.ttf')
-            doc.text(`Certificamos, para os devidos fins que ${rows[posicao].Nome} participou do I Simpósio Brasileiro de Educação em Computação (EduComp 2021) como membro do comitê de programa`, 200, 260, {width: 400, align: 'justify'})
+            let nome = rows[posicao].Nome
+            nome = nome.toUpperCase()
+            doc.text(`Certificamos, para os devidos fins que ${nome} participou do I Simpósio Brasileiro de Educação em Computação (EduComp 2021) como membro do comitê de programa.`, 150, 275, {width: 500, align: 'justify'})
             //doc.text('do I Simpósio Brasileiro de Educação em Computação (EduComp 2021) como', 200, 280, {width: 300})
             //doc.text('membro do comitê de programa', 200, 300)
             doc.end()
