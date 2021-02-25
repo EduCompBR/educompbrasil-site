@@ -15,7 +15,9 @@
             </div>
             <p> <input type="submit" value="Obter" class="btn btn-primary btn-lg" style="width: 150px;" /> 
             {{!-- <input type="submit" value="Verificar" class="btn btn-primary btn-lg ml-2" style="width: 150px;"/> </p> --}}
-
+            {{#if encontrado}}                
+                <div class="alert alert-danger">Email não encontrado em nossa base.</div>
+            {{/if}}
           </form>
         </div>
       </div>

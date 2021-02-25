@@ -307,12 +307,18 @@ app.get('/en-US/symposium/2021/forlic', (req, res) => {
     ) 
 })
 
-app.get('/simposio/2021/certificado', (req, res) => { 
+app.get('/simposio/2021/certificado/:encontrado', (req, res) => { 
+    let mensagem = true
+    if (req.params.encontrado === 'encontrado') {
+        mensagem = false
+    }
+
     res.render('simposio/2021/pt-BR/certificado', 
         {
             layout: 'simposio/2021/pt-BR/layout', 
             certificado: true,
-            titulo: 'Certificado'
+            titulo: 'Certificado',
+            encontrado: mensagem
         }
     ) 
 })
@@ -336,15 +342,12 @@ app.post('/simposio/2021/certificado/obter', async (req, res) => {
                 posicao = index
             }
         })
-        // console.log(req.body.email)
-        // console.log(encontrado)
-        // console.log(rows[posicao].Nome)
         if (posicao !== -1) {
             const doc = new PDFDocument({                
                 layout: 'landscape', 
                 size: [540, 800],               
             })
-            doc.image('./certificado-modelo.png', 0, 0,{
+            doc.image('./certificado-esquenta.png', 0, 0,{
                 fit: [800, 600],
 
             })
@@ -352,15 +355,15 @@ app.post('/simposio/2021/certificado/obter', async (req, res) => {
             doc.font('./trebuc.ttf')
             let nome = rows[posicao].Nome
             nome = nome.toUpperCase()
-            doc.text(`Certificamos, para os devidos fins que ${nome} participou do I Simpósio Brasileiro de Educação em Computação (EduComp 2021) como membro do comitê de programa.`, 150, 275, {width: 500, align: 'justify'})
-            //doc.text('do I Simpósio Brasileiro de Educação em Computação (EduComp 2021) como', 200, 280, {width: 300})
-            //doc.text('membro do comitê de programa', 200, 300)
+            doc.text(`Certificamos, para os devidos fins, que ${nome} participou, em 27/02/2021, do Esquenta EduComp, um evento prévio do I Simpósio Brasileiro de Educação em Computação.`, 150, 275, {width: 500, align: 'justify'})
             doc.end()
             doc.pipe(fs.createWriteStream('certificado.pdf')).on('finish', () => {
                 res.download('./certificado.pdf')
             })    
         } else {
-            res.redirect('/simposio/2021/contato')
+            res.redirect('/simposio/2021/certificado/nao-encontrado')
+            //req.flash('message', 'Email não encontrado na base!')
+
         }
     } catch (error) {
         console.log(error)

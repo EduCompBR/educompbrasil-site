@@ -92,20 +92,33 @@
             </div>
           </li>
 
-          <li class="nav-item">
+          {{!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger 
             {{~#if contato}}
               active
             {{/if}}
             " href="/simposio/2021/contato">Contato</a>
-          </li>
-          <li class="nav-item">
+          </li> --}}
+
+          {{!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger 
             {{~#if certificado}}
               active
             {{/if}}
             " href="/simposio/2021/certificado">Certificado</a>
+          </li> --}}
+
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle 
+                {{~#if certificado}}
+                  active
+                {{/if}}
+            ">Certificado</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2021/certificado/encontrado">Esquenta EduComp</a>
+            </div>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="/en-US/symposium/2021">
               <img style="height: 25px; width: 25px" 
