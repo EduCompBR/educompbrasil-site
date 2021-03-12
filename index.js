@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const emailServer = require('./models/emailServer')
 const PDFDocument = require('pdfkit')
 const { GoogleSpreadsheet } = require('google-spreadsheet')
-const creds = require('./educomp-novo-certificado.json')
+//const creds = require('./educomp-novo-certificado.json')
 const fs = require('fs')
 
 //Engine View
@@ -307,13 +307,13 @@ app.get('/en-US/symposium/2021/forlic', (req, res) => {
     ) 
 })
 
-app.get('/simposio/2021/certificado/:encontrado', (req, res) => { 
+app.get('/simposio/2021/certificados/esquenta/1/:encontrado', (req, res) => { 
     let mensagem = true
     if (req.params.encontrado === 'encontrado') {
         mensagem = false
     }
 
-    res.render('simposio/2021/pt-BR/certificado', 
+    res.render('simposio/2021/pt-BR/certificados/esquenta-1', 
         {
             layout: 'simposio/2021/pt-BR/layout', 
             certificado: true,
@@ -323,13 +323,13 @@ app.get('/simposio/2021/certificado/:encontrado', (req, res) => {
     ) 
 })
 
-app.post('/simposio/2021/certificado/obter', async (req, res) => {
+app.post('/simposio/2021/certificados/esquenta/1/obter', async (req, res) => {
     try{
         console.log('Teste certificado')
-        const doc = new GoogleSpreadsheet('1xiq7o8bwgiXzkBQR3Vdja8vcFDvSRBe1cFY1FAiTiPQ')
+        const doc = new GoogleSpreadsheet('1bOIjyqdNo2x5TkhNPNPid2FFD1JkQeb24R1izWilh2E')
         await doc.useServiceAccountAuth({
-            client_email: creds.client_email,
-            private_key: creds.private_key.replace(/\\n/g, '\n'),
+            client_email: process.env.GOOGLE_API_CLIENT_EMAIL,
+            private_key: process.env.GOOGLE_API_PRIVATE_KEY.replace(/\\n/g, '\n'),
         })
         await doc.loadInfo()
         const sheet = doc.sheetsByIndex[0]
@@ -361,7 +361,7 @@ app.post('/simposio/2021/certificado/obter', async (req, res) => {
                 res.download('./certificado.pdf')
             })    
         } else {
-            res.redirect('/simposio/2021/certificado/nao-encontrado')
+            res.redirect('/simposio/2021/certificados/esquenta/1/nao-encontrado')
             //req.flash('message', 'Email não encontrado na base!')
 
         }
