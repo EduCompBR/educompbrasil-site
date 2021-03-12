@@ -1,0 +1,28 @@
+  {{> simposio/2021/pt-BR/headerInterno}}
+
+  <section id="datas" style="background-color:rgb(221, 232, 243);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 style="margin-top: -6rem;">
+            Certificados do Esquenta EduComp <br>
+            <small class="text-muted">(27 de março de 2021)</small>
+          </h2> 
+          <br>
+          <h3>Obtenha e valide seu certificado: </h3>
+          <br>
+          <form method="POST" action="/simposio/2021/certificados/esquenta/1/obter">
+            <div class="form-group">
+                <label for="email1">Email usado na inscrição:</label>
+                <input type="email" class="form-control" name="email" id="email">
+            </div>
+            <p> <input type="submit" value="Obter" class="btn btn-primary btn-lg" style="width: 150px;" /> 
+            {{!-- <input type="submit" value="Verificar" class="btn btn-primary btn-lg ml-2" style="width: 150px;"/> </p> --}}
+            {{#if encontrado}}                
+                <div class="alert alert-danger">Email não encontrado em nossa base.</div>
+            {{/if}}
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
