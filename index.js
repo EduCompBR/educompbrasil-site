@@ -353,9 +353,9 @@ app.post('/simposio/2021/certificados/esquenta/1/obter', async (req, res) => {
             })
             doc.fontSize(18)
             doc.font('./trebuc.ttf')
-            let nome = rows[posicao].Nome
+            let nome = rows[posicao].Nome_completo
             nome = nome.toUpperCase()
-            doc.text(`Certificamos, para os devidos fins, que ${nome} participou, em 27/02/2021, do Esquenta EduComp, um evento prévio do I Simpósio Brasileiro de Educação em Computação.`, 150, 275, {width: 500, align: 'justify'})
+            doc.text(`Certificamos para os devidos fins que ${nome} participou do evento preparatório Esquenta EduComp (Simpósio Brasileiro de Educação em Computação) no dia 27 de fevereiro de 2021 com a carga horária de 03 (três) horas.`, 150, 275, {width: 500, align: 'justify'})
             doc.end()
             doc.pipe(fs.createWriteStream('certificado.pdf')).on('finish', () => {
                 res.download('./certificado.pdf')
