@@ -4,6 +4,10 @@ const handlebars = require('express-handlebars')
 const methodOverride = require('method-override')
 const bodyParser = require('body-parser')
 const emailServer = require('./models/emailServer')
+const PDFDocument = require('pdfkit')
+const { GoogleSpreadsheet } = require('google-spreadsheet')
+//const creds = require('./educomp-novo-certificado.json')
+const fs = require('fs')
 
 //Engine View
 app.engine('handlebars', handlebars({defaultLayout: 'main'}) )
@@ -311,6 +315,71 @@ app.get('/en-US/symposium/2021/forlic', (req, res) => {
         }
     ) 
 })
+
+app.get('/simposio/2021/certificados/esquenta/1/:encontrado', (req, res) => { 
+    let mensagem = true
+    if (req.params.encontrado === 'encontrado') {
+        mensagem = false
+    }
+
+    res.render('simposio/2021/pt-BR/certificados/esquenta-1', 
+        {
+            layout: 'simposio/2021/pt-BR/layout', 
+            certificado: true,
+            titulo: 'Certificado',
+            encontrado: mensagem
+        }
+    ) 
+})
+
+app.post('/simposio/2021/certificados/esquenta/1/obter', async (req, res) => {
+    try{
+        console.log('Teste certificado')
+        const doc = new GoogleSpreadsheet('1bOIjyqdNo2x5TkhNPNPid2FFD1JkQeb24R1izWilh2E')
+        await doc.useServiceAccountAuth({
+            client_email: process.env.GOOGLE_API_CLIENT_EMAIL,
+            private_key: process.env.GOOGLE_API_PRIVATE_KEY.replace(/\\n/g, '\n'),
+        })
+        await doc.loadInfo()
+        const sheet = doc.sheetsByIndex[0]
+        const rows = await sheet.getRows()
+        let encontrado = -1
+        let posicao = -1
+        rows.forEach( (element, index) => {
+            if (element.Email === req.body.email){
+                encontrado = 1
+                posicao = index
+            }
+        })
+        if (posicao !== -1) {
+            const doc = new PDFDocument({                
+                layout: 'landscape', 
+                size: [540, 800],               
+            })
+            doc.image('./certificado-esquenta.png', 0, 0,{
+                fit: [800, 600],
+
+            })
+            doc.fontSize(18)
+            doc.font('./trebuc.ttf')
+            let nome = rows[posicao].Nome_completo
+            nome = nome.toUpperCase()
+            doc.text(`Certificamos para os devidos fins que ${nome} participou do evento preparatório Esquenta EduComp (Simpósio Brasileiro de Educação em Computação) no dia 27 de fevereiro de 2021 com a carga horária de 03 (três) horas.`, 150, 275, {width: 500, align: 'justify'})
+            doc.end()
+            doc.pipe(fs.createWriteStream('certificado.pdf')).on('finish', () => {
+                res.download('./certificado.pdf')
+            })    
+        } else {
+            res.redirect('/simposio/2021/certificados/esquenta/1/nao-encontrado')
+            //req.flash('message', 'Email não encontrado na base!')
+
+        }
+    } catch (error) {
+        console.log(error)
+    }
+
+})
+
 
 
 
