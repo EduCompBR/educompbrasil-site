@@ -90,8 +90,9 @@ app.get('/simposio/2021/contato', (req, res) => {
 app.get('/simposio/2021/programacao', (req, res) => { 
     res.render('simposio/2021/pt-BR/programacao/index', 
         {
-            layout: 'simposio/2021/pt-BR/layout', 
+            //layout: 'simposio/2021/pt-BR/layout', 
             prog: true,
+            prog_educomp: true,
             titulo: 'Programação'
         }
     ) 
