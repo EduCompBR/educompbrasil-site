@@ -9,6 +9,10 @@ const { GoogleSpreadsheet } = require('google-spreadsheet')
 //const creds = require('./educomp-novo-certificado.json')
 const fs = require('fs')
 
+//Routes
+var educomp_2021_main = require('./routes/simposio/2021/pt-BR/main');
+var giec_main = require('./routes/giec/main');
+
 //Engine View
 app.engine('handlebars', handlebars({defaultLayout: 'main'}) )
 
@@ -22,53 +26,13 @@ app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.urlencoded({extended: false}))
 
 //GIEC
-app.get('/', (req, res) => { 
-    res.render('giec/index', 
-        {
-            layout: 'giec/layout',
-            principal: true,
-            titulo: "Principal"
-        }
-    ) 
-})
-app.get('/sobre', (req, res) => { 
-    res.render('giec/sobre', 
-        {
-            layout: 'giec/layout',
-            sobre: true,
-            titulo: "Sobre"
-        }
-    ) 
-})
+app.get('/', giec_main.index)
+app.get('/sobre', giec_main.sobre)
 
 //EduComp 2021 - pt-BR
-app.get('/simposio/2021', (req, res) => { 
-    res.render('simposio/2021/pt-BR/sobre', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            sobre: true, 
-            titulo: "Principal"
-        }
-    ) 
-})
-app.get('/simposio/2021/topicos-de-interesse', (req, res) => { 
-    res.render('simposio/2021/pt-BR/topicos-de-interesse', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            topicos: true,
-            titulo: "Tópicos de Interesse"
-        }
-    ) 
-})
-app.get('/simposio/2021/sobre', (req, res) => { 
-    res.render('simposio/2021/pt-BR/sobre', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            sobre: true,
-            titulo: "Principal"
-        }
-    ) 
-})
+app.get('/simposio/2021', educomp_2021_main.index)
+app.get('/simposio/2021/topicos-de-interesse', educomp_2021_main.topicos)
+app.get('/simposio/2021/sobre', educomp_2021_main.sobre)
 app.get('/simposio/2021/datas', (req, res) => { 
     res.render('simposio/2021/pt-BR/datas', 
         {
