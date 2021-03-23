@@ -12,6 +12,7 @@ const fs = require('fs')
 //Routes
 var educomp_2021_main = require('./routes/simposio/2021/pt-BR/main');
 var giec_main = require('./routes/giec/main');
+var giec_quem_somos = require('./routes/giec/quem_somos');
 
 //Engine View
 app.engine('handlebars', handlebars({defaultLayout: 'main'}) )
@@ -27,7 +28,10 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 //GIEC
 app.get('/', giec_main.index)
-app.get('/sobre', giec_main.sobre)
+app.get('/eventos', giec_main.eventos)
+app.get('/quem-somos/comite-gestor', giec_quem_somos.comite_gestor)
+app.get('/quem-somos/membros', giec_quem_somos.membros)
+app.get('/documentos', giec_main.documentos)
 
 //EduComp 2021 - pt-BR
 app.get('/simposio/2021', educomp_2021_main.index)
