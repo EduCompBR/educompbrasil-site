@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: darkcyan">
+<nav class="navbar navbar-expand-lg navbar-dark" id="mainNav" style="background-color: darkcyan">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">GIEC</a>
+      <a class="navbar-brand js-scroll-trigger" href="/">GIEC</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -16,19 +16,26 @@
           </li>
           <li class="nav-item">
             <a class="nav-link 
-                {{~#if sobre}}
+                {{~#if eventos}}
                   active
                 {{/if}}
-             " href="/sobre"> Sobre
+             " href="/eventos"> Eventos
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link 
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle 
                 {{~#if quem_somos}}
                   active
                 {{/if}}
-             " href="/quem-somos"> Quem Somos?
-            </a>
+            ">Quem Somos?</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/quem-somos/comite-gestor">
+                Comitê Gestor
+              </a>
+              <a class="dropdown-item" href="/quem-somos/membros">
+                Membros
+              </a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link 
@@ -36,14 +43,6 @@
                   active
                 {{/if}}
              " href="/documentos"> Documentos
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link 
-                {{~#if contato}}
-                  active
-                {{/if}}
-             " href="/contato"> Contato
             </a>
           </li>
         </ul>

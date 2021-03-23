@@ -8,12 +8,22 @@ exports.index = function(req, res) {
     ) 
 };
 
-exports.sobre = function(req, res){ 
-    res.render('giec/sobre', 
+exports.eventos = function(req, res){ 
+    res.render('giec/eventos', 
         {
             layout: 'giec/layout',
-            sobre: true,
-            titulo: "Sobre"
+            eventos: true,
+            titulo: "Eventos"
+        }
+    ) 
+};
+
+exports.documentos = function(req, res){ 
+    res.render('giec/documentos', 
+        {
+            layout: 'giec/layout',
+            documentos: true,
+            titulo: "Documentos"
         }
     ) 
 };
