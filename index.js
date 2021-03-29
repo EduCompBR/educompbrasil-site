@@ -70,7 +70,16 @@ app.get('/simposio/2021/programacao/esquenta/1', (req, res) => {
         {
             layout: 'simposio/2021/pt-BR/layout', 
             prog: true,
-            titulo: 'Esquenta'
+            titulo: 'Esquenta I'
+        }
+    ) 
+})
+app.get('/simposio/2021/programacao/esquenta/2', (req, res) => { 
+    res.render('simposio/2021/pt-BR/programacao/esquenta/segundo', 
+        {
+            layout: 'simposio/2021/pt-BR/layout', 
+            prog: true,
+            titulo: 'Esquenta II'
         }
     ) 
 })
