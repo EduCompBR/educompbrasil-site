@@ -1,0 +1,27 @@
+  {{> simposio/2021/pt-BR/headerInterno}}
+
+  <section id="datas" style="background-color:rgb(221, 232, 243);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 style="margin-top: -6rem;">
+            Certificados do Esquenta 1 EduComp <br>
+            <small class="text-muted">(27 de março de 2021)</small>
+          </h2> 
+          <br>
+          <h3>Validar certificado: </h3>
+          <br>
+          <form method="POST" action="/simposio/2021/certificados/esquenta/1/validar">
+            <p> <a href="/simposio/2021/certificados/esquenta/1/formvalidar" class="btn btn-primary btn-lg" style="width: 100px;">Validar</a> </p>
+            {{#if result}}                       
+                <div class="alert alert-success">O certificado é válido para o evento: Educomp esquenta 1, ocorrido em 27/03/2021</div>
+            {{else}}
+                <div class="alert alert-danger">Não é válido para o evento: Educomp esquenta 1</div>
+            {{/if}}
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
