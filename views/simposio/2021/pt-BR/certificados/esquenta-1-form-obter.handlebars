@@ -1,4 +1,4 @@
-  {{> simposio/2021/pt-BR/headerInterno}}
+   {{> simposio/2021/pt-BR/headerInterno}}
 
   <section id="datas" style="background-color:rgb(221, 232, 243);">
     <div class="container">
@@ -16,9 +16,14 @@
                 <label for="email1">Email usado na inscrição:</label>
                 <input type="email" class="form-control" name="email" id="email">
             </div>
-            <p> <input type="submit" value="Obter" class="btn btn-primary btn-lg" style="width: 150px;" /> 
+            <p> <input type="submit" value="Obter" class="btn btn-primary btn-lg" style="width: 150px;" /> </p> 
+
+            {{#if email}}
+              <a href='#'>Download certificado</a>
+            {{/if}}
+
             {{#if emailnaoencontrado}}
-                <div class="alert alert-danger">Email não encontrado em nossa base.</div>              
+              <div class="alert alert-danger">Email não encontrado em nossa base.</div>              
             {{/if}}
           </form>
         </div>

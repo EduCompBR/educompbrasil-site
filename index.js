@@ -88,21 +88,17 @@ app.get('/en-US/symposium/2021/contact', educomp_2021_en_us_main.contact)
 app.get('/en-US/symposium/2021/forlic', educomp_2021_en_us_main.forlic)
 
 app.get('/simposio/2021/certificados/esquenta/1', educomp_2021_certificados.esquenta1CertificadoOpcoes)
-app.get('/simposio/2021/certificados/esquenta/1/formobter', educomp_2021_certificados.esquenta1Certificado)
+app.get('/simposio/2021/certificados/esquenta/1/obter', educomp_2021_certificados.esquenta1Certificado)
 app.post('/simposio/2021/certificados/esquenta/1/obter', educomp_2021_certificados.obterEsquenta1)
-app.get('/simposio/2021/certificados/esquenta/1/formvalidar', educomp_2021_certificados.esquenta1FormValidar)
+app.get('/simposio/2021/certificados/esquenta/1/obter/arquivo/:tipo/:email', educomp_2021_certificados.obterArquivoEsquenta1)
+app.get('/simposio/2021/certificados/esquenta/1/validar', educomp_2021_certificados.esquenta1FormValidar)
 app.post('/simposio/2021/certificados/esquenta/1/validar', educomp_2021_certificados.validarEsquenta1)
 app.get('/simposio/2021/certificados/esquenta/1/resultado/:result', educomp_2021_certificados.validarEsquenta1Resultado)
 
-
 app.get('/simposio/2021/certificados/esquenta/2/:encontrado', educomp_2021_certificados.esquenta2Certificado)
 app.get('/simposio/2021/certificados/educomp/:encontrado', educomp_2021_certificados.educompCertificado)
-
-
 app.post('/simposio/2021/certificados/esquenta/2/obter', educomp_2021_certificados.obterEsquenta2)
 app.post('/simposio/2021/certificados/educomp/obter', educomp_2021_certificados.obterEducomp)
-
-app.get('/simposio/2021/certificados/esquenta/1/validar', educomp_2021_certificados.validarEsquenta1)
 app.post('/simposio/2021/certificados/esquenta/2/validar', educomp_2021_certificados.validarEsquenta2)
 app.post('/simposio/2021/certificados/educomp/validar', educomp_2021_certificados.validarEducomp)
 
