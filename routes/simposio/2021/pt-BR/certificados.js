@@ -39,9 +39,9 @@ exports.obterEsquenta1 = async function (req, res) {
         let rowsOrganizacao = await doc.sheetsByTitle['organizacao'].getRows()
         let rowsComitePrograma = await doc.sheetsByTitle['comite_programa'].getRows()
         let rowsPalestra = await doc.sheetsByTitle['palestra'].getRows()
-        // let rowsSessaoTecnicaApres = await doc.sheetsByTitle['sessao_tecnica_apres'].getRows()
-        // let rowsSessaoTecnicaCoord = await doc.sheetsByTitle['sessao_tecnica_coord'].getRows()
-        // let rowsAberturaEncerramento = await doc.sheetsByTitle['abertura_encerramento'].getRows()
+        let rowsSessaoTecnicaApres = await doc.sheetsByTitle['sessao-tecnica-apres'].getRows()
+        let rowsSessaoTecnicaCoord = await doc.sheetsByTitle['sessao-tecnica-coord'].getRows()
+        let rowsAberturaEncerramento = await doc.sheetsByTitle['abertura-encerramento'].getRows()
 
         let participacao = false 
         let organizacao = false
@@ -75,37 +75,42 @@ exports.obterEsquenta1 = async function (req, res) {
             }
         })
 
-        // rowsSessaoTecnicaApres.forEach( (element) => {
-        //     if (element.email === req.body.email) {
-        //         sessao_tecnica_apres = true
-        //     }
-        // })
+        rowsSessaoTecnicaApres.forEach( (element) => {
+            if (element.email === req.body.email) {
+                sessao_tecnica_apres = true
+            }
+        })
 
-        // rowsSessaoTecnicaCoord.forEach( (element) => {
-        //     if (element.email === req.body.email) {
-        //         sessao_tecnica_coord = true
-        //     }
-        // })
+        rowsSessaoTecnicaCoord.forEach( (element) => {
+            if (element.email === req.body.email) {
+                sessao_tecnica_coord = true
+            }
+        })
 
-        // rowsAberturaEncerramento.forEach( (element) => {
-        //     if (element.email === req.body.email) {
-        //         abertura_encerramento = true
-        //     }
-        // })
+        rowsAberturaEncerramento.forEach( (element) => {
+            if (element.email === req.body.email) {
+                abertura_encerramento = true
+            }
+        })
 
         res.render('simposio/2021/pt-BR/certificados/esquenta-1-obter-lista',
             {
                 layout: 'simposio/2021/pt-BR/layout', 
                 certificado: true,
                 titulo: 'Certificado', 
+                email: req.body.email,
                 participacao: participacao,
                 organizacao: organizacao,
                 comite_programa: comite_programa,
                 palestra: palestra,
+                sessao_tecnica_apres: sessao_tecnica_apres,
+                sessao_tecnica_coord: sessao_tecnica_coord,
+                abertura_encerramento: abertura_encerramento,
             }
         )
 
     } catch (error) {
+        console.log(error)
         res.render('simposio/2021/pt-BR/certificados/esquenta-1-obter-lista',
                 {
                     layout: 'simposio/2021/pt-BR/layout', 
@@ -131,7 +136,7 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
         console.log(req.params.email)
         if (req.params.tipo) {
             let rows = await doc.sheetsByTitle[req.params.tipo].getRows()
-            let encontrado = -1
+            var encontrado = -1
             let posicao = -1
             rows.forEach( (element, index) => {
                 if (element.email === req.params.email){
@@ -200,7 +205,7 @@ exports.validarEsquenta1 = async function (req, res) {
         await doc.loadInfo()
         const sheet = doc.sheetsByTitle['participacao']
         const rows = await sheet.getRows()
-        let encontrado = -1
+        var encontrado = -1
         let posicao = -1
         console.log(req.body.codigo)
         rows.forEach( (element, index) => {
