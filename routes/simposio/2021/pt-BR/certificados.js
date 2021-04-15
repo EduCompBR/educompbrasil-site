@@ -150,19 +150,30 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
                     layout: 'landscape',  
                     size: [540, 800],               
                 })
-                doc.image('./certificado-esquenta.png', 0, 0,{
+                doc.image('resources/certificados/modelos/certificado-esquenta.png', 0, 0,{
                     fit: [800, 600],
 
                 })
                 doc.fontSize(18)
-                doc.font('./trebuc.ttf')
+                doc.font('resources/fonts/trebuc.ttf')
                 let nome = rows[posicao].nome_completo
                 let codigo = rows[posicao].codigo
+                let funcao = ''
+                if (rows[posicao].funcao) funcao = rows[posicao].funcao
+                let titulo = ''
+                if (rows[posicao].titulo) titulo = rows[posicao].titulo
+                let tipo = ''
+                if (rows[posicao].tipo) tipo = rows[posicao].tipo
                 nome = nome.toUpperCase()
-                doc.text(`Certificamos para os devidos fins que ${nome} participou do evento preparatório Esquenta EduComp (Simpósio Brasileiro de Educação em Computação) no dia 27 de fevereiro de 2021 com a carga horária de 03 (três) horas.`, 150, 275, {width: 500, align: 'justify', continued: true}).fontSize(10).text(`Pode ser verificado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 375, {width: 600, align: 'justify'})
+                let textoBase = rows[0].texto_base
+                let novoTextoBase = textoBase.replace('${nome_completo}', nome)
+                novoTextoBase = novoTextoBase.replace('${funcao}', funcao)
+                novoTextoBase = novoTextoBase.replace('${titulo}', titulo)
+                novoTextoBase = novoTextoBase.replace('${tipo}', tipo)
+                doc.text(novoTextoBase, 150, 275, {width: 500, align: 'justify', continued: true}).fontSize(10).text(`Pode ser verificado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 375, {width: 600, align: 'left'})
                 doc.end()
-                doc.pipe(fs.createWriteStream('certificado.pdf')).on('finish', () => {
-                    res.download('./certificado.pdf')
+                doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado${codigo}.pdf`)).on('finish', () => {
+                    res.download(`resources/certificados/gerados/certificado${codigo}.pdf`)
                 })    
             } else {
                 res.render('simposio/2021/pt-BR/certificados/esquenta-1-obter-lista',
@@ -179,6 +190,13 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
     }
     catch(error) {
         console.log('Erro ao gerar arquivo pdf' + error)
+        res.render('simposio/2021/pt-BR/certificados/esquenta-1-obter-lista',
+            {
+                layout: 'simposio/2021/pt-BR/layout', 
+                certificado: true,
+                titulo: 'Certificado',  
+            }
+        )
     }
 }
 
