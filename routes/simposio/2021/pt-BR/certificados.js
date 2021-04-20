@@ -43,55 +43,96 @@ exports.obterEsquenta1 = async function (req, res) {
         let rowsSessaoTecnicaCoord = await doc.sheetsByTitle['sessao-tecnica-coord'].getRows()
         let rowsAberturaEncerramento = await doc.sheetsByTitle['abertura-encerramento'].getRows()
 
-        let participacao = false 
-        let organizacao = false
-        let comite_programa = false
-        let palestra = false
-        let sessao_tecnica_apres = false
-        let sessao_tecnica_coord = false
-        let abertura_encerramento = false
+        let plans = []
 
+        let organizacao = {}
+        let participacao = {}
+        let comite_programa = {}
+        let palestra = {}
+        let sessao_tecnica_apres = {}
+        let sessao_tecnica_coord = {}
+        let abertura_encerramento = {}
+
+        participacao.nome = 'Participação'
+        participacao.textoBase = ''
+        participacao.registros = []
         rowsParticipacao.forEach( (element) => {
             if (element.email === req.body.email) {
-                participacao = true
+                participacao.push(
+                    { 
+                        'email': element.email,
+                        'nome_completo': element.nome_completo,
+                        'funcao': element.funcao,
+                        'codigo': element.codigo,
+                    }
+                )
             }
         })
-
+        plans.push( participacao )
+        
+        organizacao.nome = 'Organização'
+        organizacao.textoBase = ''
+        organizacao.registros = []
         rowsOrganizacao.forEach( (element) => {
             if (element.email === req.body.email) {
-                organizacao = true
+                organizacao.registros.push(
+                    { 
+                        'email': element.email,
+                        'nome_completo': element.nome_completo,
+                        'funcao': element.funcao,
+                        'codigo': element.codigo,
+                    }
+                )
             }
         })
+        plans.push( organizacao )
 
+        comite_programa.nome = 'Comitê de Programa'
+        comite_programa.textoBase = ''
+        comite_programa.registros = []
         rowsComitePrograma.forEach( (element) => {
             if (element.email === req.body.email) {
-                comite_programa = true
+                comite_programa.registros.push(
+                    { 
+                        'email': element.email,
+                        'nome_completo': element.nome_completo,
+                        'funcao': element.funcao,
+                        'codigo': element.codigo,
+                    }
+                )
             }
         })
+        plans.push(comite_programa)
 
         rowsPalestra.forEach( (element) => {
             if (element.email === req.body.email) {
-                palestra = true
+                //palestra.push(element)
             }
         })
+        plans.push(palestra)
 
         rowsSessaoTecnicaApres.forEach( (element) => {
             if (element.email === req.body.email) {
-                sessao_tecnica_apres = true
+                //sessao_tecnica_apres.push(element)
             }
         })
+        plans.push(sessao_tecnica_apres)
 
         rowsSessaoTecnicaCoord.forEach( (element) => {
             if (element.email === req.body.email) {
-                sessao_tecnica_coord = true
+                //sessao_tecnica_coord.push(element)
             }
         })
+        plans.push(sessao_tecnica_coord)
 
         rowsAberturaEncerramento.forEach( (element) => {
             if (element.email === req.body.email) {
-                abertura_encerramento = true
+                //abertura_encerramento.push(element)
             }
         })
+        plans.push(abertura_encerramento)
+
+        console.log(plans)
 
         res.render('simposio/2021/pt-BR/certificados/esquenta-1-obter-lista',
             {
@@ -99,13 +140,7 @@ exports.obterEsquenta1 = async function (req, res) {
                 certificado: true,
                 titulo: 'Certificado', 
                 email: req.body.email,
-                participacao: participacao,
-                organizacao: organizacao,
-                comite_programa: comite_programa,
-                palestra: palestra,
-                sessao_tecnica_apres: sessao_tecnica_apres,
-                sessao_tecnica_coord: sessao_tecnica_coord,
-                abertura_encerramento: abertura_encerramento,
+                data: plans,
             }
         )
 
@@ -136,55 +171,86 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
         console.log(req.params.email)
         if (req.params.tipo) {
             let rows = await doc.sheetsByTitle[req.params.tipo].getRows()
-            var encontrado = -1
-            let posicao = -1
+            
+
             rows.forEach( (element, index) => {
                 if (element.email === req.params.email){
-                    encontrado = 1
-                    posicao = index
+                    console.log('Gerando certificado, pode conter várias páginas...')
+                    const doc = new PDFDocument({                
+                        layout: 'landscape',  
+                        size: [540, 800],               
+                    })
+                    doc.image('resources/certificados/modelos/certificado-esquenta.png', 0, 0,{
+                        fit: [800, 600],
+
+                    })
+                    doc.fontSize(18)
+                    doc.font('resources/fonts/trebuc.ttf')
+                    let nome = rows[posicao].nome_completo
+                    let codigo = rows[posicao].codigo
+                    let funcao = ''
+                    if (rows[posicao].funcao) funcao = rows[posicao].funcao
+                    let titulo = ''
+                    if (rows[posicao].titulo) titulo = rows[posicao].titulo
+                    let tipo = ''
+                    if (rows[posicao].tipo) tipo = rows[posicao].tipo
+                    nome = nome.toUpperCase()
+                    let textoBase = rows[0].texto_base
+                    let novoTextoBase = textoBase.replace('${nome_completo}', nome)
+                    novoTextoBase = novoTextoBase.replace('${funcao}', funcao)
+                    novoTextoBase = novoTextoBase.replace('${titulo}', titulo)
+                    novoTextoBase = novoTextoBase.replace('${tipo}', tipo)
+                    doc.text(novoTextoBase, 150, 275, {width: 500, align: 'justify', continued: true}).fontSize(10).text(`Pode ser verificado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 375, {width: 600, align: 'left'})
+                    doc.end()
+                    doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado${codigo}.pdf`)).on('finish', () => {
+                        res.download(`resources/certificados/gerados/certificado${codigo}.pdf`)
+                    })
                 }
             })
-            if (posicao !== -1) {
-                console.log('Usuário encontrado, gerando certificado...')
-                const doc = new PDFDocument({                
-                    layout: 'landscape',  
-                    size: [540, 800],               
-                })
-                doc.image('resources/certificados/modelos/certificado-esquenta.png', 0, 0,{
-                    fit: [800, 600],
 
-                })
-                doc.fontSize(18)
-                doc.font('resources/fonts/trebuc.ttf')
-                let nome = rows[posicao].nome_completo
-                let codigo = rows[posicao].codigo
-                let funcao = ''
-                if (rows[posicao].funcao) funcao = rows[posicao].funcao
-                let titulo = ''
-                if (rows[posicao].titulo) titulo = rows[posicao].titulo
-                let tipo = ''
-                if (rows[posicao].tipo) tipo = rows[posicao].tipo
-                nome = nome.toUpperCase()
-                let textoBase = rows[0].texto_base
-                let novoTextoBase = textoBase.replace('${nome_completo}', nome)
-                novoTextoBase = novoTextoBase.replace('${funcao}', funcao)
-                novoTextoBase = novoTextoBase.replace('${titulo}', titulo)
-                novoTextoBase = novoTextoBase.replace('${tipo}', tipo)
-                doc.text(novoTextoBase, 150, 275, {width: 500, align: 'justify', continued: true}).fontSize(10).text(`Pode ser verificado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 375, {width: 600, align: 'left'})
-                doc.end()
-                doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado${codigo}.pdf`)).on('finish', () => {
-                    res.download(`resources/certificados/gerados/certificado${codigo}.pdf`)
-                })    
-            } else {
-                res.render('simposio/2021/pt-BR/certificados/esquenta-1-obter-lista',
-                    {
-                        layout: 'simposio/2021/pt-BR/layout', 
-                        certificado: true,
-                        titulo: 'Certificado',  
-                    }
-                )
 
-            }
+            // if (posicao !== -1 ) {
+            //     console.log('Usuário encontrado, gerando certificado...')
+            //     const doc = new PDFDocument({                
+            //         layout: 'landscape',  
+            //         size: [540, 800],               
+            //     })
+            //     doc.image('resources/certificados/modelos/certificado-esquenta.png', 0, 0,{
+            //         fit: [800, 600],
+
+            //     })
+            //     doc.fontSize(18)
+            //     doc.font('resources/fonts/trebuc.ttf')
+            //     let nome = rows[posicao].nome_completo
+            //     let codigo = rows[posicao].codigo
+            //     let funcao = ''
+            //     if (rows[posicao].funcao) funcao = rows[posicao].funcao
+            //     let titulo = ''
+            //     if (rows[posicao].titulo) titulo = rows[posicao].titulo
+            //     let tipo = ''
+            //     if (rows[posicao].tipo) tipo = rows[posicao].tipo
+            //     nome = nome.toUpperCase()
+            //     let textoBase = rows[0].texto_base
+            //     let novoTextoBase = textoBase.replace('${nome_completo}', nome)
+            //     novoTextoBase = novoTextoBase.replace('${funcao}', funcao)
+            //     novoTextoBase = novoTextoBase.replace('${titulo}', titulo)
+            //     novoTextoBase = novoTextoBase.replace('${tipo}', tipo)
+            //     doc.text(novoTextoBase, 150, 275, {width: 500, align: 'justify', continued: true}).fontSize(10).text(`Pode ser verificado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 375, {width: 600, align: 'left'})
+            //     doc.end()
+            //     doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado${codigo}.pdf`)).on('finish', () => {
+            //         res.download(`resources/certificados/gerados/certificado${codigo}.pdf`)
+            //     })  
+
+            // } else {
+            //     res.render('simposio/2021/pt-BR/certificados/esquenta-1-obter-lista',
+            //         {
+            //             layout: 'simposio/2021/pt-BR/layout', 
+            //             certificado: true,
+            //             titulo: 'Certificado',  
+            //         }
+            //     )
+
+            // }
         }
 
     }
