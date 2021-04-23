@@ -231,8 +231,16 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
                 if (element.email === email && element.funcao === funcao) {
                     posicao = index
                 }
-            } else if (atividade === 'sessao-tecnica-apresentacao') {
+            } else if (atividade === 'sessao-tecnica-apres') {
                 if (element.email === email && element.titulo === titulo) {
+                    posicao = index
+                }
+            } else if (atividade === 'sessao-tecnica-coord') {
+                if (element.email === email) {
+                    posicao = index
+                }
+            } else if (atividade === 'abertura-encerramento') {
+                if (element.email === email && element.tipo === tipo) {
                     posicao = index
                 }
             }
@@ -276,6 +284,7 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
                 layout: 'simposio/2021/pt-BR/layout', 
                 certificado: true,
                 titulo: 'Certificado',  
+                mensagem: 'Erro ao buscar certificado. Entre em contato com a organização'
             }
         )
     }

@@ -29,19 +29,23 @@
                   {{#if palestra}}
                     <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/{{funcao}}/0/{{titulo}}' target="_blank" class="list-group-item list-group-item-primary" >{{titulo}}</a>
                   {{/if}}
-                  {{#if sessao-tecnica-apresentacao}}
+                  {{#if sessao-tecnica-apres}}
                     <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/0/0/{{titulo}}' target="_blank" class="list-group-item list-group-item-primary" >{{titulo}}</a>
                   {{/if}}
-                  {{#if sessao-tecnica-coordenacao}}
+                  {{#if sessao-tecnica-coord}}
                     <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/0/0/0' target="_blank" class="list-group-item list-group-item-primary" >Sessão técnica - coordenação</a>
                   {{/if}}
                   {{#if abertura-encerramento}}
-                    <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/0/0/{{tipo}}' target="_blank" class="list-group-item list-group-item-primary" >{{tipo}}</a>
+                    <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/0/{{tipo}}/0' target="_blank" class="list-group-item list-group-item-primary" >{{tipo}}</a>
                   {{/if}}
                 {{/each}}
               </ul>
             {{/if}}
           {{/each}}
+
+          {{#if mensagem}}
+            <div class="alert alert-danger">{{mensagem}}</div>
+          {{/if}}
 
         </div>
             {{!-- var product =
@@ -64,6 +68,12 @@
                     alert('Update Error occurred - ' + error);
                 }
             }); --}}
+
+            <script>
+              function arquivoCertificado(dados) {
+                console.log(dados)
+              }
+            </script>
       </div>
     </div>
 
