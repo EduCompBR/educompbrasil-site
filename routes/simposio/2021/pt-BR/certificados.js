@@ -269,7 +269,7 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
             novoTextoBase = novoTextoBase.replace('${titulo}', atividade)
             novoTextoBase = novoTextoBase.replace('${tipo}', tipo)
 
-            doc.text(novoTextoBase, 150, 275, {width: 500, align: 'justify', continued: true}).fontSize(8).text(`Pode ser verificado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 375, {width: 600, align: 'left'})
+            doc.text(novoTextoBase, 150, 265, {width: 500, align: 'justify', continued: true}).fontSize(10).text(`Pode ser verificado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 385, {width: 600, align: 'justify'})
             doc.end()
             doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado${codigo}.pdf`)).on('finish', () => {
                 res.download(`resources/certificados/gerados/certificado${codigo}.pdf`)
@@ -311,28 +311,48 @@ exports.validarEsquenta1 = async function (req, res) {
             private_key: process.env.GOOGLE_API_PRIVATE_KEY.replace(/\\n/g, '\n'),
         })
         await doc.loadInfo()
-        const sheet = doc.sheetsByTitle['participacao']
-        const rows = await sheet.getRows()
+        let codigo = req.body.codigo
+        console.log(codigo)
+        let finalCodigo = codigo.substring(8, 10)
+        console.log(finalCodigo)
+
+        let atividade = ''
+        const planCodigos = await doc.sheetsByTitle['codigos-limpos'].getRows()
+        planCodigos.forEach( (element) => {
+            console.log('Elemento e código: ', element.codigo, codigo)
+            if (element.codigo === finalCodigo)
+                atividade = element.titulo
+        })
+        
+        console.log(atividade)
+        console.log(finalCodigo)
+        const rows = await doc.sheetsByTitle[atividade].getRows()
+        //const rows = await sheet.getRows()
         var encontrado = -1
         let posicao = -1
-        console.log(req.body.codigo)
         rows.forEach( (element, index) => {
             //console.log(element.Email)
-            if (element.Codigo === req.body.codigo){
+            if (element.codigo === codigo){
                 encontrado = 1
                 posicao = index
             }
         })
         if (posicao !== -1) {
             console.log('Usuário encontrado, validando...')
-            let nome = rows[posicao].Nome_completo
-            let codigo = rows[posicao].Codigo   
+            // let nome = rows[posicao].Nome_completo
+            // let codigo = rows[posicao].Codigo   
             res.redirect('/simposio/2021/certificados/esquenta/1/resultado/valido')
         } else {
             res.redirect('/simposio/2021/certificados/esquenta/1/resultado/naovalido')
         }
     } catch (error) {
-        console.log(error)
+        res.render('simposio/2021/pt-BR/certificados/esquenta-1-form-validar', 
+        {
+            layout: 'simposio/2021/pt-BR/layout', 
+            certificado: true,
+            titulo: 'Certificado',            
+        }
+    ) 
     }
 
 };
@@ -342,21 +362,23 @@ exports.validarEsquenta1Resultado = function (req, res) {
     console.log(req.params.result)
     if (resultado === 'valido' ) {
         res.render('simposio/2021/pt-BR/certificados/esquenta-1-validar-resultado', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            certificado: true,
-            titulo: 'Certificado',            
-            result: true,
-        }
-        )} else {
-        res.render('simposio/2021/pt-BR/certificados/esquenta-1-form-validar', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            certificado: true,
-            titulo: 'Certificado',            
-            result: false,
-        }
-        )}
+            {
+                layout: 'simposio/2021/pt-BR/layout', 
+                certificado: true,
+                titulo: 'Certificado',            
+                result: true,
+            }
+        )
+    } else {
+        res.render('simposio/2021/pt-BR/certificados/esquenta-1-validar-resultado', 
+            {
+                layout: 'simposio/2021/pt-BR/layout', 
+                certificado: true,
+                titulo: 'Certificado',            
+                result: false,
+            }
+        )
+    }
 } 
 
 //form do esquenta 2
