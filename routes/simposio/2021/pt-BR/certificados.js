@@ -45,8 +45,8 @@ exports.obterEsquenta1 = async function (req, res) {
 
         let plans = []
 
-        let organizacao = {}
         let participacao = {}
+        let organizacao = {}
         let comite_programa = {}
         let palestra = {}
         let sessao_tecnica_apres = {}
@@ -54,16 +54,14 @@ exports.obterEsquenta1 = async function (req, res) {
         let abertura_encerramento = {}
 
         participacao.nome = 'Participação'
-        participacao.textoBase = ''
         participacao.registros = []
         rowsParticipacao.forEach( (element) => {
             if (element.email === req.body.email) {
-                participacao.push(
+                participacao.registros.push(
                     { 
-                        'email': element.email,
-                        'nome_completo': element.nome_completo,
-                        'funcao': element.funcao,
-                        'codigo': element.codigo,
+                        'email': element.email,                        
+                        'atividade': 'participacao',
+                        'participacao': true,
                     }
                 )
             }
@@ -71,16 +69,15 @@ exports.obterEsquenta1 = async function (req, res) {
         plans.push( participacao )
         
         organizacao.nome = 'Organização'
-        organizacao.textoBase = ''
         organizacao.registros = []
         rowsOrganizacao.forEach( (element) => {
             if (element.email === req.body.email) {
                 organizacao.registros.push(
                     { 
                         'email': element.email,
-                        'nome_completo': element.nome_completo,
-                        'funcao': element.funcao,
-                        'codigo': element.codigo,
+                        'funcao': element.funcao,                
+                        'atividade': 'organizacao',
+                        'organizacao': true,
                     }
                 )
             }
@@ -88,46 +85,81 @@ exports.obterEsquenta1 = async function (req, res) {
         plans.push( organizacao )
 
         comite_programa.nome = 'Comitê de Programa'
-        comite_programa.textoBase = ''
         comite_programa.registros = []
         rowsComitePrograma.forEach( (element) => {
             if (element.email === req.body.email) {
                 comite_programa.registros.push(
                     { 
-                        'email': element.email,
-                        'nome_completo': element.nome_completo,
-                        'funcao': element.funcao,
-                        'codigo': element.codigo,
+                        'email': element.email,                        
+                        'funcao': element.funcao,                        
+                        'atividade': 'comite_programa',
+                        'comite_programa': true,
                     }
                 )
             }
         })
         plans.push(comite_programa)
 
+        palestra.nome = 'Palestra'
+        palestra.registros = []
         rowsPalestra.forEach( (element) => {
             if (element.email === req.body.email) {
-                //palestra.push(element)
+                palestra.registros.push(
+                    { 
+                        'email': element.email,
+                        'funcao': element.funcao,
+                        'titulo': element.titulo,
+                        'atividade': 'palestra',
+                        'palestra': true,
+                    }
+                )
             }
         })
         plans.push(palestra)
 
+        sessao_tecnica_apres.nome = 'Sessão técnica - apresentação'        
+        sessao_tecnica_apres.registros = []
         rowsSessaoTecnicaApres.forEach( (element) => {
             if (element.email === req.body.email) {
-                //sessao_tecnica_apres.push(element)
+                sessao_tecnica_apres.registros.push(
+                    { 
+                        'email': element.email,                        
+                        'titulo': element.titulo,                        
+                        'atividade': 'sessao-tecnica-apres',
+                        'sessao-tecnica-apres': true,
+                    }
+                )
             }
         })
         plans.push(sessao_tecnica_apres)
 
+        sessao_tecnica_coord.nome = 'Sessão técnica - coordenação'
+        sessao_tecnica_coord.registros = []
         rowsSessaoTecnicaCoord.forEach( (element) => {
             if (element.email === req.body.email) {
-                //sessao_tecnica_coord.push(element)
+                sessao_tecnica_coord.registros.push(
+                    { 
+                        'email': element.email,                                                
+                        'atividade': 'sessao-tecnica-coord',
+                        'sessao-tecnica-coord': true,
+                    }
+                )
             }
         })
         plans.push(sessao_tecnica_coord)
 
+        abertura_encerramento.nome = 'Abertura - Encerramento'
+        abertura_encerramento.registros = []
         rowsAberturaEncerramento.forEach( (element) => {
             if (element.email === req.body.email) {
-                //abertura_encerramento.push(element)
+                abertura_encerramento.registros.push(
+                    { 
+                        'email': element.email,
+                        'tipo': element.tipo,
+                        'atividade': 'abertura-encerramento',
+                        'abertura-encerramento': true,
+                    }
+                )
             }
         })
         plans.push(abertura_encerramento)
@@ -160,98 +192,81 @@ exports.obterEsquenta1 = async function (req, res) {
 //obter arquivo específico de certificado
 exports.obterArquivoEsquenta1 = async function (req, res) {
     try{
-        console.log('Teste certificado')
-        const doc = new GoogleSpreadsheet('1bOIjyqdNo2x5TkhNPNPid2FFD1JkQeb24R1izWilh2E')
-        await doc.useServiceAccountAuth({
+        console.log('Gerando arquivo específico do certificado')
+
+        let atividade = req.params.atividade
+        let email = req.params.email
+        let funcao = req.params.funcao
+        let tipo = req.params.tipo
+        let titulo = req.params.titulo 
+        let textoBase = ''
+        let nome = ''
+        let codigo = ''
+        console.log(atividade, email, funcao, tipo, titulo)
+
+        const sheets = new GoogleSpreadsheet('1bOIjyqdNo2x5TkhNPNPid2FFD1JkQeb24R1izWilh2E')
+        await sheets.useServiceAccountAuth({
             client_email: process.env.GOOGLE_API_CLIENT_EMAIL,
             private_key: process.env.GOOGLE_API_PRIVATE_KEY.replace(/\\n/g, '\n'),
         })
-        await doc.loadInfo()
-        console.log(req.params.tipo)
-        console.log(req.params.email)
-        if (req.params.tipo) {
-            let rows = await doc.sheetsByTitle[req.params.tipo].getRows()
-            
 
-            rows.forEach( (element, index) => {
-                if (element.email === req.params.email){
-                    console.log('Gerando certificado, pode conter várias páginas...')
-                    const doc = new PDFDocument({                
-                        layout: 'landscape',  
-                        size: [540, 800],               
-                    })
-                    doc.image('resources/certificados/modelos/certificado-esquenta.png', 0, 0,{
-                        fit: [800, 600],
+        await sheets.loadInfo()
+        let posicao = -1
 
-                    })
-                    doc.fontSize(18)
-                    doc.font('resources/fonts/trebuc.ttf')
-                    let nome = rows[posicao].nome_completo
-                    let codigo = rows[posicao].codigo
-                    let funcao = ''
-                    if (rows[posicao].funcao) funcao = rows[posicao].funcao
-                    let titulo = ''
-                    if (rows[posicao].titulo) titulo = rows[posicao].titulo
-                    let tipo = ''
-                    if (rows[posicao].tipo) tipo = rows[posicao].tipo
-                    nome = nome.toUpperCase()
-                    let textoBase = rows[0].texto_base
-                    let novoTextoBase = textoBase.replace('${nome_completo}', nome)
-                    novoTextoBase = novoTextoBase.replace('${funcao}', funcao)
-                    novoTextoBase = novoTextoBase.replace('${titulo}', titulo)
-                    novoTextoBase = novoTextoBase.replace('${tipo}', tipo)
-                    doc.text(novoTextoBase, 150, 275, {width: 500, align: 'justify', continued: true}).fontSize(10).text(`Pode ser verificado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 375, {width: 600, align: 'left'})
-                    doc.end()
-                    doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado${codigo}.pdf`)).on('finish', () => {
-                        res.download(`resources/certificados/gerados/certificado${codigo}.pdf`)
-                    })
+        const rows = await sheets.sheetsByTitle[atividade].getRows()
+        rows.forEach( (element, index) => {
+            if (atividade === 'participacao') {
+                if (element.email === email) {
+                    posicao = index
                 }
+            } else if (atividade === 'organizacao') {
+                if (element.email === email && element.funcao === funcao) {
+                    posicao = index
+                }
+            } else if (atividade === 'comite_programa') {
+                if (element.email === email && element.funcao === funcao) {
+                    posicao = index
+                }
+            } else if (atividade === 'palestra') {
+                if (element.email === email && element.funcao === funcao) {
+                    posicao = index
+                }
+            } else if (atividade === 'sessao-tecnica-apresentacao') {
+                if (element.email === email && element.titulo === titulo) {
+                    posicao = index
+                }
+            }
+        })
+
+        if ( posicao !== -1 ) {
+            const doc = new PDFDocument({                
+                layout: 'landscape',  
+                size: [540, 800],               
             })
+            doc.image('resources/certificados/modelos/certificado-esquenta.png', 0, 0,{
+                fit: [800, 600],
+            })
+            doc.fontSize(18)
+            doc.font('resources/fonts/trebuc.ttf')
 
+            if (rows[posicao].funcao) funcao = rows[posicao].funcao
+            if (rows[posicao].titulo) titulo = rows[posicao].titulo
+            if (rows[posicao].tipo) tipo = rows[posicao].tipo
+            if (rows[posicao].nome_completo) nome = rows[posicao].nome_completo
+            if (rows[posicao].codigo) codigo = rows[posicao].codigo
+            nome = nome.toUpperCase()
+            textoBase = rows[0].texto_base
+            let novoTextoBase = textoBase.replace('${nome_completo}', nome)
+            novoTextoBase = novoTextoBase.replace('${funcao}', funcao)
+            novoTextoBase = novoTextoBase.replace('${titulo}', atividade)
+            novoTextoBase = novoTextoBase.replace('${tipo}', tipo)
 
-            // if (posicao !== -1 ) {
-            //     console.log('Usuário encontrado, gerando certificado...')
-            //     const doc = new PDFDocument({                
-            //         layout: 'landscape',  
-            //         size: [540, 800],               
-            //     })
-            //     doc.image('resources/certificados/modelos/certificado-esquenta.png', 0, 0,{
-            //         fit: [800, 600],
-
-            //     })
-            //     doc.fontSize(18)
-            //     doc.font('resources/fonts/trebuc.ttf')
-            //     let nome = rows[posicao].nome_completo
-            //     let codigo = rows[posicao].codigo
-            //     let funcao = ''
-            //     if (rows[posicao].funcao) funcao = rows[posicao].funcao
-            //     let titulo = ''
-            //     if (rows[posicao].titulo) titulo = rows[posicao].titulo
-            //     let tipo = ''
-            //     if (rows[posicao].tipo) tipo = rows[posicao].tipo
-            //     nome = nome.toUpperCase()
-            //     let textoBase = rows[0].texto_base
-            //     let novoTextoBase = textoBase.replace('${nome_completo}', nome)
-            //     novoTextoBase = novoTextoBase.replace('${funcao}', funcao)
-            //     novoTextoBase = novoTextoBase.replace('${titulo}', titulo)
-            //     novoTextoBase = novoTextoBase.replace('${tipo}', tipo)
-            //     doc.text(novoTextoBase, 150, 275, {width: 500, align: 'justify', continued: true}).fontSize(10).text(`Pode ser verificado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 375, {width: 600, align: 'left'})
-            //     doc.end()
-            //     doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado${codigo}.pdf`)).on('finish', () => {
-            //         res.download(`resources/certificados/gerados/certificado${codigo}.pdf`)
-            //     })  
-
-            // } else {
-            //     res.render('simposio/2021/pt-BR/certificados/esquenta-1-obter-lista',
-            //         {
-            //             layout: 'simposio/2021/pt-BR/layout', 
-            //             certificado: true,
-            //             titulo: 'Certificado',  
-            //         }
-            //     )
-
-            // }
-        }
+            doc.text(novoTextoBase, 150, 275, {width: 500, align: 'justify', continued: true}).fontSize(8).text(`Pode ser verificado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 375, {width: 600, align: 'left'})
+            doc.end()
+            doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado${codigo}.pdf`)).on('finish', () => {
+                res.download(`resources/certificados/gerados/certificado${codigo}.pdf`)
+            })
+        }  
 
     }
     catch(error) {

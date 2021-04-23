@@ -15,27 +15,56 @@
           {{#each data}}
             {{#if registros}}
               <ul class="list-group">
-                <li class="list-group-item disable" style="font-size: x-large;">{{nome}}</li>
-                {{#each registros}}
-                  <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo'  target="_blank" class="list-group-item list-group-item-action active" style="margin-bottom: 2px;" onclick="arquivoCertificado()">{{funcao}}</a>
+                <li class="list-group-item list-group-item-dark disable" style="font-size: x-large;">{{nome}}</li>
+                {{#each registros}}    
+                  {{#if participacao}}
+                    <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/0/0/0' target="_blank" class="list-group-item list-group-item-primary" >Participação</a>
+                  {{/if}}
+                  {{#if organizacao}}
+                    <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/{{funcao}}/0/0' target="_blank" class="list-group-item list-group-item-primary" >{{funcao}}</a>
+                  {{/if}}
+                  {{#if comite_programa}}
+                    <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/{{funcao}}/0/0' target="_blank" class="list-group-item list-group-item-primary" >{{funcao}}</a>
+                  {{/if}}
+                  {{#if palestra}}
+                    <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/{{funcao}}/0/{{titulo}}' target="_blank" class="list-group-item list-group-item-primary" >{{titulo}}</a>
+                  {{/if}}
+                  {{#if sessao-tecnica-apresentacao}}
+                    <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/0/0/{{titulo}}' target="_blank" class="list-group-item list-group-item-primary" >{{titulo}}</a>
+                  {{/if}}
+                  {{#if sessao-tecnica-coordenacao}}
+                    <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/0/0/0' target="_blank" class="list-group-item list-group-item-primary" >Sessão técnica - coordenação</a>
+                  {{/if}}
+                  {{#if abertura-encerramento}}
+                    <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/0/0/{{tipo}}' target="_blank" class="list-group-item list-group-item-primary" >{{tipo}}</a>
+                  {{/if}}
                 {{/each}}
               </ul>
             {{/if}}
           {{/each}}
 
-          {{!-- {{#if abartura_fechamento}}
-            <p> <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/abertura-fechamento/{{email}}' target="_blank" class="btn btn-primary btn-lg" style="width: 250px;">Abertura fechamento</a> </p>
-          {{/if}} --}}
         </div>
+            {{!-- var product =
+                JSON.stringify({
+                    productGroup: "Fablet",
+                    productId: 1,
+                    productName: "Lumia 1525 64 GB",
+                    sellingPrice: 700
+                });
+
+            $.ajax({
+                URL: 'http://localhost/api/Products',
+                type: 'POST',
+                contentType: 'application/json',
+                data: product,
+                success: function (data, status, xhr) {
+                    alert('Success!');
+                },
+                error: function (xhr, status, error) {
+                    alert('Update Error occurred - ' + error);
+                }
+            }); --}}
       </div>
     </div>
-
-    <script>
-      function arquivoCertificado() {
-        console.log('Arquivo certificado')
-        let url = '/simposio/2021/certificados/esquenta/1/obter/arquivo'
-        let data = 
-      }
-    </script>
 
   </section>
