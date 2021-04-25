@@ -11,6 +11,7 @@ const fs = require('fs')
 
 //Routes
 var educomp_2021_main = require('./routes/simposio/2021/pt-BR/main');
+var educomp_2021_trabalhos = require('./routes/simposio/2021/pt-BR/trabalhos');
 var giec_main = require('./routes/giec/main');
 var giec_quem_somos = require('./routes/giec/quem_somos');
 
@@ -35,8 +36,12 @@ app.get('/documentos', giec_main.documentos)
 
 //EduComp 2021 - pt-BR
 app.get('/simposio/2021', educomp_2021_main.index)
-app.get('/simposio/2021/topicos-de-interesse', educomp_2021_main.topicos)
 app.get('/simposio/2021/sobre', educomp_2021_main.sobre)
+
+app.get('/simposio/2021/topicos-de-interesse', educomp_2021_trabalhos.topicos)
+app.get('/simposio/2021/trabalhos', educomp_2021_trabalhos.chamada)
+app.get('/simposio/2021/trabalhos/aceitos', educomp_2021_trabalhos.aceitos)
+
 app.get('/simposio/2021/datas', (req, res) => { 
     res.render('simposio/2021/pt-BR/datas', 
         {
@@ -89,24 +94,6 @@ app.get('/simposio/2021/forlic', (req, res) => {
             layout: 'simposio/2021/pt-BR/layout', 
             forlic: true,
             titulo: 'ForLic'
-        }
-    ) 
-})
-app.get('/simposio/2021/trabalhos', (req, res) => { 
-    res.render('simposio/2021/pt-BR/trabalhos/chamada', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            trabalhos: true,
-            titulo: 'Chamada de Trabalhos'
-        }
-    ) 
-})
-app.get('/simposio/2021/trabalhos/aceitos', (req, res) => { 
-    res.render('simposio/2021/pt-BR/trabalhos/aceitos', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            trabalhos: true,
-            titulo: 'Trabalhos Aceitos'
         }
     ) 
 })

@@ -21,12 +21,20 @@
             {{/if}}
             " href="/simposio/2021/sobre">Sobre</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger 
-            {{~#if topicos}}
-              active
-            {{/if}}
-            " href="/simposio/2021/topicos-de-interesse">Tópicos</a>
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle 
+                {{~#if anais}}
+                  active
+                {{/if}}
+            ">Anais</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" target="_blank" href="https://sol.sbc.org.br/index.php/educomp">
+                Anais Completos
+              </a>
+              <a class="dropdown-item" target="_blank" href="https://sol.sbc.org.br/index.php/educomp_estendido">
+                Anais Estendidos
+              </a>
+            </div>
           </li>
           <li class="nav-item dropdown">
             <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle 
@@ -35,6 +43,9 @@
                 {{/if}}
             ">Trabalhos</a>
             <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2021/topicos-de-interesse">
+                Tópicos de Interesse
+              </a>
               <a class="dropdown-item" href="/simposio/2021/trabalhos">
                 Chamada de Trabalhos
               </a>
