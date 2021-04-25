@@ -489,5 +489,21 @@
 
   <script src="/js/prog_educomp/util.js"></script> <!-- util functions included in the CodyHouse framework -->
   <script src="/js/prog_educomp/main.js"></script>
+
+  <script>
+    
+    function filtrar(valor) {
+      var tagEm = document.getElementsByTagName('em')
+      for (var i = 0; i < tagEm.length; i++) {
+        if (!(tagEm[i].innerHTML.includes(valor)) ) {
+          console.log(tagEm[i].innerHTML)
+          tagEm[i].parentElement.style.display = 'none'
+        } else {
+          tagEm[i].parentElement.style.display = 'block'
+        }
+      }
+    }
+  </script>
+  
 </body>
 </html>

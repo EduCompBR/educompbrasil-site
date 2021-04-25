@@ -272,8 +272,12 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
             doc.text(novoTextoBase, 150, 265, {width: 500, align: 'justify', continued: true}).fontSize(10).text(`Pode ser verificado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 385, {width: 600, align: 'justify'})
             doc.end()
             doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado${codigo}.pdf`)).on('finish', () => {
-                res.download(`resources/certificados/gerados/certificado${codigo}.pdf`)
+                res.download(`resources/certificados/gerados/certificado${codigo}.pdf`, () => {
+                    fs.unlinkSync(`resources/certificados/gerados/certificado${codigo}.pdf`)
+                })
+                
             })
+            
         }  
 
     }
