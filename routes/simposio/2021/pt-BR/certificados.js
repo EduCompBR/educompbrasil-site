@@ -269,11 +269,14 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
             novoTextoBase = novoTextoBase.replace('${titulo}', atividade)
             novoTextoBase = novoTextoBase.replace('${tipo}', tipo)
 
-            doc.text(novoTextoBase, 150, 265, {width: 500, align: 'justify', continued: true}).fontSize(10).text(`Pode ser verificado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 385, {width: 600, align: 'justify'})
+            //doc.text(novoTextoBase, 150, 265, {width: 600, align: 'justify', continued: true}).fontSize(8).text(`Pode ser validado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 385, {width:600, align: 'justify'})
+            doc.text(novoTextoBase, 150, 265, {width: 500, align: 'justify'})
+            doc.fontSize(8)
+            doc.text(`Pode ser validado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 395, {width:500, align: 'left'})
             doc.end()
-            doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado${codigo}.pdf`)).on('finish', () => {
-                res.download(`resources/certificados/gerados/certificado${codigo}.pdf`, () => {
-                    fs.unlinkSync(`resources/certificados/gerados/certificado${codigo}.pdf`)
+            doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado-${codigo}.pdf`)).on('finish', () => {
+                res.download(`resources/certificados/gerados/certificado-${codigo}.pdf`, () => {
+                    fs.unlinkSync(`resources/certificados/gerados/certificado-${codigo}.pdf`)
                 })
                 
             })
