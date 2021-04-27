@@ -13,8 +13,8 @@
           <br>
           <form method="POST" action="/simposio/2021/certificados/esquenta/1/validar">
             <p> <a href="/simposio/2021/certificados/esquenta/1/validar" class="btn btn-primary btn-lg" style="width: 100px;">Validar</a> </p>
-            {{#if result}}                       
-                <div class="alert alert-success">O certificado é válido para o evento: Educomp esquenta 1, ocorrido em 27/03/2021</div>
+            {{#if dadosMensagem}}                       
+                <div class="alert alert-success">Validação: {{dadosMensagem}} </div>
             {{else}}
                 <div class="alert alert-danger">Não é válido para o evento: Educomp esquenta 1</div>
             {{/if}}

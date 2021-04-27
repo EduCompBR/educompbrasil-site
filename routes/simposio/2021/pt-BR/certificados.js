@@ -346,11 +346,32 @@ exports.validarEsquenta1 = async function (req, res) {
         })
         if (posicao !== -1) {
             console.log('Usuário encontrado, validando...')
-            // let nome = rows[posicao].Nome_completo
-            // let codigo = rows[posicao].Codigo   
-            res.redirect('/simposio/2021/certificados/esquenta/1/resultado/valido')
+            let nome = rows[posicao].nome_completo
+            //res.redirect('/simposio/2021/certificados/esquenta/1/resultado/valido')
+            let dadosMensagem = `O certificado é válido para o evento: Educomp esquenta 1, ocorrido em 27/03/2021. Participante: ${nome}`
+            if (rows[posicao].funcao){
+                dadosMensagem += ` Função: ${rows[posicao].funcao} `
+            }
+            if (rows[posicao].titulo){
+                dadosMensagem += ` Título: ${rows[posicao].titulo} `
+            }
+            if (rows[posicao].tipo){
+                dadosMensagem += ` Tipo: ${rows[posicao].tipo} `
+            }
+
+            res.render('simposio/2021/pt-BR/certificados/esquenta-1-validar-resultado', {
+                layout: 'simposio/2021/pt-BR/layout', 
+                certificado: true,
+                titulo: 'Certificado', 
+                dadosMensagem: dadosMensagem, 
+            })
         } else {
-            res.redirect('/simposio/2021/certificados/esquenta/1/resultado/naovalido')
+            res.render('simposio/2021/pt-BR/certificados/esquenta-1-validar-resultado', {
+                layout: 'simposio/2021/pt-BR/layout', 
+                certificado: true,
+                titulo: 'Certificado', 
+                dadosMensagem: false,
+            })
         }
     } catch (error) {
         res.render('simposio/2021/pt-BR/certificados/esquenta-1-form-validar', 
@@ -364,6 +385,7 @@ exports.validarEsquenta1 = async function (req, res) {
 
 };
 
+//Exibir a mensagem de resultado da validação
 exports.validarEsquenta1Resultado = function (req, res) {
     let resultado = req.params.result    
     console.log(req.params.result)
