@@ -16,7 +16,7 @@ var educomp_2021_programacao = require('./routes/simposio/2021/pt-BR/programacao
 var educomp_2021_trabalhos = require('./routes/simposio/2021/pt-BR/trabalhos');
 var educomp_2021_equipe = require('./routes/simposio/2021/pt-BR/equipe');
 var educomp_2021_criterios = require('./routes/simposio/2021/pt-BR/criterios');
-var educomp_2021_certificados = require('./routes/simposio/2021/pt-BR/certificados');
+var educomp_2021_certificados = require('./routes/simposio/2021/pt-BR/certificado/esquenta-1/index');
 var giec_quem_somos = require('./routes/giec/quem_somos');
 
 //Routes en-US

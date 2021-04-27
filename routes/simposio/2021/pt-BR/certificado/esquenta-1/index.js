@@ -348,15 +348,19 @@ exports.validarEsquenta1 = async function (req, res) {
             console.log('Usuário encontrado, validando...')
             let nome = rows[posicao].nome_completo
             //res.redirect('/simposio/2021/certificados/esquenta/1/resultado/valido')
-            let dadosMensagem = `O certificado é válido para o evento: Educomp esquenta 1, ocorrido em 27/03/2021. Participante: ${nome}`
+            let dadosMensagem = []
+            dadosMensagem.push(`CÓDIGO: ${codigo}`)
+            dadosMensagem.push("EVENTO: Esquenta EduComp 1")
+            dadosMensagem.push("DATA: 27/03/2021")
+            dadosMensagem.push(`PARTICIPANTE: ${nome}`)
             if (rows[posicao].funcao){
-                dadosMensagem += ` Função: ${rows[posicao].funcao} `
+                dadosMensagem.push(`FUNÇÃO: ${rows[posicao].funcao} `)
             }
             if (rows[posicao].titulo){
-                dadosMensagem += ` Título: ${rows[posicao].titulo} `
+                dadosMensagem.push(`TÍTULO: ${rows[posicao].titulo} `)
             }
             if (rows[posicao].tipo){
-                dadosMensagem += ` Tipo: ${rows[posicao].tipo} `
+                dadosMensagem.push(`TIPO: ${rows[posicao].tipo} `)
             }
 
             res.render('simposio/2021/pt-BR/certificados/esquenta-1-validar-resultado', {
