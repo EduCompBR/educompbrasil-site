@@ -108,6 +108,8 @@ app.get('/simposio/2021/certificados/educomp', educomp_2021_certificados_educomp
 app.get('/simposio/2021/certificados/educomp/obter', educomp_2021_certificados_educomp.educompCertificado)
 app.post('/simposio/2021/certificados/educomp/obter', educomp_2021_certificados_educomp.obterEducomp)
 app.get('/simposio/2021/certificados/educomp/obter/arquivo/:atividade/:email/:funcao/:tipo/:titulo', educomp_2021_certificados_educomp.obterArquivoEducomp)
+app.get('/simposio/2021/certificados/educomp/validar', educomp_2021_certificados_educomp.educompFormValidar)
+app.post('/simposio/2021/certificados/educomp/validar', educomp_2021_certificados_educomp.validarEducomp)
 
 
 //Envio de email

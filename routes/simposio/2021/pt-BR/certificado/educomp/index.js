@@ -298,9 +298,9 @@ exports.obterArquivoEducomp = async function (req, res) {
     }
 }
 
-//form validar do esquenta 1
-exports.esquenta1FormValidar = function (req, res) { 
-    res.render('simposio/2021/pt-BR/certificados/esquenta-1-form-validar', 
+//form validar educomp
+exports.educompFormValidar = function (req, res) { 
+    res.render('simposio/2021/pt-BR/certificados-educomp/educomp-form-validar', 
         {
             layout: 'simposio/2021/pt-BR/layout', 
             certificado: true,
@@ -309,11 +309,11 @@ exports.esquenta1FormValidar = function (req, res) {
     ) 
 };
 
-//Validação do esquenta 1
-exports.validarEsquenta1 = async function (req, res) {
+//Validação educomp
+exports.validarEducomp = async function (req, res) {
     try{
-        console.log('Teste validacao do esquenta 1')
-        const doc = new GoogleSpreadsheet('1bOIjyqdNo2x5TkhNPNPid2FFD1JkQeb24R1izWilh2E')
+        console.log('Teste validacao do educomp')
+        const doc = new GoogleSpreadsheet('1ShcIedcnFk9oiIwKo2daA6GqKVEYLlgitRNYtu3fjPM')
         await doc.useServiceAccountAuth({
             client_email: process.env.GOOGLE_API_CLIENT_EMAIL,
             private_key: process.env.GOOGLE_API_PRIVATE_KEY.replace(/\\n/g, '\n'),
@@ -321,13 +321,13 @@ exports.validarEsquenta1 = async function (req, res) {
         await doc.loadInfo()
         let codigo = req.body.codigo
         console.log(codigo)
-        let finalCodigo = codigo.substring(8, 10)
+        let finalCodigo = codigo.substring(7, 9)
         console.log(finalCodigo)
 
         let atividade = ''
         const planCodigos = await doc.sheetsByTitle['codigos-limpos'].getRows()
         planCodigos.forEach( (element) => {
-            console.log('Elemento e código: ', element.codigo, codigo)
+            console.log('Elemento e código: ', element.codigo, finalCodigo)
             if (element.codigo === finalCodigo)
                 atividade = element.titulo
         })
@@ -351,8 +351,8 @@ exports.validarEsquenta1 = async function (req, res) {
             //res.redirect('/simposio/2021/certificados/esquenta/1/resultado/valido')
             let dadosMensagem = []
             dadosMensagem.push(`CÓDIGO: ${codigo}`)
-            dadosMensagem.push("EVENTO: Esquenta EduComp 1")
-            dadosMensagem.push("DATA: 27/03/2021")
+            dadosMensagem.push("EVENTO: EduComp")
+            dadosMensagem.push("DATA: 26 a 30/04/2021")
             dadosMensagem.push(`PARTICIPANTE: ${nome}`)
             if (rows[posicao].funcao){
                 dadosMensagem.push(`FUNÇÃO: ${rows[posicao].funcao} `)
@@ -364,14 +364,14 @@ exports.validarEsquenta1 = async function (req, res) {
                 dadosMensagem.push(`TIPO: ${rows[posicao].tipo} `)
             }
 
-            res.render('simposio/2021/pt-BR/certificados/esquenta-1-validar-resultado', {
+            res.render('simposio/2021/pt-BR/certificados-educomp/educomp-validar-resultado', {
                 layout: 'simposio/2021/pt-BR/layout', 
                 certificado: true,
                 titulo: 'Certificado', 
                 dadosMensagem: dadosMensagem, 
             })
         } else {
-            res.render('simposio/2021/pt-BR/certificados/esquenta-1-validar-resultado', {
+            res.render('simposio/2021/pt-BR/certificados-educomp/educomp-validar-resultado', {
                 layout: 'simposio/2021/pt-BR/layout', 
                 certificado: true,
                 titulo: 'Certificado', 
@@ -379,7 +379,7 @@ exports.validarEsquenta1 = async function (req, res) {
             })
         }
     } catch (error) {
-        res.render('simposio/2021/pt-BR/certificados/esquenta-1-form-validar', 
+        res.render('simposio/2021/pt-BR/certificados-educomp/educomp-form-validar', 
         {
             layout: 'simposio/2021/pt-BR/layout', 
             certificado: true,
@@ -594,7 +594,7 @@ exports.validarEsquenta2 = async function (req, res) {
 
 };
 
-exports.validarEducomp = async function (req, res) {
+exports.validarEducomp2 = async function (req, res) {
     try{
         console.log('Teste validacao')
         const doc = new GoogleSpreadsheet('1bOIjyqdNo2x5TkhNPNPid2FFD1JkQeb24R1izWilh2E')
