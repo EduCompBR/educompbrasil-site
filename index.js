@@ -17,6 +17,7 @@ var educomp_2021_trabalhos = require('./routes/simposio/2021/pt-BR/trabalhos');
 var educomp_2021_equipe = require('./routes/simposio/2021/pt-BR/equipe');
 var educomp_2021_criterios = require('./routes/simposio/2021/pt-BR/criterios');
 var educomp_2021_certificados = require('./routes/simposio/2021/pt-BR/certificado/esquenta-1/index');
+var educomp_2021_certificados_educomp = require('./routes/simposio/2021/pt-BR/certificado/educomp/index');
 var giec_quem_somos = require('./routes/giec/quem_somos');
 
 //Routes en-US
@@ -95,12 +96,18 @@ app.get('/simposio/2021/certificados/esquenta/1/validar', educomp_2021_certifica
 app.post('/simposio/2021/certificados/esquenta/1/validar', educomp_2021_certificados.validarEsquenta1)
 app.get('/simposio/2021/certificados/esquenta/1/resultado/:result', educomp_2021_certificados.validarEsquenta1Resultado)
 
-app.get('/simposio/2021/certificados/esquenta/2/:encontrado', educomp_2021_certificados.esquenta2Certificado)
-app.get('/simposio/2021/certificados/educomp/:encontrado', educomp_2021_certificados.educompCertificado)
-app.post('/simposio/2021/certificados/esquenta/2/obter', educomp_2021_certificados.obterEsquenta2)
-app.post('/simposio/2021/certificados/educomp/obter', educomp_2021_certificados.obterEducomp)
-app.post('/simposio/2021/certificados/esquenta/2/validar', educomp_2021_certificados.validarEsquenta2)
-app.post('/simposio/2021/certificados/educomp/validar', educomp_2021_certificados.validarEducomp)
+// app.get('/simposio/2021/certificados/esquenta/2/:encontrado', educomp_2021_certificados.esquenta2Certificado)
+// app.get('/simposio/2021/certificados/educomp/:encontrado', educomp_2021_certificados.educompCertificado)
+// app.post('/simposio/2021/certificados/esquenta/2/obter', educomp_2021_certificados.obterEsquenta2)
+// app.post('/simposio/2021/certificados/educomp/obter', educomp_2021_certificados.obterEducomp)
+// app.post('/simposio/2021/certificados/esquenta/2/validar', educomp_2021_certificados.validarEsquenta2)
+// app.post('/simposio/2021/certificados/educomp/validar', educomp_2021_certificados.validarEducomp)
+
+//Certificados educomp
+app.get('/simposio/2021/certificados/educomp', educomp_2021_certificados_educomp.educompCertificadoOpcoes)
+app.get('/simposio/2021/certificados/educomp/obter', educomp_2021_certificados_educomp.educompCertificado)
+app.post('/simposio/2021/certificados/educomp/obter', educomp_2021_certificados_educomp.obterEducomp)
+app.get('/simposio/2021/certificados/educomp/obter/arquivo/:atividade/:email/:funcao/:tipo/:titulo', educomp_2021_certificados_educomp.obterArquivoEducomp)
 
 
 //Envio de email
