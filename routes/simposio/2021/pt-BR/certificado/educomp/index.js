@@ -37,30 +37,35 @@ exports.obterEducomp = async function (req, res) {
         })
         await doc.loadInfo()
         let rowsParticipacao = await doc.sheetsByTitle['participacao'].getRows()
-        let rowsAberturaEncerramento = await doc.sheetsByTitle['abertura-encerramento'].getRows()
-        let rowsApresTrabalho = await doc.sheetsByTitle['apres-trabalho'].getRows()
-        let rowsLabIdeiasMesa = await doc.sheetsByTitle['lab-ideias-mesa'].getRows()
-        let rowsSessaoTecnicaCoord = await doc.sheetsByTitle['sessao-tecnica-coord'].getRows()
-        let rowsTrabalhoPublicado = await doc.sheetsByTitle['trabalho-publicado'].getRows()
         let rowsOrganizacao = await doc.sheetsByTitle['organizacao'].getRows()
-        let rowsComitePrograma = await doc.sheetsByTitle['comite-programa'].getRows()
-        let rowsPalestra = await doc.sheetsByTitle['palestra'].getRows()
+        let rowsComiteProgramaMembro = await doc.sheetsByTitle['comite-programa-membro'].getRows()
+        let rowsComiteProgramaConvidado = await doc.sheetsByTitle['comite-programa-convidado'].getRows()
+        let rowsComiteProgramaCoord = await doc.sheetsByTitle['comite-programa-coord'].getRows()
+        let rowsPalestrante = await doc.sheetsByTitle['palestrante'].getRows()
+        let rowsPalestraApoio = await doc.sheetsByTitle['palestra-apoio'].getRows()
         let rowsPainel = await doc.sheetsByTitle['painel'].getRows()
+        let rowsSessaoTecnicaCoord = await doc.sheetsByTitle['sessao-tecnica-coord'].getRows()
+        let rowsApresTrabalho = await doc.sheetsByTitle['apres-trabalho'].getRows()
+        let rowsAberturaEncerramento = await doc.sheetsByTitle['abertura-encerramento'].getRows()
+        let rowsTrabalhoPublicado = await doc.sheetsByTitle['trabalho-publicado'].getRows()
+        let rowsLabIdeiasMesa = await doc.sheetsByTitle['lab-ideias-mesa'].getRows()
 
         let plans = []
 
         let participacao = {}
-        let abertura_encerramento = {}
-        let apres_trabalho = {}
-        let lab_ideias_mesa = {}
-        let sessao_tecnica_coord = {}
-        let trabalho_publicado = {}
         let organizacao = {}
-        let comite_programa = {}
-        let palestra = {}
+        let comite_programa_membro = {}
+        let comite_programa_convidado = {}
+        let comite_programa_coord = {}
+        let palestrante = {}
+        let palestra_apoio = {}
         let painel = {}
+        let sessao_tecnica_coord = {}
+        let apres_trabalho = {}
+        let abertura_encerramento = {}
+        let trabalho_publicado = {}
+        let lab_ideias_mesa = {}
         
-
         participacao.nome = 'Participação'
         participacao.registros = []
         rowsParticipacao.forEach( (element) => {
@@ -76,84 +81,6 @@ exports.obterEducomp = async function (req, res) {
         })
         plans.push( participacao )
 
-        abertura_encerramento.nome = 'Abertura - Encerramento'
-        abertura_encerramento.registros = []
-        rowsAberturaEncerramento.forEach( (element) => {
-            if (element.email === req.body.email) {
-                abertura_encerramento.registros.push(
-                    { 
-                        'email': element.email,
-                        'tipo': element.tipo,
-                        'atividade': 'abertura-encerramento',
-                        'abertura-encerramento': true,
-                    }
-                )
-            }
-        })
-        plans.push(abertura_encerramento)
-
-        apres_trabalho.nome = 'Apresentação de Trabalhos'        
-        apres_trabalho.registros = []
-        rowsApresTrabalho.forEach( (element) => {
-            if (element.email === req.body.email) {
-                apres_trabalho.registros.push(
-                    { 
-                        'email': element.email,                        
-                        'titulo': element.titulo,                        
-                        'atividade': 'apres-trabalho',
-                        'apres-trabalho': true,
-                    }
-                )
-            }
-        })
-        plans.push(apres_trabalho)
-
-        lab_ideias_mesa.nome = 'Lab Ideias (Mesa)'        
-        lab_ideias_mesa.registros = []
-        rowsLabIdeiasMesa.forEach( (element) => {
-            if (element.email === req.body.email) {
-                lab_ideias_mesa.registros.push(
-                    { 
-                        'email': element.email,                        
-                        'titulo': element.titulo,                        
-                        'atividade': 'lab-ideias-mesa',
-                        'lab-ideias-mesa': true,
-                    }
-                )
-            }
-        })
-        plans.push(lab_ideias_mesa)
-
-        sessao_tecnica_coord.nome = 'Sessão técnica - Coordenação'
-        sessao_tecnica_coord.registros = []
-        rowsSessaoTecnicaCoord.forEach( (element) => {
-            if (element.email === req.body.email) {
-                sessao_tecnica_coord.registros.push(
-                    { 
-                        'email': element.email,                                                
-                        'atividade': 'sessao-tecnica-coord',
-                        'sessao-tecnica-coord': true,
-                    }
-                )
-            }
-        })
-        plans.push(sessao_tecnica_coord)
-
-        trabalho_publicado.nome = 'Trabalho Publicado'
-        trabalho_publicado.registros = []
-        rowsTrabalhoPublicado.forEach( (element) => {
-            if (element.email === req.body.email) {
-                trabalho_publicado.registros.push(
-                    { 
-                        'email': element.email,                                                
-                        'atividade': 'trabalho-publicado',
-                        'trabalho-publicado': true,
-                    }
-                )
-            }
-        })
-        plans.push(trabalho_publicado)
-        
         organizacao.nome = 'Organização'
         organizacao.registros = []
         rowsOrganizacao.forEach( (element) => {
@@ -170,38 +97,87 @@ exports.obterEducomp = async function (req, res) {
         })
         plans.push( organizacao )
 
-        comite_programa.nome = 'Comitê de Programa'
-        comite_programa.registros = []
-        rowsComitePrograma.forEach( (element) => {
+        comite_programa_membro.nome = 'Comitê de Programa (Membro)'
+        comite_programa_membro.registros = []
+        rowsComiteProgramaMembro.forEach( (element) => {
             if (element.email === req.body.email) {
-                comite_programa.registros.push(
-                    { 
-                        'email': element.email,                        
-                        'funcao': element.funcao,                        
-                        'atividade': 'comite-programa',
-                        'comite-programa': true,
-                    }
-                )
-            }
-        })
-        plans.push(comite_programa)
-
-        palestra.nome = 'Palestra'
-        palestra.registros = []
-        rowsPalestra.forEach( (element) => {
-            if (element.email === req.body.email) {
-                palestra.registros.push(
+                comite_programa_membro.registros.push(
                     { 
                         'email': element.email,
-                        'funcao': element.funcao,
-                        'titulo': element.titulo,
-                        'atividade': 'palestra',
-                        'palestra': true,
+                        'funcao': element.funcao,                
+                        'atividade': 'comite-programa-membro',
+                        'comite-programa-membro': true,
                     }
                 )
             }
         })
-        plans.push(palestra)
+        plans.push( comite_programa_membro )
+
+        comite_programa_convidado.nome = 'Comitê de Programa (Revisor Convidado)'
+        comite_programa_convidado.registros = []
+        rowsComiteProgramaConvidado.forEach( (element) => {
+            if (element.email === req.body.email) {
+                comite_programa_convidado.registros.push(
+                    { 
+                        'email': element.email,               
+                        'atividade': 'comite-programa-convidado',
+                        'comite-programa-convidado': true,
+                    }
+                )
+            }
+        })
+        plans.push( comite_programa_convidado )
+
+        comite_programa_coord.nome = 'Comitê de Programa (Coordenação)'
+        comite_programa_coord.registros = []
+        rowsComiteProgramaCoord.forEach( (element) => {
+            if (element.email === req.body.email) {
+                comite_programa_coord.registros.push(
+                    { 
+                        'email': element.email,               
+                        'atividade': 'comite-programa-coord',
+                        'trilha': element.trilha, 
+                        'comite-programa-coord': true,
+                    }
+                )
+            }
+        })
+        plans.push( comite_programa_coord )
+
+        palestrante.nome = 'Palestrante'
+        palestrante.registros = []
+        rowsPalestrante.forEach( (element) => {
+            if (element.email === req.body.email) {
+                palestrante.registros.push(
+                    { 
+                        'email': element.email,               
+                        'atividade': 'palestrante',
+                        'titulo': element.titulo,
+                        'dia': element.dia,
+                        'palestrante': true,
+                    }
+                )
+            }
+        })
+        plans.push( palestrante )
+
+        palestra_apoio.nome = 'Palestra (Apoio)'
+        palestra_apoio.registros = []
+        rowsPalestraApoio.forEach( (element) => {
+            if (element.email === req.body.email) {
+                palestra_apoio.registros.push(
+                    { 
+                        'email': element.email,               
+                        'atividade': 'palestra-apoio',
+                        'funcao': element.funcao,
+                        'titulo': element.titulo,
+                        'dia': element.dia, 
+                        'palestra-apoio': true,
+                    }
+                )
+            }
+        })
+        plans.push( palestra_apoio )
 
         painel.nome = 'Painel'
         painel.registros = []
@@ -212,6 +188,7 @@ exports.obterEducomp = async function (req, res) {
                         'email': element.email,
                         'funcao': element.funcao,
                         'titulo': element.titulo,
+                        'dia': element.dia,
                         'atividade': 'painel',
                         'painel': true,
                     }
@@ -219,6 +196,94 @@ exports.obterEducomp = async function (req, res) {
             }
         })
         plans.push(painel)
+
+        sessao_tecnica_coord.nome = 'Sessão técnica - Coordenação'
+        sessao_tecnica_coord.registros = []
+        rowsSessaoTecnicaCoord.forEach( (element) => {
+            if (element.email === req.body.email) {
+                sessao_tecnica_coord.registros.push(
+                    { 
+                        'email': element.email,                                                
+                        'atividade': 'sessao-tecnica-coord',
+                        'sessao': element.sessao,
+                        'dia': element.dia,
+                        'sessao-tecnica-coord': true,
+                    }
+                )
+            }
+        })
+        plans.push(sessao_tecnica_coord)
+
+        apres_trabalho.nome = 'Apresentação de Trabalhos'        
+        apres_trabalho.registros = []
+        rowsApresTrabalho.forEach( (element) => {
+            if (element.email === req.body.email) {
+                apres_trabalho.registros.push(
+                    { 
+                        'email': element.email,                        
+                        'titulo': element.titulo,        
+                        'tipo': element.tipo,
+                        'dia': element.dia,                
+                        'atividade': 'apres-trabalho',
+                        'apres-trabalho': true,
+                    }
+                )
+            }
+        })
+        plans.push(apres_trabalho)
+
+        abertura_encerramento.nome = 'Abertura - Encerramento'
+        abertura_encerramento.registros = []
+        rowsAberturaEncerramento.forEach( (element) => {
+            if (element.email === req.body.email) {
+                abertura_encerramento.registros.push(
+                    { 
+                        'email': element.email,
+                        'tipo': element.tipo,
+                        'dia': element.dia, 
+                        'atividade': 'abertura-encerramento',
+                        'abertura-encerramento': true,
+                    }
+                )
+            }
+        })
+        plans.push(abertura_encerramento)
+
+        trabalho_publicado.nome = 'Trabalho Publicado'
+        trabalho_publicado.registros = []
+        rowsTrabalhoPublicado.forEach( (element) => {
+            if (element.email === req.body.email) {
+                trabalho_publicado.registros.push(
+                    { 
+                        'email': element.email,                                                
+                        'atividade': 'trabalho-publicado',
+                        'autores': element.autores,
+                        'tipo': element.tipo,
+                        'titulo': element.titulo,
+                        'trabalho-publicado': true,
+                    }
+                )
+            }
+        })
+        plans.push(trabalho_publicado)
+
+        lab_ideias_mesa.nome = 'Lab Ideias (Mesa)'        
+        lab_ideias_mesa.registros = []
+        rowsLabIdeiasMesa.forEach( (element) => {
+            if (element.email === req.body.email) {
+                lab_ideias_mesa.registros.push(
+                    { 
+                        'email': element.email,                        
+                        'sessao': element.sessao,
+                        'dia': element.dia,
+                        'tipo': element.tipo,                        
+                        'atividade': 'lab-ideias-mesa',
+                        'lab-ideias-mesa': true,
+                    }
+                )
+            }
+        })
+        plans.push(lab_ideias_mesa)
 
         console.log(plans)
 
@@ -248,17 +313,18 @@ exports.obterEducomp = async function (req, res) {
 //obter arquivo específico de certificado do educomp
 exports.obterArquivoEducomp = async function (req, res) {
     try{
-        console.log('Gerando arquivo específico do certificado educomp')
-
-        let atividade = req.params.atividade
-        let email = req.params.email
-        let funcao = req.params.funcao
-        let tipo = req.params.tipo
-        let titulo = req.params.titulo 
-        let textoBase = ''
+        let atividade = req.body.atividade
+        let email = req.body.email
         let nome = ''
-        let codigo = ''
-        console.log(atividade, email, funcao, tipo, titulo)
+        let codigo = req.body.codigo
+        let funcao = false
+        let tipo = false
+        let titulo = false
+        let sessao = false
+        let dia = false 
+        let trilha = false 
+        let autores = false
+        let textoBase = ''
 
         const sheets = new GoogleSpreadsheet('1ShcIedcnFk9oiIwKo2daA6GqKVEYLlgitRNYtu3fjPM')
         await sheets.useServiceAccountAuth({
@@ -272,31 +338,83 @@ exports.obterArquivoEducomp = async function (req, res) {
         const rows = await sheets.sheetsByTitle[atividade].getRows()
         rows.forEach( (element, index) => {
             if (atividade === 'participacao') {
-                if (element.email === email) {
+                 if (element.email === email) {
                     posicao = index
                 }
             } else if (atividade === 'organizacao') {
+                funcao = req.body.funcao
                 if (element.email === email && element.funcao === funcao) {
                     posicao = index
                 }
-            } else if (atividade === 'comite-programa') {
+            } else if (atividade === 'comite-programa-membro') {
+                funcao = req.body.funcao
                 if (element.email === email && element.funcao === funcao) {
                     posicao = index
                 }
-            } else if (atividade === 'palestra') {
-                if (element.email === email && element.funcao === funcao) {
-                    posicao = index
-                }
-            } else if (atividade === 'sessao-tecnica-apres') {
-                if (element.email === email && element.titulo === titulo) {
-                    posicao = index
-                }
-            } else if (atividade === 'sessao-tecnica-coord') {
+            } else if (atividade === 'comite-programa-convidado') {
                 if (element.email === email) {
                     posicao = index
                 }
+            } else if (atividade === 'comite-programa-coord') {
+                trilha = req.body.trila 
+                if (element.email === email && element.trilha === trilha) {
+                    posicao = index
+                }
+            }
+            else if (atividade === 'palestrante') {
+                titulo = req.body.titulo 
+                dia = req.body.dia
+                if (element.email === email && element.titulo === titulo) {
+                    posicao = index
+                }
+            } 
+            else if (atividade === 'palestra-apoio') {
+                funcao = req.body.funcao
+                titulo = req.body.titulo 
+                dia = req.body.dia
+                if (element.email === email && element.funcao === funcao && element.titulo === titulo) {
+                    posicao = index
+                }
+            }
+            else if (atividade === 'painel') {
+                funcao = req.body.funcao
+                titulo = req.body.titulo 
+                dia = req.body.dia 
+                if (element.email === email && element.funcao === funcao && element.titulo === titulo) {
+                    posicao = index
+                }
+            } else if (atividade === 'sessao-tecnica-coord') {
+                sessao = req.body.sessao 
+                dia = req.body.dia 
+                if (element.email === email && element.sessao === sessao) {
+                    posicao = index
+                }
+            } else if (atividade === 'apres-trabalho') {
+                tipo = req.body.tipo
+                titulo = req.body.titulo
+                dia = req.body.dia 
+                if (element.email === email && element.tipo === tipo && element.titulo === titulo) {
+                    posicao = index
+                }
             } else if (atividade === 'abertura-encerramento') {
+                tipo = req.body.tipo
+                dia = req.body.dia 
                 if (element.email === email && element.tipo === tipo) {
+                    posicao = index
+                }
+            } else if (atividade === 'trabalho-publicado') {
+                tipo = req.body.tipo
+                titulo = req.body.titulo 
+                autores = req.body.autores 
+                if (element.email === email && element.tipo === tipo && element.titulo === titulo) {
+                    posicao = index
+                }
+            } else if (atividade === 'lab-ideias-mesa') {
+                funcao = req.body.funcao
+                sessao = req.body.sessao
+                dia = req.body.dia
+                tipo = req.body.tipo 
+                if (element.email === email && element.funcao === funcao && element.sessao === sessao && element.tipo === tipo) {
                     posicao = index
                 }
             }
@@ -313,17 +431,18 @@ exports.obterArquivoEducomp = async function (req, res) {
             doc.fontSize(18)
             doc.font('resources/fonts/trebuc.ttf')
 
-            if (rows[posicao].funcao) funcao = rows[posicao].funcao
-            if (rows[posicao].titulo) titulo = rows[posicao].titulo
-            if (rows[posicao].tipo) tipo = rows[posicao].tipo
             if (rows[posicao].nome_completo) nome = rows[posicao].nome_completo
-            if (rows[posicao].codigo) codigo = rows[posicao].codigo
             nome = nome.toUpperCase()
             textoBase = rows[0].texto_base
             let novoTextoBase = textoBase.replace('${nome_completo}', nome)
             novoTextoBase = novoTextoBase.replace('${funcao}', funcao)
             novoTextoBase = novoTextoBase.replace('${titulo}', atividade)
             novoTextoBase = novoTextoBase.replace('${tipo}', tipo)
+            novoTextoBase = novoTextoBase.replace('${sessao}', sessao)
+            novoTextoBase = novoTextoBase.replace('${dia}', dia)
+            novoTextoBase = novoTextoBase.replace('${trilha}', trilha)
+            novoTextoBase = novoTextoBase.replace('${autores}', autores)
+            
 
             //doc.text(novoTextoBase, 150, 265, {width: 600, align: 'justify', continued: true}).fontSize(8).text(`Pode ser validado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 385, {width:600, align: 'justify'})
             doc.text(novoTextoBase, 150, 265, {width: 500, align: 'justify'})

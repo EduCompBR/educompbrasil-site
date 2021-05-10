@@ -194,15 +194,15 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
     try{
         console.log('Gerando arquivo específico do certificado')
 
-        let atividade = req.params.atividade
-        let email = req.params.email
-        let funcao = req.params.funcao
-        let tipo = req.params.tipo
-        let titulo = req.params.titulo 
+        let atividade = req.body.atividade
+        let email = req.body.email
+        let funcao = false
+        let tipo = false
+        let titulo = false
         let textoBase = ''
         let nome = ''
         let codigo = ''
-        console.log(atividade, email, funcao, tipo, titulo)
+        //console.log(atividade, email, funcao, tipo, titulo)
 
         const sheets = new GoogleSpreadsheet('1bOIjyqdNo2x5TkhNPNPid2FFD1JkQeb24R1izWilh2E')
         await sheets.useServiceAccountAuth({
@@ -220,18 +220,23 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
                     posicao = index
                 }
             } else if (atividade === 'organizacao') {
+                funcao = req.body.funcao
                 if (element.email === email && element.funcao === funcao) {
                     posicao = index
                 }
             } else if (atividade === 'comite_programa') {
+                funcao = req.body.funcao
                 if (element.email === email && element.funcao === funcao) {
                     posicao = index
                 }
             } else if (atividade === 'palestra') {
+                funcao = req.body.funcao
+                titulo = req.body.titulo
                 if (element.email === email && element.funcao === funcao) {
                     posicao = index
                 }
             } else if (atividade === 'sessao-tecnica-apres') {
+                titulo = req.body.titulo
                 if (element.email === email && element.titulo === titulo) {
                     posicao = index
                 }
@@ -240,6 +245,7 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
                     posicao = index
                 }
             } else if (atividade === 'abertura-encerramento') {
+                tipo = req.body.tipo
                 if (element.email === email && element.tipo === tipo) {
                     posicao = index
                 }
