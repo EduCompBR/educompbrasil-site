@@ -29,7 +29,8 @@
                     <form method="POST" action="/simposio/2021/certificados/educomp/obter/arquivo/">
                       <input name="atividade" type="hidden" value="{{atividade}}" />
                       <input name="email" type="hidden" value="{{email}}" />
-                      <input value="Participação" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <input name="funcao" type="hidden" value="{{funcao}}" />
+                      <input value="{{funcaoFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
                     </form>
                     {{!-- <a href='/simposio/2021/certificados/educomp/obter/arquivo/{{atividade}}/{{email}}/{{funcao}}/0/0' target="_blank" class="list-group-item list-group-item-primary" >{{funcao}}</a> --}}
                   {{/if}}
@@ -37,7 +38,8 @@
                     <form method="POST" action="/simposio/2021/certificados/educomp/obter/arquivo/">
                       <input name="atividade" type="hidden" value="{{atividade}}" />
                       <input name="email" type="hidden" value="{{email}}" />
-                      <input value="{{funcao}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <input name="funcao" type="hidden" value="{{funcao}}" />
+                      <input value="{{funcaoFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
                     </form>
                   {{/if}}
                   {{#if comite-programa-convidado}}
@@ -52,7 +54,7 @@
                       <input name="atividade" type="hidden" value="{{atividade}}" />
                       <input name="email" type="hidden" value="{{email}}" />
                       <input name="trilha" type="hidden" value="{{trilha}}" />
-                      <input value="{{trilha}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <input value="{{trilhaFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
                     </form>
                   {{/if}}
                   {{#if palestrante}}
@@ -61,7 +63,7 @@
                       <input name="email" type="hidden" value="{{email}}" />
                       <input name="titulo" type="hidden" value="{{titulo}}" />
                       <input name="dia" type="hidden" value="{{dia}}" />
-                      <input value="{{titulo}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <input value="{{tituloFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
                     </form>
                   {{/if}}
                   {{#if palestra-apoio}}
@@ -70,7 +72,8 @@
                       <input name="email" type="hidden" value="{{email}}" />
                       <input name="funcao" type="hidden" value="{{funcao}}" />
                       <input name="titulo" type="hidden" value="{{titulo}}" />
-                      <input value="{{titulo}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <input name="dia" type="hidden" value="{{dia}}" />
+                      <input value="{{tituloFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
                     </form>
                   {{/if}}
                   {{#if painel}}
@@ -79,7 +82,8 @@
                       <input name="email" type="hidden" value="{{email}}" />
                       <input name="funcao" type="hidden" value="{{funcao}}" />
                       <input name="titulo" type="hidden" value="{{titulo}}" />
-                      <input value="{{titulo}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <input name="dia" type="hidden" value="{{dia}}" />
+                      <input value="{{tituloFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
                     </form>
                   {{/if}}
                   {{#if sessao-tecnica-coord}}
@@ -87,7 +91,8 @@
                       <input name="atividade" type="hidden" value="{{atividade}}" />
                       <input name="email" type="hidden" value="{{email}}" />
                       <input name="sessao" type="hidden" value="{{sessao}}" />
-                      <input value="{{sessao}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <input name="dia" type="hidden" value="{{dia}}" />
+                      <input value="{{sessaoFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
                     </form>
                   {{/if}}
                   {{#if apres-trabalho}}
@@ -97,7 +102,7 @@
                       <input name="tipo" type="hidden" value="{{tipo}}" />
                       <input name="titulo" type="hidden" value="{{titulo}}" />
                       <input name="dia" type="hidden" value="{{dia}}" />
-                      <input value="{{titulo}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <input value="{{tituloFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
                     </form>
                   {{/if}}
                   {{#if abertura-encerramento}}
@@ -105,9 +110,8 @@
                       <input name="atividade" type="hidden" value="{{atividade}}" />
                       <input name="email" type="hidden" value="{{email}}" />
                       <input name="tipo" type="hidden" value="{{tipo}}" />
-                      <input name="titulo" type="hidden" value="{{titulo}}" />
                       <input name="dia" type="hidden" value="{{dia}}" />
-                      <input value="{{titulo}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <input value="{{tipoFormat}} - {{dia}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
                     </form>
                   {{/if}}
                   {{#if trabalho-publicado}}
@@ -117,18 +121,17 @@
                       <input name="tipo" type="hidden" value="{{tipo}}" />
                       <input name="titulo" type="hidden" value="{{titulo}}" />
                       <input name="autores" type="hidden" value="{{autores}}" />
-                      <input value="{{titulo}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <input value="{{tituloFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
                     </form>
                   {{/if}}
                   {{#if lab-ideias-mesa}}
                     <form method="POST" action="/simposio/2021/certificados/educomp/obter/arquivo/">
                       <input name="atividade" type="hidden" value="{{atividade}}" />
                       <input name="email" type="hidden" value="{{email}}" />
-                      <input name="funcao" type="hidden" value="{{funcao}}" />
                       <input name="sessao" type="hidden" value="{{sessao}}" />
                       <input name="dia" type="hidden" value="{{dia}}" />
                       <input name="tipo" type="hidden" value="{{tipo}}" />
-                      <input value="{{tipo}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <input value="{{tipoFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
                     </form>
                   {{/if}}
                 {{/each}}

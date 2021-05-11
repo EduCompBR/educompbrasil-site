@@ -164,7 +164,7 @@ exports.obterEsquenta1 = async function (req, res) {
         })
         plans.push(abertura_encerramento)
 
-        console.log(plans)
+        //console.log(plans)
 
         res.render('simposio/2021/pt-BR/certificados/esquenta-1-obter-lista',
             {
@@ -221,6 +221,7 @@ exports.obterArquivoEsquenta1 = async function (req, res) {
                 }
             } else if (atividade === 'organizacao') {
                 funcao = req.body.funcao
+                console.log(element.funcao, funcao)
                 if (element.email === email && element.funcao === funcao) {
                     posicao = index
                 }

@@ -88,7 +88,8 @@ exports.obterEducomp = async function (req, res) {
                 organizacao.registros.push(
                     { 
                         'email': element.email,
-                        'funcao': element.funcao,                
+                        'funcao': element.funcao,
+                        'funcaoFormat': element.funcao[0].toUpperCase() + element.funcao.substr(1),
                         'atividade': 'organizacao',
                         'organizacao': true,
                     }
@@ -104,7 +105,8 @@ exports.obterEducomp = async function (req, res) {
                 comite_programa_membro.registros.push(
                     { 
                         'email': element.email,
-                        'funcao': element.funcao,                
+                        'funcao': element.funcao,  
+                        'funcaoFormat': element.funcao[0].toUpperCase() + element.funcao.substr(1),              
                         'atividade': 'comite-programa-membro',
                         'comite-programa-membro': true,
                     }
@@ -137,6 +139,7 @@ exports.obterEducomp = async function (req, res) {
                         'email': element.email,               
                         'atividade': 'comite-programa-coord',
                         'trilha': element.trilha, 
+                        'trilhaFormat': element.trilha[0].toUpperCase() + element.trilha.substr(1),
                         'comite-programa-coord': true,
                     }
                 )
@@ -153,6 +156,7 @@ exports.obterEducomp = async function (req, res) {
                         'email': element.email,               
                         'atividade': 'palestrante',
                         'titulo': element.titulo,
+                        'tituloFormat': element.titulo[0].toUpperCase() + element.titulo.substr(1),
                         'dia': element.dia,
                         'palestrante': true,
                     }
@@ -171,6 +175,7 @@ exports.obterEducomp = async function (req, res) {
                         'atividade': 'palestra-apoio',
                         'funcao': element.funcao,
                         'titulo': element.titulo,
+                        'tituloFormat': element.titulo[0].toUpperCase() + element.titulo.substr(1),
                         'dia': element.dia, 
                         'palestra-apoio': true,
                     }
@@ -188,6 +193,7 @@ exports.obterEducomp = async function (req, res) {
                         'email': element.email,
                         'funcao': element.funcao,
                         'titulo': element.titulo,
+                        'tituloFormat': element.titulo[0].toUpperCase() + element.titulo.substr(1),
                         'dia': element.dia,
                         'atividade': 'painel',
                         'painel': true,
@@ -206,6 +212,7 @@ exports.obterEducomp = async function (req, res) {
                         'email': element.email,                                                
                         'atividade': 'sessao-tecnica-coord',
                         'sessao': element.sessao,
+                        'sessaoFormat': element.sessao[0].toUpperCase() + element.sessao.substr(1),
                         'dia': element.dia,
                         'sessao-tecnica-coord': true,
                     }
@@ -221,7 +228,8 @@ exports.obterEducomp = async function (req, res) {
                 apres_trabalho.registros.push(
                     { 
                         'email': element.email,                        
-                        'titulo': element.titulo,        
+                        'titulo': element.titulo,     
+                        'tituloFormat': element.titulo[0].toUpperCase() + element.titulo.substr(1),   
                         'tipo': element.tipo,
                         'dia': element.dia,                
                         'atividade': 'apres-trabalho',
@@ -240,6 +248,7 @@ exports.obterEducomp = async function (req, res) {
                     { 
                         'email': element.email,
                         'tipo': element.tipo,
+                        'tipoFormat': element.tipo[0].toUpperCase() + element.tipo.substr(1),
                         'dia': element.dia, 
                         'atividade': 'abertura-encerramento',
                         'abertura-encerramento': true,
@@ -260,6 +269,7 @@ exports.obterEducomp = async function (req, res) {
                         'autores': element.autores,
                         'tipo': element.tipo,
                         'titulo': element.titulo,
+                        'tituloFormat': element.titulo[0].toUpperCase() + element.titulo.substr(1),
                         'trabalho-publicado': true,
                     }
                 )
@@ -276,7 +286,8 @@ exports.obterEducomp = async function (req, res) {
                         'email': element.email,                        
                         'sessao': element.sessao,
                         'dia': element.dia,
-                        'tipo': element.tipo,                        
+                        'tipo': element.tipo,          
+                        'tipoFormat': element.tipo[0].toUpperCase() + element.tipo.substr(1),              
                         'atividade': 'lab-ideias-mesa',
                         'lab-ideias-mesa': true,
                     }
@@ -285,7 +296,7 @@ exports.obterEducomp = async function (req, res) {
         })
         plans.push(lab_ideias_mesa)
 
-        console.log(plans)
+        //console.log(plans)
 
         res.render('simposio/2021/pt-BR/certificados-educomp/educomp-obter-lista',
             {
@@ -343,12 +354,15 @@ exports.obterArquivoEducomp = async function (req, res) {
                 }
             } else if (atividade === 'organizacao') {
                 funcao = req.body.funcao
+                //console.log(element.funcao, funcao)
                 if (element.email === email && element.funcao === funcao) {
+                    funcao = funcao[0].toUpperCase() + funcao.substr(1)
                     posicao = index
                 }
             } else if (atividade === 'comite-programa-membro') {
                 funcao = req.body.funcao
                 if (element.email === email && element.funcao === funcao) {
+                    funcao = funcao[0].toUpperCase() + funcao.substr(1)
                     posicao = index
                 }
             } else if (atividade === 'comite-programa-convidado') {
@@ -356,8 +370,9 @@ exports.obterArquivoEducomp = async function (req, res) {
                     posicao = index
                 }
             } else if (atividade === 'comite-programa-coord') {
-                trilha = req.body.trila 
+                trilha = req.body.trilha 
                 if (element.email === email && element.trilha === trilha) {
+                    trilha = trilha[0].toUpperCase() + trilha.substr(1)
                     posicao = index
                 }
             }
@@ -365,6 +380,7 @@ exports.obterArquivoEducomp = async function (req, res) {
                 titulo = req.body.titulo 
                 dia = req.body.dia
                 if (element.email === email && element.titulo === titulo) {
+                    titulo = titulo[0].toUpperCase() + titulo.substr(1)
                     posicao = index
                 }
             } 
@@ -373,6 +389,8 @@ exports.obterArquivoEducomp = async function (req, res) {
                 titulo = req.body.titulo 
                 dia = req.body.dia
                 if (element.email === email && element.funcao === funcao && element.titulo === titulo) {
+                    funcao = funcao[0].toUpperCase() + funcao.substr(1)
+                    titulo = titulo[0].toUpperCase() + titulo.substr(1)
                     posicao = index
                 }
             }
@@ -381,12 +399,15 @@ exports.obterArquivoEducomp = async function (req, res) {
                 titulo = req.body.titulo 
                 dia = req.body.dia 
                 if (element.email === email && element.funcao === funcao && element.titulo === titulo) {
+                    funcao = funcao[0].toUpperCase() + funcao.substr(1)
+                    titulo = titulo[0].toUpperCase() + titulo.substr(1)
                     posicao = index
                 }
             } else if (atividade === 'sessao-tecnica-coord') {
                 sessao = req.body.sessao 
                 dia = req.body.dia 
                 if (element.email === email && element.sessao === sessao) {
+                    sessao = sessao[0].toUpperCase() + sessao.substr(1)
                     posicao = index
                 }
             } else if (atividade === 'apres-trabalho') {
@@ -394,12 +415,15 @@ exports.obterArquivoEducomp = async function (req, res) {
                 titulo = req.body.titulo
                 dia = req.body.dia 
                 if (element.email === email && element.tipo === tipo && element.titulo === titulo) {
+                    tipo = tipo[0].toUpperCase() + tipo.substr(1)
+                    titulo = titulo[0].toUpperCase() + titulo.substr(1)
                     posicao = index
                 }
             } else if (atividade === 'abertura-encerramento') {
                 tipo = req.body.tipo
                 dia = req.body.dia 
                 if (element.email === email && element.tipo === tipo) {
+                    tipo = tipo[0].toUpperCase() + tipo.substr(1)
                     posicao = index
                 }
             } else if (atividade === 'trabalho-publicado') {
@@ -407,14 +431,18 @@ exports.obterArquivoEducomp = async function (req, res) {
                 titulo = req.body.titulo 
                 autores = req.body.autores 
                 if (element.email === email && element.tipo === tipo && element.titulo === titulo) {
+                    tipo = tipo[0].toUpperCase() + tipo.substr(1)
+                    titulo = titulo[0].toUpperCase() + titulo.substr(1)
+                    autores = autores[0].toUpperCase() + autores.substr(1)
                     posicao = index
                 }
             } else if (atividade === 'lab-ideias-mesa') {
-                funcao = req.body.funcao
                 sessao = req.body.sessao
                 dia = req.body.dia
                 tipo = req.body.tipo 
-                if (element.email === email && element.funcao === funcao && element.sessao === sessao && element.tipo === tipo) {
+                if (element.email === email && element.sessao === sessao && element.tipo === tipo) {
+                    sessao = sessao[0].toUpperCase() + sessao.substr(1)
+                    tipo = tipo[0].toUpperCase() + tipo.substr(1)
                     posicao = index
                 }
             }
@@ -432,6 +460,7 @@ exports.obterArquivoEducomp = async function (req, res) {
             doc.font('resources/fonts/trebuc.ttf')
 
             if (rows[posicao].nome_completo) nome = rows[posicao].nome_completo
+            if (rows[posicao].codigo) codigo = rows[posicao].codigo
             nome = nome.toUpperCase()
             textoBase = rows[0].texto_base
             let novoTextoBase = textoBase.replace('${nome_completo}', nome)
