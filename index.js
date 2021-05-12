@@ -13,7 +13,16 @@ const fs = require('fs')
 var educomp_2021_main = require('./routes/simposio/2021/pt-BR/main');
 var educomp_2021_trabalhos = require('./routes/simposio/2021/pt-BR/trabalhos');
 var giec_main = require('./routes/giec/main');
+var educomp_2021_programacao = require('./routes/simposio/2021/pt-BR/programacao');
+var educomp_2021_trabalhos = require('./routes/simposio/2021/pt-BR/trabalhos');
+var educomp_2021_equipe = require('./routes/simposio/2021/pt-BR/equipe');
+var educomp_2021_criterios = require('./routes/simposio/2021/pt-BR/criterios');
+var educomp_2021_certificados = require('./routes/simposio/2021/pt-BR/certificado/esquenta-1/index');
+var educomp_2021_certificados_educomp = require('./routes/simposio/2021/pt-BR/certificado/educomp/index');
 var giec_quem_somos = require('./routes/giec/quem_somos');
+
+//Routes en-US
+var educomp_2021_en_us_main = require('./routes/simposio/2021/en-US/main');
 
 //Engine View
 app.engine('handlebars', handlebars({defaultLayout: 'main'}) )
@@ -23,8 +32,6 @@ app.set('view engine', 'handlebars')
 
 //Uses
 app.use(express.static(__dirname + '/public'))
-//app.use(methodOverride('_method', {methods: ['GET', 'POST', 'PUT', 'DELETE']} ))
-//app.use(methodOverride('X-HTTP-Method-Override'))
 app.use(bodyParser.urlencoded({extended: false}))
 
 //GIEC
@@ -37,148 +44,28 @@ app.get('/documentos', giec_main.documentos)
 //EduComp 2021 - pt-BR
 app.get('/simposio/2021', educomp_2021_main.index)
 app.get('/simposio/2021/sobre', educomp_2021_main.sobre)
+app.get('/simposio/2021/datas', educomp_2021_main.datas)
+app.get('/simposio/2021/contato', educomp_2021_main.contato)
+app.get('/simposio/2021/inscricoes', educomp_2021_main.inscricoes)
+app.get('/simposio/2021/forlic', educomp_2021_main.forlic)
 
-app.get('/simposio/2021/topicos-de-interesse', educomp_2021_trabalhos.topicos)
-app.get('/simposio/2021/trabalhos', educomp_2021_trabalhos.chamada)
+app.get('/simposio/2021/programacao', educomp_2021_programacao.programacao)
+app.get('/simposio/2021/programacao/esquenta/1', educomp_2021_programacao.esquenta_1)
+app.get('/simposio/2021/programacao/esquenta/2', educomp_2021_programacao.esquenta_2)
+
+app.get('/simposio/2021/trabalhos', educomp_2021_trabalhos.chamado)
 app.get('/simposio/2021/trabalhos/aceitos', educomp_2021_trabalhos.aceitos)
+app.get('/simposio/2021/topicos-de-interesse', educomp_2021_trabalhos.topicos)
+app.get('/simposio/2021/equipe', educomp_2021_equipe.comissao_organizadora)
+app.get('/simposio/2021/comite-programa', educomp_2021_equipe.comite_programa)
 
-app.get('/simposio/2021/datas', (req, res) => { 
-    res.render('simposio/2021/pt-BR/datas', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            datas: true,
-            titulo: 'Datas Importantes'
-        }
-    ) 
-})
-app.get('/simposio/2021/contato', (req, res) => { 
-    res.render('simposio/2021/pt-BR/contato', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            contato: true,
-            titulo: "Contato"
-        }
-    ) 
-})
-app.get('/simposio/2021/programacao', (req, res) => { 
-    res.render('simposio/2021/pt-BR/programacao/index', 
-        {
-            //layout: 'simposio/2021/pt-BR/layout', 
-            prog: true,
-            prog_educomp: true,
-            titulo: 'Programação'
-        }
-    ) 
-})
-app.get('/simposio/2021/programacao/esquenta/1', (req, res) => { 
-    res.render('simposio/2021/pt-BR/programacao/esquenta/primeiro', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            prog: true,
-            titulo: 'Esquenta I'
-        }
-    ) 
-})
-app.get('/simposio/2021/programacao/esquenta/2', (req, res) => { 
-    res.render('simposio/2021/pt-BR/programacao/esquenta/segundo', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            prog: true,
-            titulo: 'Esquenta II'
-        }
-    ) 
-})
-app.get('/simposio/2021/forlic', (req, res) => { 
-    res.render('simposio/2021/pt-BR/forlic', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            forlic: true,
-            titulo: 'ForLic'
-        }
-    ) 
-})
-app.get('/simposio/2021/inscricoes', (req, res) => { 
-    res.render('simposio/2021/pt-BR/inscricoes', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            inscricoes: true,
-            titulo: 'Inscrições'
-        }
-    ) 
-})
-app.get('/simposio/2021/equipe', (req, res) => { 
-    res.render('simposio/2021/pt-BR/equipe', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            equipe: true,
-            titulo: 'Equipe'
-        }
-    ) 
-})
-app.get('/simposio/2021/comite-programa', (req, res) => { 
-    res.render('simposio/2021/pt-BR/comite-programa', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            equipe: true,
-            titulo: 'Comitê de Programa'
-        }
-    ) 
-})
 //critérios de revisão
-app.get('/simposio/2021/trabalhos/criterios/trilha-1/ensaios', (req, res) => { 
-    res.render('simposio/2021/pt-BR/criterios-de-revisao/criterio-trilha1', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            trabalhos: true,
-            titulo: 'Critérios de Revisão (Trilha 1 - Ensaios)'
-        }
-    ) 
-})
-app.get('/simposio/2021/trabalhos/criterios/trilha-1/artigos', (req, res) => { 
-    res.render('simposio/2021/pt-BR/criterios-de-revisao/criterio-trilha1-artigos', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            trabalhos: true,
-            titulo: 'Critérios de Revisão (Trilha 1 - Artigos de Pesquisa)'
-        }
-    ) 
-})
-app.get('/simposio/2021/trabalhos/criterios/trilha-2', (req, res) => { 
-    res.render('simposio/2021/pt-BR/criterios-de-revisao/criterio-trilha2', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            trabalhos: true,
-            titulo: 'Critérios de Revisão (Trilha 2)'
-        }
-    ) 
-})
-app.get('/simposio/2021/trabalhos/criterios/trilha-3', (req, res) => { 
-    res.render('simposio/2021/pt-BR/criterios-de-revisao/criterio-trilha3', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            trabalhos: true,
-            titulo: 'Critérios de Revisão (Trilha 3)'
-        }
-    ) 
-})
-app.get('/simposio/2021/trabalhos/criterios/trilha-4', (req, res) => { 
-    res.render('simposio/2021/pt-BR/criterios-de-revisao/criterio-trilha4', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            trabalhos: true,
-            titulo: 'Critérios de Revisão (Trilha 4)'
-        }
-    ) 
-})
-app.get('/simposio/2021/trabalhos/criterios/lab-ideias', (req, res) => { 
-    res.render('simposio/2021/pt-BR/criterios-de-revisao/criterio-lab-ideias', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            trabalhos: true,
-            titulo: 'Critérios de Revisão (Laboratório de Ideias)'
-        }
-    ) 
-})
+app.get('/simposio/2021/trabalhos/criterios/trilha-1/ensaios', educomp_2021_criterios.ensaios)
+app.get('/simposio/2021/trabalhos/criterios/trilha-1/artigos', educomp_2021_criterios.artigos)
+app.get('/simposio/2021/trabalhos/criterios/trilha-2', educomp_2021_criterios.trilha2)
+app.get('/simposio/2021/trabalhos/criterios/trilha-3', educomp_2021_criterios.trilha3)
+app.get('/simposio/2021/trabalhos/criterios/trilha-4', educomp_2021_criterios.trilha4)
+app.get('/simposio/2021/trabalhos/criterios/lab-ideias', educomp_2021_criterios.labideias)
 
 //EduComp 2021 - en-US
 app.get('/en-US/symposium/2021/', (req, res) => { 
@@ -190,162 +77,40 @@ app.get('/en-US/symposium/2021/', (req, res) => {
         }
     ) 
 })
-app.get('/en-US/symposium/2021/about', (req, res) => { 
-    res.render('simposio/2021/en-US/sobre', 
-        {
-            layout: 'simposio/2021/en-US/layout', 
-            about: true, 
-            titulo: "Home"
-        }
-    ) 
-})
-app.get('/en-US/symposium/2021/topics-of-interest', (req, res) => { 
-    res.render('simposio/2021/en-US/topicos-de-interesse', 
-        {
-            layout: 'simposio/2021/en-US/layout', 
-            topics: true, 
-            titulo: "Topics of Interest"
-        }
-    ) 
-})
-app.get('/en-US/symposium/2021/call-for-contributions', (req, res) => { 
-    res.render('simposio/2021/en-US/trabalhos', 
-        {
-            layout: 'simposio/2021/en-US/layout', 
-            papers: true, 
-            titulo: "Call for Contributions"
-        }
-    ) 
-})
-app.get('/en-US/symposium/2021/dates', (req, res) => { 
-    res.render('simposio/2021/en-US/datas', 
-        {
-            layout: 'simposio/2021/en-US/layout', 
-            dates: true,
-            titulo: 'Dates'
-        }
-    ) 
-})
-app.get('/en-US/symposium/2021/registrations', (req, res) => { 
-    res.render('simposio/2021/en-US/inscricoes', 
-        {
-            layout: 'simposio/2021/en-US/layout', 
-            registrations: true,
-            titulo: 'Registrations'
-        }
-    ) 
-})
-app.get('/en-US/symposium/2021/program', (req, res) => { 
-    res.render('simposio/2021/en-US/programacao', 
-        {
-            layout: 'simposio/2021/en-US/layout', 
-            shedule: true,
-            titulo: 'Program'
-        }
-    ) 
-})
-app.get('/en-US/symposium/2021/team', (req, res) => { 
-    res.render('simposio/2021/en-US/equipe', 
-        {
-            layout: 'simposio/2021/en-US/layout', 
-            team: true,
-            titulo: 'Team'
-        }
-    ) 
-})
-app.get('/en-US/symposium/2021/program-committee', (req, res) => { 
-    res.render('simposio/2021/en-US/comite-programa', 
-        {
-            layout: 'simposio/2021/en-US/layout', 
-            team: true,
-            titulo: 'Program Committee'
-        }
-    ) 
-})
-app.get('/en-US/symposium/2021/contact', (req, res) => { 
-    res.render('simposio/2021/en-US/contato', 
-        {
-            layout: 'simposio/2021/en-US/layout', 
-            contact: true,
-            titulo: 'Contact'
-        }
-    ) 
-})
-app.get('/en-US/symposium/2021/forlic', (req, res) => { 
-    res.render('simposio/2021/en-US/forlic', 
-        {
-            layout: 'simposio/2021/en-US/layout', 
-            forlic: true,
-            titulo: 'ForLic'
-        }
-    ) 
-})
 
-app.get('/simposio/2021/certificados/esquenta/1/:encontrado', (req, res) => { 
-    let mensagem = true
-    if (req.params.encontrado === 'encontrado') {
-        mensagem = false
-    }
+app.get('/en-US/symposium/2021/about', educomp_2021_en_us_main.about)
+app.get('/en-US/symposium/2021/topics-of-interest', educomp_2021_en_us_main.topics)
+app.get('/en-US/symposium/2021/call-for-contributions', educomp_2021_en_us_main.contributors)
+app.get('/en-US/symposium/2021/dates', educomp_2021_en_us_main.dates)
+app.get('/en-US/symposium/2021/registrations', educomp_2021_en_us_main.incricoes)
+app.get('/en-US/symposium/2021/program', educomp_2021_en_us_main.program)
+app.get('/en-US/symposium/2021/team', educomp_2021_en_us_main.team)
+app.get('/en-US/symposium/2021/program-committee', educomp_2021_en_us_main.committee)
+app.get('/en-US/symposium/2021/contact', educomp_2021_en_us_main.contact)
+app.get('/en-US/symposium/2021/forlic', educomp_2021_en_us_main.forlic)
 
-    res.render('simposio/2021/pt-BR/certificados/esquenta-1', 
-        {
-            layout: 'simposio/2021/pt-BR/layout', 
-            certificado: true,
-            titulo: 'Certificado',
-            encontrado: mensagem
-        }
-    ) 
-})
+app.get('/simposio/2021/certificados/esquenta/1', educomp_2021_certificados.esquenta1CertificadoOpcoes)
+app.get('/simposio/2021/certificados/esquenta/1/obter', educomp_2021_certificados.esquenta1Certificado)
+app.post('/simposio/2021/certificados/esquenta/1/obter', educomp_2021_certificados.obterEsquenta1)
+app.post('/simposio/2021/certificados/esquenta/1/obter/arquivo', educomp_2021_certificados.obterArquivoEsquenta1)
+app.get('/simposio/2021/certificados/esquenta/1/validar', educomp_2021_certificados.esquenta1FormValidar)
+app.post('/simposio/2021/certificados/esquenta/1/validar', educomp_2021_certificados.validarEsquenta1)
+app.get('/simposio/2021/certificados/esquenta/1/resultado/:result', educomp_2021_certificados.validarEsquenta1Resultado)
 
-app.post('/simposio/2021/certificados/esquenta/1/obter', async (req, res) => {
-    try{
-        console.log('Teste certificado')
-        const doc = new GoogleSpreadsheet('1bOIjyqdNo2x5TkhNPNPid2FFD1JkQeb24R1izWilh2E')
-        await doc.useServiceAccountAuth({
-            client_email: process.env.GOOGLE_API_CLIENT_EMAIL,
-            private_key: process.env.GOOGLE_API_PRIVATE_KEY.replace(/\\n/g, '\n'),
-        })
-        await doc.loadInfo()
-        const sheet = doc.sheetsByIndex[0]
-        const rows = await sheet.getRows()
-        let encontrado = -1
-        let posicao = -1
-        rows.forEach( (element, index) => {
-            if (element.Email === req.body.email){
-                encontrado = 1
-                posicao = index
-            }
-        })
-        if (posicao !== -1) {
-            const doc = new PDFDocument({                
-                layout: 'landscape', 
-                size: [540, 800],               
-            })
-            doc.image('./certificado-esquenta.png', 0, 0,{
-                fit: [800, 600],
+// app.get('/simposio/2021/certificados/esquenta/2/:encontrado', educomp_2021_certificados.esquenta2Certificado)
+// app.get('/simposio/2021/certificados/educomp/:encontrado', educomp_2021_certificados.educompCertificado)
+// app.post('/simposio/2021/certificados/esquenta/2/obter', educomp_2021_certificados.obterEsquenta2)
+// app.post('/simposio/2021/certificados/educomp/obter', educomp_2021_certificados.obterEducomp)
+// app.post('/simposio/2021/certificados/esquenta/2/validar', educomp_2021_certificados.validarEsquenta2)
+// app.post('/simposio/2021/certificados/educomp/validar', educomp_2021_certificados.validarEducomp)
 
-            })
-            doc.fontSize(18)
-            doc.font('./trebuc.ttf')
-            let nome = rows[posicao].Nome_completo
-            nome = nome.toUpperCase()
-            doc.text(`Certificamos para os devidos fins que ${nome} participou do evento preparatório Esquenta EduComp (Simpósio Brasileiro de Educação em Computação) no dia 27 de fevereiro de 2021 com a carga horária de 03 (três) horas.`, 150, 275, {width: 500, align: 'justify'})
-            doc.end()
-            doc.pipe(fs.createWriteStream('certificado.pdf')).on('finish', () => {
-                res.download('./certificado.pdf')
-            })    
-        } else {
-            res.redirect('/simposio/2021/certificados/esquenta/1/nao-encontrado')
-            //req.flash('message', 'Email não encontrado na base!')
-
-        }
-    } catch (error) {
-        console.log(error)
-    }
-
-})
-
-
+//Certificados educomp
+app.get('/simposio/2021/certificados/educomp', educomp_2021_certificados_educomp.educompCertificadoOpcoes)
+app.get('/simposio/2021/certificados/educomp/obter', educomp_2021_certificados_educomp.educompCertificado)
+app.post('/simposio/2021/certificados/educomp/obter', educomp_2021_certificados_educomp.obterEducomp)
+app.post('/simposio/2021/certificados/educomp/obter/arquivo', educomp_2021_certificados_educomp.obterArquivoEducomp)
+app.get('/simposio/2021/certificados/educomp/validar', educomp_2021_certificados_educomp.educompFormValidar)
+app.post('/simposio/2021/certificados/educomp/validar', educomp_2021_certificados_educomp.validarEducomp)
 
 
 //Envio de email

@@ -16,7 +16,6 @@
     "nodemon": "^2.0.7",
     "pdfkit": "^0.11.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,96 @@
+   {{> simposio/2021/pt-BR/headerInterno}}
+
+  <section id="datas" style="background-color:rgb(221, 232, 243);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 style="margin-top: -6rem;">
+            Esquenta EduComp 1 | Certificados <br>
+            <small class="text-muted">(27 de março de 2021)</small>
+          </h2> 
+          <br>
+          <h3>Obter certificado: </h3>
+          <br>
+
+          {{#each data}}
+            {{#if registros}}
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-dark disable" style="font-size: x-large;">{{nome}}</li>
+                {{#each registros}}    
+                  {{#if participacao}}
+                    <form method="POST" action="/simposio/2021/certificados/esquenta/1/obter/arquivo/">
+                      <input name="atividade" type="hidden" value="{{atividade}}" />
+                      <input name="email" type="hidden" value="{{email}}" />
+                      <input value="Participação" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                    </form>
+                    {{!-- <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/0/0/0' target="_blank" class="list-group-item list-group-item-primary" >Participação</a> --}}
+                  {{/if}}
+                  {{#if organizacao}}
+                    <form method="POST" action="/simposio/2021/certificados/esquenta/1/obter/arquivo/">
+                      <input name="atividade" type="hidden" value="{{atividade}}" />
+                      <input name="email" type="hidden" value="{{email}}" />
+                      <input name="funcao" type="hidden" value="{{funcao}}" />
+                      <input value="{{funcao}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                    </form>
+                    {{!-- <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/{{funcao}}/0/0' target="_blank" class="list-group-item list-group-item-primary" >{{funcao}}</a> --}}
+                  {{/if}}
+                  {{#if comite_programa}}
+                    <form method="POST" action="/simposio/2021/certificados/esquenta/1/obter/arquivo/">
+                      <input name="atividade" type="hidden" value="{{atividade}}" />
+                      <input name="email" type="hidden" value="{{email}}" />
+                      <input name="funcao" type="hidden" value="{{funcao}}" />
+                      <input value="{{funcao}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                    </form>
+                    {{!-- <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/{{funcao}}/0/0' target="_blank" class="list-group-item list-group-item-primary" >{{funcao}}</a> --}}
+                  {{/if}}
+                  {{#if palestra}}
+                    <form method="POST" action="/simposio/2021/certificados/esquenta/1/obter/arquivo/">
+                      <input name="atividade" type="hidden" value="{{atividade}}" />
+                      <input name="email" type="hidden" value="{{email}}" />
+                      <input name="funcao" type="hidden" value="{{funcao}}" />
+                      <input name="titulo" type="hidden" value="{{titulo}}" />
+                      <input value="{{titulo}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                    </form>
+                    {{!-- <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/{{funcao}}/0/{{titulo}}' target="_blank" class="list-group-item list-group-item-primary" >{{titulo}}</a> --}}
+                  {{/if}}
+                  {{#if sessao-tecnica-apres}}
+                    <form method="POST" action="/simposio/2021/certificados/esquenta/1/obter/arquivo/">
+                      <input name="atividade" type="hidden" value="{{atividade}}" />
+                      <input name="email" type="hidden" value="{{email}}" />
+                      <input name="titulo" type="hidden" value="{{titulo}}" />
+                      <input value="{{titulo}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                    </form>
+                    {{!-- <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/0/0/{{titulo}}' target="_blank" class="list-group-item list-group-item-primary" >{{titulo}}</a> --}}
+                  {{/if}}
+                  {{#if sessao-tecnica-coord}}
+                    <form method="POST" action="/simposio/2021/certificados/esquenta/1/obter/arquivo/">
+                      <input name="atividade" type="hidden" value="{{atividade}}" />
+                      <input name="email" type="hidden" value="{{email}}" />
+                      <input value="Sessão técnica - coordenação" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                    </form>
+                    {{!-- <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/0/0/0' target="_blank" class="list-group-item list-group-item-primary" >Sessão técnica - coordenação</a> --}}
+                  {{/if}}
+                  {{#if abertura-encerramento}}
+                    <form method="POST" action="/simposio/2021/certificados/esquenta/1/obter/arquivo/">
+                      <input name="atividade" type="hidden" value="{{atividade}}" />
+                      <input name="email" type="hidden" value="{{email}}" />
+                      <input name="tipo" type="hidden" value="{{tipo}}" />
+                      <input value="{{tipo}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                    </form>
+                    {{!-- <a href='/simposio/2021/certificados/esquenta/1/obter/arquivo/{{atividade}}/{{email}}/0/{{tipo}}/0' target="_blank" class="list-group-item list-group-item-primary" >{{tipo}}</a> --}}
+                  {{/if}}
+                {{/each}}
+              </ul>
+            {{/if}}
+          {{/each}}
+
+          {{#if mensagem}}
+            <div class="alert alert-danger">{{mensagem}}</div>
+          {{/if}}
+
+        </div>
+            
+      </div>
+    </div>
+
+  </section>
