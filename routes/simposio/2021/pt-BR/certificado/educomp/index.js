@@ -104,9 +104,7 @@ exports.obterEducomp = async function (req, res) {
             if (element.email === req.body.email) {
                 comite_programa_membro.registros.push(
                     { 
-                        'email': element.email,
-                        'funcao': element.funcao,  
-                        'funcaoFormat': element.funcao[0].toUpperCase() + element.funcao.substr(1),              
+                        'email': element.email,          
                         'atividade': 'comite-programa-membro',
                         'comite-programa-membro': true,
                     }
@@ -361,8 +359,7 @@ exports.obterArquivoEducomp = async function (req, res) {
                 }
             } else if (atividade === 'comite-programa-membro') {
                 funcao = req.body.funcao
-                if (element.email === email && element.funcao === funcao) {
-                    funcao = funcao[0].toUpperCase() + funcao.substr(1)
+                if (element.email === email) {
                     posicao = index
                 }
             } else if (atividade === 'comite-programa-convidado') {
@@ -465,7 +462,7 @@ exports.obterArquivoEducomp = async function (req, res) {
             textoBase = rows[0].texto_base
             let novoTextoBase = textoBase.replace('${nome_completo}', nome)
             novoTextoBase = novoTextoBase.replace('${funcao}', funcao)
-            novoTextoBase = novoTextoBase.replace('${titulo}', atividade)
+            novoTextoBase = novoTextoBase.replace('${titulo}', titulo)
             novoTextoBase = novoTextoBase.replace('${tipo}', tipo)
             novoTextoBase = novoTextoBase.replace('${sessao}', sessao)
             novoTextoBase = novoTextoBase.replace('${dia}', dia)
@@ -474,9 +471,12 @@ exports.obterArquivoEducomp = async function (req, res) {
             
 
             //doc.text(novoTextoBase, 150, 265, {width: 600, align: 'justify', continued: true}).fontSize(8).text(`Pode ser validado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 385, {width:600, align: 'justify'})
-            doc.text(novoTextoBase, 150, 265, {width: 500, align: 'justify'})
-            doc.fontSize(8)
-            doc.text(`Pode ser validado em: https://www.educompbrasil.org/simposio/2021/certificados/educomp/validar com o código: ${codigo}`, 150, 395, {width:500, align: 'left'})
+
+            if(novoTextoBase.length > 400)
+                doc.fontSize(16)
+            doc.text(novoTextoBase, 100, 265, {width: 600, align: 'justify'})
+            doc.fontSize(9.5)
+            doc.text(`Pode ser validado em: https://www.educompbrasil.org/simposio/2021/certificados/educomp/validar com o código ${codigo}`, 100, 405, {width:600, align: 'center'})
             doc.end()
             doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado-${codigo}.pdf`)).on('finish', () => {
                 res.download(`resources/certificados/gerados/certificado-${codigo}.pdf`, () => {

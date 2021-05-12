@@ -15,13 +15,15 @@
           {{#each data}}
             {{#if registros}}
               <ul class="list-group">
-                <li class="list-group-item list-group-item-dark disable" style="font-size: x-large;">{{nome}}</li>
+                <li class="list-group-item list-group-item-primary" style="font-size: x-large;">{{nome}}</li>
                 {{#each registros}}    
                   {{#if participacao}}
                     <form method="POST" action="/simposio/2021/certificados/educomp/obter/arquivo/">
                       <input name="atividade" type="hidden" value="{{atividade}}" />
                       <input name="email" type="hidden" value="{{email}}" />
-                      <input value="Participação" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> Participação
+                      </button> 
                     </form>
                     {{!-- <a href='/simposio/2021/certificados/educomp/obter/arquivo/{{atividade}}/{{email}}/0/0/0' target="_blank" class="list-group-item list-group-item-primary" >Participação</a> --}}
                   {{/if}}
@@ -30,7 +32,9 @@
                       <input name="atividade" type="hidden" value="{{atividade}}" />
                       <input name="email" type="hidden" value="{{email}}" />
                       <input name="funcao" type="hidden" value="{{funcao}}" />
-                      <input value="{{funcaoFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> {{funcaoFormat}}
+                      </button> 
                     </form>
                     {{!-- <a href='/simposio/2021/certificados/educomp/obter/arquivo/{{atividade}}/{{email}}/{{funcao}}/0/0' target="_blank" class="list-group-item list-group-item-primary" >{{funcao}}</a> --}}
                   {{/if}}
@@ -38,15 +42,18 @@
                     <form method="POST" action="/simposio/2021/certificados/educomp/obter/arquivo/">
                       <input name="atividade" type="hidden" value="{{atividade}}" />
                       <input name="email" type="hidden" value="{{email}}" />
-                      <input name="funcao" type="hidden" value="{{funcao}}" />
-                      <input value="{{funcaoFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> Comitê de Programa (Membro)
+                      </button>
                     </form>
                   {{/if}}
                   {{#if comite-programa-convidado}}
                     <form method="POST" action="/simposio/2021/certificados/educomp/obter/arquivo/">
                       <input name="atividade" type="hidden" value="{{atividade}}" />
                       <input name="email" type="hidden" value="{{email}}" />
-                      <input value="Comitê de Programa (Convidado)" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> Comitê de Programa (Convidado)
+                      </button>
                     </form>
                   {{/if}}
                   {{#if comite-programa-coord}}
@@ -54,7 +61,9 @@
                       <input name="atividade" type="hidden" value="{{atividade}}" />
                       <input name="email" type="hidden" value="{{email}}" />
                       <input name="trilha" type="hidden" value="{{trilha}}" />
-                      <input value="{{trilhaFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> {{ trilhaFormat }}
+                      </button>
                     </form>
                   {{/if}}
                   {{#if palestrante}}
@@ -63,7 +72,9 @@
                       <input name="email" type="hidden" value="{{email}}" />
                       <input name="titulo" type="hidden" value="{{titulo}}" />
                       <input name="dia" type="hidden" value="{{dia}}" />
-                      <input value="{{tituloFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> {{ funcaoFormat }}
+                      </button>
                     </form>
                   {{/if}}
                   {{#if palestra-apoio}}
@@ -73,7 +84,9 @@
                       <input name="funcao" type="hidden" value="{{funcao}}" />
                       <input name="titulo" type="hidden" value="{{titulo}}" />
                       <input name="dia" type="hidden" value="{{dia}}" />
-                      <input value="{{tituloFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> {{ tituloFormat }}
+                      </button>
                     </form>
                   {{/if}}
                   {{#if painel}}
@@ -83,7 +96,9 @@
                       <input name="funcao" type="hidden" value="{{funcao}}" />
                       <input name="titulo" type="hidden" value="{{titulo}}" />
                       <input name="dia" type="hidden" value="{{dia}}" />
-                      <input value="{{tituloFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> {{ tituloFormat }}
+                      </button>
                     </form>
                   {{/if}}
                   {{#if sessao-tecnica-coord}}
@@ -92,7 +107,9 @@
                       <input name="email" type="hidden" value="{{email}}" />
                       <input name="sessao" type="hidden" value="{{sessao}}" />
                       <input name="dia" type="hidden" value="{{dia}}" />
-                      <input value="{{sessaoFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> {{ sessaoFormat }}
+                      </button>
                     </form>
                   {{/if}}
                   {{#if apres-trabalho}}
@@ -102,7 +119,9 @@
                       <input name="tipo" type="hidden" value="{{tipo}}" />
                       <input name="titulo" type="hidden" value="{{titulo}}" />
                       <input name="dia" type="hidden" value="{{dia}}" />
-                      <input value="{{tituloFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> {{ tituloFormat }}
+                      </button>
                     </form>
                   {{/if}}
                   {{#if abertura-encerramento}}
@@ -111,7 +130,9 @@
                       <input name="email" type="hidden" value="{{email}}" />
                       <input name="tipo" type="hidden" value="{{tipo}}" />
                       <input name="dia" type="hidden" value="{{dia}}" />
-                      <input value="{{tipoFormat}} - {{dia}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> {{ tipoFormat }}
+                      </button>
                     </form>
                   {{/if}}
                   {{#if trabalho-publicado}}
@@ -121,7 +142,9 @@
                       <input name="tipo" type="hidden" value="{{tipo}}" />
                       <input name="titulo" type="hidden" value="{{titulo}}" />
                       <input name="autores" type="hidden" value="{{autores}}" />
-                      <input value="{{tituloFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> {{ tituloFormat }}
+                      </button>
                     </form>
                   {{/if}}
                   {{#if lab-ideias-mesa}}
@@ -131,7 +154,9 @@
                       <input name="sessao" type="hidden" value="{{sessao}}" />
                       <input name="dia" type="hidden" value="{{dia}}" />
                       <input name="tipo" type="hidden" value="{{tipo}}" />
-                      <input value="{{tipoFormat}}" type="submit" class="btn btn-primary btn-lg btn-block" style="text-align: left;" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> {{ tipoFormat }}
+                      </button>
                     </form>
                   {{/if}}
                 {{/each}}
