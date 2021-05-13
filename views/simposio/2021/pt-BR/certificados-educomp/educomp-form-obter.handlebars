@@ -30,6 +30,10 @@
 
           </form>
 
+          {{#if mensagem}}
+            <div class="alert alert-danger">{{mensagem}}</div>
+          {{/if}}
+
           <script type="text/javascript"> // Script
               document.getElementById('submit1').addEventListener('click', mudarEstilo)
 
