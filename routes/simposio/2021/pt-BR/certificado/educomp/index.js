@@ -29,7 +29,7 @@ exports.educompCertificado = function (req, res) {
 //gerar lista de links do educomp
 exports.obterEducomp = async function (req, res) {
     try{
-        console.log('Teste certificado educomp')
+        console.log('Teste certificado educomp2')
         const doc = new GoogleSpreadsheet('1ShcIedcnFk9oiIwKo2daA6GqKVEYLlgitRNYtu3fjPM')
         await doc.useServiceAccountAuth({
             client_email: process.env.GOOGLE_API_CLIENT_EMAIL,
@@ -49,6 +49,7 @@ exports.obterEducomp = async function (req, res) {
         let rowsAberturaEncerramento = await doc.sheetsByTitle['abertura-encerramento'].getRows()
         let rowsTrabalhoPublicado = await doc.sheetsByTitle['trabalho-publicado'].getRows()
         let rowsLabIdeiasMesa = await doc.sheetsByTitle['lab-ideias-mesa'].getRows()
+        let rowsMelhorTrabalho = await doc.sheetsByTitle['melhor-trabalho'].getRows()
 
         let plans = []
 
@@ -65,14 +66,18 @@ exports.obterEducomp = async function (req, res) {
         let abertura_encerramento = {}
         let trabalho_publicado = {}
         let lab_ideias_mesa = {}
+        let melhor_trabalho = {}
+
+        let encontrado = false
         
         participacao.nome = 'Participação'
         participacao.registros = []
         rowsParticipacao.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 participacao.registros.push(
                     { 
-                        'email': element.email,                        
+                        'email': element.email.trim(),                        
                         'atividade': 'participacao',
                         'participacao': true,
                     }
@@ -84,10 +89,11 @@ exports.obterEducomp = async function (req, res) {
         organizacao.nome = 'Organização'
         organizacao.registros = []
         rowsOrganizacao.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 organizacao.registros.push(
                     { 
-                        'email': element.email,
+                        'email': element.email.trim(),
                         'funcao': element.funcao,
                         'funcaoFormat': element.funcao[0].toUpperCase() + element.funcao.substr(1),
                         'atividade': 'organizacao',
@@ -101,10 +107,11 @@ exports.obterEducomp = async function (req, res) {
         comite_programa_membro.nome = 'Comitê de Programa (Membro)'
         comite_programa_membro.registros = []
         rowsComiteProgramaMembro.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 comite_programa_membro.registros.push(
                     { 
-                        'email': element.email,          
+                        'email': element.email.trim(),          
                         'atividade': 'comite-programa-membro',
                         'comite-programa-membro': true,
                     }
@@ -116,10 +123,11 @@ exports.obterEducomp = async function (req, res) {
         comite_programa_convidado.nome = 'Comitê de Programa (Revisor Convidado)'
         comite_programa_convidado.registros = []
         rowsComiteProgramaConvidado.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 comite_programa_convidado.registros.push(
                     { 
-                        'email': element.email,               
+                        'email': element.email.trim(),               
                         'atividade': 'comite-programa-convidado',
                         'comite-programa-convidado': true,
                     }
@@ -131,10 +139,11 @@ exports.obterEducomp = async function (req, res) {
         comite_programa_coord.nome = 'Comitê de Programa (Coordenação)'
         comite_programa_coord.registros = []
         rowsComiteProgramaCoord.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 comite_programa_coord.registros.push(
                     { 
-                        'email': element.email,               
+                        'email': element.email.trim(),               
                         'atividade': 'comite-programa-coord',
                         'trilha': element.trilha, 
                         'trilhaFormat': element.trilha[0].toUpperCase() + element.trilha.substr(1),
@@ -148,10 +157,11 @@ exports.obterEducomp = async function (req, res) {
         palestrante.nome = 'Palestrante'
         palestrante.registros = []
         rowsPalestrante.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 palestrante.registros.push(
                     { 
-                        'email': element.email,               
+                        'email': element.email.trim(),               
                         'atividade': 'palestrante',
                         'titulo': element.titulo,
                         'tituloFormat': element.titulo[0].toUpperCase() + element.titulo.substr(1),
@@ -166,10 +176,11 @@ exports.obterEducomp = async function (req, res) {
         palestra_apoio.nome = 'Palestra (Apoio)'
         palestra_apoio.registros = []
         rowsPalestraApoio.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 palestra_apoio.registros.push(
                     { 
-                        'email': element.email,               
+                        'email': element.email.trim(),               
                         'atividade': 'palestra-apoio',
                         'funcao': element.funcao,
                         'titulo': element.titulo,
@@ -185,10 +196,11 @@ exports.obterEducomp = async function (req, res) {
         painel.nome = 'Painel'
         painel.registros = []
         rowsPainel.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 painel.registros.push(
                     { 
-                        'email': element.email,
+                        'email': element.email.trim(),
                         'funcao': element.funcao,
                         'titulo': element.titulo,
                         'tituloFormat': element.titulo[0].toUpperCase() + element.titulo.substr(1),
@@ -204,10 +216,11 @@ exports.obterEducomp = async function (req, res) {
         sessao_tecnica_coord.nome = 'Sessão técnica - Coordenação'
         sessao_tecnica_coord.registros = []
         rowsSessaoTecnicaCoord.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 sessao_tecnica_coord.registros.push(
                     { 
-                        'email': element.email,                                                
+                        'email': element.email.trim(),                                                
                         'atividade': 'sessao-tecnica-coord',
                         'sessao': element.sessao,
                         'sessaoFormat': element.sessao[0].toUpperCase() + element.sessao.substr(1),
@@ -222,10 +235,11 @@ exports.obterEducomp = async function (req, res) {
         apres_trabalho.nome = 'Apresentação de Trabalhos'        
         apres_trabalho.registros = []
         rowsApresTrabalho.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 apres_trabalho.registros.push(
                     { 
-                        'email': element.email,                        
+                        'email': element.email.trim(),                        
                         'titulo': element.titulo,     
                         'tituloFormat': element.titulo[0].toUpperCase() + element.titulo.substr(1),   
                         'tipo': element.tipo,
@@ -241,10 +255,11 @@ exports.obterEducomp = async function (req, res) {
         abertura_encerramento.nome = 'Abertura - Encerramento'
         abertura_encerramento.registros = []
         rowsAberturaEncerramento.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 abertura_encerramento.registros.push(
                     { 
-                        'email': element.email,
+                        'email': element.email.trim(),
                         'tipo': element.tipo,
                         'tipoFormat': element.tipo[0].toUpperCase() + element.tipo.substr(1),
                         'dia': element.dia, 
@@ -259,10 +274,11 @@ exports.obterEducomp = async function (req, res) {
         trabalho_publicado.nome = 'Trabalho Publicado'
         trabalho_publicado.registros = []
         rowsTrabalhoPublicado.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 trabalho_publicado.registros.push(
                     { 
-                        'email': element.email,                                                
+                        'email': element.email.trim(),                                                
                         'atividade': 'trabalho-publicado',
                         'autores': element.autores,
                         'tipo': element.tipo,
@@ -278,10 +294,11 @@ exports.obterEducomp = async function (req, res) {
         lab_ideias_mesa.nome = 'Lab Ideias (Mesa)'        
         lab_ideias_mesa.registros = []
         rowsLabIdeiasMesa.forEach( (element) => {
-            if (element.email === req.body.email) {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
                 lab_ideias_mesa.registros.push(
                     { 
-                        'email': element.email,                        
+                        'email': element.email.trim(),                        
                         'sessao': element.sessao,
                         'dia': element.dia,
                         'tipo': element.tipo,          
@@ -294,17 +311,47 @@ exports.obterEducomp = async function (req, res) {
         })
         plans.push(lab_ideias_mesa)
 
-        //console.log(plans)
-
-        res.render('simposio/2021/pt-BR/certificados-educomp/educomp-obter-lista',
-            {
-                layout: 'simposio/2021/pt-BR/layout', 
-                certificado: true,
-                titulo: 'Certificado', 
-                email: req.body.email,
-                data: plans,
+        melhor_trabalho.nome = 'Melhor Trabalho'        
+        melhor_trabalho.registros = []
+        rowsMelhorTrabalho.forEach( (element) => {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
+                melhor_trabalho.registros.push(
+                    { 
+                        'email': element.email.trim(),                        
+                        'titulo': element.titulo,
+                        'tituloFormat': element.titulo[0].toUpperCase() + element.titulo.substr(1),
+                        'tipo': element.tipo,           
+                        'autores': element.autores,                       
+                        'atividade': 'melhor-trabalho',
+                        'melhor-trabalho': true,
+                    }
+                )
             }
-        )
+        })
+        plans.push(melhor_trabalho)
+
+        console.log(plans)
+
+        if (encontrado) {
+            res.render('simposio/2021/pt-BR/certificados-educomp/educomp-obter-lista',
+                {
+                    layout: 'simposio/2021/pt-BR/layout', 
+                    certificado: true,
+                    titulo: 'Certificado', 
+                    email: req.body.email,
+                    data: plans,
+                }
+            )
+        } else {
+            res.render('simposio/2021/pt-BR/certificados-educomp/educomp-form-obter',
+                {
+                    layout: 'simposio/2021/pt-BR/layout', 
+                    certificado: true,
+                    mensagem: 'Email não encontrado na base de dados. Entre em contato com a organização'
+                }
+            )
+        }
 
     } catch (error) {
         console.log(error)
@@ -312,9 +359,10 @@ exports.obterEducomp = async function (req, res) {
                 {
                     layout: 'simposio/2021/pt-BR/layout', 
                     certificado: true,
-                    titulo: 'Certificado',            
+                    titulo: 'Certificado',    
+                    mensagem: 'Erro ao buscar certificado. Entre em contato com a organização'      
                 }
-            )
+        )
     }
 
 };
@@ -347,28 +395,28 @@ exports.obterArquivoEducomp = async function (req, res) {
         const rows = await sheets.sheetsByTitle[atividade].getRows()
         rows.forEach( (element, index) => {
             if (atividade === 'participacao') {
-                 if (element.email === email) {
+                 if ((element.email.trim()) === email) {
                     posicao = index
                 }
             } else if (atividade === 'organizacao') {
                 funcao = req.body.funcao
                 //console.log(element.funcao, funcao)
-                if (element.email === email && element.funcao === funcao) {
+                if ((element.email.trim()) === email && element.funcao === funcao) {
                     funcao = funcao[0].toUpperCase() + funcao.substr(1)
                     posicao = index
                 }
             } else if (atividade === 'comite-programa-membro') {
                 funcao = req.body.funcao
-                if (element.email === email) {
+                if ((element.email.trim()) === email) {
                     posicao = index
                 }
             } else if (atividade === 'comite-programa-convidado') {
-                if (element.email === email) {
+                if ((element.email.trim()) === email) {
                     posicao = index
                 }
             } else if (atividade === 'comite-programa-coord') {
                 trilha = req.body.trilha 
-                if (element.email === email && element.trilha === trilha) {
+                if ((element.email.trim()) === email && element.trilha === trilha) {
                     trilha = trilha[0].toUpperCase() + trilha.substr(1)
                     posicao = index
                 }
@@ -376,7 +424,7 @@ exports.obterArquivoEducomp = async function (req, res) {
             else if (atividade === 'palestrante') {
                 titulo = req.body.titulo 
                 dia = req.body.dia
-                if (element.email === email && element.titulo === titulo) {
+                if ((element.email.trim()) === email && element.titulo === titulo) {
                     titulo = titulo[0].toUpperCase() + titulo.substr(1)
                     posicao = index
                 }
@@ -385,7 +433,7 @@ exports.obterArquivoEducomp = async function (req, res) {
                 funcao = req.body.funcao
                 titulo = req.body.titulo 
                 dia = req.body.dia
-                if (element.email === email && element.funcao === funcao && element.titulo === titulo) {
+                if ((element.email.trim()) === email && element.funcao === funcao && element.titulo === titulo) {
                     funcao = funcao[0].toUpperCase() + funcao.substr(1)
                     titulo = titulo[0].toUpperCase() + titulo.substr(1)
                     posicao = index
@@ -395,7 +443,7 @@ exports.obterArquivoEducomp = async function (req, res) {
                 funcao = req.body.funcao
                 titulo = req.body.titulo 
                 dia = req.body.dia 
-                if (element.email === email && element.funcao === funcao && element.titulo === titulo) {
+                if ((element.email.trim()) === email && element.funcao === funcao && element.titulo === titulo) {
                     funcao = funcao[0].toUpperCase() + funcao.substr(1)
                     titulo = titulo[0].toUpperCase() + titulo.substr(1)
                     posicao = index
@@ -403,7 +451,7 @@ exports.obterArquivoEducomp = async function (req, res) {
             } else if (atividade === 'sessao-tecnica-coord') {
                 sessao = req.body.sessao 
                 dia = req.body.dia 
-                if (element.email === email && element.sessao === sessao) {
+                if ((element.email.trim()) === email && element.sessao === sessao) {
                     sessao = sessao[0].toUpperCase() + sessao.substr(1)
                     posicao = index
                 }
@@ -411,7 +459,7 @@ exports.obterArquivoEducomp = async function (req, res) {
                 tipo = req.body.tipo
                 titulo = req.body.titulo
                 dia = req.body.dia 
-                if (element.email === email && element.tipo === tipo && element.titulo === titulo) {
+                if ((element.email.trim()) === email && element.tipo === tipo && element.titulo === titulo) {
                     tipo = tipo[0].toUpperCase() + tipo.substr(1)
                     titulo = titulo[0].toUpperCase() + titulo.substr(1)
                     posicao = index
@@ -419,7 +467,7 @@ exports.obterArquivoEducomp = async function (req, res) {
             } else if (atividade === 'abertura-encerramento') {
                 tipo = req.body.tipo
                 dia = req.body.dia 
-                if (element.email === email && element.tipo === tipo) {
+                if ((element.email.trim()) === email && element.tipo === tipo) {
                     tipo = tipo[0].toUpperCase() + tipo.substr(1)
                     posicao = index
                 }
@@ -427,7 +475,7 @@ exports.obterArquivoEducomp = async function (req, res) {
                 tipo = req.body.tipo
                 titulo = req.body.titulo 
                 autores = req.body.autores 
-                if (element.email === email && element.tipo === tipo && element.titulo === titulo) {
+                if ((element.email.trim()) === email && element.tipo === tipo && element.titulo === titulo) {                    
                     tipo = tipo[0].toUpperCase() + tipo.substr(1)
                     titulo = titulo[0].toUpperCase() + titulo.substr(1)
                     autores = autores[0].toUpperCase() + autores.substr(1)
@@ -437,9 +485,19 @@ exports.obterArquivoEducomp = async function (req, res) {
                 sessao = req.body.sessao
                 dia = req.body.dia
                 tipo = req.body.tipo 
-                if (element.email === email && element.sessao === sessao && element.tipo === tipo) {
+                if ((element.email.trim()) === email && element.sessao === sessao && element.tipo === tipo) {
                     sessao = sessao[0].toUpperCase() + sessao.substr(1)
                     tipo = tipo[0].toUpperCase() + tipo.substr(1)
+                    posicao = index
+                }
+            } else if (atividade === 'melhor-trabalho') {
+                tipo = req.body.tipo
+                titulo = req.body.titulo 
+                autores = req.body.autores 
+                if ((element.email.trim()) === email && element.tipo === tipo && element.titulo === titulo) {                    
+                    tipo = tipo[0].toUpperCase() + tipo.substr(1)
+                    titulo = titulo[0].toUpperCase() + titulo.substr(1)
+                    autores = autores[0].toUpperCase() + autores.substr(1)
                     posicao = index
                 }
             }
