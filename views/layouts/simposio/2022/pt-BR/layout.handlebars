@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>EduComp 2022 :: {{titulo}}</title>
+
+  {{!-- <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /> --}}
+  <link rel="stylesheet" href="/css/bootstrap5.min.css" />
+  <link href="/css/scrolling-nav.css" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet">
+
+  <!-- Font-Awesome -->
+  <script src="https://kit.fontawesome.com/bd98f4183e.js" crossorigin="anonymous"></script>
+
+  {{~#if prog_educomp}}
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="stylesheet" href="/css/programacao/style.css">
+  {{/if}}
+
+   <!-- Font-Awesome -->
+  <script src="https://kit.fontawesome.com/bd98f4183e.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+  <!-- Navigation -->
+  {{> simposio/2022/pt-BR/navbar}}
+
+  {{{ body }}}
+
+  {{> simposio/2022/pt-BR/footer}}
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    {{!-- <script src="/js/scrolling-nav.js"></script> --}}
+
+    <script type="text/javascript" src="/js/jquery.hideseek.js"></script>
+    <script>
+        $(document).ready(function() {
+          $('#search').hideseek({
+          nodata: 'Nenhum curso encontrado',
+          
+          });
+        });
+      </script>
+
+</body>
+
+</html>

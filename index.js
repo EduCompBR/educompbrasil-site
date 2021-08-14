@@ -19,6 +19,13 @@ var educomp_2021_equipe = require('./routes/simposio/2021/pt-BR/equipe');
 var educomp_2021_criterios = require('./routes/simposio/2021/pt-BR/criterios');
 var educomp_2021_certificados = require('./routes/simposio/2021/pt-BR/certificado/esquenta-1/index');
 var educomp_2021_certificados_educomp = require('./routes/simposio/2021/pt-BR/certificado/educomp/index');
+
+var educomp_2022_main = require('./routes/simposio/2022/pt-BR/main');
+var educomp_2022_trabalhos = require('./routes/simposio/2022/pt-BR/trabalhos');
+var educomp_2022_criterios = require('./routes/simposio/2022/pt-BR/criterios');
+var educomp_2022_programacao = require('./routes/simposio/2022/pt-BR/programacao');
+var educomp_2022_equipe = require('./routes/simposio/2022/pt-BR/equipe');
+
 var giec_quem_somos = require('./routes/giec/quem_somos');
 
 //Routes en-US
@@ -40,6 +47,28 @@ app.get('/eventos', giec_main.eventos)
 app.get('/quem-somos/comite-gestor', giec_quem_somos.comite_gestor)
 app.get('/quem-somos/membros', giec_quem_somos.membros)
 app.get('/documentos', giec_main.documentos)
+
+//EduComp 2022 - pt-BR
+app.get('/simposio/2022', educomp_2022_main.index)
+app.get('/simposio/2022/sobre', educomp_2022_main.sobre)
+app.get('/simposio/2022/datas', educomp_2022_main.datas)
+app.get('/simposio/2022/programacao', educomp_2022_programacao.programacao)
+app.get('/simposio/2022/forlic', educomp_2022_main.forlic)
+app.get('/simposio/2022/inscricoes', educomp_2022_main.inscricoes)
+
+app.get('/simposio/2022/trabalhos/chamada', educomp_2022_trabalhos.chamado)
+app.get('/simposio/2022/trabalhos/topicos-de-interesse', educomp_2022_trabalhos.topicos)
+
+
+app.get('/simposio/2022/trabalhos/criterios/trilha-1', educomp_2022_criterios.artigos)
+app.get('/simposio/2022/trabalhos/criterios/trilha-2', educomp_2022_criterios.trilha2)
+app.get('/simposio/2022/trabalhos/criterios/trilha-3', educomp_2022_criterios.trilha3)
+app.get('/simposio/2022/trabalhos/criterios/trilha-4', educomp_2022_criterios.trilha4)
+app.get('/simposio/2022/trabalhos/criterios/trilha-5', educomp_2022_criterios.ensaios)
+app.get('/simposio/2022/trabalhos/criterios/lab-ideias', educomp_2022_criterios.labideias)
+
+app.get('/simposio/2022/equipe/comissao-organizadora', educomp_2022_equipe.comissao_organizadora)
+app.get('/simposio/2022/equipe/comite-programa', educomp_2022_equipe.comite_programa)
 
 //EduComp 2021 - pt-BR
 app.get('/simposio/2021', educomp_2021_main.index)
