@@ -56,9 +56,10 @@ app.get('/simposio/2022/programacao', educomp_2022_programacao.programacao)
 app.get('/simposio/2022/forlic', educomp_2022_main.forlic)
 app.get('/simposio/2022/inscricoes', educomp_2022_main.inscricoes)
 
-app.get('/simposio/2022/trabalhos/chamada', educomp_2022_trabalhos.chamado)
 app.get('/simposio/2022/trabalhos/topicos-de-interesse', educomp_2022_trabalhos.topicos)
-
+app.get('/simposio/2022/trabalhos/chamada', educomp_2022_trabalhos.chamado)
+app.get('/simposio/2022/trabalhos/lab-ideias', educomp_2022_trabalhos.lab_ideias)
+app.get('/simposio/2022/trabalhos/wtd', educomp_2022_trabalhos.wtd)
 
 app.get('/simposio/2022/trabalhos/criterios/trilha-1', educomp_2022_criterios.artigos)
 app.get('/simposio/2022/trabalhos/criterios/trilha-2', educomp_2022_criterios.trilha2)
