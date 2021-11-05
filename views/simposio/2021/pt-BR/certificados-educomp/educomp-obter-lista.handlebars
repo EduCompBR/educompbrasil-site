@@ -171,6 +171,17 @@
                       </button>
                     </form>
                   {{/if}}
+                  {{#if melhor-revisor}}
+                    <form method="POST" action="/simposio/2021/certificados/educomp/obter/arquivo/">
+                      <input name="atividade" type="hidden" value="{{atividade}}" />
+                      <input name="email" type="hidden" value="{{email}}" />
+                      <input name="revisor" type="hidden" value="{{revisor}}" />                      
+                      <input name="trilha" type="hidden" value="{{trilha}}" />
+                      <button type="submit" style="text-align: left;" class="btn btn-light btn-lg btn-block">
+                        <i class="fas fa-file-pdf"></i> {{ tituloFormat }}
+                      </button>
+                    </form>
+                  {{/if}}
                 {{/each}}
               </ul>
             {{/if}}
