@@ -50,6 +50,7 @@ exports.obterEducomp = async function (req, res) {
         let rowsTrabalhoPublicado = await doc.sheetsByTitle['trabalho-publicado'].getRows()
         let rowsLabIdeiasMesa = await doc.sheetsByTitle['lab-ideias-mesa'].getRows()
         let rowsMelhorTrabalho = await doc.sheetsByTitle['melhor-trabalho'].getRows()
+        let rowsMelhorRevisor = await doc.sheetsByTitle['melhor-revisor'].getRows()
 
         let plans = []
 
@@ -67,6 +68,7 @@ exports.obterEducomp = async function (req, res) {
         let trabalho_publicado = {}
         let lab_ideias_mesa = {}
         let melhor_trabalho = {}
+        let melhor_revisor = {}
 
         let encontrado = false
         
@@ -331,6 +333,25 @@ exports.obterEducomp = async function (req, res) {
         })
         plans.push(melhor_trabalho)
 
+        melhor_revisor.nome = 'Melhor Revisor'        
+        melhor_revisor.registros = []
+        rowsMelhorRevisor.forEach( (element) => {
+            if ((element.email.trim()) === req.body.email) {
+                encontrado = true
+                melhor_revisor.registros.push(
+                    { 
+                        'email': element.email.trim(),                        
+                        'revisor': element.revisor,
+                        'tituloFormat': "Melhor Revisor",
+                        'trilha': element.trilha,                        
+                        'atividade': 'melhor-revisor',
+                        'melhor-revisor': true
+                    }
+                )
+            }
+        })
+        plans.push(melhor_revisor)
+
         console.log(plans)
 
         if (encontrado) {
@@ -381,6 +402,7 @@ exports.obterArquivoEducomp = async function (req, res) {
         let dia = false 
         let trilha = false 
         let autores = false
+        let revisor = false
         let textoBase = ''
 
         const sheets = new GoogleSpreadsheet('1ShcIedcnFk9oiIwKo2daA6GqKVEYLlgitRNYtu3fjPM')
@@ -500,6 +522,10 @@ exports.obterArquivoEducomp = async function (req, res) {
                     autores = autores[0].toUpperCase() + autores.substr(1)
                     posicao = index
                 }
+            } else if (atividade === 'melhor-revisor') {
+                revisor = req.body.revisor
+                trilha = req.body.trilha 
+                posicao = index
             }
         })
 
@@ -526,6 +552,7 @@ exports.obterArquivoEducomp = async function (req, res) {
             novoTextoBase = novoTextoBase.replace('${dia}', dia)
             novoTextoBase = novoTextoBase.replace('${trilha}', trilha)
             novoTextoBase = novoTextoBase.replace('${autores}', autores)
+            novoTextoBase = novoTextoBase.replace('${revisor}', revisor)
             
 
             //doc.text(novoTextoBase, 150, 265, {width: 600, align: 'justify', continued: true}).fontSize(8).text(`Pode ser validado em: https://www.educompbrasil.org/simposio/2021/certificados/esquenta/1/validar com o código: ${codigo}`, 150, 385, {width:600, align: 'justify'})
@@ -614,7 +641,11 @@ exports.validarEducomp = async function (req, res) {
             dadosMensagem.push(`CÓDIGO: ${codigo}`)
             dadosMensagem.push("EVENTO: EduComp")
             dadosMensagem.push("DATA: 26 a 30/04/2021")
-            dadosMensagem.push(`PARTICIPANTE: ${nome}`)
+            if (rows[posicao].revisor){
+                dadosMensagem.push(`REVISOR: ${rows[posicao].revisor}`)
+            } else {
+                dadosMensagem.push(`PARTICIPANTE: ${nome}`)
+            }
             if (rows[posicao].funcao){
                 dadosMensagem.push(`FUNÇÃO: ${rows[posicao].funcao} `)
             }
@@ -623,6 +654,9 @@ exports.validarEducomp = async function (req, res) {
             }
             if (rows[posicao].tipo){
                 dadosMensagem.push(`TIPO: ${rows[posicao].tipo} `)
+            }
+            if (rows[posicao].trilha){
+                dadosMensagem.push(`TRILHA: ${rows[posicao].trilha} `)
             }
 
             res.render('simposio/2021/pt-BR/certificados-educomp/educomp-validar-resultado', {
