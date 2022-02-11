@@ -9,16 +9,16 @@ exports.programacao = function (req, res) {
     ) 
 };
 
-/*exports.esquenta_1 = function (req, res) { 
-    res.render('simposio/2021/pt-BR/programacao/esquenta/primeiro', 
+exports.esquenta_1 = function (req, res) { 
+    res.render('simposio/2022/pt-BR/programacao/esquenta/primeiro', 
         {
-            layout: 'simposio/2021/pt-BR/layout', 
+            layout: 'simposio/2022/pt-BR/layout', 
             prog: true,
             titulo: 'Esquenta'
         }
     ) 
 };
-
+/*
 exports.esquenta_2 = function (req, res) { 
     res.render('simposio/2021/pt-BR/programacao/esquenta/segundo', 
         {
