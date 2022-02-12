@@ -1,3 +1,50 @@
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px 
+1920
+1280
+1024
+768
+640
+320
+*/
+
+@media screen and (min-width: 1367px) and (max-width: 1920px){
+  h3.inside-header {
+    font-size: 1.3vw;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px){
+  h3.inside-header {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  h3.inside-header {
+    font-size: 2.2vw;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px){
+  h3.inside-header {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 600px){
+  h3.inside-header {
+    font-size: 2.8vw;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 320px) {
+  h3.inside-header {
+    font-size: 3vw;
+    padding-left: 3em;
+  }
+}
+
 #topicos {
     list-style-type: none;
   }
