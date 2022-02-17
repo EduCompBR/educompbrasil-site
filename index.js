@@ -62,6 +62,7 @@ app.get('/simposio/2022/trabalhos/topicos-de-interesse', educomp_2022_trabalhos.
 app.get('/simposio/2022/trabalhos/chamada', educomp_2022_trabalhos.chamado)
 app.get('/simposio/2022/trabalhos/lab-ideias', educomp_2022_trabalhos.lab_ideias)
 app.get('/simposio/2022/trabalhos/wtd', educomp_2022_trabalhos.wtd)
+app.get('/simposio/2022/trabalhos/aceitos', educomp_2022_trabalhos.aceitos)
 
 app.get('/simposio/2022/trabalhos/criterios/trilha-1', educomp_2022_criterios.artigos)
 app.get('/simposio/2022/trabalhos/criterios/trilha-2', educomp_2022_criterios.trilha2)
