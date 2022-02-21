@@ -248,7 +248,7 @@ exports.obter = async function (req, res) {
                 }
             )
         } else {
-            res.render('simposio/2022/pt-BR/certificados/form-obter',
+            res.render('simposio/2022/pt-BR/certificados/esquenta-1/form-obter',
                 {
                     layout: 'simposio/2022/pt-BR/layout', 
                     certificado: true,
