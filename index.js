@@ -48,6 +48,7 @@ app.get('/eventos', giec_main.eventos)
 app.get('/quem-somos/comite-gestor', giec_quem_somos.comite_gestor)
 app.get('/quem-somos/membros', giec_quem_somos.membros)
 app.get('/documentos', giec_main.documentos)
+app.get('/documentos/modelos/proposta-sede-educomp', giec_main.documentos_modelo_educomp)
 
 //EduComp 2022 - pt-BR
 app.get('/simposio/2022', educomp_2022_main.index)
