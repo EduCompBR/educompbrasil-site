@@ -27,3 +27,7 @@ exports.documentos = function(req, res){
         }
     ) 
 };
+
+exports.documentos_modelo_educomp = function(req, res){ 
+    res.redirect('https://docs.google.com/document/d/1XPsOkjNOw2CcuM2J2ZZKSZlLYNvNBw_O/edit?usp=sharing&ouid=102441951325229597765&rtpof=true&sd=true') 
+};
