@@ -14,7 +14,17 @@ exports.esquenta_1 = function (req, res) {
         {
             layout: 'simposio/2022/pt-BR/layout', 
             prog: true,
-            titulo: 'Esquenta'
+            titulo: 'I Esquenta EduComp 2022'
+        }
+    ) 
+};
+
+exports.esquenta_2 = function (req, res) { 
+    res.render('simposio/2022/pt-BR/programacao/esquenta/segundo', 
+        {
+            layout: 'simposio/2022/pt-BR/layout', 
+            prog: true,
+            titulo: 'II Esquenta EduComp 2022'
         }
     ) 
 };
