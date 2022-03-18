@@ -207,7 +207,7 @@ exports.obterArquivo = async function (req, res) {
 
 //form validar educomp
 exports.formValidar = function (req, res) {
-    res.render('simposio/2022/pt-BR/certificados/esquenta-1/form-validar',
+    res.render('simposio/2022/pt-BR/certificados/esquenta-2/form-validar',
         {
             layout: 'simposio/2022/pt-BR/layout',
             certificado: true,
@@ -218,94 +218,96 @@ exports.formValidar = function (req, res) {
 
 //Validação educomp
 exports.validar = async function (req, res) {
-    try{
-        console.log('Teste validacao do I Esquenta EduComp 2022')
-        const doc = new GoogleSpreadsheet('1PVmQ0SWG635jevdIQPh8ToUNdzCmwPK6k9MYP_KhxaQ')
-        await doc.useServiceAccountAuth({
-            client_email: process.env.GOOGLE_API_CLIENT_EMAIL,
-            private_key: process.env.GOOGLE_API_PRIVATE_KEY.replace(/\\n/g, '\n'),
-        })
-        await doc.loadInfo()
-        let codigo = req.body.codigo
-        console.log(codigo)
-        let finalCodigo = codigo.substring(9, 11)
-        console.log(finalCodigo)
+  try{
+    console.log('Validação do II Esquenta EduComp 2022')
+    const doc = new GoogleSpreadsheet(codigo_planilha)
+    await doc.useServiceAccountAuth({
+        client_email: process.env.GOOGLE_API_CLIENT_EMAIL,
+        private_key: process.env.GOOGLE_API_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    })
+    await doc.loadInfo()
 
-        let atividade = ''
-        let descricao = ''
-        const planCodigos = await doc.sheetsByTitle['codigos-limpos'].getRows()
-        planCodigos.forEach( (element) => {
-            console.log('Elemento e código: ', element.codigo, finalCodigo)
-            if (element.codigo === finalCodigo){
-                atividade = element.titulo
-                descricao = element.descricao
-            }
-        })
+    var codigo = req.body.codigo
+    console.log(codigo)
 
-        console.log(atividade)
-        console.log(finalCodigo)
-        console.log(descricao)
-        const rows = await doc.sheetsByTitle[atividade].getRows()
-        //const rows = await sheet.getRows()
-        var encontrado = -1
-        let posicao = -1
-        rows.forEach( (element, index) => {
-            //console.log(element.Email)
-            if(!!element.id && element.status == "liberado")
-            if (element.codigo === codigo){
-                encontrado = 1
-                posicao = index
-            }
-        })
-        if (posicao !== -1) {
-            console.log('Usuário encontrado, validando...')
-            let nome = rows[posicao].nome_completo
-            //res.redirect('/simposio/2021/certificados/esquenta/1/resultado/valido')
-            let dadosMensagem = []
-            dadosMensagem.push(`CÓDIGO: ${codigo}`)
-            dadosMensagem.push("EVENTO: I Esquenta EduComp 2022")
-            dadosMensagem.push("DATA: 21/02/2022")
-            dadosMensagem.push(`ATIVIDADE: ${descricao}`)
-            if (rows[posicao].revisor){
-                dadosMensagem.push(`REVISOR: ${rows[posicao].revisor}`)
-            } else {
-                dadosMensagem.push(`PARTICIPANTE: ${nome}`)
-            }
-            if (rows[posicao].funcao){
-                dadosMensagem.push(`FUNÇÃO: ${rows[posicao].funcao} `)
-            }
-            if (rows[posicao].titulo){
-                dadosMensagem.push(`TÍTULO: ${rows[posicao].titulo} `)
-            }
-            if (rows[posicao].tipo){
-                dadosMensagem.push(`TIPO: ${rows[posicao].tipo} `)
-            }
-            if (rows[posicao].trilha){
-                dadosMensagem.push(`TRILHA: ${rows[posicao].trilha} `)
-            }
+    var codigoPlan = codigo.substring(9, 11)
+    console.log(codigoPlan)
 
-            res.render('simposio/2022/pt-BR/certificados/esquenta-1/validar-resultado', {
-                layout: 'simposio/2022/pt-BR/layout',
-                certificado: true,
-                titulo: 'Certificado',
-                dadosMensagem: dadosMensagem,
-            })
-        } else {
-            res.render('simposio/2022/pt-BR/certificados/esquenta-1/validar-resultado', {
-                layout: 'simposio/2022/pt-BR/layout',
-                certificado: true,
-                titulo: 'Certificado',
-                dadosMensagem: false,
-            })
-        }
+    let numberOfSheets = await doc.sheetCount;
+    //console.log(numberOfSheets)
+
+    //Pegar códigos
+    var rowsCodigosLimpos = await doc.sheetsByTitle["codigos-limpos"].getRows()
+
+    var tituloPlan = {}
+    var campo_destaque = {}
+    var descricao = {}
+    rowsCodigosLimpos.forEach( (element) => {
+      //console.log(element.codigo)
+      if(element.codigo === codigoPlan){
+        tituloPlan = element.titulo
+        campo_destaque = element.campo_destaque
+        descricao = element.descricao
+      }
+    })
+
+    //console.log(tituloPlan)
+    //console.log(campo_destaque)
+    //console.log(descricao)
+
+    //Buscar na planilha
+    var rowsPlan = await doc.sheetsByTitle[tituloPlan].getRows()
+
+    var descricaoCampoDestaque = {}
+    var posicao = 0
+    var nome_completo = ""
+    rowsPlan.forEach( (element) => {
+      //console.log(element.codigo)
+      if(
+        !!element.id &&
+        element.codigo === codigo &&
+        element.status == "liberado"
+      ){
+        console.log('Código encontrado')
+        nome_completo = element.nome_completo
+        descricaoCampoDestaque = element[campo_destaque]
+        posicao = 1
+      }
+    })
+
+    if (posicao !== 0) {
+
+      console.log('Usuário encontrado, validando...')
+      var dadosMensagem = []
+
+      dadosMensagem.push(`CÓDIGO: ${codigo}`)
+      dadosMensagem.push("EVENTO: II Esquenta EduComp 2022")
+      dadosMensagem.push("DATA: 24/03/2022")
+      dadosMensagem.push(`NOME: ${nome_completo}`)
+      dadosMensagem.push(`ATIVIDADE: ${descricao}`)
+      if(campo_destaque != "nome_completo")
+        dadosMensagem.push(`${campo_destaque.toUpperCase()}: ${descricaoCampoDestaque}`)
+
+      res.render('simposio/2022/pt-BR/certificados/esquenta-2/validar-resultado', {
+          layout: 'simposio/2022/pt-BR/layout',
+          certificado: true,
+          titulo: 'Certificado',
+          dadosMensagem: dadosMensagem,
+      })
+      } else {
+          res.render('simposio/2022/pt-BR/certificados/esquenta-2/validar-resultado', {
+              layout: 'simposio/2022/pt-BR/layout',
+              certificado: true,
+              titulo: 'Certificado',
+              dadosMensagem: false,
+          })
+      }
     } catch (error) {
-        res.render('simposio/2022/pt-BR/certificados/esquenta-1/form-validar',
-        {
-            layout: 'simposio/2022/pt-BR/layout',
-            certificado: true,
-            titulo: 'Certificado',
-        }
-    )
+      res.render('simposio/2022/pt-BR/certificados/esquenta-2/form-validar',
+      {
+          layout: 'simposio/2022/pt-BR/layout',
+          certificado: true,
+          titulo: 'Certificado',
+      })
     }
-
 };
