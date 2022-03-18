@@ -26,6 +26,7 @@ var educomp_2022_criterios = require('./routes/simposio/2022/pt-BR/criterios');
 var educomp_2022_programacao = require('./routes/simposio/2022/pt-BR/programacao');
 var educomp_2022_equipe = require('./routes/simposio/2022/pt-BR/equipe');
 var educomp_2022_certificados_esquenta_1 = require('./routes/simposio/2022/pt-BR/certificado/esquenta-1');
+var educomp_2022_certificados_esquenta_2 = require('./routes/simposio/2022/pt-BR/certificado/esquenta-2');
 
 var giec_quem_somos = require('./routes/giec/quem_somos');
 
@@ -86,6 +87,13 @@ app.post('/simposio/2022/certificados/esquenta/1/obter/arquivo', educomp_2022_ce
 app.get('/simposio/2022/certificados/esquenta/1/validar', educomp_2022_certificados_esquenta_1.formValidar)
 app.post('/simposio/2022/certificados/esquenta/1/validar', educomp_2022_certificados_esquenta_1.validar)
 
+app.get('/simposio/2022/certificados/esquenta/2', educomp_2022_certificados_esquenta_2.opcoes)
+app.get('/simposio/2022/certificados/esquenta/2/obter', educomp_2022_certificados_esquenta_2.certificado)
+app.post('/simposio/2022/certificados/esquenta/2/obter', educomp_2022_certificados_esquenta_2.obter)
+app.post('/simposio/2022/certificados/esquenta/2/obter/arquivo', educomp_2022_certificados_esquenta_2.obterArquivo)
+app.get('/simposio/2022/certificados/esquenta/2/validar', educomp_2022_certificados_esquenta_2.formValidar)
+app.post('/simposio/2022/certificados/esquenta/2/validar', educomp_2022_certificados_esquenta_2.validar)
+
 //EduComp 2021 - pt-BR
 app.get('/simposio/2021', educomp_2021_main.index)
 app.get('/simposio/2021/sobre', educomp_2021_main.sobre)
@@ -113,14 +121,14 @@ app.get('/simposio/2021/trabalhos/criterios/trilha-4', educomp_2021_criterios.tr
 app.get('/simposio/2021/trabalhos/criterios/lab-ideias', educomp_2021_criterios.labideias)
 
 //EduComp 2021 - en-US
-app.get('/en-US/symposium/2021/', (req, res) => { 
-    res.render('simposio/2021/en-US/sobre', 
+app.get('/en-US/symposium/2021/', (req, res) => {
+    res.render('simposio/2021/en-US/sobre',
         {
-            layout: 'simposio/2021/en-US/layout', 
-            about: true, 
+            layout: 'simposio/2021/en-US/layout',
+            about: true,
             titulo: "Home"
         }
-    ) 
+    )
 })
 
 app.get('/en-US/symposium/2021/about', educomp_2021_en_us_main.about)
@@ -159,7 +167,7 @@ app.post('/simposio/2021/certificados/educomp/validar', educomp_2021_certificado
 
 
 //Envio de email
-app.post('/simposio/2021/contato/email', async (req, res) => { 
+app.post('/simposio/2021/contato/email', async (req, res) => {
     await emailServer.enviarEmail(req.body.email1, req.body.assunto1, req.body.mensagem1)
     res.redirect('/simposio/2021/contato')
 })
