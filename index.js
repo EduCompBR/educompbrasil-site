@@ -57,7 +57,6 @@ app.get('/simposio/2022/sobre', educomp_2022_main.sobre)
 app.get('/simposio/2022/datas', educomp_2022_main.datas)
 
 app.get('/simposio/2022/programacao', educomp_2022_programacao.programacao)
-app.get('/simposio/2022/prog-prov-educomp', educomp_2022_programacao.prog_prov_educomp)
 app.get('/simposio/2022/programacao/esquenta/1', educomp_2022_programacao.esquenta_1)
 app.get('/simposio/2022/programacao/esquenta/2', educomp_2022_programacao.esquenta_2)
 
