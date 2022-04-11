@@ -2,10 +2,10 @@ const PDFDocument = require('pdfkit')
 const { GoogleSpreadsheet } = require('google-spreadsheet')
 const fs = require('fs')
 
-const nome_evento = "II Esquenta EduComp 2022"
+const nome_evento = "EduComp 2022"
 const base_name = "educomp"
 const base_view = "simposio/2022/pt-BR/certificados/" + base_name + "/"
-const template_url = "'resources/simposio/2022/pt-BR/modelos/" + base_name + ".png'"
+const template_url = "resources/simposio/2022/pt-BR/modelos/" + base_name + ".png"
 const font_url = 'resources/simposio/2022/pt-BR/fonts/trebuc.ttf'
 const codigo_planilha = '1V0NpRXxQkvHL5aX4_ID57bV-Ao7qTYyIUttYs2H2XQ0'
 
@@ -184,9 +184,9 @@ exports.obterArquivo = async function (req, res) {
 
       if(novoTextoBase.length > 400)
           doc.fontSize(16)
-      doc.text(novoTextoBase, 165, 195, {width: 600, align: 'justify'})
+      doc.text(novoTextoBase, 125, 250, {width: 600, align: 'justify'})
       doc.fontSize(9.5)
-      doc.text(`Use o código ${codigo} para validar o certificado em: \nwww.educompbrasil.org/simposio/2022/certificados/educomp/validar`, 280, 500, {width:600, align: 'left'})
+      doc.text(`Use o código ${codigo} para validar o certificado em: \nwww.educompbrasil.org/simposio/2022/certificados/educomp/validar`, 190, 500, {width:600, align: 'left'})
       doc.end()
       doc.pipe(fs.createWriteStream(`resources/certificados/gerados/certificado-${codigo}.pdf`)).on('finish', () => {
           res.download(`resources/certificados/gerados/certificado-${codigo}.pdf`, () => {
@@ -285,8 +285,8 @@ exports.validar = async function (req, res) {
       var dadosMensagem = []
 
       dadosMensagem.push(`CÓDIGO: ${codigo}`)
-      dadosMensagem.push("EVENTO: II Esquenta EduComp 2022")
-      dadosMensagem.push("DATA: 24/03/2022")
+      dadosMensagem.push("EVENTO: EduComp 2022")
+      dadosMensagem.push("DATA: 24 a 29/04/2022")
       dadosMensagem.push(`NOME: ${nome_completo}`)
       dadosMensagem.push(`ATIVIDADE: ${descricao}`)
       if(campo_destaque != "nome_completo")
