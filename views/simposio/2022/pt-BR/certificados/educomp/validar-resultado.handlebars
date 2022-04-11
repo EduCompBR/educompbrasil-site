@@ -1,0 +1,32 @@
+  {{> simposio/2022/pt-BR/inside-header}}
+
+  <section id="datas" style="background-color:rgb(221, 232, 243);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 style="margin-top: -6rem;">
+            EduComp 2022<br>
+            <small class="text-muted">24 a 29 de abril de 2022</small>
+          </h2>
+          <br>
+          <h3>Validar certificado: </h3>
+          <br>
+          {{#if dadosMensagem}}
+              <div class="alert alert-success">
+                <b>Código Encontrado!</b> <br/>
+                <ul>
+                {{#each dadosMensagem}}
+                  <li>{{this}}</li>
+                {{/each}}
+                </ul>
+                </div>
+          {{else}}
+              <div class="alert alert-danger">Não é válido para o evento: EduComp 2022</div>
+          {{/if}}
+          <form method="POST" action="/simposio/2022/certificados/educomp/validar">
+            <p> <a href="/simposio/2022/certificados/educomp/validar" class="btn btn-primary btn-lg" style="width: 100px;">Validar</a> </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
