@@ -25,6 +25,7 @@ var educomp_2022_trabalhos = require('./routes/simposio/2022/pt-BR/trabalhos');
 var educomp_2022_criterios = require('./routes/simposio/2022/pt-BR/criterios');
 var educomp_2022_programacao = require('./routes/simposio/2022/pt-BR/programacao');
 var educomp_2022_equipe = require('./routes/simposio/2022/pt-BR/equipe');
+var educomp_2022_certificados_educomp = require('./routes/simposio/2022/pt-BR/certificado/educomp');
 var educomp_2022_certificados_esquenta_1 = require('./routes/simposio/2022/pt-BR/certificado/esquenta-1');
 var educomp_2022_certificados_esquenta_2 = require('./routes/simposio/2022/pt-BR/certificado/esquenta-2');
 
@@ -92,6 +93,13 @@ app.post('/simposio/2022/certificados/esquenta/2/obter', educomp_2022_certificad
 app.post('/simposio/2022/certificados/esquenta/2/obter/arquivo', educomp_2022_certificados_esquenta_2.obterArquivo)
 app.get('/simposio/2022/certificados/esquenta/2/validar', educomp_2022_certificados_esquenta_2.formValidar)
 app.post('/simposio/2022/certificados/esquenta/2/validar', educomp_2022_certificados_esquenta_2.validar)
+
+app.get('/simposio/2022/certificados/educomp', educomp_2022_certificados_educomp.opcoes)
+app.get('/simposio/2022/certificados/educomp/obter', educomp_2022_certificados_educomp.certificado)
+app.post('/simposio/2022/certificados/educomp/obter', educomp_2022_certificados_educomp.obter)
+app.post('/simposio/2022/certificados/educomp/obter/arquivo', educomp_2022_certificados_educomp.obterArquivo)
+app.get('/simposio/2022/certificados/educomp/validar', educomp_2022_certificados_educomp.formValidar)
+app.post('/simposio/2022/certificados/educomp/validar', educomp_2022_certificados_educomp.validar)
 
 //EduComp 2021 - pt-BR
 app.get('/simposio/2021', educomp_2021_main.index)
