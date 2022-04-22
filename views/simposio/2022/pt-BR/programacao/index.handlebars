@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="/css/prog_educomp/style.css">
-  <title>Schedule Template | CodyHouse</title>
+  <title>{{titulo}}</title>
 
   <!-- Font-Awesome -->
   <script src="https://kit.fontawesome.com/bd98f4183e.js" crossorigin="anonymous"></script>
 </head>
-<body>
-  <header class="cd-main-header text-center flex flex-column flex-center">
-    <br>
-    <h1 class="text-xl">Programação EduComp 2022</h1>
-  </header>
+<body style="margin-top: -5em; background-color:rgb(221, 232, 243);">
+
+  {{> simposio/2022/pt-BR/inside-header}}
 
   <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
     <div class="cd-schedule__timeline">
@@ -59,10 +57,6 @@
         <li><span>19:10</span></li>
         <li><span>19:20</span></li>
         <li><span>19:30</span></li>
-        <li><span>19:40</span></li>
-        <li><span>19:50</span></li>
-        <li><span>20:00</span></li>
-         <li><span>20:10</span></li>
       </ul>
     </div> <!-- .cd-schedule__timeline -->
 

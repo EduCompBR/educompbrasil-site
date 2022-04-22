@@ -4,7 +4,11 @@ exports.programacao = function (req, res) {
             //layout: 'simposio/2022/pt-BR/layout', 
             prog: true,
             prog_educomp: true,
-            titulo: 'Programação'
+            titulo: 'Programação',
+            header: {
+                endereco: 'programacao',
+                descricao: 'Faixa de título da programação.'
+            }
         }
     ) 
 };
@@ -14,7 +18,11 @@ exports.esquenta_1 = function (req, res) {
         {
             layout: 'simposio/2022/pt-BR/layout', 
             prog: true,
-            titulo: 'I Esquenta EduComp 2022'
+            titulo: 'I Esquenta EduComp 2022',
+            header: {
+                endereco: 'esquenta-1',
+                descricao: 'Faixa de título do I Esquenta EduComp 2022.'
+            }
         }
     ) 
 };
@@ -24,7 +32,11 @@ exports.esquenta_2 = function (req, res) {
         {
             layout: 'simposio/2022/pt-BR/layout', 
             prog: true,
-            titulo: 'II Esquenta EduComp 2022'
+            titulo: 'II Esquenta EduComp 2022',
+            header: {
+                endereco: 'esquenta-2',
+                descricao: 'Faixa de título do II Esquenta EduComp 2022.'
+            }
         }
     ) 
 };

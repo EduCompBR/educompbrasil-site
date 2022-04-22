@@ -3,7 +3,11 @@ exports.comissao_organizadora = function (req, res) {
         {
             layout: 'simposio/2022/pt-BR/layout', 
             equipe: true,
-            titulo: 'Comissão Organizadora'
+            titulo: 'Comissão Organizadora',
+            header: {
+                endereco: 'comissao-organizadora',
+                descricao: 'Faixa de título da comissão organizadora.'
+            }
         }
     ) 
 };
@@ -13,8 +17,11 @@ exports.comite_programa = function (req, res) {
         {
             layout: 'simposio/2022/pt-BR/layout', 
             equipe: true,
-            titulo: 'Comitê de Programa'
+            titulo: 'Comitê de Programa',
+            header: {
+                endereco: 'comite-programa',
+                descricao: 'Faixa de título do comitê de programa.'
+            }
         }
     ) 
 };
-//comissao-organizadora
