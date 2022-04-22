@@ -3,7 +3,11 @@ exports.topicos = function(req, res){
         {
             layout: 'simposio/2022/pt-BR/layout', 
             trabalhos: true, 
-            titulo: "Tópicos de Interesse"
+            titulo: "Tópicos de Interesse",
+            header: {
+                endereco: 'topicos',
+                descricao: 'Faixa de título dos tópicos de interesse.'
+            }
         }
     )
   };
@@ -13,7 +17,11 @@ exports.chamado = function (req, res) {
         {
             layout: 'simposio/2022/pt-BR/layout', 
             trabalhos: true,
-            titulo: 'Chamada de Trabalhos'
+            titulo: 'Chamada de Trabalhos',
+            header: {
+                endereco: 'chamada-trabalhos',
+                descricao: 'Faixa de título da chamada de trabalhos.'
+            }
         }
     ) 
 };
@@ -23,7 +31,11 @@ exports.lab_ideias = function (req, res) {
         {
             layout: 'simposio/2022/pt-BR/layout', 
             trabalhos: true,
-            titulo: 'Laboratório de Ideias - Chamada de Trabalhos'
+            titulo: 'Laboratório de Ideias - Chamada de Trabalhos',
+            header: {
+                endereco: 'lab-ideias',
+                descricao: 'Faixa de título do Laboratório de Ideias.'
+            }
         }
     ) 
 };
@@ -33,7 +45,11 @@ exports.wtd = function (req, res) {
         {
             layout: 'simposio/2022/pt-BR/layout', 
             trabalhos: true,
-            titulo: 'WTD - Chamada de Trabalhos'
+            titulo: 'WTD - Chamada de Trabalhos',
+            header: {
+                endereco: 'wtd',
+                descricao: 'Faixa de título do Workshop de Teses e Dissertações (WTD).'
+            }
         }
     ) 
 };
@@ -43,7 +59,11 @@ exports.aceitos = function (req, res) {
         {
             layout: 'simposio/2022/pt-BR/layout', 
             trabalhos: true,
-            titulo: 'Trabalhos Aceitos'
+            titulo: 'Trabalhos Aceitos',
+            header: {
+                endereco: 'trabalhos-aceitos',
+                descricao: 'Faixa de título dos trabalhos aceitos.'
+            }
         }
     ) 
 };
