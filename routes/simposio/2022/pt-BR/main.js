@@ -23,7 +23,11 @@ exports.datas = function(req, res) {
         {
             layout: 'simposio/2022/pt-BR/layout', 
             datas: true,
-            titulo: 'Datas Importantes'
+            titulo: 'Datas Importantes',
+            header: {
+                endereco: 'datas',
+                descricao: 'Faixa de título das datas importantes.'
+            }
         }
     ) 
 };
@@ -33,7 +37,11 @@ exports.forlic = function(req, res) {
         {
             layout: 'simposio/2022/pt-BR/layout', 
             forlic: true,
-            titulo: 'ForLic'
+            titulo: 'ForLic',
+            header: {
+                endereco: 'forlic',
+                descricao: 'Faixa de título do II ForLic.'
+            }
         }
     ) 
 };
@@ -43,7 +51,11 @@ exports.inscricoes = function(req, res) {
         {
             layout: 'simposio/2022/pt-BR/layout', 
             inscricoes: true,
-            titulo: 'Inscrições'
+            titulo: 'Inscrições',
+            header: {
+                endereco: 'inscricoes',
+                descricao: 'Faixa de título das Inscrições.'
+            }
         }
     ) 
 };

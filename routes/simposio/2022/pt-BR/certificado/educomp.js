@@ -17,6 +17,10 @@ exports.opcoes = function (req, res) {
             layout: 'simposio/2022/pt-BR/layout',
             certificado: true,
             titulo: 'Certificado',
+            header: {
+                endereco: 'certificados',
+                descricao: 'Faixa de título dos certificados.'
+            }
         }
     )
 };
@@ -29,6 +33,10 @@ exports.certificado = function (req, res) {
             layout: 'simposio/2022/pt-BR/layout',
             certificado: true,
             titulo: 'Certificado',
+            header: {
+                endereco: 'certificados',
+                descricao: 'Faixa de título dos certificados.'
+            }
         }
     )
 };
@@ -124,6 +132,10 @@ exports.obter = async function (req, res) {
                     titulo: 'Certificados',
                     email: req.body.email,
                     data: plans,
+                    header: {
+                        endereco: 'certificados',
+                        descricao: 'Faixa de título dos certificados.'
+                    }
                 }
             )
         } else {
@@ -131,7 +143,11 @@ exports.obter = async function (req, res) {
                 {
                     layout: 'simposio/2022/pt-BR/layout',
                     certificado: true,
-                    mensagem: 'Email não encontrado na base de dados. Entre em contato com a organização'
+                    mensagem: 'Email não encontrado na base de dados. Entre em contato com a organização',
+                    header: {
+                        endereco: 'certificados',
+                        descricao: 'Faixa de título dos certificados.'
+                    }
                 }
             )
         }
@@ -142,7 +158,11 @@ exports.obter = async function (req, res) {
                     layout: 'simposio/2022/pt-BR/layout',
                     certificado: true,
                     titulo: 'Certificado',
-                    mensagem: 'Erro ao buscar certificado. Entre em contato com a organização'
+                    mensagem: 'Erro ao buscar certificado. Entre em contato com a organização',
+                    header: {
+                        endereco: 'certificados',
+                        descricao: 'Faixa de título dos certificados.'
+                    }
                 }
         )
     }
@@ -203,7 +223,11 @@ exports.obterArquivo = async function (req, res) {
                 layout: 'simposio/2022/pt-BR/layout',
                 certificado: true,
                 titulo: 'Certificado',
-                mensagem: 'Erro ao buscar certificado. Entre em contato com a organização'
+                mensagem: 'Erro ao buscar certificado. Entre em contato com a organização',
+                header: {
+                    endereco: 'certificados',
+                    descricao: 'Faixa de título dos certificados.'
+                }
             }
         )
     }
@@ -216,6 +240,10 @@ exports.formValidar = function (req, res) {
             layout: 'simposio/2022/pt-BR/layout',
             certificado: true,
             titulo: 'Certificado',
+            header: {
+                endereco: 'certificados',
+                descricao: 'Faixa de título dos certificados.'
+            }
         }
     )
 };
@@ -234,7 +262,7 @@ exports.validar = async function (req, res) {
     var codigo = req.body.codigo
     console.log(codigo)
 
-    var codigoPlan = codigo.substring(9, 11)
+    var codigoPlan = codigo.substring(7, 9)
     console.log(codigoPlan)
 
     let numberOfSheets = await doc.sheetCount;
@@ -297,6 +325,10 @@ exports.validar = async function (req, res) {
           certificado: true,
           titulo: 'Certificado',
           dadosMensagem: dadosMensagem,
+          header: {
+              endereco: 'certificados',
+              descricao: 'Faixa de título dos certificados.'
+          }
       })
       } else {
           res.render(base_view + 'validar-resultado', {
@@ -304,6 +336,10 @@ exports.validar = async function (req, res) {
               certificado: true,
               titulo: 'Certificado',
               dadosMensagem: false,
+              header: {
+                  endereco: 'certificados',
+                  descricao: 'Faixa de título dos certificados.'
+              }
           })
       }
     } catch (error) {
@@ -312,6 +348,10 @@ exports.validar = async function (req, res) {
           layout: 'simposio/2022/pt-BR/layout',
           certificado: true,
           titulo: 'Certificado',
+          header: {
+              endereco: 'certificados',
+              descricao: 'Faixa de título dos certificados.'
+          }
       })
     }
 };
