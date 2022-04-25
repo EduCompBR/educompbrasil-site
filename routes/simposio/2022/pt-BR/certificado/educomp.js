@@ -181,12 +181,15 @@ exports.obterArquivo = async function (req, res) {
       })
       doc.fontSize(18)
       doc.font(font_url)
+      
+      var nome_completo = {}
+      if(req.body.nome_completo){
+        var nome_completo = req.body.nome_completo
+        nome_completo = nome_completo.toUpperCase()
+      }
 
-      var nome_completo = req.body.nome_completo
       var novoTextoBase = req.body.texto_base
-      var codigo = req.body.codigo
-
-      nome_completo = nome_completo.toUpperCase()
+      var codigo = req.body.codigo      
 
       var indice_atual = 0
       while(indice_atual != -1){
@@ -200,7 +203,9 @@ exports.obterArquivo = async function (req, res) {
         novoTextoBase = novoTextoBase.replace(tag, req.body[campo])
         indice_atual = indice_fim
       }
-      novoTextoBase = novoTextoBase.replace(req.body.nome_completo, nome_completo)
+      
+      if(req.body.nome_completo)
+        novoTextoBase = novoTextoBase.replace(req.body.nome_completo, nome_completo)
 
       if(novoTextoBase.length > 400)
           doc.fontSize(16)
