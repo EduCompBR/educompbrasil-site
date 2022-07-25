@@ -1,0 +1,181 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger imagelink" href="/simposio/2023/">
+        <img src="/img/simposio/2022/logo-white.png" style="height: 1.8rem; padding-left: 0.6em;"/>
+      </a>
+      <a class="imagelink" href="http://www.sbc.org.br" target="_blank">
+        <!--<span style="color: white; padding-left: 1.6em;">
+          Realização
+        </span>-->
+        <img src="/img/simposio/2022/sbc-white.png" style="height: 2.5rem; padding-left: 0.6em;"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: white">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+
+          <!-- Sobre -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger
+            {{~#if sobre}}
+              active
+            {{/if}}
+            " href="/simposio/2023/sobre">Sobre</a>
+          </li>
+
+          <!-- Anais -->
+          <!--
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                {{~#if anais}}
+                  active
+                {{/if}}
+            ">Anais</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" target="_blank" href="https://sol.sbc.org.br/index.php/educomp">
+                Anais Completos
+              </a>
+              <a class="dropdown-item" target="_blank" href="https://sol.sbc.org.br/index.php/educomp_estendido">
+                Anais Estendidos
+              </a>
+            </div>
+          </li>
+          -->
+
+          <!-- Trabalhos -->
+
+          <li class="nav-item dropdown">
+
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                {{~#if trabalhos}}
+                  active
+                {{/if}}
+            ">Chamada de Trabalhos</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2023/trabalhos/topicos-de-interesse">
+                Tópicos de Interesse
+              </a>
+              <!--<a class="dropdown-item" target="_blank" href="https://drive.google.com/file/d/1VNAvjyYVqwE4JxtPeIcUMHDbMS1h3rzN/view?usp=sharing">
+                Guia de Revisão
+              </a>-->
+              <!--
+              <hr class="dropdown-divider">
+              <a class="dropdown-item" href="/simposio/2022/trabalhos/chamada">
+                Artigos Completos
+              </a>
+              <a class="dropdown-item" href="/simposio/2022/trabalhos/lab-ideias">
+                Laboratório de Ideias
+              </a>
+              <a class="dropdown-item" href="/simposio/2022/trabalhos/wtd">
+                WTD
+              </a>
+              <hr class="dropdown-divider">
+              <a class="dropdown-item" href="/simposio/2022/trabalhos/aceitos">
+                Trabalhos Aceitos
+              </a>
+              -->
+            </div>
+          </li>
+
+          <!-- Datas -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger
+            {{~#if datas}}
+              active
+            {{/if}}
+            " href="/simposio/2023/datas">Datas</a>
+          </li>
+
+          <!-- Programação -->
+          <!--
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                {{~#if prog}}
+                  active
+                {{/if}}
+            ">Programação</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2023/programacao">
+                EduComp 2023
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/simposio/2022/programacao/esquenta/1">
+                Esquenta I
+              </a>
+              <a class="dropdown-item" href="/simposio/2022/programacao/esquenta/2">
+                Esquenta II
+              </a>
+            </div>
+          </li>
+          -->
+
+          <!-- ForLic -->
+          
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger
+            {{~#if forlic}}
+              active
+            {{/if}}
+            " href="/simposio/2023/forlic">ForLic</a>
+          </li>
+
+          <!-- Inscrições -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger
+            {{~#if inscricoes}}
+              active
+            {{/if}}
+            " href="/simposio/2023/inscricoes">Inscrições</a>
+          </li>
+
+          <!-- Equipe -->
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                {{~#if equipe}}
+                  active
+                {{/if}}
+            ">Equipe</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2023/equipe/comissao-organizadora">Comissão Organizadora</a>
+              <a class="dropdown-item" href="/simposio/2023/equipe/comite-programa">Comitê de Programa</a>
+            </div>
+          </li>
+
+          <!-- Certificados -->
+          <!--
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                {{~#if certificado}}
+                  active
+                {{/if}}
+            ">Certificado</a>
+            <div class="dropdown-menu">
+              
+              <a class="dropdown-item" href="/simposio/2022/certificados/educomp">
+                EduComp
+              </a>
+              <div class="dropdown-divider"></div> 
+              <a class="dropdown-item" href="/simposio/2022/certificados/esquenta/1">
+                I Esquenta
+              </a>
+              <a class="dropdown-item" href="/simposio/2022/certificados/esquenta/2">
+                II Esquenta
+              </a>
+            </div>
+          </li>
+          -->
+
+          <!--Internacionalização -->
+          <!--
+          <li class="nav-item">
+            <a class="nav-link" href="/en-US/symposium/2021">
+              <img style="height: 25px; width: 25px"
+              src="https://img.icons8.com/color/48/000000/usa.png" title="Site in English (US)"/>
+            </a>
+          </li>
+          -->
+        </ul>
+      </div>
+    </div>
+  </nav>
