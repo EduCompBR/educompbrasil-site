@@ -26,6 +26,20 @@ exports.chamado = function (req, res) {
     ) 
 };
 
+exports.minicursos = function (req, res) { 
+    res.render('simposio/2023/pt-BR/trabalhos/minicursos', 
+        {
+            layout: 'simposio/2023/pt-BR/layout', 
+            trabalhos: true,
+            titulo: 'Minicursos',
+            header: {
+                endereco: 'chamada-trabalhos',
+                descricao: 'Faixa de título da chamada de trabalhos.'
+            }
+        }
+    ) 
+};
+
 exports.lab_ideias = function (req, res) { 
     res.render('simposio/2023/pt-BR/trabalhos/lab-ideias', 
         {
