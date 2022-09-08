@@ -1,0 +1,13 @@
+Cores utilizadas em: 
+- Logo, botão, e títulos em destaques:
+
+#58B24D
+
+- Cor de fundo em "Principais Trilhas" e Carrosel de "Datas Importantes":
+
+#EBF8EA
+
+- Cor utilizada em ilustrações de Pessoas e outros objetos:
+
+#92E3A9
+
