@@ -10,7 +10,7 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
         </span>-->
         <img src="/img/sbc.png" style="height: 4rem; padding-left: 1em; padding-right: 9em;"/>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: white">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" >
         <i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse m0" id="navbarResponsive">
@@ -25,28 +25,53 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
             " href="/simposio/2023/sobre">PRINCIPAL</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger
-            {{~#if evento}}
-              active
-            {{/if}}
-            " href="/simposio/2023/sobre">O EVENTO</a>
+           <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                {{~#if evento}}
+                  active
+                {{/if}}
+            ">CHAMADA</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2023/trabalhos/topicos-de-interesse">
+                Tópicos de Interesse
+              </a>
+              <a class="dropdown-item" href="/simposio/2023/datas">
+                Datas Importantes
+              </a>
+              <hr class="dropdown-divider">
+              <a class="dropdown-item" href="/simposio/2023/trabalhos/chamada">
+                Artigos Completos
+              </a>
+              <a class="dropdown-item" href="/simposio/2023/trabalhos/minicursos">
+                Minicursos
+              </a>
+            </div>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger
-            {{~#if eventos_satelites}}
-              active
-            {{/if}}
-            " href="/simposio/2023/sobre">EVENTOS SATÉLITES</a>
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                {{~#if evento}}
+                  active
+                {{/if}}
+            ">EVENTOS PARALELOS</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2023/forlic">
+                Forlic
+              </a>
+              
+            </div>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger
-            {{~#if equipe}}
-              active
-            {{/if}}
-            " href="/simposio/2023/sobre">EQUIPE</a>
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                {{~#if equipe}}
+                  active
+                {{/if}}
+            ">EQUIPE</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2023/equipe/comissao-organizadora">Comissão Organizadora</a>
+              <a class="dropdown-item" href="/simposio/2023/equipe/comite-programa">Comitê de Programa</a>
+            </div>
           </li>
 
           <!-- Anais -->
@@ -203,6 +228,15 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
           </li>
           -->
         </ul>
+        <a 
+          class="
+            btn 
+            nav-link bg-primary text-white 
+            js-scroll-trigger p-2 px-4" 
+          href="/simposio/2023/inscricoes" 
+          style="font-size: 1em; font-weight: normal; font-family: 'Inter', sans-serif; border-radius: 1em;">
+          INSCRIÇÕES
+        </a>
       </div>
     </div>
   </nav>

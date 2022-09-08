@@ -1,5 +1,11 @@
 /*! * Bootswatch v4.5.0 * Homepage: https://bootswatch.com * Copyright 2012-2020 Thomas Park * Licensed under MIT * Based on Bootstrap */
 /*! * Bootstrap v4.5.0 (https://getbootstrap.com/) * Copyright 2011-2020 The Bootstrap Authors * Copyright 2011-2020 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap");
 :root{
     --blue:#638a97;
@@ -123,9 +129,12 @@ a{
     color: black;
     text-decoration:none;
 }
+.lead > a{
+    text-decoration: underline
+}
 a:hover{
     color:white;
-    background-color:gray
+    background-color: #58B24D;
 }
 a:not([href]){
     color:inherit;
@@ -3153,6 +3162,9 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
     padding-right:.75rem;
     padding-left:.75rem
 }
+a .dropdown-toggle:hover{
+    color: white;
+}
 .btn-group-vertical{
     -webkit-box-orient:vertical;
     -webkit-box-direction:normal;
@@ -3743,10 +3755,12 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
     padding-top: 3rem!important;
     padding-left: 1.5rem!important;
     padding-right: 1.5rem!important;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9em;
 }
 .nav-item .active{
     background-color: rgb(245, 243, 243); 
-    border-bottom: 0.5em solid #4A7E65;
+    border-bottom: 0.5em solid #58B24D;
 }
 .tab-content>.tab-pane{
     display:none
@@ -4111,8 +4125,8 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
     color:white
 }
 .nav-link:hover {
-    color: white;
-    background-color: #4A7E65;   
+    color: white!important;
+    background-color: #58B24D;   
     /*border-bottom: 0.5em solid rgb(245, 243, 243);*/
 }
 .navbar-dark .navbar-nav .nav-link.disabled{
@@ -4426,7 +4440,7 @@ a.badge:hover,a.badge:focus{
 }
 .badge-primary{
     color:#fff;
-    background-color:#2780e3
+    background-color:#58B24D
 }
 a.badge-primary:hover,a.badge-primary:focus{
     color:#fff;
@@ -5754,7 +5768,7 @@ a.close.disabled{
     vertical-align:text-top!important
 }
 .bg-primary{
-    background-color:black!important
+    background-color:#58B24D!important
 }
 a.bg-primary:hover,a.bg-primary:focus,button.bg-primary:hover,button.bg-primary:focus{
     background-color:#1967be!important
