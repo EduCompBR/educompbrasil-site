@@ -1,19 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg bg-white fixed-top p-0" 
+style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger imagelink" href="/simposio/2023/">
-        <img src="/img/simposio/2022/logo-white.png" style="height: 1.8rem; padding-left: 0.6em;"/>
+        <img src="/img/simposio/2023/logo-educomp.png" style="height: 4rem; margin-left:0em; margin-top: 1em; margin-bottom: 1em;"/>
       </a>
       <a class="imagelink" href="http://www.sbc.org.br" target="_blank">
         <!--<span style="color: white; padding-left: 1.6em;">
           Realização
         </span>-->
-        <img src="/img/simposio/2022/sbc-white.png" style="height: 2.5rem; padding-left: 0.6em;"/>
+        <img src="/img/sbc.png" style="height: 4rem; padding-left: 1em; padding-right: 9em;"/>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: white">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" >
         <i class="fa fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+      <div class="collapse navbar-collapse m0" id="navbarResponsive">
+        <ul class="navbar-nav">
 
           <!-- Sobre -->
           <li class="nav-item">
@@ -21,7 +22,56 @@
             {{~#if sobre}}
               active
             {{/if}}
-            " href="/simposio/2023/sobre">Sobre</a>
+            " href="/simposio/2023/sobre">PRINCIPAL</a>
+          </li>
+
+           <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                {{~#if evento}}
+                  active
+                {{/if}}
+            ">CHAMADA</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2023/trabalhos/topicos-de-interesse">
+                Tópicos de Interesse
+              </a>
+              <a class="dropdown-item" href="/simposio/2023/datas">
+                Datas Importantes
+              </a>
+              <hr class="dropdown-divider">
+              <a class="dropdown-item" href="/simposio/2023/trabalhos/chamada">
+                Artigos Completos
+              </a>
+              <a class="dropdown-item" href="/simposio/2023/trabalhos/minicursos">
+                Minicursos
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                {{~#if evento}}
+                  active
+                {{/if}}
+            ">EVENTOS PARALELOS</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2023/forlic">
+                Forlic
+              </a>
+              
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                {{~#if equipe}}
+                  active
+                {{/if}}
+            ">EQUIPE</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2023/equipe/comissao-organizadora">Comissão Organizadora</a>
+              <a class="dropdown-item" href="/simposio/2023/equipe/comite-programa">Comitê de Programa</a>
+            </div>
           </li>
 
           <!-- Anais -->
@@ -45,7 +95,7 @@
 
           <!-- Trabalhos -->
 
-          <li class="nav-item dropdown">
+          <!--<li class="nav-item dropdown">
 
             <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
                 {{~#if trabalhos}}
@@ -59,7 +109,7 @@
               <!--<a class="dropdown-item" target="_blank" href="https://drive.google.com/file/d/1VNAvjyYVqwE4JxtPeIcUMHDbMS1h3rzN/view?usp=sharing">
                 Guia de Revisão
               </a>-->
-              <hr class="dropdown-divider">
+              <!--<hr class="dropdown-divider">
               <a class="dropdown-item" href="/simposio/2023/trabalhos/chamada">
                 Artigos Completos
               </a>
@@ -77,11 +127,11 @@
                 Trabalhos Aceitos
               </a>
               -->
-            </div>
+         <!--   </div>
           </li>
 
           <!-- Datas -->
-          <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger
             {{~#if datas}}
               active
@@ -114,7 +164,7 @@
 
           <!-- ForLic -->
           
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link js-scroll-trigger
             {{~#if forlic}}
               active
@@ -123,7 +173,7 @@
           </li>
 
           <!-- Inscrições -->
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link js-scroll-trigger
             {{~#if inscricoes}}
               active
@@ -132,7 +182,7 @@
           </li>
 
           <!-- Equipe -->
-          <li class="nav-item dropdown">
+          <!--<li class="nav-item dropdown">
             <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
                 {{~#if equipe}}
                   active
@@ -178,6 +228,15 @@
           </li>
           -->
         </ul>
+        <a 
+          class="
+            btn 
+            nav-link bg-primary text-white 
+            js-scroll-trigger p-2 px-4" 
+          href="/simposio/2023/inscricoes" 
+          style="font-size: 1em; font-weight: normal; font-family: 'Inter', sans-serif; border-radius: 1em;">
+          INSCRIÇÕES
+        </a>
       </div>
     </div>
   </nav>
