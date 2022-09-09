@@ -38,6 +38,7 @@ var educomp_2022_certificados_esquenta_2 = require('./routes/simposio/2022/pt-BR
 var educomp_2023_main = require('./routes/simposio/2023/pt-BR/main');
 var educomp_2023_equipe = require('./routes/simposio/2023/pt-BR/equipe');
 var educomp_2023_trabalhos = require('./routes/simposio/2023/pt-BR/trabalhos');
+var educomp_2023_criterios = require('./routes/simposio/2023/pt-BR/criterios');
 
 //Giec
 
@@ -78,15 +79,14 @@ app.get('/simposio/2023/trabalhos/chamada', educomp_2023_trabalhos.chamado)
 app.get('/simposio/2023/trabalhos/minicursos', educomp_2023_trabalhos.minicursos)
 /*app.get('/simposio/2022/trabalhos/lab-ideias', educomp_2023_trabalhos.lab_ideias)
 app.get('/simposio/2022/trabalhos/wtd', educomp_2023_trabalhos.wtd)
-app.get('/simposio/2022/trabalhos/aceitos', educomp_2023_trabalhos.aceitos)
+app.get('/simposio/2022/trabalhos/aceitos', educomp_2023_trabalhos.aceitos)*/
 
-app.get('/simposio/2022/trabalhos/criterios/trilha-1', educomp_2022_criterios.artigos)
-app.get('/simposio/2022/trabalhos/criterios/trilha-2', educomp_2022_criterios.trilha2)
-app.get('/simposio/2022/trabalhos/criterios/trilha-3', educomp_2022_criterios.trilha3)
-app.get('/simposio/2022/trabalhos/criterios/trilha-4', educomp_2022_criterios.trilha4)
-app.get('/simposio/2022/trabalhos/criterios/trilha-5', educomp_2022_criterios.ensaios)
-app.get('/simposio/2022/trabalhos/criterios/lab-ideias', educomp_2022_criterios.labideias)
-*/
+app.get('/simposio/2023/trabalhos/criterios/trilha-1', educomp_2023_criterios.artigos)
+app.get('/simposio/2023/trabalhos/criterios/trilha-2', educomp_2023_criterios.trilha2)
+app.get('/simposio/2023/trabalhos/criterios/trilha-3', educomp_2023_criterios.trilha3)
+app.get('/simposio/2023/trabalhos/criterios/trilha-4', educomp_2023_criterios.trilha4)
+app.get('/simposio/2023/trabalhos/criterios/trilha-5', educomp_2023_criterios.ensaios)
+/*app.get('/simposio/2023/trabalhos/criterios/lab-ideias', educomp_2022_criterios.labideias)*/
 
 app.get('/simposio/2023/equipe/comissao-organizadora', educomp_2023_equipe.comissao_organizadora)
 app.get('/simposio/2023/equipe/comite-programa', educomp_2023_equipe.comite_programa)
