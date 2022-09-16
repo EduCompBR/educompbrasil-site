@@ -8,12 +8,26 @@ exports.index = function(req, res){
     )
   };
 
-exports.sobre = function(req, res) { 
+  exports.sobre = function(req, res){
     res.render('simposio/2023/pt-BR/sobre', 
         {
             layout: 'simposio/2023/pt-BR/layout', 
-            sobre: true,
+            sobre: true, 
             titulo: "Principal"
+        }
+    )
+  };
+
+exports.sobre_sbc = function(req, res) { 
+    res.render('simposio/2023/pt-BR/sobre-sbc', 
+        {
+            layout: 'simposio/2023/pt-BR/layout', 
+            sobre: true,
+            titulo: "Sobre a SBC",
+            header: {
+                endereco: 'sobre-sbc',
+                descricao: 'Faixa de título sobre a SBC'
+            }
         }
     ) 
 };
