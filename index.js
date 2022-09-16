@@ -65,6 +65,7 @@ app.get('/documentos/modelos/proposta-sede-educomp', giec_main.documentos_modelo
 //EduComp 2023 - pt-BR
 app.get('/simposio/2023', educomp_2023_main.index)
 app.get('/simposio/2023/sobre', educomp_2023_main.sobre)
+app.get('/simposio/2023/sobre-sbc', educomp_2023_main.sobre_sbc)
 app.get('/simposio/2023/datas', educomp_2023_main.datas)
 
 /*app.get('/simposio/2023/programacao', educomp_2023_programacao.programacao)
