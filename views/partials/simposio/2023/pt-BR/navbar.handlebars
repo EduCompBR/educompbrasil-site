@@ -4,7 +4,7 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
       <a class="navbar-brand js-scroll-trigger imagelink" href="/simposio/2023/">
         <img src="/img/simposio/2023/logo-educomp.png" style="height: 4rem; margin-left:0em; margin-top: 1em; margin-bottom: 1em;"/>
       </a>
-      <a class="imagelink" href="/simposio/2023/sobre-sbc">
+      <a class="imagelink" href="http://www.sbc.org.br" target="_blank">
         <!--<span style="color: white; padding-left: 1.6em;">
           Realização
         </span>-->
@@ -17,12 +17,20 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
         <ul class="navbar-nav">
 
           <!-- Sobre -->
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger
-            {{~#if sobre}}
-              active
-            {{/if}}
-            " href="/simposio/2023/sobre">PRINCIPAL</a>
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                {{~#if sobre}}
+                  active
+                {{/if}}
+            ">PRINCIPAL</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2023/">
+                Sobre o evento
+              </a>
+              <a class="dropdown-item" href="/simposio/2023/sobre-sbc">
+                Sobre a SBC
+              </a>
+            </div>
           </li>
 
            <li class="nav-item dropdown">
