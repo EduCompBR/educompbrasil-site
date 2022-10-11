@@ -78,9 +78,10 @@ app.get('/simposio/2023/inscricoes', educomp_2023_main.inscricoes)
 app.get('/simposio/2023/trabalhos/topicos-de-interesse', educomp_2023_trabalhos.topicos)
 app.get('/simposio/2023/trabalhos/chamada', educomp_2023_trabalhos.chamado)
 app.get('/simposio/2023/trabalhos/minicursos', educomp_2023_trabalhos.minicursos)
-/*app.get('/simposio/2022/trabalhos/lab-ideias', educomp_2023_trabalhos.lab_ideias)
-app.get('/simposio/2022/trabalhos/wtd', educomp_2023_trabalhos.wtd)
-app.get('/simposio/2022/trabalhos/aceitos', educomp_2023_trabalhos.aceitos)*/
+app.get('/simposio/2023/trabalhos/lab-ideias', educomp_2023_trabalhos.lab_ideias)
+app.get('/simposio/2023/trabalhos/wtd', educomp_2023_trabalhos.wtd)
+app.get('/simposio/2023/trabalhos/paineis', educomp_2023_trabalhos.paineis)
+/*app.get('/simposio/2022/trabalhos/aceitos', educomp_2023_trabalhos.aceitos)*/
 
 app.get('/simposio/2023/trabalhos/criterios/trilha-1', educomp_2023_criterios.artigos)
 app.get('/simposio/2023/trabalhos/criterios/trilha-2', educomp_2023_criterios.trilha2)

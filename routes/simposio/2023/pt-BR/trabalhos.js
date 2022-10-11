@@ -47,8 +47,8 @@ exports.lab_ideias = function (req, res) {
             trabalhos: true,
             titulo: 'Laboratório de Ideias - Chamada de Trabalhos',
             header: {
-                endereco: 'lab-ideias',
-                descricao: 'Faixa de título do Laboratório de Ideias.'
+                endereco: 'chamada-trabalhos',
+                descricao: 'Faixa de título da chamada de trabalhos.'
             }
         }
     ) 
@@ -61,8 +61,22 @@ exports.wtd = function (req, res) {
             trabalhos: true,
             titulo: 'WTD - Chamada de Trabalhos',
             header: {
-                endereco: 'wtd',
-                descricao: 'Faixa de título do Workshop de Teses e Dissertações (WTD).'
+                endereco: 'chamada-trabalhos',
+                descricao: 'Faixa de título da chamada de trabalhos.'
+            }
+        }
+    ) 
+};
+
+exports.paineis = function (req, res) { 
+    res.render('simposio/2023/pt-BR/trabalhos/paineis', 
+        {
+            layout: 'simposio/2023/pt-BR/layout', 
+            trabalhos: true,
+            titulo: 'Paineis - Chamada de Trabalhos',
+            header: {
+                endereco: 'chamada-trabalhos',
+                descricao: 'Faixa de título da chamada de trabalhos.'
             }
         }
     ) 
