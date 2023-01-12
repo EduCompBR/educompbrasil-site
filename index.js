@@ -247,5 +247,5 @@ app.post('/simposio/2021/contato/email', async (req, res) => {
 //Worker do servidor
 var porta = process.env.PORT || 3000
 app.listen(porta, () => {
-    console.log('App rodando na porta: ' + porta)
+    console.log('App rodando na porta: ' + porta) 
 })
