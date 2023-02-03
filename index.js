@@ -39,6 +39,7 @@ var educomp_2023_main = require('./routes/simposio/2023/pt-BR/main');
 var educomp_2023_equipe = require('./routes/simposio/2023/pt-BR/equipe');
 var educomp_2023_trabalhos = require('./routes/simposio/2023/pt-BR/trabalhos');
 var educomp_2023_criterios = require('./routes/simposio/2023/pt-BR/criterios');
+var educomp_2023_programacao = require('./routes/simposio/2023/pt-BR/programacao');
 
 //Giec
 
@@ -68,6 +69,7 @@ app.get('/simposio/2023', educomp_2023_main.index)
 app.get('/simposio/2023/sobre', educomp_2023_main.sobre)
 app.get('/simposio/2023/sobre-sbc', educomp_2023_main.sobre_sbc)
 app.get('/simposio/2023/datas', educomp_2023_main.datas)
+app.get('/simposio/2023/programacao/esquenta/1', educomp_2023_programacao.esquenta_1)
 
 /*app.get('/simposio/2023/programacao', educomp_2023_programacao.programacao)
 app.get('/simposio/2023/programacao/esquenta/1', educomp_2023_programacao.esquenta_1)
