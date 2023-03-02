@@ -169,12 +169,15 @@ exports.obter = async function (req, res) {
             if(!!element.id && element.status == "liberado")
             if ((element.email.trim()) === req.body.email) {
                 encontrado = true
+                var sessao = "Principal"
+                if(!!element.sessao)
+                    sessao = element.sessao
                 sessao_tecnica_coord.registros.push(
                     { 
                         'email': element.email.trim(),                                                
                         'atividade': 'sessao-tecnica-coord',
-                        'sessao': element.sessao,
-                        'sessaoFormat': element.sessao[0].toUpperCase() + element.sessao.substr(1),
+                        'sessao': sessao,
+                        'sessaoFormat': sessao[0].toUpperCase() + sessao.substr(1),
                         'dia': element.dia,
                         'sessao-tecnica-coord': true,
                     }
@@ -317,9 +320,13 @@ exports.obterArquivo = async function (req, res) {
         await sheets.loadInfo()
         let posicao = -1
 
+        console.log("Chegou aqui!")
+
         const rows = await sheets.sheetsByTitle[atividade].getRows()
+        console.log("Chegou aqui! Atividade: " + atividade)
         rows.forEach( (element, index) => {
             if(!!element.id && element.status == "liberado"){
+                console.log("Chegou aqui! 03! Atividade: " + atividade)
                 if (atividade === 'participacao') {
                     if ((element.email.trim()) === email) {
                         posicao = index
@@ -375,12 +382,27 @@ exports.obterArquivo = async function (req, res) {
                         posicao = index
                     }
                 } else if (atividade === 'sessao-tecnica-coord') {
-                    sessao = req.body.sessao 
-                    dia = req.body.dia 
-                    if ((element.email.trim()) === email && element.sessao === sessao) {
-                        sessao = sessao[0].toUpperCase() + sessao.substr(1)
-                        posicao = index
+                    console.log("Chegou aqui! Posição: " + posicao + 
+                    " | Index: " + index + 
+                    " | Sessao: " + sessao +
+                    " | Email: " + email +
+                    " | Element.email: " + element.email)
+                    dia = req.body.dia  
+                    if(!!element.sessao){
+                        sessao = "Principal"
+                        
+                        if (email.trim === email.trim){
+                            posicao = index
+                            console.log("Chegou aqui cabra")
+                        }
+                    }else{
+                        sessao = req.body.sessao
+                        if ((element.email.trim()) === email && element.sessao === sessao) {
+                            sessao = sessao[0].toUpperCase() + sessao.substr(1)
+                            posicao = index
+                        }
                     }
+                    console.log("Chegou aqui! Posição: " + posicao + " | Index: " + index + " | Sessao: " + sessao)
                 } else if (atividade === 'apres-trabalho') {
                     tipo = req.body.tipo
                     titulo = req.body.titulo
@@ -450,6 +472,7 @@ exports.obterArquivo = async function (req, res) {
             if (rows[posicao].codigo) codigo = rows[posicao].codigo
             nome = nome.toUpperCase()
             textoBase = rows[0].texto_base
+            console.log("Chegou aqui! 05")
             let novoTextoBase = textoBase.replace('${nome_completo}', nome)
             novoTextoBase = novoTextoBase.replace('${funcao}', funcao)
             novoTextoBase = novoTextoBase.replace('${titulo}', titulo)
