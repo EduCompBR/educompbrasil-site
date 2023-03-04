@@ -82,6 +82,20 @@ exports.paineis = function (req, res) {
     ) 
 };
 
+exports.livros = function (req, res) { 
+    res.render('simposio/2023/pt-BR/trabalhos/livros', 
+        {
+            layout: 'simposio/2023/pt-BR/layout', 
+            trabalhos: true,
+            titulo: 'Lançamento de Livros - Chamada de Trabalhos',
+            header: {
+                endereco: 'chamada-trabalhos',
+                descricao: 'Faixa de título da chamada de trabalhos.'
+            }
+        }
+    ) 
+};
+
 exports.aceitos = function (req, res) { 
     res.render('simposio/2023/pt-BR/trabalhos/aceitos', 
         {
