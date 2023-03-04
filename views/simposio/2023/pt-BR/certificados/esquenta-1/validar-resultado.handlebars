@@ -11,22 +11,20 @@
           <br>
           <h3>Validar certificado: </h3>
           <br>
-          <form method="POST" action="/simposio/2022/certificados/esquenta/1/validar">
-            <p> <a href="/simposio/2022/certificados/esquenta/1/validar" class="btn btn-primary btn-lg" style="width: 100px;">Validar</a> </p>
-            {{#if dadosMensagem}}                       
-                <div class="alert alert-success">
-                  <b>Código Encontrado!</b> <br/>
-                  <ul>
-                  {{#each dadosMensagem}}
-                    <li>{{this}}</li>
-                  {{/each}}
-                  </ul>
-                  </div>
-            {{else}}
-                <div class="alert alert-danger">Não é válido para o evento: I Esquenta EduComp 2022</div>
-            {{/if}}
-
-
+          {{#if dadosMensagem}}
+              <div class="alert alert-success">
+                <b>Código Encontrado!</b> <br/>
+                <ul>
+                {{#each dadosMensagem}}
+                  <li>{{this}}</li>
+                {{/each}}
+                </ul>
+                </div>
+          {{else}}
+              <div class="alert alert-danger">Não é válido para o evento: I Esquenta EduComp 2023</div>
+          {{/if}}
+          <form method="POST" action="/simposio/2023/certificados/esquenta/1/validar">
+            <p> <a href="/simposio/2023/certificados/esquenta/1/validar" class="btn btn-primary btn-lg" >Validar outro certificado...</a> </p>
           </form>
         </div>
       </div>
