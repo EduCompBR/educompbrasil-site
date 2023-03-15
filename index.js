@@ -71,6 +71,7 @@ app.get('/simposio/2023/sobre', educomp_2023_main.sobre)
 app.get('/simposio/2023/sobre-sbc', educomp_2023_main.sobre_sbc)
 app.get('/simposio/2023/datas', educomp_2023_main.datas)
 app.get('/simposio/2023/programacao/esquenta/1', educomp_2023_programacao.esquenta_1)
+app.get('/simposio/2023/programacao/esquenta/2', educomp_2023_programacao.esquenta_2)
 
 /*app.get('/simposio/2023/programacao', educomp_2023_programacao.programacao)
 app.get('/simposio/2023/programacao/esquenta/1', educomp_2023_programacao.esquenta_1)

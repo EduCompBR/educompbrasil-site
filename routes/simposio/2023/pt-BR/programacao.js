@@ -27,6 +27,20 @@ exports.esquenta_1 = function (req, res) {
     ) 
 };
 
+exports.esquenta_2 = function (req, res) { 
+    res.render('simposio/2023/pt-BR/programacao/esquenta/segundo', 
+        {
+            layout: 'simposio/2023/pt-BR/layout', 
+            sobre: true,
+            titulo: 'II Esquenta EduComp 2023',
+            header: {
+                endereco: 'esquenta-2',
+                descricao: 'Faixa de título do II Esquenta EduComp 2023.'
+            }
+        }
+    ) 
+};
+
 /*exports.esquenta_2 = function (req, res) { 
     res.render('simposio/2022/pt-BR/programacao/esquenta/segundo', 
         {
