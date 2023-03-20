@@ -62,6 +62,7 @@ app.get('/eventos', giec_main.eventos)
 app.get('/simposio', giec_main.eventos)
 app.get('/quem-somos/comite-gestor', giec_quem_somos.comite_gestor)
 app.get('/quem-somos/membros', giec_quem_somos.membros)
+app.get('/quem-somos/gts', giec_quem_somos.gts)
 app.get('/documentos', giec_main.documentos)
 app.get('/documentos/modelos/proposta-sede-educomp', giec_main.documentos_modelo_educomp)
 
