@@ -3,7 +3,17 @@ exports.comite_gestor = function(req, res) {
         {
             layout: 'giec/layout',
             quem_somos: true,
-            titulo: "Comitê Gestor"
+            titulo: "Comitê Gestor (CG)"
+        }
+    ) 
+};
+
+exports.gts = function(req, res){ 
+    res.render('giec/quem-somos/gts', 
+        {
+            layout: 'giec/layout',
+            quem_somos: true,
+            titulo: "Grupos de Trabalho (GT)"
         }
     ) 
 };
