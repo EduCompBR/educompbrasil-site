@@ -73,3 +73,17 @@ exports.inscricoes = function(req, res) {
         }
     ) 
 };
+
+exports.certificados = function(req, res) { 
+    res.render('simposio/2023/pt-BR/certificados/eventos', 
+        {
+            layout: 'simposio/2023/pt-BR/layout', 
+            inscricoes: true,
+            titulo: 'Certificados',
+            header: {
+                endereco: 'inscricoes',
+                descricao: 'Faixa de título dos Certificados.'
+            }
+        }
+    ) 
+};
