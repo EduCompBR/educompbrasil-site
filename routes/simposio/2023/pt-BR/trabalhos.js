@@ -109,3 +109,17 @@ exports.aceitos = function (req, res) {
         }
     ) 
 };
+
+exports.orientacoes = function (req, res) { 
+    res.render('simposio/2023/pt-BR/trabalhos/orientacoes', 
+        {
+            layout: 'simposio/2023/pt-BR/layout', 
+            trabalhos: true,
+            titulo: 'Orientações sobre Apresentações',
+            header: {
+                endereco: 'orientacoes',
+                descricao: 'Faixa de título das orientações: autores.'
+            }
+        }
+    ) 
+};
