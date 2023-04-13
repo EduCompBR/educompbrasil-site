@@ -1,7 +1,7 @@
-/*exports.programacao = function (req, res) { 
-    res.render('simposio/2022/pt-BR/programacao/index', 
+exports.programacao = function (req, res) { 
+    res.render('simposio/2023/pt-BR/programacao/educomp/index', 
         {
-            //layout: 'simposio/2022/pt-BR/layout', 
+            layout: 'simposio/2023/pt-BR/layout', 
             prog: true,
             prog_educomp: true,
             titulo: 'Programação',
@@ -11,7 +11,37 @@
             }
         }
     ) 
-};*/
+};
+
+exports.programacao_manha = function (req, res) { 
+    res.render('simposio/2023/pt-BR/programacao/educomp/manha', 
+        {
+            //layout: 'simposio/2022/pt-BR/layout', 
+            prog: true,
+            prog_educomp: true,
+            titulo: 'Programação da Manhã',
+            header: {
+                endereco: 'programacao-manha',
+                descricao: 'Faixa de título da programação do turno da manhã.'
+            }
+        }
+    ) 
+};
+
+exports.programacao_tarde = function (req, res) { 
+    res.render('simposio/2023/pt-BR/programacao/educomp/tarde', 
+        {
+            //layout: 'simposio/2022/pt-BR/layout', 
+            prog: true,
+            prog_educomp: true,
+            titulo: 'Programação da Tarde',
+            header: {
+                endereco: 'programacao-tarde',
+                descricao: 'Faixa de título da programação do turno da tarde.'
+            }
+        }
+    ) 
+};
 
 exports.esquenta_1 = function (req, res) { 
     res.render('simposio/2023/pt-BR/programacao/esquenta/primeiro', 
