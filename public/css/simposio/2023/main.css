@@ -90,3 +90,9 @@
   footer {
     background-color: black;
   }
+
+  .fc-list-event-title a:hover {
+    color: white;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }

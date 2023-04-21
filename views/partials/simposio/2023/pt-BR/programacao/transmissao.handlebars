@@ -1,0 +1,40 @@
+<span 
+    style="
+    font-size: large; display: block; 
+    margin-bottom: 1.5em;"
+>
+    {{#if discord}}
+        <a class="btn btn-info"
+        href="https://discord.gg/ETbYMAXWTA" target="_blank"
+        style="background-color: rgb(104, 185, 247); color:white;"
+        >
+        <span style="padding-right:0.5em;">
+            <i class="fab fa-discord"></i>
+        </span>
+        Transmissão pelo Discord 
+    {{/if}}
+
+    {{#if youtube}}
+        <a class="btn btn-info"
+        href="{{link}}" target="_blank"
+        style="background-color: red; color:white;"
+        >
+        <span style="padding-right:0.5em;">
+            <i class="fab fa-youtube"></i>
+        </span>
+        Transmissão pelo YouTube 
+    {{/if}}
+
+    {{#if googlemeet}}
+        <a class="btn btn-info"
+        href="{{link}}" target="_blank"
+        style="background-color: rgb(8, 161, 149); color:white;"
+        >
+        <span style="padding-right:0.5em;">
+            <i class="fab fa-google"></i>
+        </span>
+        Transmissão pelo Google Meet 
+    {{/if}}
+    
+    </a>
+</span>
