@@ -43,7 +43,7 @@
         data: [
             {{#each membros_efetivos_dados}}
                 {
-                    nome: "{{nome}}",
+                    nome: '<b>{{nome}}</b><br>Teste',
                     instituicao: "{{instituicao}}",
                     inclusao: "{{inclusao}}",
                     vigencia: "{{vigencia}}"
@@ -52,7 +52,7 @@
 
         ],
         columns:[
-            {title:"Nome", field:"nome", headerFilter:"input", width: 250, bottomCalc:"count", sorter:"string"},
+            {title:"Nome", field:"nome", formatter:"html", headerFilter:"input", width: 250, bottomCalc:"count", sorter:"string"},
             {title:"Instituição", field:"instituicao", hozAlign:"center", headerFilter:"input", sorter:"string"},
             {title:"Inclusão", field:"inclusao", sorter:"date", headerFilter:"input" },
             {title:"Vigência", field:"vigencia", sorter:"date", headerFilter:"input",}
