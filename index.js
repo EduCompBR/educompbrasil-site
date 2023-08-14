@@ -44,6 +44,16 @@ var educomp_2023_certificados_educomp = require('./routes/simposio/2023/pt-BR/ce
 var educomp_2023_certificados_esquenta_1 = require('./routes/simposio/2023/pt-BR/certificado/esquenta-1');
 var educomp_2023_certificados_esquenta_2 = require('./routes/simposio/2023/pt-BR/certificado/esquenta-2');
 
+//Educomp 2024
+var educomp_2024_main = require('./routes/simposio/2024/pt-BR/main');
+/*var educomp_2023_equipe = require('./routes/simposio/2023/pt-BR/equipe');
+var educomp_2023_trabalhos = require('./routes/simposio/2023/pt-BR/trabalhos');
+var educomp_2023_criterios = require('./routes/simposio/2023/pt-BR/criterios');
+var educomp_2023_programacao = require('./routes/simposio/2023/pt-BR/programacao');
+var educomp_2023_certificados_educomp = require('./routes/simposio/2023/pt-BR/certificado/educomp');
+var educomp_2023_certificados_esquenta_1 = require('./routes/simposio/2023/pt-BR/certificado/esquenta-1');
+var educomp_2023_certificados_esquenta_2 = require('./routes/simposio/2023/pt-BR/certificado/esquenta-2');*/
+
 //Giec
 
 var giec_quem_somos = require('./routes/giec/quem_somos');
@@ -67,6 +77,64 @@ app.get('/quem-somos/membros', giec_quem_somos.membros)
 app.get('/quem-somos/gts', giec_quem_somos.gts)
 app.get('/documentos', giec_main.documentos)
 app.get('/documentos/modelos/proposta-sede-educomp', giec_main.documentos_modelo_educomp)
+
+//EduComp 2024 - pt-BR
+app.get('/simposio/2024', educomp_2024_main.index)
+/*app.get('/simposio/2023/sobre', educomp_2023_main.sobre)
+app.get('/simposio/2023/sobre-sbc', educomp_2023_main.sobre_sbc)
+app.get('/simposio/2023/certificados', educomp_2023_main.certificados)
+
+app.get('/simposio/2023/datas', educomp_2023_main.datas)
+app.get('/simposio/2023/programacao/educomp', educomp_2023_programacao.programacao)
+app.get('/simposio/2023/programacao/educomp/manha', educomp_2023_programacao.programacao_manha)
+app.get('/simposio/2023/programacao/educomp/tarde', educomp_2023_programacao.programacao_tarde)
+app.get('/simposio/2023/programacao/esquenta/1', educomp_2023_programacao.esquenta_1)
+app.get('/simposio/2023/programacao/esquenta/2', educomp_2023_programacao.esquenta_2)
+
+app.get('/simposio/2023/forlic', educomp_2023_main.forlic)
+app.get('/simposio/2023/inscricoes', educomp_2023_main.inscricoes)
+
+app.get('/simposio/2023/trabalhos/topicos-de-interesse', educomp_2023_trabalhos.topicos)
+app.get('/simposio/2023/trabalhos/chamada', educomp_2023_trabalhos.chamado)
+app.get('/simposio/2023/trabalhos/minicursos', educomp_2023_trabalhos.minicursos)
+app.get('/simposio/2023/trabalhos/lab-ideias', educomp_2023_trabalhos.lab_ideias)
+app.get('/simposio/2023/trabalhos/wtd', educomp_2023_trabalhos.wtd)
+app.get('/simposio/2023/trabalhos/paineis', educomp_2023_trabalhos.paineis)
+app.get('/simposio/2023/trabalhos/livros', educomp_2023_trabalhos.livros)
+app.get('/simposio/2023/trabalhos/aceitos', educomp_2023_trabalhos.aceitos)
+app.get('/simposio/2023/trabalhos/orientacoes', educomp_2023_trabalhos.orientacoes)
+
+app.get('/simposio/2023/trabalhos/criterios/trilha-1', educomp_2023_criterios.artigos)
+app.get('/simposio/2023/trabalhos/criterios/trilha-2', educomp_2023_criterios.trilha2)
+app.get('/simposio/2023/trabalhos/criterios/trilha-3', educomp_2023_criterios.trilha3)
+app.get('/simposio/2023/trabalhos/criterios/trilha-4', educomp_2023_criterios.trilha4)
+app.get('/simposio/2023/trabalhos/criterios/trilha-5', educomp_2023_criterios.ensaios)
+/*app.get('/simposio/2023/trabalhos/criterios/lab-ideias', educomp_2022_criterios.labideias)
+
+app.get('/simposio/2023/equipe/comissao-organizadora', educomp_2023_equipe.comissao_organizadora)
+app.get('/simposio/2023/equipe/comite-programa', educomp_2023_equipe.comite_programa)
+
+
+app.get('/simposio/2023/certificados/esquenta/1', educomp_2023_certificados_esquenta_1.opcoes)
+app.get('/simposio/2023/certificados/esquenta/1/obter', educomp_2023_certificados_esquenta_1.certificado)
+app.post('/simposio/2023/certificados/esquenta/1/obter', educomp_2023_certificados_esquenta_1.obter)
+app.post('/simposio/2023/certificados/esquenta/1/obter/arquivo', educomp_2023_certificados_esquenta_1.obterArquivo)
+app.get('/simposio/2023/certificados/esquenta/1/validar', educomp_2023_certificados_esquenta_1.formValidar)
+app.post('/simposio/2023/certificados/esquenta/1/validar', educomp_2023_certificados_esquenta_1.validar)
+
+app.get('/simposio/2023/certificados/esquenta/2', educomp_2023_certificados_esquenta_2.opcoes)
+app.get('/simposio/2023/certificados/esquenta/2/obter', educomp_2023_certificados_esquenta_2.certificado)
+app.post('/simposio/2023/certificados/esquenta/2/obter', educomp_2023_certificados_esquenta_2.obter)
+app.post('/simposio/2023/certificados/esquenta/2/obter/arquivo', educomp_2023_certificados_esquenta_2.obterArquivo)
+app.get('/simposio/2023/certificados/esquenta/2/validar', educomp_2023_certificados_esquenta_2.formValidar)
+app.post('/simposio/2023/certificados/esquenta/2/validar', educomp_2023_certificados_esquenta_2.validar)
+
+app.get('/simposio/2023/certificados/educomp', educomp_2023_certificados_educomp.opcoes)
+app.get('/simposio/2023/certificados/educomp/obter', educomp_2023_certificados_educomp.certificado)
+app.post('/simposio/2023/certificados/educomp/obter', educomp_2023_certificados_educomp.obter)
+app.post('/simposio/2023/certificados/educomp/obter/arquivo', educomp_2023_certificados_educomp.obterArquivo)
+app.get('/simposio/2023/certificados/educomp/validar', educomp_2023_certificados_educomp.formValidar)
+app.post('/simposio/2023/certificados/educomp/validar', educomp_2023_certificados_educomp.validar)*/
 
 //EduComp 2023 - pt-BR
 app.get('/simposio/2023', educomp_2023_main.index)

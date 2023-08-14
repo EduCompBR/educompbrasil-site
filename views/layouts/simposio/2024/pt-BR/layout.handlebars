@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>EduComp 2024 :: {{titulo}}</title>
+
+  {{!-- <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /> --}}
+  <link rel="stylesheet" href="/css/simposio/2024/bootstrap5.min.css" />
+  <link rel="icon" type="image/png" href="/img/simposio/2024/logo-educomp-favicon.png"/>
+  <link href="/css/simposio/2024/scrolling-nav.css" rel="stylesheet">
+
+  <!-- Font-Awesome -->
+  <script src="https://kit.fontawesome.com/bd98f4183e.js" crossorigin="anonymous"></script>
+
+  {{~#if prog_educomp}}
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <!--
+      <link rel="stylesheet" href="/css/simposio/2022/programacao.css">
+    -->
+  {{/if}}
+
+  <!-- Tabulator -->
+  <script src="
+  https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js
+  "></script>
+  <link href="https://unpkg.com/tabulator-tables@5.4.4/dist/css/tabulator_bootstrap5.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.4.4/dist/js/tabulator.min.js"></script>
+  
+  <!-- FullCalendar.io -->
+  <!--<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          height: "auto",
+          initialView: 'listDay',
+          initialDate: "2023-04-24",
+          themeSystem: "bootstrap5",
+          locale: 'pt-br',
+          headerToolbar: {
+            left: 'today prev,next',
+            center: 'title',
+            right: 'dayGridEduComp,listDay'
+          },
+          views: {
+            dayGridEduComp: {
+              type: 'dayGrid',
+              duration: { days: 6 },
+              buttonText: 'evento'
+            }
+          },
+          buttonText: {
+            today: "hoje",
+            week: "semana",
+            day: "dia"
+          },
+          eventClick: function(info) {
+            alert('Event: ' + info.event.title);
+            alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
+            alert('View: ' + info.view.type);
+
+            // change the border color just for fun
+            info.el.style.borderColor = 'red';
+            $("#")
+          },
+          events: [
+            {
+              title: "Abertura (EduComp/ForLic)",
+              start: '2023-04-24T13:00:00',
+              end: '2023-04-24T13:40:00',
+              backgroundColor: '#433352',
+              extendedProps: {
+                status: 'done'
+              }
+            },
+            {
+              title: 'Intervalo / Apresentação Cultural',
+              start: '2023-04-24T13:40:00',
+              end: '2023-04-24T14:00:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+            {
+              title: 'ForLic - Sessão I',
+              start: '2023-04-24T14:00:00',
+              end: '2023-04-24T16:10:00',
+              backgroundColor: "hsl(199, 25%, 46%)"
+            },
+            {
+              title: 'Intervalo',
+              start: '2023-04-24T16:10:00',
+              end: '2023-04-24T16:30:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+            {
+              title: 'ForLic - Sessão II',
+              start: '2023-04-24T16:30:00',
+              end: '2023-04-24T18:30:00',
+              backgroundColor: "hsl(199, 25%, 46%)"
+            },
+            {
+              title: 'Encerramento (ForLic)',
+              start: '2023-04-24T18:30:00',
+              end: '2023-04-24T18:50:00',
+              backgroundColor: '#433352'
+            },
+            {
+              title: 'Apresentação Cultural',
+              start: '2023-04-24T18:50:00',
+              end: '2023-04-24T19:10:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+
+            //Terça
+            {
+              title: 'Painel I: Ética em Ensino, Pesquisa e Extensão em Computação',
+              start: '2023-04-25T13:00:00',
+              end: '2023-04-25T14:40:00',
+              backgroundColor: "hsl(199, 25%, 46%)"
+            },
+            {
+              title: 'Intervalo / Apresentação Cultural',
+              start: '2023-04-25T14:40:00',
+              end: '2023-04-25T15:00:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+            {
+              title: 'Sessões Técnicas I e II',
+              start: '2023-04-25T15:00:00',
+              end: '2023-04-25T16:10:00',
+              backgroundColor: "hsl(162, 14%, 68%)"
+            },
+            {
+              title: 'Intervalo',
+              start: '2023-04-25T16:10:00',
+              end: '2023-04-25T16:30:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+            {
+              title: 'Sessões Técnicas III e IV',
+              start: '2023-04-25T16:30:00',
+              end: '2023-04-25T17:40:00',
+              backgroundColor: "hsl(162, 14%, 68%)"
+            },
+            {
+              title: 'Intervalo',
+              start: '2023-04-25T17:40:00',
+              end: '2023-04-25T18:00:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+            {
+              title: 'Lab de Ideias (LI-I e LI-II)',
+              start: '2023-04-25T18:00:00',
+              end: '2023-04-25T19:10:00',
+              backgroundColor: "hsl(30, 39%, 55%)"
+            },
+
+            //Quarta
+            {
+              title: 'Sessões Técnicas V e VI',
+              start: '2023-04-26T13:00:00',
+              end: '2023-04-26T14:40:00',
+              backgroundColor: "hsl(162, 14%, 68%)"
+            },
+            {
+              title: 'Intervalo',
+              start: '2023-04-26T14:40:00',
+              end: '2023-04-26T15:00:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+            {
+              title: 'Sessões Técnicas VII e VIII',
+              start: '2023-04-26T15:00:00',
+              end: '2023-04-26T16:10:00',
+              backgroundColor: "hsl(162, 14%, 68%)"
+            },
+            {
+              title: 'Intervalo / Apresentação Cultural',
+              start: '2023-04-26T16:10:00',
+              end: '2023-04-26T17:00:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+            {
+              title: 'Palestra I:  Integração de Computação à Aprendizagem de Ciências na Educação Básica',
+              start: '2023-04-26T17:00:00',
+              end: '2023-04-26T18:40:00',
+              backgroundColor: "hsl(199, 25%, 46%)"
+            },
+            {
+              title: 'Lab de Ideias (LI-III e LI-IV)',
+              start: '2023-04-26T18:40:00',
+              end: '2023-04-26T19:40:00',
+              backgroundColor: "hsl(30, 39%, 55%)"
+            },
+
+            //Quinta
+            {
+              title: "Palestra II: De volta ao 'normal'? Porque a educação pós-ensino remoto deve ser mais do que uma volta ao passado",
+              start: '2023-04-27T13:00:00',
+              end: '2023-04-27T14:40:00',
+              backgroundColor: "hsl(199, 25%, 46%)"
+            },
+            {
+              title: 'Intervalo / Apresentação Cultural',
+              start: '2023-04-27T14:40:00',
+              end: '2023-04-27T15:00:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+            {
+              title: 'Sessões Técnicas IX e X',
+              start: '2023-04-27T15:00:00',
+              end: '2023-04-27T16:10:00',
+              backgroundColor: "hsl(162, 14%, 68%)"
+            },
+            {
+              title: 'Intervalo',
+              start: '2023-04-27T16:10:00',
+              end: '2023-04-27T16:30:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+            {
+              title: 'Sessões Técnicas XI e XII',
+              start: '2023-04-27T16:30:00',
+              end: '2023-04-27T17:40:00',
+              backgroundColor: "hsl(162, 14%, 68%)"
+            },
+            {
+              title: 'Intervalo',
+              start: '2023-04-27T17:40:00',
+              end: '2023-04-27T18:00:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+            {
+              title: 'Lab de Ideias (LI-V e LI-VI)',
+              start: '2023-04-27T18:00:00',
+              end: '2023-04-27T19:10:00',
+              backgroundColor: "hsl(30, 39%, 55%)"
+            },
+
+            //Sexta
+            {
+              title: "Assembleia GIEC",
+              start: '2023-04-28T13:00:00',
+              end: '2023-04-28T14:40:00',
+              backgroundColor: '#433352'
+            },
+            {
+              title: 'Intervalo',
+              start: '2023-04-28T14:40:00',
+              end: '2023-04-28T15:00:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+            {
+              title: 'Sessões Técnicas XIII e XIV',
+              start: '2023-04-28T15:00:00',
+              end: '2023-04-28T16:10:00',
+              backgroundColor: "hsl(162, 14%, 68%)"
+            },
+            {
+              title: 'WTD',
+              start: '2023-04-28T15:00:00',
+              end: '2023-04-28T18:30:00',
+              backgroundColor: "hsl(162, 14%, 68%)"
+            },
+            {
+              title: 'Intervalo',
+              start: '2023-04-28T16:10:00',
+              end: '2023-04-28T16:30:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            },
+            {
+              title: 'GT GIEC',
+              start: '2023-04-28T16:30:00',
+              end: '2023-04-28T18:30:00',
+              backgroundColor: "hsl(162, 14%, 68%)"
+            },
+
+            //Sábado
+            {
+              title: "Encerramento",
+              start: '2023-04-29T13:00:00',
+              end: '2023-04-29T14:40:00',
+              backgroundColor: '#433352'
+            },
+            {
+              title: 'Apresentação Cultural',
+              start: '2023-04-29T14:40:00',
+              end: '2023-04-29T15:00:00',
+              backgroundColor: "hsl(31, 89%, 68%)"
+            }
+          ]
+        });
+        calendar.render();
+      });
+
+    </script>-->
+
+    <link href="/css/simposio/2024/main.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+  <!-- Navigation -->
+  {{> simposio/2023/pt-BR/navbar}}
+
+  {{{ body }}}
+
+  {{> simposio/2023/pt-BR/footer}}
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    {{!-- <script src="/js/scrolling-nav.js"></script> --}}
+
+    <script type="text/javascript" src="/js/jquery.hideseek.js"></script>
+    <script>
+        $(document).ready(function() {
+          $('#search').hideseek({
+          nodata: 'Nenhum curso encontrado',
+          
+          });
+        });
+      </script>
+
+</body>
+
+</html>
