@@ -46,13 +46,13 @@ var educomp_2023_certificados_esquenta_2 = require('./routes/simposio/2023/pt-BR
 
 //Educomp 2024
 var educomp_2024_main = require('./routes/simposio/2024/pt-BR/main');
-/*var educomp_2023_equipe = require('./routes/simposio/2023/pt-BR/equipe');
+var educomp_2023_equipe = require('./routes/simposio/2024/pt-BR/equipe');
 var educomp_2023_trabalhos = require('./routes/simposio/2023/pt-BR/trabalhos');
 var educomp_2023_criterios = require('./routes/simposio/2023/pt-BR/criterios');
-var educomp_2023_programacao = require('./routes/simposio/2023/pt-BR/programacao');
-var educomp_2023_certificados_educomp = require('./routes/simposio/2023/pt-BR/certificado/educomp');
-var educomp_2023_certificados_esquenta_1 = require('./routes/simposio/2023/pt-BR/certificado/esquenta-1');
-var educomp_2023_certificados_esquenta_2 = require('./routes/simposio/2023/pt-BR/certificado/esquenta-2');*/
+//var educomp_2023_programacao = require('./routes/simposio/2023/pt-BR/programacao');
+//var educomp_2023_certificados_educomp = require('./routes/simposio/2023/pt-BR/certificado/educomp');
+//var educomp_2023_certificados_esquenta_1 = require('./routes/simposio/2023/pt-BR/certificado/esquenta-1');
+//var educomp_2023_certificados_esquenta_2 = require('./routes/simposio/2023/pt-BR/certificado/esquenta-2');
 
 //Giec
 
