@@ -1,7 +1,7 @@
-/*exports.programacao = function (req, res) { 
-    res.render('simposio/2023/pt-BR/programacao/educomp/index', 
+exports.programacao = function (req, res) { 
+    res.render('simposio/2024/pt-BR/programacao/educomp/index', 
         {
-            layout: 'simposio/2023/pt-BR/layout', 
+            layout: 'simposio/2024/pt-BR/layout', 
             prog: true,
             prog_educomp: true,
             titulo: 'Programação',
@@ -14,7 +14,7 @@
 };
 
 exports.programacao_manha = function (req, res) { 
-    res.render('simposio/2023/pt-BR/programacao/educomp/manha', 
+    res.render('simposio/2024/pt-BR/programacao/educomp/manha', 
         {
             //layout: 'simposio/2022/pt-BR/layout', 
             prog: true,
@@ -29,7 +29,7 @@ exports.programacao_manha = function (req, res) {
 };
 
 exports.programacao_tarde = function (req, res) { 
-    res.render('simposio/2023/pt-BR/programacao/educomp/tarde', 
+    res.render('simposio/2024/pt-BR/programacao/educomp/tarde', 
         {
             //layout: 'simposio/2022/pt-BR/layout', 
             prog: true,
@@ -44,34 +44,34 @@ exports.programacao_tarde = function (req, res) {
 };
 
 exports.esquenta_1 = function (req, res) { 
-    res.render('simposio/2023/pt-BR/programacao/esquenta/primeiro', 
+    res.render('simposio/2024/pt-BR/programacao/esquenta/primeiro', 
         {
-            layout: 'simposio/2023/pt-BR/layout', 
+            layout: 'simposio/2024/pt-BR/layout', 
             sobre: true,
-            titulo: 'I Esquenta EduComp 2023',
+            titulo: 'I Esquenta EduComp 2024',
             header: {
                 endereco: 'esquenta-1',
-                descricao: 'Faixa de título do I Esquenta EduComp 2023.'
+                descricao: 'Faixa de título do I Esquenta EduComp 2024.'
             }
         }
     ) 
 };
 
 exports.esquenta_2 = function (req, res) { 
-    res.render('simposio/2023/pt-BR/programacao/esquenta/segundo', 
+    res.render('simposio/2024/pt-BR/programacao/esquenta/segundo', 
         {
-            layout: 'simposio/2023/pt-BR/layout', 
+            layout: 'simposio/2024/pt-BR/layout', 
             sobre: true,
-            titulo: 'II Esquenta EduComp 2023',
+            titulo: 'II Esquenta EduComp 2024',
             header: {
                 endereco: 'esquenta-2',
-                descricao: 'Faixa de título do II Esquenta EduComp 2023.'
+                descricao: 'Faixa de título do II Esquenta EduComp 2024.'
             }
         }
     ) 
-}; */
-
-/*exports.esquenta_2 = function (req, res) { 
+}; 
+/*
+exports.esquenta_2 = function (req, res) { 
     res.render('simposio/2022/pt-BR/programacao/esquenta/segundo', 
         {
             layout: 'simposio/2022/pt-BR/layout', 
@@ -83,11 +83,11 @@ exports.esquenta_2 = function (req, res) {
             }
         }
     ) 
-};*/
+};
 
 /*
 exports.esquenta_2 = function (req, res) { 
-    res.render('simposio/2021/pt-BR/programacao/esquenta/segundo', 
+    res.render('simposio/2024/pt-BR/programacao/esquenta/segundo', 
         {
             layout: 'simposio/2021/pt-BR/layout', 
             prog: true,
