@@ -48,7 +48,7 @@ var educomp_2023_certificados_esquenta_2 = require('./routes/simposio/2023/pt-BR
 var educomp_2024_main = require('./routes/simposio/2024/pt-BR/main');
 var educomp_2024_equipe = require('./routes/simposio/2024/pt-BR/equipe');
 var educomp_2024_trabalhos = require('./routes/simposio/2024/pt-BR/trabalhos');
-var educomp_2024_criterios = require('./routes/simposio/2023/pt-BR/criterios');
+var educomp_2024_criterios = require('./routes/simposio/2024/pt-BR/criterios');
 var educomp_2024_programacao = require('./routes/simposio/2024/pt-BR/programacao');
 //var educomp_2023_certificados_educomp = require('./routes/simposio/2023/pt-BR/certificado/educomp');
 //var educomp_2023_certificados_esquenta_1 = require('./routes/simposio/2023/pt-BR/certificado/esquenta-1');
@@ -105,7 +105,7 @@ app.get('/simposio/2024/trabalhos/wtd', educomp_2024_trabalhos.wtd)
 app.get('/simposio/2024/trabalhos/livros', educomp_2024_trabalhos.livros)
 app.get('/simposio/2024/trabalhos/aceitos', educomp_2024_trabalhos.aceitos)
 app.get('/simposio/2024/trabalhos/orientacoes', educomp_2024_trabalhos.orientacoes)
-
+app.get('/simposio/2024/inscricoes', educomp_2024_main.inscricoes)
 app.get('/simposio/2024/trabalhos/criterios/trilha-1', educomp_2024_criterios.artigos)
 app.get('/simposio/2024/trabalhos/criterios/trilha-2', educomp_2024_criterios.trilha2)
 app.get('/simposio/2024/trabalhos/criterios/trilha-3', educomp_2024_criterios.trilha3)
