@@ -8,10 +8,10 @@ exports.index = function(req, res){
     )
   };
 
-/*  exports.sobre = function(req, res){
-    res.render('simposio/2023/pt-BR/sobre', 
+  exports.sobre = function(req, res){
+    res.render('simposio/2024/pt-BR/sobre', 
         {
-            layout: 'simposio/2023/pt-BR/layout', 
+            layout: 'simposio/2024/pt-BR/layout', 
             sobre: true, 
             titulo: "Principal"
         }
@@ -19,9 +19,9 @@ exports.index = function(req, res){
   };
 
 exports.sobre_sbc = function(req, res) { 
-    res.render('simposio/2023/pt-BR/sobre-sbc', 
+    res.render('simposio/2024/pt-BR/sobre-sbc', 
         {
-            layout: 'simposio/2023/pt-BR/layout', 
+            layout: 'simposio/2024/pt-BR/layout', 
             sobre: true,
             titulo: "Sobre a SBC",
             header: {
@@ -33,9 +33,9 @@ exports.sobre_sbc = function(req, res) {
 };
 
 exports.datas = function(req, res) { 
-    res.render('simposio/2023/pt-BR/datas', 
+    res.render('simposio/2024/pt-BR/datas', 
         {
-            layout: 'simposio/2023/pt-BR/layout', 
+            layout: 'simposio/2024/pt-BR/layout', 
             datas: true,
             titulo: 'Datas Importantes',
             header: {
@@ -47,9 +47,9 @@ exports.datas = function(req, res) {
 };
 
 exports.forlic = function(req, res) { 
-    res.render('simposio/2023/pt-BR/forlic', 
+    res.render('simposio/2024/pt-BR/forlic', 
         {
-            layout: 'simposio/2023/pt-BR/layout', 
+            layout: 'simposio/2024/pt-BR/layout', 
             forlic: true,
             titulo: 'ForLic',
             header: {
@@ -61,9 +61,9 @@ exports.forlic = function(req, res) {
 };
 
 exports.inscricoes = function(req, res) { 
-    res.render('simposio/2023/pt-BR/inscricoes', 
+    res.render('simposio/2024/pt-BR/inscricoes', 
         {
-            layout: 'simposio/2023/pt-BR/layout', 
+            layout: 'simposio/2024/pt-BR/layout', 
             inscricoes: true,
             titulo: 'Inscrições',
             header: {
@@ -75,9 +75,9 @@ exports.inscricoes = function(req, res) {
 };
 
 exports.certificados = function(req, res) { 
-    res.render('simposio/2023/pt-BR/certificados/eventos', 
+    res.render('simposio/2024/pt-BR/certificados/eventos', 
         {
-            layout: 'simposio/2023/pt-BR/layout', 
+            layout: 'simposio/2024/pt-BR/layout', 
             inscricoes: true,
             titulo: 'Certificados',
             header: {
@@ -86,4 +86,4 @@ exports.certificados = function(req, res) {
             }
         }
     ) 
-};*/
+};

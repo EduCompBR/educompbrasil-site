@@ -1,0 +1,594 @@
+  {{> simposio/2023/pt-BR/inside-header}}
+
+  <section id="datas" style="background-color:rgb(255, 255, 255);">
+    <div class="container" style="margin-top: -9em;">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h3>Mais informações em breve!</h3>
+
+<!--
+          <h3>Confira a nossa programação</h3>
+
+
+
+          <ul class="lead" style="text-align: justify; font-size: 14pt; border-left: 10px #58b24d solid; list-style: none">
+            <li>
+              <a href="#grade">
+                Visualização Geral (Turnos)
+              </a>
+            </li>
+            <li>
+              <a href="#completa">
+                Programação Completa (Detalhada)
+              </a>
+            </li>
+          </ul>
+
+          <hr class="mb-5">
+          
+          <a name="grade">
+            <h2 style="padding-top: 140px; margin-top: -140px; "></h2>
+            <h2 class="mb-3 mt-5 pl-3" style="border-left: 5px solid darkcyan">
+              Visualização Geral (Turnos)
+            </h2>
+          </a>
+
+          <span> <a target="_blank" href="/simposio/2023/programacao/educomp/manha" class="btn btn-primary btn-lg" style="width: 100px;">Manhã</a> </span>
+          <span> <a target="_blank" href="/simposio/2023/programacao/educomp/tarde" class="btn btn-primary btn-lg" style="width: 100px;">Tarde</a> </span>
+          
+          <hr class="mb-5">
+
+          <a name="completa">
+            <h2 style="padding-top: 140px; margin-top: -140px; "></h2>
+            <h2 class="mb-3 mt-5 pl-3" style="border-left: 5px solid darkcyan">
+              Programação Completa (Detalhada)<br>
+              <small class="text-muted">Clique em cada atividade para mais detalhes</small>
+            </h2>
+          </a>
+
+          <div id="programacao-tabela"></div>
+
+          <hr>
+-->
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<script>
+      
+    var programacaoTabela = new Tabulator("#programacao-tabela", {
+        height:"400px",
+        layout:"fitColumns",
+        responsiveLayout:"hide",
+        data: [
+          {
+            dia: 24,
+            inicio: "13:00",
+            fim: "13:40",
+            descricao: '<b>Abertura</b> <br>' +
+                        'EduComp/ForLic',
+            tipo: "Geral \nForLic",
+            modal: "24-abertura"
+          },
+          {
+            dia: 24,
+            inicio: "13:40",
+            fim: "14:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'Apresentação Cultural',
+            tipo: "Intervalo",
+            modal: "24-intervalo-i"
+          },
+          {
+            dia: 24,
+            inicio: "14:00",
+            fim: "16:10",
+            descricao: '<b>Palestra Forlic</b> <br>' +
+                        'BNCC Computação e Política Nacional de Educação Digital: caminhos para implantação',
+            tipo: "ForLic \nPalestra",
+            modal: "24-palestra-forlic"
+          },
+          {
+            dia: 24,
+            inicio: "16:10",
+            fim: "16:30",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'ForLic',
+            tipo: "Intervalo",
+            modal: "24-intervalo-ii"
+          },
+          {
+            dia: 24,
+            inicio: "16:30",
+            fim: "18:30",
+            descricao: '<b>Painel ForLic</b> <br>' +
+                        'Casos de Sucesso: Experiências sobre o Ensino de Computação na Educação Básica Brasileira',
+            tipo: "ForLic",
+            modal: "24-painel-forlic"
+          },
+          {
+            dia: 24,
+            inicio: "18:30",
+            fim: "18:50",
+            descricao: '<b>Encerramento</b> <br>' +
+                        'ForLic',
+            tipo: "ForLic",
+            modal: "24-encerramento-forlic"
+          },
+          {
+            dia: 24,
+            inicio: "18:50",
+            fim: "19:10",
+            descricao: '<b>Apresentação Cultural</b> <br>' +
+                        'ForLic',
+            tipo: "Intervalo",
+            modal: "24-intervalo-iii"
+          },
+
+          //Terça
+          {
+            dia: 25,
+            inicio: "09:00",
+            fim: "12:00",
+            descricao: '<b>Minicurso I</b> <br>' +
+                        'Google Colab para Ensino de Computação',
+            tipo: "Minicurso",
+            modal: "25-minicurso"
+          }, 
+          {
+            dia: 25,
+            inicio: "12:00",
+            fim: "13:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "25-intervalo-i"
+          },         
+          {
+            dia: 25,
+            inicio: "13:00",
+            fim: "14:40",
+            descricao: '<b>Painel I</b> <br>' +
+                        'Ética em Ensino, Pesquisa e Extensão em Computação',
+            tipo: "Painel",
+            modal: "25-painel"
+          },
+          {
+            dia: 25,
+            inicio: "14:40",
+            fim: "15:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'Apresentação Cultural',
+            tipo: "Intervalo",
+            modal: "25-intervalo-ii"
+          },
+          {
+            dia: 25,
+            inicio: "15:00",
+            fim: "16:10",
+            descricao: '<b>Sessões Técnicas I e II</b> <br>' +
+                        '(ST-I) Pensamento Computacional I<br>' +
+                        '(ST-II) Avaliação Automatizada de Tarefas de Programação<br>',
+            tipo: "Sessão Técnica",
+            modal: "25-sessao-tecnica-i-ii"
+          },
+          {
+            dia: 25,
+            inicio: "16:10",
+            fim: "16:30",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "25-intervalo-iii"
+          },
+          {
+            dia: 25,
+            inicio: "16:30",
+            fim: "17:40",
+            descricao: '<b>Sessões Técnicas III e IV</b> <br>' +
+                        '(ST-III) Pensamento Computacional II<br>' +
+                        '(ST-IV) ENADE, PIBID, e Educação Hacker<br>',
+            tipo: "Sessão Técnica",
+            modal: "25-sessao-tecnica-iii-iv"
+          },
+          {
+            dia: 25,
+            inicio: "17:40",
+            fim: "18:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "25-intervalo-iv"
+          },
+          {
+            dia: 25,
+            inicio: "18:00",
+            fim: "19:10",
+            descricao: '<b>Laboratório de Ideias</b> <br>' +
+                        'LI-I e LI-II',
+            tipo: "Lab Ideias",
+            modal: "25-lab-ideias-i-ii"
+          },
+
+          //Quarta
+          {
+            dia: 26,
+            inicio: "09:00",
+            fim: "12:00",
+            descricao: '<b>Minicurso II</b> <br>' +
+                        'Recursos Educacionais Abertos para Apoio ao Ensino de Computação na Educação Básica',
+            tipo: "Minicurso",
+            modal: "26-minicurso"
+          },
+          {
+            dia: 26,
+            inicio: "10:00",
+            fim: "11:30",
+            descricao: '<b>Painel da Comunidade I</b> <br>' +
+                        'Da BNCC à BNCC Computação: Histórico, Afinidades e Desafios na Implementação de um Currículo Único',
+            tipo: "Painel",
+            modal: "26-painel"
+          }, 
+          {
+            dia: 26,
+            inicio: "12:00",
+            fim: "13:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "26-intervalo-i"
+          },
+          {
+            dia: 26,
+            inicio: "13:00",
+            fim: "14:10",
+            descricao: '<b>Sessões Técnicas V e VI</b> <br>' +
+                        '(ST-V) Computação no ensino médio<br>' +
+                        '(ST-VI) Avaliação da Aprendizagem em Computação<br>',
+            tipo: "Sessão Técnica",
+            modal: "26-sessao-tecnica-v-vi"
+          },
+          {
+            dia: 26,
+            inicio: "14:10",
+            fim: "15:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "26-intervalo-ii"
+          },
+          {
+            dia: 26,
+            inicio: "15:00",
+            fim: "16:10",
+            descricao: '<b>Sessões Técnicas VII e VIII</b> <br>' +
+                        '(ST-VII) Currículos de Computação<br>' +
+                        '(ST-VIII) Ensino de Engenharia de Software<br>',
+            tipo: "Sessão Técnica",
+            modal: "26-sessao-tecnica-vii-viii"
+          },
+          {
+            dia: 26,
+            inicio: "16:10",
+            fim: "16:50",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "26-intervalo-iii"
+          },
+          {
+            dia: 26,
+            inicio: "16:50",
+            fim: "17:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'Apresentação Cultural',
+            tipo: "Intervalo",
+            modal: "26-intervalo-iv"
+          },
+          {
+            dia: 26,
+            inicio: "17:00",
+            fim: "18:40",
+            descricao: '<b>Palestra I</b> <br>' +
+                        'Integração de computação à aprendizagem de ciências na educação básica',
+            tipo: "Palestra",
+            modal: "26-palestra"
+          },
+          {
+            dia: 26,
+            inicio: "18:40",
+            fim: "19:50",
+            descricao: '<b>Laboratório de Ideias</b> <br>' +
+                        'LI-III e LI-IV',
+            tipo: "Lab Ideias",
+            modal: "26-lab-ideias-iii-iv"
+          },
+
+          //Quinta
+          {
+            dia: 27,
+            inicio: "10:00",
+            fim: "11:30",
+            descricao: '<b>Painel da Comunidade II</b> <br>' +
+                        'Como Enfrentar o Desengajamento dos Estudantes de Computação da Educação Básica Utilizando Gamificação?',
+            tipo: "Painel",
+            modal: "27-painel"
+          },
+          {
+            dia: 27,
+            inicio: "11:30",
+            fim: "13:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "27-intervalo-i"
+          },      
+          {
+            dia: 27,
+            inicio: "13:00",
+            fim: "14:40",
+            descricao: '<b>Palestra II</b> <br>' +
+                        "De volta ao 'normal'? Porque a educação pós-ensino remoto deve ser mais do que uma volta ao passado",
+            tipo: "Palestra",
+            modal: "27-palestra"
+          },
+          {
+            dia: 27,
+            inicio: "14:40",
+            fim: "15:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'Apresentação Cultural',
+            tipo: "Intervalo",
+            modal: "27-intervalo-ii"
+          },
+          {
+            dia: 27,
+            inicio: "15:00",
+            fim: "16:10",
+            descricao: '<b>Sessões Técnicas IX e X</b> <br>' +
+                        '(ST-IX) Diversidade e inclusão<br>' +
+                        '(ST-X) Robótica<br>',
+            tipo: "Sessão Técnica",
+            modal: "27-sessao-tecnica-ix-x"
+          },
+          {
+            dia: 27,
+            inicio: "16:10",
+            fim: "16:30",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "27-intervalo-iii"
+          },
+          {
+            dia: 27,
+            inicio: "16:30",
+            fim: "17:40",
+            descricao: '<b>Sessões Técnicas XI e XII</b> <br>' +
+                        '(ST-XI) Fatores emocionais<br>' +
+                        '(ST-XII) Ensino Remoto<br>',
+            tipo: "Sessão Técnica",
+            modal: "27-sessao-tecnica-xi-xii"
+          },
+          {
+            dia: 27,
+            inicio: "17:40",
+            fim: "18:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "27-intervalo-iv"
+          },
+          {
+            dia: 27,
+            inicio: "18:00",
+            fim: "19:10",
+            descricao: '<b>Laboratório de Ideias</b> <br>' +
+                        'LI-V e LI-VI',
+            tipo: "Lab Ideias",
+            modal: "27-lab-ideias-v-vi"
+          },
+
+          //Sexta
+          {
+            dia: 28,
+            inicio: "10:00",
+            fim: "11:30",
+            descricao: '<b>Painel da Comunidade III</b> <br>' +
+                        'Curricularização da Extensão: Experiências e Propostas para os Cursos Superiores de Computação',
+            tipo: "Painel",
+            modal: "28-painel"
+          },
+          {
+            dia: 28,
+            inicio: "11:30",
+            fim: "13:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "28-intervalo-i"
+          },  
+          {
+            dia: 28,
+            inicio: "13:00",
+            fim: "14:40",
+            descricao: '<b>Assembleia do GIEC</b> <br>' +
+                        'EduComp',
+            tipo: "Geral",
+            modal: "28-assembleia"
+          },
+          {
+            dia: 28,
+            inicio: "14:40",
+            fim: "15:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "28-intervalo-ii"
+          },
+          {
+            dia: 28,
+            inicio: "15:00",
+            fim: "16:10",
+            descricao: '<b>Sessões Técnicas XIII e XIV</b> <br>' +
+                        '(ST-XIII) Educação em Computação na Educação Básica <br>' +
+                        '(ST-XIV) Ensino de Programação e Lógica Fuzzy<br>',
+            tipo: "Sessão Técnica",
+            modal: "28-sessao-tecnica-xiii-xiv"
+          },
+          {
+            dia: 28,
+            inicio: "15:00",
+            fim: "19:30",
+            descricao: '<b>WTD-EduComp</b><br>' +
+                        'II Workshop de Teses e Dissertações em Educação em Computação',
+            tipo: "Workshop",
+            modal: "28-wtd"
+          },
+          {
+            dia: 28,
+            inicio: "16:10",
+            fim: "16:30",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "28-intervalo-iii"
+          },
+          {
+            dia: 28,
+            inicio: "16:30",
+            fim: "18:30",
+            descricao: '<b>Painel GT</b><br>' +
+                        'Apresentação dos Grupos de Trabalho (GT) do GIEC',
+            tipo: "Painel",
+            modal: "28-painel-gt"
+          },
+          {
+            dia: 28,
+            inicio: "18:30",
+            fim: "18:40",
+            descricao: '<b>Apresentação Cultural</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "28-intervalo-iv"
+          },
+
+          //Sábado
+          {
+            dia: 29,
+            inicio: "09:00",
+            fim: "12:30",
+            descricao: '<b>WTD-EduComp</b><br>' +
+                        'II Workshop de Teses e Dissertações em Educação em Computação',
+            tipo: "Workshop",
+            modal: "29-wtd"
+          },
+          {
+            dia: 29,
+            inicio: "12:30",
+            fim: "13:00",
+            descricao: '<b>Intervalo</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "29-intervalo-i"
+          },
+          {
+            dia: 29,
+            inicio: "13:00",
+            fim: "14:40",
+            descricao: '<b>Sessão de Encerramento</b><br>' +
+                        'Lançamento de Livros, Premiações e Encerramento',
+            tipo: "Geral",
+            modal: "29-encerramento"
+          },
+          {
+            dia: 29,
+            inicio: "14:40",
+            fim: "14:50",
+            descricao: '<b>Apresentação Cultural</b> <br>' +
+                        'EduComp',
+            tipo: "Intervalo",
+            modal: "29-intervalo-ii"
+          },
+
+        ],
+        columns:[
+            {title:"Dia", field:"dia", headerFilter:"input", vertAlign:"middle", hozAlign: "center", sorter:"number"},
+            {title:"Descrição", field:"descricao", formatter:"html", headerFilter:"input", width: "40%", sorter:"string"},
+            {title:"Tipo", field:"tipo", formatter: "textarea", hozAlign:"center", headerFilter:"input", vertAlign:"middle", sorter:"string"},
+            {title:"Início", field:"inicio", vertAlign:"middle", sorter:"time", hozAlign: "center", headerFilter:"input" },
+            {title:"Fim", field:"fim", vertAlign:"middle", sorter:"time", hozAlign: "center", headerFilter:"input",}
+        ],
+    });
+
+    programacaoTabela.on("rowClick", function(e, row){
+        //document.getElementById("exampleModal").style.display = "block"
+        console.log(row.getData().modal)
+        $("#"+row.getData().modal).modal('show');
+    });
+</script>
+
+
+<!--Modais-->
+
+<!--Segunda (24)-->
+{{> simposio/2023/pt-BR/programacao/24/abertura}}
+{{> simposio/2023/pt-BR/programacao/24/intervalo-i}}
+{{> simposio/2023/pt-BR/programacao/24/palestra-forlic}}
+{{> simposio/2023/pt-BR/programacao/24/intervalo-ii}}
+{{> simposio/2023/pt-BR/programacao/24/painel-forlic}}
+{{> simposio/2023/pt-BR/programacao/24/encerramento-forlic}}
+{{> simposio/2023/pt-BR/programacao/24/intervalo-iii}}
+
+<!--Terça (25)-->
+{{> simposio/2023/pt-BR/programacao/25/minicurso}}
+{{> simposio/2023/pt-BR/programacao/25/intervalo-i}}
+{{> simposio/2023/pt-BR/programacao/25/painel}}
+{{> simposio/2023/pt-BR/programacao/25/intervalo-ii}}
+{{> simposio/2023/pt-BR/programacao/25/sessao-tecnica-i-ii}}
+{{> simposio/2023/pt-BR/programacao/25/intervalo-iii}}
+{{> simposio/2023/pt-BR/programacao/25/sessao-tecnica-iii-iv}}
+{{> simposio/2023/pt-BR/programacao/25/intervalo-iv}}
+{{> simposio/2023/pt-BR/programacao/25/lab-ideias-i-ii}}
+
+<!--Quarta (26)-->
+{{> simposio/2023/pt-BR/programacao/26/minicurso}}
+{{> simposio/2023/pt-BR/programacao/26/painel}}
+{{> simposio/2023/pt-BR/programacao/26/intervalo-i}}
+{{> simposio/2023/pt-BR/programacao/26/sessao-tecnica-v-vi}}
+{{> simposio/2023/pt-BR/programacao/26/intervalo-ii}}
+{{> simposio/2023/pt-BR/programacao/26/sessao-tecnica-vii-viii}}
+{{> simposio/2023/pt-BR/programacao/26/intervalo-iii}}
+{{> simposio/2023/pt-BR/programacao/26/intervalo-iv}}
+{{> simposio/2023/pt-BR/programacao/26/palestra}}
+{{> simposio/2023/pt-BR/programacao/26/lab-ideias-iii-iv}}
+
+<!--Quinta (27)-->
+{{> simposio/2023/pt-BR/programacao/27/painel}}
+{{> simposio/2023/pt-BR/programacao/27/intervalo-i}}
+{{> simposio/2023/pt-BR/programacao/27/palestra}}
+{{> simposio/2023/pt-BR/programacao/27/intervalo-ii}}
+{{> simposio/2023/pt-BR/programacao/27/sessao-tecnica-ix-x}}
+{{> simposio/2023/pt-BR/programacao/27/intervalo-iii}}
+{{> simposio/2023/pt-BR/programacao/27/sessao-tecnica-xi-xii}}
+{{> simposio/2023/pt-BR/programacao/27/intervalo-iv}}
+{{> simposio/2023/pt-BR/programacao/27/lab-ideias-v-vi}}
+
+<!-- Sexta (28) -->
+{{> simposio/2023/pt-BR/programacao/28/painel}}
+{{> simposio/2023/pt-BR/programacao/28/intervalo-i}}
+{{> simposio/2023/pt-BR/programacao/28/assembleia}}
+{{> simposio/2023/pt-BR/programacao/28/intervalo-ii}}
+{{> simposio/2023/pt-BR/programacao/28/sessao-tecnica-xiii-xiv}}
+{{> simposio/2023/pt-BR/programacao/28/wtd}}
+{{> simposio/2023/pt-BR/programacao/28/intervalo-iii}}
+{{> simposio/2023/pt-BR/programacao/28/painel-gt}}
+{{> simposio/2023/pt-BR/programacao/28/intervalo-iv}}
+
+<!-- Sábado (29) -->
+{{> simposio/2023/pt-BR/programacao/29/wtd}}
+{{> simposio/2023/pt-BR/programacao/29/intervalo-i}}
+{{> simposio/2023/pt-BR/programacao/29/encerramento}}
+{{> simposio/2023/pt-BR/programacao/29/intervalo-ii}}
