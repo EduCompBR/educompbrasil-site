@@ -115,6 +115,7 @@ app.get('/simposio/2024/trabalhos/criterios/trilha-5', educomp_2024_criterios.en
 */
 app.get('/simposio/2024/equipe/comissao-organizadora', educomp_2024_equipe.comissao_organizadora)
 app.get('/simposio/2024/equipe/comite-programa', educomp_2024_equipe.comite_programa)
+app.get('/simposio/2024/equipe/comite-diretivo', educomp_2024_equipe.comite_diretivo)
 
 /*
 app.get('/simposio/2023/certificados/esquenta/1', educomp_2023_certificados_esquenta_1.opcoes)
