@@ -25,3 +25,17 @@ exports.comite_programa = function (req, res) {
         }
     ) 
 };
+
+exports.comite_diretivo = function (req, res) { 
+    res.render('simposio/2024/pt-BR/equipe/comite-diretivo', 
+        {
+            layout: 'simposio/2024/pt-BR/layout', 
+            equipe: true,
+            titulo: 'Comitê Diretivo',
+            header: {
+                endereco: 'comite-diretivo',
+                descricao: 'Faixa de título do comitê diretivo.'
+            }
+        }
+    ) 
+};
