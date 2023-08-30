@@ -71,7 +71,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 //GIEC
 app.get('/', giec_main.index)
 app.get('/eventos', giec_main.eventos)
-app.get('/simposio', giec_main.eventos)
+app.get('/simposio', educomp_2024_main.index)
 app.get('/quem-somos/comite-gestor', giec_quem_somos.comite_gestor)
 app.get('/quem-somos/membros', giec_quem_somos.membros)
 app.get('/quem-somos/gts', giec_quem_somos.gts)
