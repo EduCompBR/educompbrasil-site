@@ -1,0 +1,24 @@
+.edc-2024,
+.edc-2024 .nav-item>a {
+    color: #fff;
+}
+
+
+
+
+.bg-blue-2024 {
+    background-color: rgba(26, 28, 58, 1) !important;
+}
+
+
+
+.edc-2024 .nav-item .active {
+    color: #1D1D3B;
+    background-color: #f5f3f3;
+    border-bottom: 0.5em solid rgba(149, 193, 31, 1);
+}
+
+
+.edc-2024 .btn {
+    background-color: rgba(59, 191, 240, 1);
+}

@@ -1,109 +1,112 @@
-<nav class="navbar navbar-expand-lg bg-white fixed-top p-0" 
-style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger imagelink" href="/simposio/2024/">
-        <img src="/img/simposio/2024/logo-educomp-branca.jpg" style="height: 4rem; margin-left:0em; margin-top: 1em; margin-bottom: 1em;"/>
-      </a>
+<nav class="navbar navbar-expand-lg bg-blue-2024 fixed-top p-0 edc-2024"
+  style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger imagelink" href="/simposio/2024/">
+      <img src="/img/simposio/2024/logo-educomp.jpg" style="height: 6rem; margin-left:0em; margin-right: 5em; " />
+    </a>
+    <!--
       <a class="imagelink" href="http://www.sbc.org.br" target="_blank">
-        <!--<span style="color: white; padding-left: 1.6em;">
+        <span style="color: white; padding-left: 1.6em;">
           Realização
-        </span>-->
-        <img src="/img/sbc.png" style="height: 4rem; padding-left: 1em; padding-right: 9em;"/>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" >
-        <i class="fa fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse m0" id="navbarResponsive">
-        <ul class="navbar-nav">
+        </span>
+      <img src="/img/sbc.png" style="height: 4rem; padding-left: 1em; padding-right: 9em;" />
+    </a>
+    -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse m0" id="navbarResponsive">
+      <ul class="navbar-nav">
 
-          <!-- Sobre -->
-          <li class="nav-item dropdown">
-            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+        <!-- Sobre -->
+        <li class="nav-item dropdown">
+          <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
                 {{~#if sobre}}
                   active
                 {{/if}}
             ">PRINCIPAL</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="/simposio/2024/">
-                Sobre o evento
-              </a>
-              <a class="dropdown-item" href="/simposio/2024/sobre-sbc">
-                Sobre a SBC
-              </a>
-              <a class="dropdown-item" href="/simposio/2024/programacao/educomp">
-                Programação
-              </a>
-              <hr class="dropdown-divider">              
-              <a class="dropdown-item" href="/simposio/2024/programacao/esquenta/1">
-                Esquenta I
-              </a>
-               <a class="dropdown-item" href="/simposio/2024/programacao/esquenta/2">
-                Esquenta II
-              </a>
-              <hr class="dropdown-divider">
-              <!--
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/simposio/2024/">
+              Sobre o evento
+            </a>
+            <a class="dropdown-item" href="/simposio/2024/sobre-sbc">
+              Sobre a SBC
+            </a>
+            <a class="dropdown-item" href="/simposio/2024/programacao/educomp">
+              Programação
+            </a>
+            <hr class="dropdown-divider">
+            <a class="dropdown-item" href="/simposio/2024/programacao/esquenta/1">
+              Esquenta I
+            </a>
+            <a class="dropdown-item" href="/simposio/2024/programacao/esquenta/2">
+              Esquenta II
+            </a>
+            <hr class="dropdown-divider">
+            <!--
               <a class="dropdown-item" href="/simposio/2024/certificados">
                 Certificados
               </a>
               -->
-              <hr class="dropdown-divider">
-              <a class="dropdown-item" href="https://sol.sbc.org.br/index.php/educomp" target="_blank">
-                Anais Completos
-              </a>
-            </div>            
-          </li>
+            <hr class="dropdown-divider">
+            <a class="dropdown-item" href="https://sol.sbc.org.br/index.php/educomp" target="_blank">
+              Anais Completos
+            </a>
+          </div>
+        </li>
 
-           <li class="nav-item dropdown">
-            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+        <li class="nav-item dropdown">
+          <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
                 {{~#if evento}}
                   active
                 {{/if}}
             ">CHAMADA</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="/simposio/2024/trabalhos/topicos-de-interesse">
-                Tópicos de Interesse
-              </a>
-              <a class="dropdown-item" href="/simposio/2024/datas">
-                Datas Importantes
-              </a>
-              <hr class="dropdown-divider">
-              <a class="dropdown-item" href="/simposio/2024/trabalhos/chamada">
-                Artigos Completos
-              </a>
-              <a class="dropdown-item" href="/simposio/2024/trabalhos/lab-ideias">
-                Laboratório de Ideias
-              </a>
-              <a class="dropdown-item" href="/simposio/2024/trabalhos/wtd">
-                WTD-EduComp
-              </a>
-<!--
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/simposio/2024/trabalhos/topicos-de-interesse">
+              Tópicos de Interesse
+            </a>
+            <a class="dropdown-item" href="/simposio/2024/datas">
+              Datas Importantes
+            </a>
+            <hr class="dropdown-divider">
+            <a class="dropdown-item" href="/simposio/2024/trabalhos/chamada">
+              Artigos Completos
+            </a>
+            <a class="dropdown-item" href="/simposio/2024/trabalhos/lab-ideias">
+              Laboratório de Ideias
+            </a>
+            <a class="dropdown-item" href="/simposio/2024/trabalhos/wtd">
+              WTD-EduComp
+            </a>
+            <!--
               <a class="dropdown-item" href="/simposio/2024/trabalhos/ctd">
                 CTD-EduComp
               </a>
 -->
-              <hr class="dropdown-divider">
-               <a class="dropdown-item" href="/simposio/2024/trabalhos/minicursos">
-                Minicursos
-              </a>
-<!--
+            <hr class="dropdown-divider">
+            <a class="dropdown-item" href="/simposio/2024/trabalhos/minicursos">
+              Minicursos
+            </a>
+            <!--
               <a class="dropdown-item" href="/simposio/2024/trabalhos/mesas">
                 Mesas Temáticas
               </a>
 -->
-              <a class="dropdown-item" href="/simposio/2024/trabalhos/livros">
-                Lançamento de Livros
-              </a>
-              <hr class="dropdown-divider">
-              <a class="dropdown-item" href="/simposio/2024/trabalhos/aceitos">
-                Trabalhos Aceitos
-              </a>
-              <a class="dropdown-item" href="/simposio/2024/trabalhos/orientacoes">
-                Orientações sobre Apresentações
-              </a>
-            </div>
-          </li>
+            <a class="dropdown-item" href="/simposio/2024/trabalhos/livros">
+              Lançamento de Livros
+            </a>
+            <hr class="dropdown-divider">
+            <a class="dropdown-item" href="/simposio/2024/trabalhos/aceitos">
+              Trabalhos Aceitos
+            </a>
+            <a class="dropdown-item" href="/simposio/2024/trabalhos/orientacoes">
+              Orientações sobre Apresentações
+            </a>
+          </div>
+        </li>
 
-          <!--<li class="nav-item dropdown">
+        <!--<li class="nav-item dropdown">
             <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
                 {{~#if evento}}
                   active
@@ -117,51 +120,51 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
             </div>
           </li>-->
 
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger
             {{~#if forlic}}
               active
             {{/if}}
             " href="/simposio/2024/forlic">FORLIC</a>
-          </li>
+        </li>
 
-          <li class="nav-item dropdown">
-            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+        <li class="nav-item dropdown">
+          <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
                 {{~#if equipe}}
                   active
                 {{/if}}
             ">EQUIPE</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="/simposio/2024/equipe/comite-diretivo">Comitê Diretivo</a>
-              <a class="dropdown-item" href="/simposio/2024/equipe/comissao-organizadora">Comissão Organizadora</a>
-              <a class="dropdown-item" href="/simposio/2024/equipe/comite-programa">Comitê de Programa</a>
-            </div>
-          </li>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/simposio/2024/equipe/comite-diretivo">Comitê Diretivo</a>
+            <a class="dropdown-item" href="/simposio/2024/equipe/comissao-organizadora">Comissão Organizadora</a>
+            <a class="dropdown-item" href="/simposio/2024/equipe/comite-programa">Comitê de Programa</a>
+          </div>
+        </li>
 
 
-          <li class="nav-item dropdown">
-            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+        <li class="nav-item dropdown">
+          <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
                 {{~#if edAnteriores}}
                   active
                 {{/if}}
             ">EDIÇÕES ANTERIORES</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="https://www.educompbrasil.org/simposio/2021/">
-                2021
-              </a>
-              
-              <a class="dropdown-item" href="https://www.educompbrasil.org/simposio/2022/">
-                2022
-              </a>
-              <a class="dropdown-item" href="https://www.educompbrasil.org/simposio/2023/">
-                2023
-              </a>
-              
-            </div>            
-          </li>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://www.educompbrasil.org/simposio/2021/">
+              2021
+            </a>
 
-          <!-- Anais -->
-          <!--
+            <a class="dropdown-item" href="https://www.educompbrasil.org/simposio/2022/">
+              2022
+            </a>
+            <a class="dropdown-item" href="https://www.educompbrasil.org/simposio/2023/">
+              2023
+            </a>
+
+          </div>
+        </li>
+
+        <!-- Anais -->
+        <!--
           <li class="nav-item dropdown">
             <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
                 {{~#if anais}}
@@ -179,9 +182,9 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
           </li>
           -->
 
-          <!-- Trabalhos -->
+        <!-- Trabalhos -->
 
-          <!--<li class="nav-item dropdown">
+        <!--<li class="nav-item dropdown">
 
             <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
                 {{~#if trabalhos}}
@@ -195,7 +198,7 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
               <!--<a class="dropdown-item" target="_blank" href="https://drive.google.com/file/d/1VNAvjyYVqwE4JxtPeIcUMHDbMS1h3rzN/view?usp=sharing">
                 Guia de Revisão
               </a>-->
-              <!--<hr class="dropdown-divider">
+        <!--<hr class="dropdown-divider">
               <a class="dropdown-item" href="/simposio/2023/trabalhos/chamada">
                 Artigos Completos
               </a>
@@ -213,11 +216,11 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
                 Trabalhos Aceitos
               </a>
               -->
-         <!--   </div>
+        <!--   </div>
           </li>
 
           <!-- Datas -->
-         <!-- <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger
             {{~#if datas}}
               active
@@ -226,7 +229,7 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
           </li>
 
           <!-- Programação -->
-          <!--
+        <!--
           <li class="nav-item dropdown">
             <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
                 {{~#if prog}}
@@ -248,9 +251,9 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
           </li>
           -->
 
-          <!-- ForLic -->
-          
-          <!--<li class="nav-item">
+        <!-- ForLic -->
+
+        <!--<li class="nav-item">
             <a class="nav-link js-scroll-trigger
             {{~#if forlic}}
               active
@@ -259,7 +262,7 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
           </li>
 
           <!-- Inscrições -->
-          <!--<li class="nav-item">
+        <!--<li class="nav-item">
             <a class="nav-link js-scroll-trigger
             {{~#if inscricoes}}
               active
@@ -268,7 +271,7 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
           </li>
 
           <!-- Equipe -->
-          <!--<li class="nav-item dropdown">
+        <!--<li class="nav-item dropdown">
             <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
                 {{~#if equipe}}
                   active
@@ -281,7 +284,7 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
           </li>
 
           <!-- Certificados -->
-          <!--
+        <!--
           <li class="nav-item dropdown">
             <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
                 {{~#if certificado}}
@@ -304,8 +307,8 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
           </li>
           -->
 
-          <!--Internacionalização -->
-          <!--
+        <!--Internacionalização -->
+        <!--
           <li class="nav-item">
             <a class="nav-link" href="/en-US/symposium/2021">
               <img style="height: 25px; width: 25px"
@@ -313,19 +316,17 @@ style="box-shadow: 0.25em 0.25em 0.25em 0.25em rgb(202, 202, 202); ">
             </a>
           </li>
           -->
-        </ul>
+      </ul>
 
 
-        <a 
-          class="
+      <a class="
             btn 
-            nav-link bg-primary text-white 
-            js-scroll-trigger p-2 px-4" 
-          href="/simposio/2024/inscricoes" 
-          style="font-size: 1em; font-weight: normal; font-family: 'Inter', sans-serif; border-radius: 1em;">
-          INSCRIÇÕES
-        </a>
+            nav-link text-white 
+            js-scroll-trigger p-2 px-4" href="/simposio/2024/inscricoes"
+        style="font-size: 1em; font-weight: normal; font-family: 'Inter', sans-serif; border-radius: 1em;">
+        INSCRIÇÕES
+      </a>
 
-      </div>
     </div>
-  </nav>
+  </div>
+</nav>
