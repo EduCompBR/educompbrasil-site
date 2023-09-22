@@ -3,12 +3,15 @@
 }
 
 
-
-
-.bg-blue-2024 {
+.edc-2024 .navbar {
     background-color: rgba(26, 28, 58, 1) !important;
+    box-shadow: 0.25em 0.25em 0.25em 0.25em rgba(5, 7, 39, 0.568);
 }
 
+.edc-2024 .navbar.nav-aux {
+    height: 8.7em;
+    box-shadow: none;
+}
 
 
 .edc-2024 .nav-item .active {
