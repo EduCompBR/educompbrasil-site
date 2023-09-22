@@ -1,0 +1,63 @@
+.edc-2024 .main-image {
+    background-color: rgba(26, 28, 58, 1);
+    box-sizing: border-box;
+
+    display: flex;
+    position: relative;
+
+}
+
+.edc-2024 .main-image a {
+    width: 100%;
+}
+
+.edc-2024 .buttons {
+    display: flex;
+    gap: 2em;
+    max-width: 30%;
+    height: fit-content;
+    position: absolute;
+    align-self: center;
+    left: 0;
+    right: 0;
+    padding-top: 16%;
+
+    margin: auto;
+    margin-right: 26%;
+}
+
+.edc-2024 .btn {
+    font-size: 1em;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    border-radius: 1em;
+    background-color: rgba(149, 193, 31, 1);
+    height: 4em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.edc-2024 .btn1 .btn {
+    background-color: rgba(149, 193, 31, 1);
+    height: 4em;
+
+
+
+}
+
+.edc-2024 .btn1 .btn a {
+    display: block;
+    text-align: center;
+
+
+}
+
+.edc-2024 .btn2 .btn {
+    background-color: transparent;
+    border: 2px solid white;
+
+
+}
