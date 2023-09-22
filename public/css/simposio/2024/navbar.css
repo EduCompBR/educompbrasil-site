@@ -9,7 +9,7 @@
 }
 
 .edc-2024 .navbar.nav-aux {
-    height: 8em;
+    height: 7.8em;
     box-shadow: none;
 }
 
@@ -21,6 +21,6 @@
 }
 
 
-.edc-2024 .navbar .btn1  {
+.edc-2024 .navbar .btn1 {
     background-color: rgba(59, 191, 240, 1);
 }
