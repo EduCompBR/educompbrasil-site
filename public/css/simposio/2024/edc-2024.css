@@ -4,7 +4,6 @@
 
     display: flex;
     position: relative;
-
 }
 
 .edc-2024 .main-image a {
@@ -12,52 +11,73 @@
 }
 
 .edc-2024 .buttons {
-    display: flex;
-    gap: 2em;
-    max-width: 30%;
-    height: fit-content;
     position: absolute;
-    align-self: center;
-    left: 0;
-    right: 0;
-    padding-top: 16%;
+    width: 40%;
+    top: 60%;
+    left: 40%;
 
-    margin: auto;
-    margin-right: 26%;
 }
 
-.edc-2024 .btn {
-    font-size: 1em;
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-    border-radius: 1em;
-    background-color: rgba(149, 193, 31, 1);
-    height: 4em;
+.edc-2024 .buttons .button-group {
+    display: flex;
 
+}
+
+
+
+.edc-2024 .buttons .btn,
+.edc-2024 .buttons .btn-lg {
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 10em;
+    max-width: 50%;
 
 }
 
-.edc-2024 .btn1 .btn {
+.edc-2024 .btn.btn-primary,
+.btn-lg.btn-primary {
     background-color: rgba(149, 193, 31, 1);
-    height: 4em;
-
-
-
-}
-
-.edc-2024 .btn1 .btn a {
-    display: block;
-    text-align: center;
-
+    border: none;
+    border-radius: 1em;
+    margin-right: 0.5em;
 
 }
 
-.edc-2024 .btn2 .btn {
-    background-color: transparent;
-    border: 2px solid white;
+.edc-2024 .btn.btn-outline-secondary,
+.btn-lg.btn-outline-secondary {
+
+    border: 0.17em solid white;
+    border-radius: 1em;
+}
+
+@media screen and (max-width: 991px) {
+    .edc-2024 .buttons {
+        position: relative;
+        box-sizing: border-box;
+        max-width: 100%;
+        width: auto;
+        left: 0;
+        bottom: 0;
+    }
+
+    .edc-2024 .buttons .button-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 1em;
+    }
+
+    .edc-2024 .buttons .btn,
+    .edc-2024 .buttons .btn-lg {
+
+        width: 40%;
+        font-size: 1em;
+    }
+
+
+
 
 
 }
