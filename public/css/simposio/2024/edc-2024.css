@@ -1,3 +1,10 @@
+
+
+.edc-2024 p{
+    text-align: justify; font-size: 14pt; font-family: 'Inter var', sans-serif;
+}
+
+
 .edc-2024 .main-image {
     background-color: rgba(26, 28, 58, 1);
     box-sizing: border-box;

@@ -1,12 +1,73 @@
 {{> simposio/2024/pt-BR/inside-header}}
 
-   <section id="trabalhos" style="background-color:rgb(255, 255, 255);">
+<section id="trabalhos" style="background-color:rgb(255, 255, 255);">
     <div class="container" style="margin-top: -9em; font-family: 'Inter var', sans-serif;">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class="row">
+            <div class="col-lg-8 mx-auto mt-4">
 
+                <p class="lead">
+                    Os artigos aceitos para publicação no EduComp devem estar formatados
+                    de acordo com o modelo disponibilizado na chamada e atualizados quanto
+                    à edição atual do evento. Além disso, é necessário incluir as
+                    informações dos autores e retirar partes anonimizadas do corpo do
+                    artigo.
+
+                </p>
+
+                <p class="lead">
+                    Para os artigos que utilizaram o modelo de edições anteriores do
+                    EduComp, sugere-se a migração para o modelo atualmente disponível ou
+                    ajuste as informações quanto à edição atual da seguinte forma:
+
+                </p>
+                <h4 class="mt-5 mb-3">Modelo LaTeX:</h4>
+                <p class="lead">
+
+                    Altere o arquivo .tex principal do artigo, atualizando as informações
+                    do evento conforme apresentado a seguir:
+
+                </p>
+
+                <pre style="background-color: #f8f9fa; padding: 20px;">
+\copyrightyear{2024}
+\acmYear{2024}
+\setcopyright{sbcpt} %%% Para artigos escritos em inglês, troque para sbcen
+\acmConference[EduComp'24]{Simpósio Brasileiro de Educação em
+Computação}{Abril 22-27, 2024}{São Paulo, São Paulo, Brasil (On-line)}
+\acmBooktitle{Simpósio Brasileiro de Educação em Computação (EduComp
+'24), Abril 22-27, 2024, São Paulo, São Paulo, Brasil (On-line)}
+
+                </pre>
+
+                <h4 class="mt-5 mb-3">Modelo Word:</h4>
+                <p class="lead">
+
+                    Atualize as informações do evento localizadas nos seguintes locais:
+
+
+                </p>
+                <ul>
+                    <li class="lead">Abaixo do texto de licenciamento, na coluna da esquerda da primeira página.</li>
+                    <li class="lead">No cabeçalho à esquerda da segunda página.</li>
+                    <li class="lead">No cabeçalho à direita da terceira página.</li>
+                </ul>
+
+                <p class="lead">
+                    O texto a ser informado é o seguinte:
+                </p>
+                <pre style="background-color: #f8f9fa; padding: 20px;">EduComp’24, Abril 22-27, 2024, São Paulo, São Paulo, Brasil (On-line)</pre>
+                <p class="lead">
+                    Ainda na coluna da esquerda da primeira página, após as informações do
+                    evento, é necessário também atualizar o ano de "Copyright" para "2024".
+                </p>
+
+
+
+                <!--
           <div class="accordion mb-5" id="accordionExample">
-            <h3>Mais informações em breve!</h3>
+            
+            
+            
            <!--
             <div class="card">
                 <div class="card-header" id="trilha1-acordeao">
@@ -636,10 +697,10 @@
             </div>
 
         
+
+        </div>
 -->
+            </div>
         </div>
-        
-        </div>
-      </div>
     </div>
-  </section>
+</section>
