@@ -124,6 +124,21 @@ exports.aceitos = function (req, res) {
     )
 };
 
+
+exports.aceitos_orientacoes = function (req, res) {
+    res.render('simposio/2024/pt-BR/trabalhos/aceitos-orientacoes',
+        {
+            layout: 'simposio/2024/pt-BR/layout',
+            trabalhos: true,
+            titulo: 'Orientações sobre Artigos Aceitos',
+            header: {
+                endereco: 'aceitos-orientacoes',
+                descricao: 'Faixa de título das orientações sobre artigos aceitos: autores.'
+            }
+        }
+    )
+};
+
 exports.orientacoes = function (req, res) {
     res.render('simposio/2024/pt-BR/trabalhos/orientacoes',
         {
