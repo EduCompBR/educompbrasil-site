@@ -59,14 +59,14 @@ var educomp_2024_programacao = require('./routes/simposio/2024/pt-BR/programacao
 var giec_quem_somos = require('./routes/giec/quem_somos');
 
 //Engine View
-app.engine('handlebars', handlebars({defaultLayout: 'main'}) )
+app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
 
 //Sets
 app.set('view engine', 'handlebars')
 
 //Uses
 app.use(express.static(__dirname + '/public'))
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({ extended: false }))
 
 //GIEC
 app.get('/', giec_main.index)
@@ -105,6 +105,7 @@ app.get('/simposio/2024/trabalhos/wtd', educomp_2024_trabalhos.wtd)
 app.get('/simposio/2024/trabalhos/livros', educomp_2024_trabalhos.livros)
 app.get('/simposio/2024/trabalhos/aceitos', educomp_2024_trabalhos.aceitos)
 app.get('/simposio/2024/trabalhos/orientacoes', educomp_2024_trabalhos.orientacoes)
+app.get('/simposio/2024/trabalhos/aceitos-orientacoes', educomp_2024_trabalhos.aceitos_orientacoes)
 app.get('/simposio/2024/inscricoes', educomp_2024_main.inscricoes)
 app.get('/simposio/2024/trabalhos/criterios/trilha-1', educomp_2024_criterios.artigos)
 app.get('/simposio/2024/trabalhos/criterios/trilha-2', educomp_2024_criterios.trilha2)
@@ -328,5 +329,5 @@ app.post('/simposio/2021/contato/email', async (req, res) => {
 //Worker do servidor
 var porta = process.env.PORT || 3000
 app.listen(porta, () => {
-    console.log('App rodando na porta: ' + porta) 
+    console.log('App rodando na porta: ' + porta)
 })

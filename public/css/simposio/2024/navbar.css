@@ -10,8 +10,10 @@
 }
 
 .edc-2024 .navbar.nav-aux {
-    height: 7.8em;
+    display: block;
+    height: 8em;
     box-shadow: none;
+    
 }
 
 
