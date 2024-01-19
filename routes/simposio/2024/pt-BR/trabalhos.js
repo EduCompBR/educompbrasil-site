@@ -82,15 +82,16 @@ exports.ctd = function (req, res) {
     )
 };
 
+
 exports.mesas = function (req, res) {
     res.render('simposio/2024/pt-BR/trabalhos/mesas',
         {
             layout: 'simposio/2024/pt-BR/layout',
             trabalhos: true,
-            titulo: 'Mesas Temáticas - Chamada de Trabalhos',
+            titulo: 'Mesas Temáticas',
             header: {
-                endereco: 'chamada-trabalhos',
-                descricao: 'Faixa de título da chamada de trabalhos.'
+                endereco: 'mesas',
+                descricao: 'Faixa de título das Mesas temáticas.'
             }
         }
     )
