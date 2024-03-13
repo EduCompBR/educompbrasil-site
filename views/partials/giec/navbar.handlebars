@@ -1,56 +1,57 @@
 <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav" style="background-color: darkcyan">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger imagelink" href="/">
-        <img class="img-fluid" src="/img/logo-giec.png" style="height: 2.5rem; padding-left: 0.6em;"/>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link 
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger imagelink" href="/">
+      <img class="img-fluid" src="/img/CEduComp.png" style="height: 2rem; padding-left: 0.6em;" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link 
                 {{~#if principal}}
                   active
                 {{/if}}
              " href="/"> Principal
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link 
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link 
                 {{~#if eventos}}
                   active
                 {{/if}}
              " href="/eventos"> Eventos
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle 
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle 
                 {{~#if quem_somos}}
                   active
                 {{/if}}
             ">Quem Somos?</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="/quem-somos/comite-gestor">
-                Comitê Gestor (CG)
-              </a>
-              <a class="dropdown-item" href="/quem-somos/gts">
-                Grupos de Trabalho (GT)
-              </a>
-              <a class="dropdown-item" href="/quem-somos/membros">
-                Membros
-              </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link 
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/quem-somos/comite-gestor">
+              Comitê Gestor (CG)
+            </a>
+            <a class="dropdown-item" href="/quem-somos/gts">
+              Grupos de Trabalho (GT)
+            </a>
+            <a class="dropdown-item" href="/quem-somos/membros">
+              Membros
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link 
                 {{~#if documentos}}
                   active
                 {{/if}}
              " href="/documentos"> Documentos
-            </a>
-          </li>
-        </ul>
-      </div>
+          </a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
