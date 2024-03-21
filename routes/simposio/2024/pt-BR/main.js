@@ -81,7 +81,7 @@ exports.certificados = function (req, res) {
             inscricoes: true,
             titulo: 'Certificados',
             header: {
-                endereco: 'inscricoes',
+                endereco: 'certificados',
                 descricao: 'Faixa de título dos Certificados.'
             }
         }
