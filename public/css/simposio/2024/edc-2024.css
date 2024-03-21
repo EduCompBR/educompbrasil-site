@@ -1,7 +1,15 @@
+body {
+    background-color: #F4F9FF;
+}
 
+section {
+    padding: 60px 0;
+}
 
-.edc-2024 p{
-    text-align: justify; font-size: 14pt; font-family: 'Inter var', sans-serif;
+.edc-2024 p {
+    text-align: justify;
+    font-size: 14pt;
+    font-family: 'Inter var', sans-serif;
 }
 
 
