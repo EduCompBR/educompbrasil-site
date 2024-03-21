@@ -37,6 +37,9 @@
     background-position: top;
 }
 
+#principais-trilhas .row>div {
+    padding-left: 3rem;
+}
 
 #principais-trilhas .title-2 {
     width: 100%;
@@ -198,6 +201,10 @@
 
     .principais-trilhas {
         margin-top: 30rem;
+    }
+
+    #principais-trilhas .row>div {
+        padding-left: 15px;
     }
 
 
