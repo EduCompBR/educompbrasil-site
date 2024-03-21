@@ -1,0 +1,233 @@
+#sobre {
+    background-image: url("/img/simposio/2024/sobre-img.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#sobre h2,
+#principais-trilhas .title-2 {
+    width: fit-content;
+    border-bottom: 2px solid #3DC0F0;
+
+    font-size: 3.4rem;
+    color: #1A1C3A;
+    font-weight: bolder;
+    line-height: 6rem;
+
+
+}
+
+#sobre p {
+    width: 50%;
+
+    font-size: 1.3rem;
+    line-height: 150%;
+    text-align: left;
+    font-family: 'Inter var', sans-serif;
+}
+
+#sobre .row>div {
+    padding-left: 3rem;
+}
+
+#principais-trilhas {
+    background-image: url(".img-fluid");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+
+#principais-trilhas .title-2 {
+    width: 100%;
+    border: none;
+    font-size: 3rem;
+}
+
+#principais-trilhas .card-wrapper-trilhas {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#principais-trilhas .card-wrapper-trilhas .card {
+    max-width: 20rem;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    border: #3dc0f06c 1px solid;
+    border-radius: 10px;
+
+
+
+}
+
+#principais-trilhas .card-wrapper-trilhas .card .card-img-top {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+#principais-trilhas .card-wrapper-trilhas .card .card-body {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .8rem;
+
+}
+
+#principais-trilhas .card-wrapper-trilhas .card .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    height: 3rem;
+
+}
+
+#principais-trilhas .card-wrapper-trilhas .card .card-text {
+    font-size: .8rem;
+    color: #544F4F;
+    font-weight: 600;
+    color: 544F4F;
+    text-align: center;
+    height: 9rem;
+
+}
+
+.btn-card {
+    color: #fff;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #1A1C3A;
+    padding: .2rem;
+    border-radius: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+#quarta-edicao {
+    background-image: url("/img/simposio/2024/sobre-img-2.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 8rem;
+
+}
+
+#quarta-edicao .content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+
+#quarta-edicao h2 {
+    width: 100%;
+    border-bottom: 2px solid #3DC0F0;
+
+    font-size: 3.4rem;
+    color: #1A1C3A;
+    font-weight: bolder;
+    line-height: 6rem;
+    text-align: right;
+
+
+}
+
+
+#quarta-edicao p {
+    width: 90%;
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: left;
+    font-family: 'Inter var', sans-serif;
+    text-align: right;
+}
+
+
+@media screen and (min-width: 1026px) {
+    #sobre img {
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width: 321px) and (max-width: 1025px) {
+
+    /**/
+    #sobre,
+    #quarta-edicao {
+        background-image: none;
+
+    }
+
+    #sobre {
+        margin-bottom: 40%;
+    }
+
+    #sobre p,
+    #quarta-edicao p {
+
+        width: 100%;
+        text-align: justify;
+    }
+
+    #sobre .row>div,
+    #quarta-edicao  .content {
+        position: relative;
+        width: 100% !important;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        align-items: center;
+    }
+
+    .principais-trilhas {
+        margin-top: 30rem;
+    }
+
+
+    #principais-trilhas .card-wrapper-trilhas .card {
+        max-width: 10rem;
+    }
+
+    #principais-trilhas .card-wrapper-trilhas {
+
+        flex-wrap: wrap;
+    }
+
+    #principais-trilhas h2,
+    #quarta-edicao h2 {
+        font-size: 2rem;
+        width: fit-content;
+        text-align: center;
+
+    }
+
+    #principais-trilhas .card-wrapper-trilhas .card {
+        max-width: 90%;
+        margin-bottom: 2rem;
+        border: #3dc0f06c 1px solid;
+        border-radius: 10px;
+    }
+
+    #quarta-edicao {
+        background-image: none;
+        padding: 0;
+    }
+}
