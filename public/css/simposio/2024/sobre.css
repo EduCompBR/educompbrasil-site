@@ -62,8 +62,7 @@
 
     justify-content: center;
 
-    border: #3dc0f06c 1px solid;
-    border-radius: 10px;
+
 
 
 
@@ -185,7 +184,7 @@
     }
 
     #sobre .row>div,
-    #quarta-edicao  .content {
+    #quarta-edicao .content {
         position: relative;
         width: 100% !important;
         padding-right: 15px;
