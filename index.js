@@ -87,8 +87,8 @@ app.get('/simposio/2024/certificados', educomp_2024_main.certificados)
 app.get('/simposio/2024/datas', educomp_2024_main.datas)
 app.get('/simposio/2024/programacao/educomp', educomp_2024_programacao.programacao)
 
-//app.get('/simposio/2023/programacao/educomp/manha', educomp_2023_programacao.programacao_manha)
-//app.get('/simposio/2023/programacao/educomp/tarde', educomp_2023_programacao.programacao_tarde)
+app.get('/simposio/2024/programacao/educomp/manha', educomp_2024_programacao.programacao_manha)
+app.get('/simposio/2024/programacao/educomp/tarde', educomp_2024_programacao.programacao_tarde)
 app.get('/simposio/2024/programacao/esquenta/1', educomp_2024_programacao.esquenta_1)
 app.get('/simposio/2024/programacao/esquenta/2', educomp_2024_programacao.esquenta_2)
 
