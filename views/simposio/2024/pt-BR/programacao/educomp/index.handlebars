@@ -1,61 +1,46 @@
-  {{> simposio/2024/pt-BR/inside-header}}
+{{> simposio/2024/pt-BR/inside-header}}
 
-  <section id="datas" style="background-color:rgb(255, 255, 255);">
-    <div class="container" >
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h3>Mais informações em breve!</h3>
-
-<!--
-          <h3>Confira a nossa programação</h3>
+<section id="datas" style="background-color:rgb(255, 255, 255);">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
 
 
 
-          <ul class="lead" style="text-align: justify; font-size: 14pt; border-left: 10px #58b24d solid; list-style: none">
-            <li>
-              <a href="#grade">
-                Visualização Geral (Turnos)
-              </a>
-            </li>
-            <li>
-              <a href="#completa">
-                Programação Completa (Detalhada)
-              </a>
-            </li>
-          </ul>
+        <a name="grade">
+          <h2 style="padding-top: 140px; margin-top: -140px; "></h2>
+          <h2 class="mb-3 mt-5 pl-3" style="border-left: 5px solid darkcyan">
+            Visualização Geral (Turnos)
+          </h2>
+        </a>
 
-          <hr class="mb-5">
-          
-          <a name="grade">
-            <h2 style="padding-top: 140px; margin-top: -140px; "></h2>
-            <h2 class="mb-3 mt-5 pl-3" style="border-left: 5px solid darkcyan">
-              Visualização Geral (Turnos)
-            </h2>
-          </a>
+        <span> <a target="_blank" href="/simposio/2024/programacao/educomp/manha" class="btn btn-primary btn-lg"
+            style="width: 100px;">Manhã</a> </span>
+        <span> <a target="_blank" href="/simposio/2024/programacao/educomp/tarde" class="btn btn-primary btn-lg"
+            style="width: 100px;">Tarde</a> </span>
 
-          <span> <a target="_blank" href="/simposio/2023/programacao/educomp/manha" class="btn btn-primary btn-lg" style="width: 100px;">Manhã</a> </span>
-          <span> <a target="_blank" href="/simposio/2023/programacao/educomp/tarde" class="btn btn-primary btn-lg" style="width: 100px;">Tarde</a> </span>
-          
-          <hr class="mb-5">
+        <hr class="mb-5">
 
-          <a name="completa">
-            <h2 style="padding-top: 140px; margin-top: -140px; "></h2>
-            <h2 class="mb-3 mt-5 pl-3" style="border-left: 5px solid darkcyan">
-              Programação Completa (Detalhada)<br>
-              <small class="text-muted">Clique em cada atividade para mais detalhes</small>
-            </h2>
-          </a>
 
-          <div id="programacao-tabela"></div>
 
-          <hr>
--->
-        </div>
+        <a name="completa">
+          <h2 style="padding-top: 140px; margin-top: -140px; "></h2>
+          <h2 class="mb-3 mt-5 pl-3" style="border-left: 5px solid darkcyan">
+            Programação Completa (Detalhada)<br>
+            <small class="text-muted">Em breve!</small>
+          </h2>
+        </a>
+
+        <div id="programacao-tabela"></div>
+
+        <hr>
+
       </div>
     </div>
+  </div>
 </section>
 
-
+<!--
 <script>
       
     var programacaoTabela = new Tabulator("#programacao-tabela", {
