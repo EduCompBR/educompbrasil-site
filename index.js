@@ -51,8 +51,9 @@ var educomp_2024_trabalhos = require('./routes/simposio/2024/pt-BR/trabalhos');
 var educomp_2024_criterios = require('./routes/simposio/2024/pt-BR/criterios');
 var educomp_2024_programacao = require('./routes/simposio/2024/pt-BR/programacao');
 var educomp_2024_certificados_esquenta_1 = require('./routes/simposio/2024/pt-BR/certificado/esquenta-1');
+var educomp_2024_certificados_esquenta_2 = require('./routes/simposio/2024/pt-BR/certificado/esquenta-2');
 //var educomp_2023_certificados_educomp = require('./routes/simposio/2023/pt-BR/certificado/educomp');
-//var educomp_2023_certificados_esquenta_2 = require('./routes/simposio/2023/pt-BR/certificado/esquenta-2');
+var educomp_2024_certificados_esquenta_2 = require('./routes/simposio/2024/pt-BR/certificado/esquenta-2');
 
 //Giec
 
@@ -128,14 +129,14 @@ app.post('/simposio/2024/certificados/esquenta/1/obter/arquivo', educomp_2024_ce
 app.get('/simposio/2024/certificados/esquenta/1/validar', educomp_2024_certificados_esquenta_1.formValidar)
 app.post('/simposio/2024/certificados/esquenta/1/validar', educomp_2024_certificados_esquenta_1.validar)
 
-/*app.get('/simposio/2023/certificados/esquenta/2', educomp_2023_certificados_esquenta_2.opcoes)
-app.get('/simposio/2023/certificados/esquenta/2/obter', educomp_2023_certificados_esquenta_2.certificado)
-app.post('/simposio/2023/certificados/esquenta/2/obter', educomp_2023_certificados_esquenta_2.obter)
-app.post('/simposio/2023/certificados/esquenta/2/obter/arquivo', educomp_2023_certificados_esquenta_2.obterArquivo)
-app.get('/simposio/2023/certificados/esquenta/2/validar', educomp_2023_certificados_esquenta_2.formValidar)
-app.post('/simposio/2023/certificados/esquenta/2/validar', educomp_2023_certificados_esquenta_2.validar)
+app.get('/simposio/2024/certificados/esquenta/2', educomp_2024_certificados_esquenta_2.opcoes)
+app.get('/simposio/2024/certificados/esquenta/2/obter', educomp_2024_certificados_esquenta_2.certificado)
+app.post('/simposio/2024/certificados/esquenta/2/obter', educomp_2024_certificados_esquenta_2.obter)
+app.post('/simposio/2024/certificados/esquenta/2/obter/arquivo', educomp_2024_certificados_esquenta_2.obterArquivo)
+app.get('/simposio/2024/certificados/esquenta/2/validar', educomp_2024_certificados_esquenta_2.formValidar)
+app.post('/simposio/2024/certificados/esquenta/2/validar', educomp_2024_certificados_esquenta_2.validar)
 
-app.get('/simposio/2023/certificados/educomp', educomp_2023_certificados_educomp.opcoes)
+/*app.get('/simposio/2023/certificados/educomp', educomp_2023_certificados_educomp.opcoes)
 app.get('/simposio/2023/certificados/educomp/obter', educomp_2023_certificados_educomp.certificado)
 app.post('/simposio/2023/certificados/educomp/obter', educomp_2023_certificados_educomp.obter)
 app.post('/simposio/2023/certificados/educomp/obter/arquivo', educomp_2023_certificados_educomp.obterArquivo)
