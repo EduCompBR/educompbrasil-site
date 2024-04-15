@@ -146,8 +146,8 @@
         dia: 23,
         inicio: "18:30",
         fim: "19:30",
-        descricao: '<b>Laboratório de ideias I</b> <br>' +
-          '(LI-I/1) Tecnologias para a educação em computação<br>' + '(LI-I/2) Pensamento Computacional com Jogos',
+        descricao: '<b>Laboratório de ideias I e II</b> <br>' +
+          '(LI-I) Tecnologias para a educação em computação<br>' + '(LI-II) Pensamento Computacional com Jogos',
         tipo: "Lab. Ideias",
         modal: "lab-ideias-i"
       },
@@ -198,7 +198,7 @@
         inicio: "18:30",
         fim: "19:30",
         descricao: '<b>Laboratório de ideias II</b> <br>' +
-          '(LI-II/1) Ensino de Programação<br>' + '(LI-II/2) Estratégias de Engajamento na Educação em Computação',
+          '(LI-III) Ensino de Programação<br>' + '(LI-IV) Estratégias de Engajamento na Educação em Computação',
         tipo: "Lab. Ideias",
         modal: "lab-ideias-ii"
       },
@@ -248,9 +248,10 @@
         dia: 25,
         inicio: "18:30",
         fim: "19:30",
-        descricao: '<b>Laboratório de ideias III</b> <br>',
-        tipo: "Lab. Ideias",
-        modal: "lab-ideias-iii"
+        descricao: '<b>Laboratório de ideias V e VI</b> <br>' +
+          '(LI-V) Tecnologias para a educação em computação II' + '(LI-VI) Inclusão e Acessibilidade na Educação em Computação',,
+      tipo: "Lab. Ideias",
+      modal: "lab-ideias-iii"
       },
 
 
@@ -259,13 +260,13 @@
 
 
     ],
-    columns: [
-      { title: "Dia", field: "dia", headerFilter: "input", vertAlign: "middle", hozAlign: "center", sorter: "number" },
-      { title: "Descrição", field: "descricao", formatter: "html", headerFilter: "input", width: "40%", sorter: "string" },
-      { title: "Tipo", field: "tipo", formatter: "textarea", hozAlign: "center", headerFilter: "input", vertAlign: "middle", sorter: "string" },
-      { title: "Início", field: "inicio", vertAlign: "middle", sorter: "time", hozAlign: "center", headerFilter: "input" },
-      { title: "Fim", field: "fim", vertAlign: "middle", sorter: "time", hozAlign: "center", headerFilter: "input", }
-    ],
+  columns: [
+    { title: "Dia", field: "dia", headerFilter: "input", vertAlign: "middle", hozAlign: "center", sorter: "number" },
+    { title: "Descrição", field: "descricao", formatter: "html", headerFilter: "input", width: "40%", sorter: "string" },
+    { title: "Tipo", field: "tipo", formatter: "textarea", hozAlign: "center", headerFilter: "input", vertAlign: "middle", sorter: "string" },
+    { title: "Início", field: "inicio", vertAlign: "middle", sorter: "time", hozAlign: "center", headerFilter: "input" },
+    { title: "Fim", field: "fim", vertAlign: "middle", sorter: "time", hozAlign: "center", headerFilter: "input", }
+  ],
   });
 
   programacaoTabela.on("rowClick", function (e, row) {
