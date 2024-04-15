@@ -214,6 +214,7 @@
         fim: "10:30",
         descricao: '<b>Mesa Temática III</b> <br>' +
           'Fatores que influenciam as escolhas profissionais das mulheres em Computação',
+        tipo: "Mesa temática",
         modal: "mesa-tematica-iii"
       },
       {
@@ -222,6 +223,7 @@
         fim: "12:20",
         descricao: '<b>Minicurso II</b> <br>' +
           'A plataforma de jogos WordWall como ferramenta para a avaliação da aprendizagem',
+        tipo: "Minicurso",
         modal: "minicurso-ii"
       },
       {
@@ -232,16 +234,27 @@
         modal: "lancamento-livros"
       },
 
-
       {
         dia: 25,
-        inicio: "13:30",
-        fim: "15:00",
-        descricao: '<b>Sessão técnica VIII/2 e IX /1</b> <br>' +
-          '(ST-VIII/2) Método e Estratégias de ensino e aprendizagem de Computação <br>' + '(ST-IX/1) Avaliação da aprendizagem em Computação',
+        inicio: "15:00",
+        fim: "16:10",
+        descricao: '<b>Sessão técnica VII e  VIII/1 </b> <br>' +
+          '(ST-VII) Aspectos Éticos na educação em Computação' + '(ST-VIII/1) Método e Estratégias de ensino e aprendizagem de Computação',
         tipo: "Sessão Técnica",
         modal: "sessao-tecnica-vii-viii1"
       },
+      {
+        dia: 25,
+        inicio: "16:30",
+        fim: "17:40",
+        descricao: '<b>Sessão técnica VIII/2 e IX/1</b> <br>' +
+          '(ST-VIII/2) Método e Estratégias de ensino e aprendizagem de Computação <br>' + '(ST-IX/1) Avaliação da aprendizagem em Computação',
+        tipo: "Sessão Técnica",
+        modal: "sessao-tecnica-viii2-ix1"
+      },
+
+
+
 
 
       {
@@ -250,23 +263,67 @@
         fim: "19:30",
         descricao: '<b>Laboratório de ideias V e VI</b> <br>' +
           '(LI-V) Tecnologias para a educação em computação II' + '(LI-VI) Inclusão e Acessibilidade na Educação em Computação',
-      tipo: "Lab. Ideias",
-      modal: "lab-ideias-iii"
+        tipo: "Lab. Ideias",
+        modal: "lab-ideias-iii"
       },
 
 
       //Sexta
+      {
+        dia: 26,
+        inicio: "09:00",
+        fim: "10:30",
+        descricao: '<b>Mesa Temática IV</b> <br>' +
+          'Formação Docente em Computação como área de conhecimento e de práxis em pesquisa educacional',
+        tipo: "Mesa temática",
+        modal: "mesa-tematica-iv"
+      },
+      {
+        dia: 26,
+        inicio: "10:30",
+        fim: "12:30",
+        descricao: '<b>III Workshop de Teses e Dissertações em Educação em Computação</b> <br>',
+        tipo: "WTD",
+        modal: "wtd"
+      },
 
+      {
+        dia: 26,
+        inicio: "13:30",
+        fim: "15:00",
+        descricao: '<b>Sessão técnica VIII/3 e IX/2</b> <br>' +
+          '(ST-VIII/3) Método e Estratégias de ensino e aprendizagem de Computação <br>' + '(ST-IX/1) Avaliação da aprendizagem em Computação',
+        tipo: "Sessão Técnica",
+        modal: "sessao-tecnica-viii3-ix2"
+      },
+      {
+        dia: 26,
+        inicio: "15:00",
+        fim: "16:30",
+        descricao: '<b>Concurso de Teses e Dissertações em Educação em Computação I e II</b> <br>' +
+          '(CTD-I / Mestrado) Concurso de Teses e Dissertações em Educação em Computação - <br>' + '(CTD-II / Doutorado) Concurso de Teses e Dissertações em Educação em Computação - ',
+        tipo: "CTD",
+        modal: "ctd"
+      },
+
+{
+        dia: 26,
+        inicio: "16:30",
+        fim: "17:40",
+        descricao: '<b>Assembléia, Premiações e encerramento</b> <br>',
+        tipo: "Encerramento",
+        modal: "assembleia-encerramento"
+      },
 
 
     ],
-  columns: [
-    { title: "Dia", field: "dia", headerFilter: "input", vertAlign: "middle", hozAlign: "center", sorter: "number" },
-    { title: "Descrição", field: "descricao", formatter: "html", headerFilter: "input", width: "40%", sorter: "string" },
-    { title: "Tipo", field: "tipo", formatter: "textarea", hozAlign: "center", headerFilter: "input", vertAlign: "middle", sorter: "string" },
-    { title: "Início", field: "inicio", vertAlign: "middle", sorter: "time", hozAlign: "center", headerFilter: "input" },
-    { title: "Fim", field: "fim", vertAlign: "middle", sorter: "time", hozAlign: "center", headerFilter: "input", }
-  ],
+    columns: [
+      { title: "Dia", field: "dia", headerFilter: "input", vertAlign: "middle", hozAlign: "center", sorter: "number" },
+      { title: "Descrição", field: "descricao", formatter: "html", headerFilter: "input", width: "40%", sorter: "string" },
+      { title: "Tipo", field: "tipo", formatter: "textarea", hozAlign: "center", headerFilter: "input", vertAlign: "middle", sorter: "string" },
+      { title: "Início", field: "inicio", vertAlign: "middle", sorter: "time", hozAlign: "center", headerFilter: "input" },
+      { title: "Fim", field: "fim", vertAlign: "middle", sorter: "time", hozAlign: "center", headerFilter: "input", }
+    ],
   });
 
   programacaoTabela.on("rowClick", function (e, row) {
@@ -302,7 +359,7 @@
 {{> simposio/2024/pt-BR/programacao/24/sessao-tecnica-i2-iii}}
 {{> simposio/2024/pt-BR/programacao/24/sessao-tecnica-iv1-v}}
 {{> simposio/2024/pt-BR/programacao/24/sessao-tecnica-iv2-vi}}
-{{> simposio/2024/pt-BR/programacao/24/lab-ideias-ii}}
+
 
 
 <!--Quinta (25)-->
@@ -310,7 +367,12 @@
 {{> simposio/2024/pt-BR/programacao/25/minicurso-ii}}
 {{> simposio/2024/pt-BR/programacao/25/lancamento-livros}}
 {{> simposio/2024/pt-BR/programacao/25/sessao-tecnica-vii-viii1}}
-
+{{> simposio/2024/pt-BR/programacao/25/sessao-tecnica-viii2-ix1}}
 {{> simposio/2024/pt-BR/programacao/25/lab-ideias-iii}}
 
 <!--Sexta (26) -->
+{{> simposio/2024/pt-BR/programacao/26/mesa-tematica-iv}}
+{{> simposio/2024/pt-BR/programacao/26/wtd}}
+{{> simposio/2024/pt-BR/programacao/26/sessao-tecnica-viii3-ix2}}
+{{> simposio/2024/pt-BR/programacao/26/ctd}}
+{{> simposio/2024/pt-BR/programacao/26/assembleia-encerramento}}
