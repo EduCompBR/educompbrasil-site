@@ -52,8 +52,7 @@ var educomp_2024_criterios = require('./routes/simposio/2024/pt-BR/criterios');
 var educomp_2024_programacao = require('./routes/simposio/2024/pt-BR/programacao');
 var educomp_2024_certificados_esquenta_1 = require('./routes/simposio/2024/pt-BR/certificado/esquenta-1');
 var educomp_2024_certificados_esquenta_2 = require('./routes/simposio/2024/pt-BR/certificado/esquenta-2');
-//var educomp_2023_certificados_educomp = require('./routes/simposio/2023/pt-BR/certificado/educomp');
-var educomp_2024_certificados_esquenta_2 = require('./routes/simposio/2024/pt-BR/certificado/esquenta-2');
+var educomp_2024_certificados_educomp = require('./routes/simposio/2024/pt-BR/certificado/educomp');
 
 //Giec
 
@@ -136,12 +135,12 @@ app.post('/simposio/2024/certificados/esquenta/2/obter/arquivo', educomp_2024_ce
 app.get('/simposio/2024/certificados/esquenta/2/validar', educomp_2024_certificados_esquenta_2.formValidar)
 app.post('/simposio/2024/certificados/esquenta/2/validar', educomp_2024_certificados_esquenta_2.validar)
 
-/*app.get('/simposio/2023/certificados/educomp', educomp_2023_certificados_educomp.opcoes)
-app.get('/simposio/2023/certificados/educomp/obter', educomp_2023_certificados_educomp.certificado)
-app.post('/simposio/2023/certificados/educomp/obter', educomp_2023_certificados_educomp.obter)
-app.post('/simposio/2023/certificados/educomp/obter/arquivo', educomp_2023_certificados_educomp.obterArquivo)
-app.get('/simposio/2023/certificados/educomp/validar', educomp_2023_certificados_educomp.formValidar)
-app.post('/simposio/2023/certificados/educomp/validar', educomp_2023_certificados_educomp.validar)*/
+app.get('/simposio/2024/certificados/educomp', educomp_2024_certificados_educomp.opcoes)
+app.get('/simposio/2024/certificados/educomp/obter', educomp_2024_certificados_educomp.certificado)
+app.post('/simposio/2024/certificados/educomp/obter', educomp_2024_certificados_educomp.obter)
+app.post('/simposio/2024/certificados/educomp/obter/arquivo', educomp_2024_certificados_educomp.obterArquivo)
+app.get('/simposio/2024/certificados/educomp/validar', educomp_2024_certificados_educomp.formValidar)
+app.post('/simposio/2024/certificados/educomp/validar', educomp_2024_certificados_educomp.validar)
 
 //EduComp 2023 - pt-BR
 app.get('/simposio/2023', educomp_2023_main.index)
