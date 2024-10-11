@@ -1,0 +1,93 @@
+:root {
+  --edc-blue: #282E69;
+  --edc-green: #098136;
+  --edc-red: #E00914;
+  --edc-gray: #EEEEEE;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.educomp {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  
+}
+
+.educomp .content {
+  flex: 1;
+}
+
+.educomp .imagelink {
+  background-color: transparent;
+}
+
+.educomp .imagelink:hover {
+  background-color: transparent;
+}
+
+.educomp .bg-gray {
+  background-color: var(--edc-gray);
+}
+
+.educomp section {
+  padding-top: 3em;
+  padding-bottom: 2em;
+}
+
+.educomp h1 {
+  padding: 3em 0.5em 0.25em 0.5em;
+  border-bottom: 2px solid var(--edc-green);
+  font-size: 3em;
+  color: var(--edc-blue);
+  font-weight: 900;
+  line-height: 1.5em;
+  text-align: center;
+  display: inline-block;
+}
+
+.educomp h2 {
+  border-bottom: 2px solid var(--edc-red);
+  margin-bottom: 1em;
+  font-size: 2.5em;
+  color: var(--edc-blue);
+  font-weight: 450;
+  line-height: 1.3em;
+  text-align: left;
+}
+
+.educomp .edc-font {
+  font-size: 1.1rem;
+  line-height: 150%;
+  text-align: justify;
+  font-family: 'Inter var', sans-serif;
+  font-weight: 300;
+}
+
+.educomp .edc-font strong {
+  color: var(--edc-blue);
+  font-weight: 600;
+}
+
+.educomp .edc-font a {
+  color: var(--edc-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 400;
+}
+
+.educomp .edc-font a:hover {
+  background-color: transparent;
+}

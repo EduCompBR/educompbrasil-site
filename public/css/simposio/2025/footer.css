@@ -1,0 +1,40 @@
+.educomp-footer {
+    max-width: 100%;
+    background-color: var(--edc-blue);
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    border-top: 0.5em solid var(--edc-green); 
+}
+
+.educomp-footer h5 {
+    padding-top: 1.5em;
+    padding-bottom: 0.5em;
+    font-size: 1.4em;
+    font-weight: 4  00;
+}
+
+.educomp-footer .icon {
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    text-align: center;
+    color: var(--edc-blue)
+}
+
+.educomp-footer .icon:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.educomp-footer a#email {
+    color: inherit;
+    font-size: 1.1em;
+    text-decoration: underline;
+    text-underline-offset: 2.5px;
+    margin-top: 1em;
+    display: inline-block;
+}
