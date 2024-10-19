@@ -1,23 +1,46 @@
 
+/* .educomp #logotipo .container {
+    height: calc(80vh - 500px);
+} */
+
 .educomp #logotipo .landing-image {
+    margin-top: 80px;
     height: auto;
     width: auto;
-    object-fit: scale-down;
-    max-width: 80%;
-    max-height: 80vh;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100vh;
 }
 
-/* Estilos para telas abaixo de 768px */
-@media (max-width: 767.98px) {
-    .educomp .sobre #logotipo .landing-image {
+/* Estilos para telas acima de 992px */
+@media (min-width: 992px) {
+    .educomp .landing-image {
+        content: url('/img/simposio/2025/landing_image_large.png');
+    }
+}
+
+/* Estilos para telas abaixo de 992px */
+/* @media (max-width: 991.98px) {
+    .educomp .landing-image {
+        content: url('/img/simposio/2025/landing_image_tall.png');
         max-height: 50vh;
         margin: 0 auto;
     }
+}
+*/
 
+/* Estilos para telas abaixo de 768px */
+@media (max-width: 767.98px) {
     .educomp .sobre #logotipo .container {
         height: auto !important;
         padding-top: 8em;
         padding-bottom: 20px;
+    }
+
+    .educomp .landing-image {
+        content: url('/img/simposio/2025/landing_image_tall.png');
+        max-height: 50vh;
+        margin: 0 auto;
     }
 
     .educomp .sobre h2 {
