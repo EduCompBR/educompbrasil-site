@@ -71,7 +71,7 @@ body {
 .educomp .edc-font {
   font-size: 1.1rem;
   line-height: 150%;
-  text-align: justify;
+  text-align: left;
   font-family: 'Inter var', sans-serif;
   font-weight: 300;
 }
