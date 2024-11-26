@@ -1,15 +1,15 @@
-.educomp #artigos-completos #datas .card {
+.educomp #datas .card {
     border: 1px solid var(--gray-dark);
     background-color: var(--edc-gray);
     transition: transform 0.2s;
 }
 
-.educomp #artigos-completos #datas .card:hover {
+.educomp #datas .card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.educomp #artigos-completos #datas .card-title {
+.educomp #datas .card-title {
     color: var(--edc-blue);
     font-weight: 800;
     font-size: 1.5em;
