@@ -66,3 +66,11 @@ exports.criterios_trilha5 = function (req, res) {
         }
     ) 
 };
+
+exports.wtd = function (req, res) {
+  res.render('simposio/2025/pt-BR/trabalhos/wtd', {
+    layout: 'simposio/2025/pt-BR/layout',
+    trabalhos: true,
+    titulo: 'Workshop de Teses e Dissertações',
+  });
+};
