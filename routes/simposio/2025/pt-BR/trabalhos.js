@@ -74,3 +74,11 @@ exports.wtd = function (req, res) {
     titulo: 'Workshop de Teses e Dissertações',
   });
 };
+
+exports.minicursos = function (req, res) {
+  res.render('simposio/2025/pt-BR/trabalhos/minicursos', {
+    layout: 'simposio/2025/pt-BR/layout',
+    trabalhos: true,
+    titulo: 'Minicursos',
+  });
+};
