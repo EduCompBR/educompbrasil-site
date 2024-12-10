@@ -84,7 +84,8 @@ app.get('/documentos', giec_main.documentos)
 app.get('/documentos/modelos/proposta-sede-educomp', giec_main.documentos_modelo_educomp)
 
 //EduComp 2025 - pt-BR
-app.get('/simposio/2025', educomp_2025_principal.index)
+app.get('/simposio/2025', educomp_2025_principal.index);
+app.get('/simposio/2025/educomp', educomp_2025_principal.index);
 app.get('/simposio/2025/principal/sobre-educomp', educomp_2025_principal.sobre_educomp)
 app.get('/simposio/2025/principal/sobre-sbc', educomp_2025_principal.sobre_sbc)
 app.get('/simposio/2025/principal/edicoes-anteriores', educomp_2025_principal.edicoes_anteriores)
