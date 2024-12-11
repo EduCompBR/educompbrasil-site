@@ -68,7 +68,7 @@ exports.criterios_trilha5 = function (req, res) {
 };
 
 exports.wtd = function (req, res) {
-  res.render('simposio/2025/pt-BR/trabalhos/wtd', {
+  res.render('simposio/2025/educomp/pt-BR/trabalhos/wtd', {
     layout: 'simposio/2025/pt-BR/layout',
     trabalhos: true,
     titulo: 'Workshop de Teses e Dissertações',
@@ -76,7 +76,7 @@ exports.wtd = function (req, res) {
 };
 
 exports.minicursos = function (req, res) {
-  res.render('simposio/2025/pt-BR/trabalhos/minicursos', {
+  res.render('simposio/2025/educomp/pt-BR/trabalhos/minicursos', {
     layout: 'simposio/2025/pt-BR/layout',
     trabalhos: true,
     titulo: 'Minicursos',
