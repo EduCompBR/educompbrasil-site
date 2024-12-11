@@ -1,6 +1,6 @@
 .eb-footer {
     max-width: 100%;
-    background-color: var(--edc-blue);
+    background-color: #06487E;
     color: white;
     padding-top: 1em;
     padding-bottom: 2em;
@@ -21,13 +21,9 @@
     line-height: 1;
     vertical-align: middle;
     text-align: center;
-    color: var(--edc-blue)
 }
 
-.eb-footer .icon:hover {
-    background-color: transparent;
-    color: white;
-}
+
 
 .eb-footer a#email {
     color: inherit;
@@ -41,3 +37,19 @@
 h5 {
     font-weight: 600;
 }
+
+span{
+    color: white;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.align-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  img{
+    margin-top: 20px;
+  }
