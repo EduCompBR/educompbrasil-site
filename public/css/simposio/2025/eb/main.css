@@ -1,203 +1,209 @@
 :root {
-    --edc-blue: #282E69;
-    --edc-green: rgb(37, 136, 115);
-    --edc-red: #E00914;
-    --edc-gray: #EEEEEE;
-  }
+  --edc-blue: #282E69;
+  --edc-green: rgb(37, 136, 115);
+  --edc-red: #E00914;
+  --edc-gray: #EEEEEE;
+}
 
 
-  
-  html {
-    height: 100%;
-    margin: 0;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100%;
-    display: flex;
-    overflow-x: hidden;
-  }
 
-  nav{
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999; 
-    background-color: white; 
-  }
-  
-  .eb {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;  
-  }
+html {
+  height: 100%;
+  margin: 0;
+}
 
-  .eb .highlight {
-    color: var(--edc-green);
-  }
-  
-  .eb .content {
-    flex: 1;
-  }
-  
-  .eb .imagelink {
-    background-color: transparent;
-  }
-  
-  .eb .imagelink:hover {
-    background-color: transparent;
-  }
-  
-  .eb .bg-gray {
-    background-color: var(--edc-gray);
-  }
-  
-  .eb section {
-    padding-top: 3em;
-    padding-bottom: 2em;
-  }
-  
-  .eb h1 {
-    padding: 3em 0.5em 0.25em 0.5em;
-    border-bottom: 2px solid var(--edc-green);
-    font-size: 3em;
-    color: var(--edc-blue);
-    font-weight: 900;
-    line-height: 1.5em;
-    text-align: center;
-    display: inline-block;
-  }
-  
-  .eb h2 {
-    margin-bottom: 1em;
-    font-size: 3em;
-    color: var(--edc-blue);
-    font-weight: 650;
-    text-align: center;
-    margin-top: 50px;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+}
 
-  .eb h3 {
-    margin-bottom: 1em;
-    font-size: 3em;
-    color: var(--edc-blue);
-    font-weight: 650;
-    text-align: left;
-    margin-top: 50px;
-  }
-  
-  .eb .edc-font {
-    font-size: 1.1rem;
-    line-height: 150%;
-    text-align: left;
-    font-family: 'Inter var', sans-serif;
-    font-weight: 300;
-  }
-  
-  .eb .edc-font strong {
-    color: var(--edc-blue);
-    font-weight: 600;
-  }
-  
-  .eb .edc-font a {
-    color: var(--edc-blue);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    font-weight: 400;
-  }
-  
-  .eb .edc-font a:hover {
-    background-color: transparent;
-  }
+nav{
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999; 
+  background-color: white; 
+}
 
-  .fundoverde{
-    background-color: var(--edc-green);
-  }
+.eb {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  
+}
 
-   .img-top {
-    width: 100%;
-    position: relative;
-    z-index: 1;
-  }
+.eb .highlight {
+  color: var(--edc-green);
+}
 
-  .img-bottom {
-    width: 100%;
-    position: relative;
-    top: -20px;
-    z-index: 0;
-  }
+.eb .content {
+  flex: 1;
+}
 
-  #tracofooter{
-    width: 100%;
-  }
+.eb .imagelink {
+  background-color: transparent;
+}
 
-  #principais-trilhas {
-    background-image: url(".img-fluid");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
+.eb .imagelink:hover {
+  background-color: transparent;
+}
+
+.eb .bg-gray {
+  background-color: var(--edc-gray);
+}
+
+.eb section {
+  padding-top: 3em;
+  padding-bottom: 2em;
+}
+
+.eb h1 {
+  padding: 3em 0.5em 0.25em 0.5em;
+  border-bottom: 2px solid var(--edc-green);
+  font-size: 3em;
+  color: var(--edc-blue);
+  font-weight: 900;
+  line-height: 1.5em;
+  text-align: center;
+  display: inline-block;
+}
+
+.eb h2 {
+  margin-bottom: 1em;
+  font-size: 3em;
+  color: var(--edc-blue);
+  font-weight: 650;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.eb h3 {
+  margin-bottom: 1em;
+  font-size: 3em;
+  color: var(--edc-blue);
+  font-weight: 650;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.eb .edc-font {
+  font-size: 1.1rem;
+  line-height: 150%;
+  text-align: left;
+  font-family: 'Inter var', sans-serif;
+  font-weight: 300;
+}
+
+.eb .edc-font strong {
+  color: var(--edc-blue);
+  font-weight: 600;
+}
+
+.eb .edc-font a {
+  color: var(--edc-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 400;
+}
+
+.eb .edc-font a:hover {
+  background-color: transparent;
+}
+
+.fundoverde{
+  background-color: var(--edc-green);
+}
+
+ .img-top {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.img-bottom {
+  width: 100%;
+  position: relative;
+  top: -20px;
+  z-index: 0;
+}
+
+#tracofooter{
+  width: 100%;
+}
+
+#principais-trilhas {
+ /* background-image: url("../../../../img/simposio/2025/eb/retanguloverde.png"); */
+  background-color: var(--edc-green);
+  min-height: 600px;
 }
 
 #principais-trilhas .row>div {
-    padding-left: 3rem;
+  padding-left: 0rem;
 }
 
 #principais-trilhas .title-2 {
-    width: 100%;
-    border: none;
-    font-size: 3rem;
+  width: 100%;
+  border: none;
+  font-size: 3rem;
+  color: white;
 }
 
 #principais-trilhas .card-wrapper-trilhas {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 6rem;
 }
 
 #principais-trilhas .card-wrapper-trilhas .card {
-    max-width: 20rem;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border: none;
-    display: flex;
-    flex-direction: column;
+  max-width: 20rem;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
 
-    justify-content: center;
+  justify-content: center;
 }
 
 #principais-trilhas .card-wrapper-trilhas .card .card-img-top {
-    max-width: 80%;
-    margin: 0 auto;
+  width: 120%;
 }
 
 
 #principais-trilhas .card-wrapper-trilhas .card .card-body {
-    height: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
 }
 
 #principais-trilhas .card-wrapper-trilhas .card .card-title {
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    color: black;   
-
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-left: 22px;
+  margin-top: 5rem;   
+  white-space: nowrap;
 }
 
 #principais-trilhas .card-wrapper-trilhas .card .card-text {
-    font-size: .8rem;
-    color: #000000;
-    font-weight: 600;
-    text-align: center;
+  font-size: .8rem;
+  color: #ffffff;
+  text-align: center;
+  margin-left: 25px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
 
+.size{
+  font-size: 20px;
+  font-weight: 100;
 }
