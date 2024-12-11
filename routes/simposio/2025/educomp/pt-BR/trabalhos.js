@@ -1,5 +1,5 @@
 exports.topicos_interesse = function (req, res) {
-    res.render('simposio/2025/pt-BR/trabalhos/topicos-interesse',
+    res.render('simposio/2025/educomp/pt-BR/trabalhos/topicos-interesse',
         {
             layout: 'simposio/2025/pt-BR/layout',
             trabalhos: true,
@@ -9,7 +9,7 @@ exports.topicos_interesse = function (req, res) {
 };
 
 exports.artigos_completos = function (req, res) {
-    res.render('simposio/2025/pt-BR/trabalhos/artigos-completos',
+    res.render('simposio/2025/educomp/pt-BR/trabalhos/artigos-completos',
         {
             layout: 'simposio/2025/pt-BR/layout',
             trabalhos: true,
@@ -19,7 +19,7 @@ exports.artigos_completos = function (req, res) {
 };
 
 exports.criterios_trilha1 = function (req, res) { 
-    res.render('simposio/2025/pt-BR/trabalhos/criterios/trilha-1', 
+    res.render('simposio/2025/educomp/pt-BR/trabalhos/criterios/trilha-1', 
         {
             layout: 'simposio/2025/pt-BR/layout', 
             trabalhos: true,
@@ -29,7 +29,7 @@ exports.criterios_trilha1 = function (req, res) {
 };
 
 exports.criterios_trilha2 = function (req, res) { 
-    res.render('simposio/2025/pt-BR/trabalhos/criterios/trilha-2', 
+    res.render('simposio/2025/educomp/pt-BR/trabalhos/criterios/trilha-2', 
         {
             layout: 'simposio/2025/pt-BR/layout', 
             trabalhos: true,
@@ -39,7 +39,7 @@ exports.criterios_trilha2 = function (req, res) {
 };
 
 exports.criterios_trilha3 = function (req, res) { 
-    res.render('simposio/2025/pt-BR/trabalhos/criterios/trilha-3', 
+    res.render('simposio/2025/educomp/pt-BR/trabalhos/criterios/trilha-3', 
         {
             layout: 'simposio/2025/pt-BR/layout', 
             trabalhos: true,
@@ -49,7 +49,7 @@ exports.criterios_trilha3 = function (req, res) {
 };
 
 exports.criterios_trilha4 = function (req, res) { 
-    res.render('simposio/2025/pt-BR/trabalhos/criterios/trilha-4', 
+    res.render('simposio/2025/educomp/pt-BR/trabalhos/criterios/trilha-4', 
         {
             layout: 'simposio/2025/pt-BR/layout', 
             trabalhos: true,
@@ -58,7 +58,7 @@ exports.criterios_trilha4 = function (req, res) {
     ) 
 };
 exports.criterios_trilha5 = function (req, res) { 
-    res.render('simposio/2025/pt-BR/trabalhos/criterios/trilha-5', 
+    res.render('simposio/2025/educomp/pt-BR/trabalhos/criterios/trilha-5', 
         {
             layout: 'simposio/2025/pt-BR/layout', 
             trabalhos: true,

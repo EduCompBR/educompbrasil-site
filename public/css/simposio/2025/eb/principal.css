@@ -1,0 +1,24 @@
+#sobre-sbceb .container {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-top: 20px;
+}
+
+
+
+.custom-image {
+    width: 100%;
+}
+
+.custom-size {
+    width: 120%; /* Aumenta a largura da imagem para 120% do tamanho original */
+    max-width: none;
+}
+
+
+#sobre-sbceb #sobre p {
+    color: red;
+    margin-bottom: 1.5em; 
+    line-height: 1.6; 
+}
+

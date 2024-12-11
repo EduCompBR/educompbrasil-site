@@ -55,9 +55,12 @@ var educomp_2024_certificados_esquenta_2 = require('./routes/simposio/2024/pt-BR
 var educomp_2024_certificados_educomp = require('./routes/simposio/2024/pt-BR/certificado/educomp');
 
 //Educomp 2025
-var educomp_2025_principal = require('./routes/simposio/2025/pt-BR/principal');
-var educomp_2025_trabalhos = require('./routes/simposio/2025/pt-BR/trabalhos');
+var educomp_2025_principal = require('./routes/simposio/2025/educomp/pt-BR/principal');
+var educomp_2025_trabalhos = require('./routes/simposio/2025/educomp/pt-BR/trabalhos');
 // var educomp_2025_equipe = require('./routes/simposio/2025/pt-BR/equipe');
+
+//sbceb 2025
+var eb_2025_principal = require('./routes/simposio/2025/eb/pt-BR/principal');
 
 //Giec
 
@@ -84,21 +87,39 @@ app.get('/documentos', giec_main.documentos)
 app.get('/documentos/modelos/proposta-sede-educomp', giec_main.documentos_modelo_educomp)
 
 //EduComp 2025 - pt-BR
-app.get('/simposio/2025', educomp_2025_principal.index)
-app.get('/simposio/2025/principal/sobre-educomp', educomp_2025_principal.sobre_educomp)
-app.get('/simposio/2025/principal/sobre-sbc', educomp_2025_principal.sobre_sbc)
-app.get('/simposio/2025/principal/edicoes-anteriores', educomp_2025_principal.edicoes_anteriores)
-app.get('/simposio/2025/trabalhos/topicos-de-interesse', educomp_2025_trabalhos.topicos_interesse)
-app.get('/simposio/2025/trabalhos/artigos-completos', educomp_2025_trabalhos.artigos_completos)
-app.get('/simposio/2025/trabalhos/criterios/trilha-1', educomp_2025_trabalhos.criterios_trilha1)
-app.get('/simposio/2025/trabalhos/criterios/trilha-2', educomp_2025_trabalhos.criterios_trilha2)
-app.get('/simposio/2025/trabalhos/criterios/trilha-3', educomp_2025_trabalhos.criterios_trilha3)
-app.get('/simposio/2025/trabalhos/criterios/trilha-4', educomp_2025_trabalhos.criterios_trilha4)
-app.get('/simposio/2025/trabalhos/criterios/trilha-5', educomp_2025_trabalhos.criterios_trilha5)
+app.get('/simposio/2025/educomp', educomp_2025_principal.index)
+app.get('/simposio/2025/educomp/principal/sobre-educomp', educomp_2025_principal.sobre_educomp)
+app.get('/simposio/2025/educomp/principal/sobre-sbc', educomp_2025_principal.sobre_sbc)
+app.get('/simposio/2025/educomp/principal/edicoes-anteriores', educomp_2025_principal.edicoes_anteriores)
+app.get('/simposio/2025/educomp/trabalhos/topicos-de-interesse', educomp_2025_trabalhos.topicos_interesse)
+app.get('/simposio/2025/educomp/trabalhos/artigos-completos', educomp_2025_trabalhos.artigos_completos)
+app.get('/simposio/2025/educomp/trabalhos/criterios/trilha-1', educomp_2025_trabalhos.criterios_trilha1)
+app.get('/simposio/2025/educomp/trabalhos/criterios/trilha-2', educomp_2025_trabalhos.criterios_trilha2)
+app.get('/simposio/2025/educomp/trabalhos/criterios/trilha-3', educomp_2025_trabalhos.criterios_trilha3)
+app.get('/simposio/2025/educomp/trabalhos/criterios/trilha-4', educomp_2025_trabalhos.criterios_trilha4)
+app.get('/simposio/2025/educomp/trabalhos/criterios/trilha-5', educomp_2025_trabalhos.criterios_trilha5)
 // app.get('/simposio/2025/equipe/comissao-organizadora', educomp_2025_equipe.comissao_organizadora)
 // app.get('/simposio/2025/equipe/comite-programa', educomp_2025_equipe.comite_programa)
 // app.get('/simposio/2025/equipe/comite-diretivo', educomp_2025_equipe.comite_diretivo)
 // app.get('/simposio/2025/equipe/comissao-especial', educomp_2025_equipe.comissao_especial)
+
+
+
+//backup remover /educomp
+app.get('/simposio/2025/educomp', educomp_2025_principal.index)
+app.get('/simposio/2025/educomp/principal/sobre-educomp', educomp_2025_principal.sobre_educomp)
+app.get('/simposio/2025/educomp/principal/sobre-sbc', educomp_2025_principal.sobre_sbc)
+app.get('/simposio/2025/educomp/principal/edicoes-anteriores', educomp_2025_principal.edicoes_anteriores)
+app.get('/simposio/2025/educomp/trabalhos/topicos-de-interesse', educomp_2025_trabalhos.topicos_interesse)
+app.get('/simposio/2025/educomp/trabalhos/artigos-completos', educomp_2025_trabalhos.artigos_completos)
+app.get('/simposio/2025/educomp/trabalhos/criterios/trilha-1', educomp_2025_trabalhos.criterios_trilha1)
+app.get('/simposio/2025/educomp/trabalhos/criterios/trilha-2', educomp_2025_trabalhos.criterios_trilha2)
+app.get('/simposio/2025/educomp/trabalhos/criterios/trilha-3', educomp_2025_trabalhos.criterios_trilha3)
+app.get('/simposio/2025/educomp/trabalhos/criterios/trilha-4', educomp_2025_trabalhos.criterios_trilha4)
+app.get('/simposio/2025/educomp/trabalhos/criterios/trilha-5', educomp_2025_trabalhos.criterios_trilha5)
+
+//sbc-eb 2025
+app.get('/simposio/2025/eb', eb_2025_principal.index);
 
 //EduComp 2024 - pt-BR
 app.get('/simposio/2024', educomp_2024_main.index)
