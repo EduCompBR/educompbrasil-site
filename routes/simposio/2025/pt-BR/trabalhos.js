@@ -67,6 +67,14 @@ exports.criterios_trilha5 = function (req, res) {
     ) 
 };
 
+exports.ctd = function (req, res) {
+  res.render('simposio/2025/pt-BR/trabalhos/ctd', {
+    layout: 'simposio/2025/pt-BR/layout',
+    trabalhos: true,
+    titulo: 'Concurso de Teses e Dissertações',
+  });
+};
+
 exports.wtd = function (req, res) {
   res.render('simposio/2025/pt-BR/trabalhos/wtd', {
     layout: 'simposio/2025/pt-BR/layout',
