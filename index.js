@@ -99,6 +99,8 @@ app.get('/simposio/2025/trabalhos/criterios/trilha-5', educomp_2025_trabalhos.cr
 app.get('/simposio/2025/trabalhos/ctd', educomp_2025_trabalhos.ctd);
 app.get('/simposio/2025/trabalhos/wtd', educomp_2025_trabalhos.wtd);
 app.get('/simposio/2025/trabalhos/minicursos', educomp_2025_trabalhos.minicursos);
+app.get('/simposio/2025/trabalhos/mesas-tematicas', educomp_2025_trabalhos.mesas);
+app.get('/simposio/2025/trabalhos/laboratorio-ideias', educomp_2025_trabalhos.laboratorio);
 // app.get('/simposio/2025/equipe/comissao-organizadora', educomp_2025_equipe.comissao_organizadora)
 // app.get('/simposio/2025/equipe/comite-programa', educomp_2025_equipe.comite_programa)
 // app.get('/simposio/2025/equipe/comite-diretivo', educomp_2025_equipe.comite_diretivo)

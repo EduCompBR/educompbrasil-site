@@ -90,3 +90,19 @@ exports.minicursos = function (req, res) {
     titulo: 'Minicursos',
   });
 };
+
+exports.mesas = function (req, res) {
+  res.render('simposio/2025/pt-BR/trabalhos/mesas-tematicas', {
+    layout: 'simposio/2025/pt-BR/layout',
+    trabalhos: true,
+    titulo: 'Mesas temáticas',
+  });
+};
+
+exports.laboratorio = function (req, res) {
+  res.render('simposio/2025/pt-BR/trabalhos/laboratorio-ideias', {
+    layout: 'simposio/2025/pt-BR/layout',
+    trabalhos: true,
+    titulo: 'Laboratório de ideias',
+  });
+};
