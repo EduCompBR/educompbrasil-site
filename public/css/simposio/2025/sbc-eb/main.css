@@ -142,65 +142,37 @@ nav{
   min-height: 600px;
 }
 
-#principais-trilhas .row>div {
-  padding-left: 0rem;
-}
-
-#principais-trilhas .title-2 {
-  width: 100%;
-  border: none;
-  font-size: 3rem;
-  color: white;
-}
-
-#principais-trilhas .card-wrapper-trilhas {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 6rem;
-}
-
-#principais-trilhas .card-wrapper-trilhas .card {
-  max-width: 20rem;
-  width: 100%;
+#principais-trilhas .card {
   background-color: transparent;
   border: none;
   display: flex;
   flex-direction: column;
-
-  justify-content: center;
-}
-
-#principais-trilhas .card-wrapper-trilhas .card .card-img-top {
-  width: 120%;
-}
-
-
-#principais-trilhas .card-wrapper-trilhas .card .card-body {
-  height: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0;
-}
-
-#principais-trilhas .card-wrapper-trilhas .card .card-title {
-  font-size: 25px;
-  font-weight: 600;
+  align-items: center;
   text-align: center;
-  color: rgb(255, 255, 255);
-  margin-left: 22px;
-  margin-top: 5rem;   
-  white-space: nowrap;
 }
 
-#principais-trilhas .card-wrapper-trilhas .card .card-text {
-  font-size: .8rem;
+#principais-trilhas .card-img-top {
+  width: 100%;
+  max-width: 120px; 
+  margin: 0 auto;
+}
+
+#principais-trilhas .card-title {
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 1rem;
+}
+
+#principais-trilhas .card-text {
+  font-size: 0.9rem;
   color: #ffffff;
-  text-align: center;
-  margin-left: 25px;
   border: 1px solid white;
-  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.titulobranco{
+  color: white;
 }
 
 .size{
