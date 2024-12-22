@@ -60,7 +60,7 @@ var educomp_2025_trabalhos = require('./routes/simposio/2025/educomp/pt-BR/traba
 // var educomp_2025_equipe = require('./routes/simposio/2025/pt-BR/equipe');
 
 //sbceb 2025
-var eb_2025_principal = require('./routes/simposio/2025/eb/pt-BR/principal');
+var eb_2025_principal = require('./routes/simposio/2025/sbc-eb/pt-BR/principal');
 
 //Giec
 
@@ -110,7 +110,7 @@ app.get('/simposio/2025/educomp/trabalhos/minicursos', educomp_2025_trabalhos.mi
 
 
 //sbc-eb 2025
-app.get('/simposio/2025/eb', eb_2025_principal.index);
+app.get('/simposio/2025/sbc-eb', eb_2025_principal.index);
 
 //EduComp 2024 - pt-BR
 app.get('/simposio/2024', educomp_2024_main.index)
