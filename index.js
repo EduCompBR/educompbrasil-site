@@ -111,6 +111,7 @@ app.get('/simposio/2025/educomp/trabalhos/minicursos', educomp_2025_trabalhos.mi
 
 //sbc-eb 2025
 app.get('/simposio/2025/sbc-eb', eb_2025_principal.index);
+app.get('/simposio/2025/sbc-eb/principal/chamadas', eb_2025_principal.chamadas,);
 
 //EduComp 2024 - pt-BR
 app.get('/simposio/2024', educomp_2024_main.index)
