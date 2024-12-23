@@ -1,5 +1,5 @@
 exports.index = function (req, res) {
-    res.render('simposio/2025/pt-BR/principal/sobre-educomp',
+    res.render('simposio/2025/educomp/pt-BR/principal/sobre-educomp',
         {
             layout: 'simposio/2025/pt-BR/layout',
             principal: true,
@@ -9,7 +9,7 @@ exports.index = function (req, res) {
 };
 
 exports.sobre_educomp = function (req, res) {
-    res.render('simposio/2025/pt-BR/principal/sobre-educomp',
+    res.render('simposio/2025/educomp/pt-BR/principal/sobre-educomp',
         {
             layout: 'simposio/2025/pt-BR/layout',
             principal: true,
@@ -19,7 +19,7 @@ exports.sobre_educomp = function (req, res) {
 };
 
 exports.sobre_sbc = function (req, res) {
-    res.render('simposio/2025/pt-BR/principal/sobre-sbc',
+    res.render('simposio/2025/educomp/pt-BR/principal/sobre-sbc',
         {
             layout: 'simposio/2025/pt-BR/layout',
             principal: true,
@@ -29,7 +29,7 @@ exports.sobre_sbc = function (req, res) {
 };
 
 exports.edicoes_anteriores = function (req, res) {
-    res.render('simposio/2025/pt-BR/principal/edicoes-anteriores',
+    res.render('simposio/2025/educomp/pt-BR/principal/edicoes-anteriores',
         {
             layout: 'simposio/2025/pt-BR/layout',
             principal: true,
