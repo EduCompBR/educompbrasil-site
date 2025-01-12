@@ -47,3 +47,13 @@ exports.inscricoes = function (req, res) {
         }
     )
 };
+
+exports.inscricoeseb = function (req, res) {
+    res.render('simposio/2025/educomp/pt-BR/principal/inscricoes-com-eb',
+        {
+            layout: 'simposio/2025/pt-BR/layout',
+            principal: true,
+            titulo: 'Inscrições',
+        }
+    )
+}
