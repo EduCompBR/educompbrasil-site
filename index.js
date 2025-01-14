@@ -57,10 +57,12 @@ var educomp_2024_certificados_educomp = require('./routes/simposio/2024/pt-BR/ce
 //Educomp 2025
 var educomp_2025_principal = require('./routes/simposio/2025/educomp/pt-BR/principal');
 var educomp_2025_trabalhos = require('./routes/simposio/2025/educomp/pt-BR/trabalhos');
+var educomp_2025_incricoes = require('./routes/simposio/2025/educomp/pt-BR/inscricoes');
 // var educomp_2025_equipe = require('./routes/simposio/2025/pt-BR/equipe');
 
 //sbceb 2025
 var eb_2025_principal = require('./routes/simposio/2025/sbc-eb/pt-BR/principal');
+var eb_2025_inscricoes = require('./routes/simposio/2025/sbc-eb/pt-BR/inscricoes');
 
 //Giec
 
@@ -104,8 +106,8 @@ app.get('/simposio/2025/educomp/trabalhos/wtd', educomp_2025_trabalhos.wtd);
 app.get('/simposio/2025/educomp/trabalhos/minicursos', educomp_2025_trabalhos.minicursos);
 app.get('/simposio/2025/educomp/trabalhos/mesas-tematicas', educomp_2025_trabalhos.mesas);
 app.get('/simposio/2025/educomp/trabalhos/laboratorio-ideias', educomp_2025_trabalhos.laboratorio);
-app.get('/simposio/2025/educomp/principal/inscricoes', educomp_2025_principal.inscricoes);
-app.get('/simposio/2025/educomp/principal/inscricoes-em-conjunto', educomp_2025_principal.inscricoeseb);
+app.get('/simposio/2025/educomp/inscricoes/inscricoes', educomp_2025_incricoes.inscricoes);
+app.get('/simposio/2025/educomp/inscricoes/inscricoes-em-conjunto', educomp_2025_incricoes.inscricoeseb);
 // app.get('/simposio/2025/equipe/comissao-organizadora', educomp_2025_equipe.comissao_organizadora)
 // app.get('/simposio/2025/equipe/comite-programa', educomp_2025_equipe.comite_programa)
 // app.get('/simposio/2025/equipe/comite-diretivo', educomp_2025_equipe.comite_diretivo)
@@ -116,7 +118,7 @@ app.get('/simposio/2025/educomp/principal/inscricoes-em-conjunto', educomp_2025_
 //sbc-eb 2025
 app.get('/simposio/2025/sbc-eb', eb_2025_principal.index);
 app.get('/simposio/2025/sbc-eb/principal/chamadas', eb_2025_principal.chamadas,);
-app.get('/simposio/2025/sbc-eb/principal/inscricoes', eb_2025_principal.inscricoes);
+app.get('/simposio/2025/sbc-eb/inscricoes/inscricoes', eb_2025_inscricoes.inscricoes);
 
 //EduComp 2024 - pt-BR
 app.get('/simposio/2024', educomp_2024_main.index)
