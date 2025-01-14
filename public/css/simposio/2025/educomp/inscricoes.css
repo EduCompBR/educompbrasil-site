@@ -37,11 +37,11 @@ table {
   
   
   tr:nth-child(4n+1), tr:nth-child(4n+2) {
-    background-color: #F7F9FB; 
+    background-color: #f1f1ff; 
   }
   
   tr:nth-child(4n+3), tr:nth-child(4n) {
-    background-color: #F0FFF0;
+    background-color: #f1f1ff;
   }
   
   td:last-child {
@@ -62,3 +62,16 @@ table {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
   }
+
+  .tabletitle{
+    text-align: center;
+    background-color: #b90009;
+   
+    color: #ffffff;
+}
+
+.tableheader{
+    background-color: #1A5D1A;
+    color: #ffffff;
+    text-align: center;
+}
