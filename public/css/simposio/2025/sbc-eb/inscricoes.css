@@ -21,15 +21,15 @@ thead {
 
 th {
     font-weight: bold;
-    border-bottom: 2px solid #A9D0F5; 
+    border-bottom: 2px solid #f0f5a9; 
 }
 
 td {
-    border-bottom: 1px solid #A9D0F5; 
+    border-bottom: 1px solid #f0f5a9; 
 }
 
 tr:nth-child(even) {
-    background-color: #F7F9FB; 
+    background-color: #f0f5a9; 
 }
 
 tr:hover {
@@ -38,11 +38,11 @@ tr:hover {
 
 
 tr:nth-child(4n+1), tr:nth-child(4n+2) {
-    background-color: #F7F9FB; 
+    background-color: #fffce8; 
 }
 
 tr:nth-child(4n+3), tr:nth-child(4n) {
-    background-color: #F0FFF0;
+    background-color: #fffce8;
 }
 
 td:last-child {
@@ -88,6 +88,18 @@ th:last-child, td:last-child {
     display: none;
     transition: max-height 0.3s ease-out;
     overflow: hidden;
+}
+
+.tabletitle{
+    text-align: center;
+    background-color: #1A5D1A;
+    color: #ffffff;
+}
+
+.tableheader{
+    background-color: #282E69;
+    color: #ffffff;
+    text-align: center;
 }
 
 #toggle-symbol-juiz{
