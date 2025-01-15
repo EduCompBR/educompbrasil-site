@@ -75,3 +75,37 @@ table {
     color: #ffffff;
     text-align: center;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; 
+  margin-top: 50px;
+}
+
+.botaoinscricao {
+ 
+  border: none;
+  background: none;
+  
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #ffffff; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #282E69; 
+  border-radius: 50px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  position: relative;
+  overflow: hidden;
+}
+
+.botaoinscricao:hover {
+  background-color: #2980b9; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-2px);
+}

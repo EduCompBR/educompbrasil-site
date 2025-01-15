@@ -64,6 +64,10 @@ var educomp_2025_incricoes = require('./routes/simposio/2025/educomp/pt-BR/inscr
 var eb_2025_principal = require('./routes/simposio/2025/sbc-eb/pt-BR/principal');
 var eb_2025_inscricoes = require('./routes/simposio/2025/sbc-eb/pt-BR/inscricoes');
 
+// sbc-eb + educomp
+
+var ebeducomp_2025_inscricoes = require('./routes/simposio/2025/pt-BR/inscricoes');
+
 //Giec
 
 var giec_quem_somos = require('./routes/giec/quem_somos');
@@ -119,6 +123,9 @@ app.get('/simposio/2025/educomp/inscricoes/inscricoes-em-conjunto', educomp_2025
 app.get('/simposio/2025/sbc-eb', eb_2025_principal.index);
 app.get('/simposio/2025/sbc-eb/principal/chamadas', eb_2025_principal.chamadas,);
 app.get('/simposio/2025/sbc-eb/inscricoes/inscricoes', eb_2025_inscricoes.inscricoes);
+
+//sbc-eb + educomp 2025
+app.get('/simposio/2025/inscricoes', ebeducomp_2025_inscricoes.inscricoes);
 
 //EduComp 2024 - pt-BR
 app.get('/simposio/2024', educomp_2024_main.index)
