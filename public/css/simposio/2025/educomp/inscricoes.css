@@ -109,3 +109,12 @@ table {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
   transform: translateY(-2px);
 }
+
+.content-container {
+  max-width: 1200px; /* Define a largura máxima do container */
+  margin: 20px auto; /* Centraliza o container horizontalmente e adiciona margem vertical */
+  padding: 20px; /* Adiciona padding interno */
+  background-color: #ffffff; /* Define a cor de fundo do container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+  border-radius: 10px; /* Adiciona cantos arredondados */
+}
