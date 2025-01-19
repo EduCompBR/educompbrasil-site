@@ -111,9 +111,10 @@ app.get('/simposio/2025/sbc-eb', sbc_eb_2025_principal.index);
 app.get('/simposio/2025/sbc-eb/principal/chamadas', sbc_eb_2025_principal.chamadas);
 
 app.get('/simposio/2025/inscricoes', inscricoes_2025.inscricoes_gerais);
-app.get('/simposio/2025/inscricoes/educomp/', inscricoes_2025.inscricoes_educomp);
-app.get('/simposio/2025/inscricoes/sbc-eb/', inscricoes_2025.inscricoes_sbc_eb);
-app.get('/simposio/2025/inscricoes/combo/', inscricoes_2025.inscricoes_combo);
+app.get('/simposio/2025/educomp/inscricoes/educomp/', inscricoes_2025.inscricoes_educomp);
+app.get('/simposio/2025/educomp/inscricoes/combo/', inscricoes_2025.inscricoes_educomp_combo);
+app.get('/simposio/2025/sbc-eb/inscricoes/sbc-eb/', inscricoes_2025.inscricoes_sbc_eb);
+app.get('/simposio/2025/sbc-eb/inscricoes/combo/', inscricoes_2025.inscricoes_sbc_eb_combo);
 
 //EduComp 2024 - pt-BR
 app.get('/simposio/2024', educomp_2024_main.index)
