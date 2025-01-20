@@ -91,3 +91,22 @@ body {
 .educomp .edc-font a:hover {
   background-color: transparent;
 }
+
+.caixalogos {
+  display: flex;
+  justify-content: space-around; /* Espaço ao redor das imagens */
+  align-items: center; /* Alinhamento vertical ao centro */
+  margin-top: 100px;
+}
+
+.imglogos {
+  max-width: 200px; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  transition: transform 0.3s ease; /* Animação suave para o efeito de botão */
+}
+
+.imglogos:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
