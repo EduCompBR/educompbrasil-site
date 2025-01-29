@@ -19,15 +19,6 @@
     }
 }
 
-/* Estilos para telas abaixo de 992px */
-/* @media (max-width: 991.98px) {
-    .educomp .landing-image {
-        content: url('/img/simposio/2025/landing_image_tall.png');
-        max-height: 50vh;
-        margin: 0 auto;
-    }
-}
-*/
 
 /* Estilos para telas abaixo de 768px */
 @media (max-width: 767.98px) {
@@ -52,9 +43,115 @@
     }
 }
 
+/* Sobre */
+
+#custom-about {
+    background-color: #282E68;
+    padding: 3rem 0;
+  }
+  
+  #custom-about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem; 
+  }
+  
+  #custom-about .text-left {
+    max-width: 50%;
+  }
+  
+  #custom-about .text-white {
+    color: white;
+  }
+  
+  #custom-about .text-left h2 {
+    text-align: left;
+    color: white; 
+    text-decoration: underline;
+    text-decoration-color: white; 
+    margin-bottom: 1rem;
+    text-decoration: none; 
+  }
+
+  .text-left .custom-title {
+    font-size: 2rem !important; 
+    font-weight: bold !important; 
+    color: #fff !important; 
+    margin-bottom: 1rem !important;
+    border-bottom: 2px solid #fff !important; 
+    display: inline-block !important; 
+    padding-bottom: 5px !important;
+  }
+  
+  
+  #custom-about .text-right img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  
+  
+  /* Trilhas */
+#principais-trilhas .title-2 {
+    width: fit-content;
+    border-bottom: 2px solid #3DC0F0;
+
+    font-size: 3.4rem;
+    color: #1A1C3A;
+    font-weight: bolder;
+    line-height: 6rem;
 
 
-/*
+}
+
+/* Estilo exclusivo para o título */
+.custom-heading {
+  font-size: 2rem !important; /* Tamanho ajustado */
+  font-weight: bold !important; /* Negrito */
+  text-align: center !important; /* Alinhamento central */
+  margin: 0 auto 3rem auto !important; /* Espaço inferior ajustado */
+  text-decoration: none !important; /* Remove sublinhado global */
+  border-bottom: none !important; /* Remove borda inferior */
+}
+
+/* Estilo para "Chamadas para" */
+.custom-heading .chamadas {
+  color: #282E68 !important; /* Azul escuro */
+}
+
+.custom-heading .trilhas {
+  color: #E00814 !important; /* Vermelho */
+}
+
+/* Espaçamento nos cards */
+.trilha-card {
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Espaçamento entre as linhas dos cards */
+.row.justify-content-center {
+  gap: 2rem; /* Espaçamento entre os cards */
+}
+
+#sobre1 p {
+    width: 50%;
+
+    font-size: 1.3rem;
+    line-height: 150%;
+    text-align: left;
+    font-family: 'Inter var', sans-serif;
+}
+
+#sobre1 .row>div {
+    padding-left: 3rem;
+}
+
 #principais-trilhas {
     background-image: url(".img-fluid");
     background-repeat: no-repeat;
@@ -129,6 +226,27 @@
 
 }
 
+/* Ajuste geral para os cards */
+
+
+/* Cores de fundo específicas para cada card */
+.card-1 .trilha-card {
+  background-color: #C7E3D1; /* Vermelho claro */
+}
+.card-2 .trilha-card {
+  background-color: #F3DCA9; /* Azul claro */
+}
+.card-3 .trilha-card {
+  background-color: #CEC0F8; /* Verde claro */
+}
+.card-4 .trilha-card {
+  background-color: #F5C0A4; /* Amarelo claro */
+}
+.card-5 .trilha-card {
+  background-color: #B8D1F1; /* Roxo claro */
+}
+
+
 .btn-card {
     color: #fff;
     width: 60%;
@@ -181,7 +299,7 @@
 
 
 @media screen and (min-width: 1026px) {
-    #sobre img {
+    #sobre1 img {
         display: none;
     }
 }
@@ -193,25 +311,26 @@
 
 @media screen and (min-width: 321px) and (max-width: 1025px) {
 
-    #sobre,
+    /**/
+    #sobre1,
     #quarta-edicao {
         background-image: none;
 
     }
 
-    #sobre {
+    #sobre1 {
         margin-bottom: 40%;
         padding: 10px 0;
     }
 
-    #sobre p,
+    #sobre1 p,
     #quarta-edicao p {
 
         width: 100%;
         text-align: justify;
     }
 
-    #sobre .row>div,
+    #sobre1 .row>div,
     #quarta-edicao .content {
         position: relative;
         width: 100% !important;
@@ -261,4 +380,269 @@
         background-image: none;
         padding: 0;
     }
-} */
+}
+/* trilhas */
+
+#trilhas {
+    background-color: var(--edc-gray);
+    padding: 3rem 0;
+  }
+  
+  .trilha-card {
+    position: relative; 
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem 1rem 1rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .trilha-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .icon-circle {
+    position: absolute; 
+    top: -30px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 60px;
+    height: 60px;
+    background-color: var(--edc-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .trilha-card p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1.5rem 0 0; 
+    color: var(--edc-blue);
+  }
+  
+  .trilha-card .description {
+    font-size: 0.875rem; 
+    color: #555; 
+    margin-top: 0.5rem; 
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  
+  /* datas importantes */
+  
+  #section-cards {
+    background-color: #B8D1F1;
+    padding: 3rem 0;
+  }
+  
+  .card-custom {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-custom .card-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .card-custom .card-title {
+    font-size: 1.5rem;
+    color: #282E69;
+    font-weight: 600;
+  }
+  
+  .card-custom .card-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  
+  .card-custom .card-footer {
+    background-color: #0B8236;
+    color: white;
+    padding: 0.75rem;
+    margin-top: auto;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  /* Edicao Especial */
+
+  #custom-edition {
+    padding: 3rem 0;
+    background-color: #f4f4f4; 
+  }
+  
+  #custom-edition .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  #custom-edition h2 {
+    color: #282E68; 
+    font-size: 2rem;
+    text-align: center; 
+    text-decoration: none; 
+    margin-bottom: 1rem;
+  }
+  
+  #custom-edition p {
+    color: #555; 
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  #custom-edition .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+  }
+  
+  #custom-edition .image-container img {
+    max-width: 45%; 
+    height: auto;
+  }
+  
+  
+  
+
+  /* SBC-EB */
+
+  #custom-section {
+    background-color: #2B7EC2;
+    padding: 4rem 0;
+    color: white;
+    text-align: center; 
+  }
+  
+  #custom-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center; 
+    color: white; 
+    text-decoration: none; 
+    border: none; 
+  }
+  
+  
+  #custom-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    text-decoration: none; 
+  }
+  
+  #custom-section .container-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center; 
+  }
+  
+  #custom-section .image {
+    flex: 1 1 40%;
+  }
+  
+  #custom-section .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  #custom-section .text {
+    flex: 1 1 50%;
+    text-align: left; 
+  }
+  
+  #custom-section .text h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  #custom-section .text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  
+  
+  /* Sobre o SBC */
+  #sobre-sbc {
+    background-color: #F5F5F5; 
+    padding: 4rem 0;
+  }
+  
+  #sobre-sbc .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  #sobre-sbc .text-content {
+    flex: 1 1 50%;
+  }
+  
+  #sobre-sbc h2 {
+    font-size: 2rem;
+    color: #282E69;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  #sobre-sbc p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+  }
+  
+  #sobre-sbc .images {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  #sobre-sbc .images img {
+    width: 100%;
+    height: auto;
+    margin: 0; 
+    border: none; 
+    box-shadow: none; 
+    border-radius: 0; 
+  }
+
+/* Carousel */
+
+.carousel-indicators li {
+  background-color: #000; 
+}
+
+.carousel-indicators .active {
+  background-color: #007bff; 
+}
+  
