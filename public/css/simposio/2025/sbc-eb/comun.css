@@ -1,0 +1,23 @@
+
+.container-common h1 {
+    padding: 3em 0.5em 0.25em 0.5em;
+    border-bottom: 2px solid var(--edc-green);
+    font-size: 3em;
+    color: var(--edc-blue);
+    font-weight: 900;
+    line-height: 1.5em;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .container-common h2 {
+    border-bottom: 2px solid var(--edc-red);
+    margin-bottom: 1em;
+    font-size: 2.5em;
+    color: var(--edc-blue);
+    font-weight: 450;
+    line-height: 1.3em;
+    text-align: left;
+  }
+  
+  
