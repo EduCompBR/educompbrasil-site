@@ -1,8 +1,11 @@
+.container-common {
+  color: var(--edc-blue);
+}
 
 .container-common h1 {
     padding: 3em 0.5em 0.25em 0.5em;
-    border-bottom: 2px solid var(--edc-green);
     font-size: 3em;
+    border-bottom: none;
     color: var(--edc-blue);
     font-weight: 900;
     line-height: 1.5em;
@@ -11,7 +14,7 @@
   }
   
   .container-common h2 {
-    border-bottom: 2px solid var(--edc-red);
+    border-bottom: none;
     margin-bottom: 1em;
     font-size: 2.5em;
     color: var(--edc-blue);
