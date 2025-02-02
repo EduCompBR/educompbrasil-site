@@ -60,7 +60,8 @@ var educomp_2025_trabalhos = require('./routes/simposio/2025/educomp/pt-BR/traba
 var educomp_2025_equipe = require('./routes/simposio/2025/educomp/pt-BR/equipe');
 var sbc_eb_2025_principal = require('./routes/simposio/2025/sbc-eb/pt-BR/principal');
 var inscricoes_2025 = require('./routes/simposio/2025/comum/pt-BR/inscricoes');
-var pagina_template_2025 = require('./routes/simposio/2025/comum/pt-BR/template') //para visualização do template
+var como_chegar_2025 = require('./routes/simposio/2025/comum/pt-BR/como-chegar-jf');
+
 
 //Giec
 var giec_quem_somos = require('./routes/giec/quem_somos');
@@ -117,8 +118,8 @@ app.get('/simposio/2025/educomp/inscricoes/combo/', inscricoes_2025.inscricoes_e
 app.get('/simposio/2025/sbc-eb/inscricoes/sbc-eb/', inscricoes_2025.inscricoes_sbc_eb);
 app.get('/simposio/2025/sbc-eb/inscricoes/combo/', inscricoes_2025.inscricoes_sbc_eb_combo);
 
-app.get('/simposio/2025/template/educomp', pagina_template_2025.template_visualizacao_educomp); //para visualização do template
-app.get('/simposio/2025/template/sbc', pagina_template_2025.template_visualizacao_sbc_eb); //para visualização do template
+app.get('/simposio/2025/como-chegar/educomp', como_chegar_2025.como_chegar_jf_educomp);
+app.get('/simposio/2025/como-chegar/sbc-eb', como_chegar_2025.como_chegar_jf_sbc);
 
 //EduComp 2024 - pt-BR
 app.get('/simposio/2024', educomp_2024_main.index)
