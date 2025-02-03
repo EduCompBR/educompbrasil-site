@@ -38,3 +38,31 @@
     margin-top: 1em;
     display: inline-block;
 }
+
+.footer-btn {
+    width: 200px; 
+    padding: 10px 20px;
+    border-radius: 11px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; 
+    border: 2px solid #0B8236; 
+    text-align: center;
+  }
+
+  .footer-btn:first-child {
+    margin-top: 40px; 
+  }
+  
+  .primary-btn {
+    background-color: #0B8236;
+    color: white;
+  }
+
+  .secondary-btn {
+    background-color: transparent;
+    color: white;
+  }
+  

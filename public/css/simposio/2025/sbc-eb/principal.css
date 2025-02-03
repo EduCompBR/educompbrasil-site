@@ -46,3 +46,136 @@
     margin: 20px ;
    
 }
+
+/* Submeta seu Trabalho */
+.custom-section {
+    padding: 50px 0;
+    background-color: #F8F9FA;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #262D76;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+  }
+  
+  .custom-card {
+    width: 300px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8.27px 49.63px 0px rgba(38, 45, 118, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 220px; /* Garante altura consistente */
+    justify-content: flex-start; /* Mantém o título no topo */
+    padding-top: 20px;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .custom-card h3 {
+    color: #262D76;
+    font-size: 1.5rem;
+    min-height: 70px; /* Mantém espaço para títulos de duas linhas */
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: center;
+    text-align: center;
+    width: 100%; /* Garante alinhamento correto */
+    padding: 0 10px; /* Evita quebra de linha inesperada */
+  }
+  
+  .custom-card p {
+    color: #666;
+    flex-grow: 1; /* Preenche o espaço disponível */
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Locais do Evento */
+
+
+  
+  
+  .background-section {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%230C497E" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,218.7C384,245,480,267,576,261.3C672,256,768,224,864,192C960,160,1056,128,1152,96C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z%22%3E%3C/path%3E%3C/svg%3E');
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+    color: #fff;
+    
+  }
+  
+  .background-section::after {
+    content: '';
+    display: block;
+    height: 300px; /* Altura ajustada para o fundo abaixo */
+    background-color: #0C497E;
+  }
+  
+  
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 40px; /* Espaço entre imagem e texto */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente para legibilidade */
+    border-radius: 10px;
+  }
+  
+  .content-image {
+    width: 40%;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  
+  .content-text {
+    width: 60%;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .content-image, .content-text {
+      width: 100%;
+    }
+  }
+  
+  

@@ -184,7 +184,7 @@
     {{!-- Datas Importantes --}}
     <section id="section-cards">
       <div class="container text-center">
-        <h2 class="mb-5">Datas importantes</h2>
+        <h2 class="mb-5">DATAS IMPORTANTES</h2>
         <div class="row justify-content-center">
           <!-- Card 1 -->
           <div class="col-md-4 col-lg-2 mb-4">
@@ -251,21 +251,29 @@
     </section>
 
     {{!-- Edicao Presencial --}}
-    <section id="custom-edition">
-      <div class="container text-center">
-        <h2 class="mb-3">1ª Edição Presencial</h2>
-        <p>TOTC is a platform that allows educators to create online classes whereby they can store the course materials
-          online; manage assignments, quizzes and exams; monitor due dates; grade results and provide students with
-          feedback all in one place.</p>
+<section id="custom-edition">
+  <div class="container text-center">
+    <h2 class="mb-3">1ª Edição Presencial</h2>
+    <p>
+      TOTC is a platform that allows educators to create online classes whereby they can store the course materials
+      online; manage assignments, quizzes and exams; monitor due dates; grade results and provide students with
+      feedback all in one place.
+    </p>
 
-        <!-- Imagens lado a lado -->
-        <div class="image-container d-flex justify-content-center gap-3">
-          <img src="/img/simposio/2025/edicao_1.png" class="img-fluid" alt="Imagem 1">
-          <img src="/img/simposio/2025/edicao_2.png" class="img-fluid" alt="Imagem 2">
-        </div>
-      </div>
-    </section>
-
+    <!-- Imagens lado a lado -->
+    <div class="image-container">
+      <img src="/img/simposio/2025/edicao_1.png" class="img-fluid" 
+           alt="Imagem 1" 
+           onclick="window.location.href='/';"
+           style="cursor: pointer;">
+      
+      <img src="/img/simposio/2025/edicao_2.png" class="img-fluid" 
+           alt="Imagem 2" 
+           onclick="window.location.href='/';"
+           style="cursor: pointer;">
+    </div>
+  </div>
+</section>
 
 
 
@@ -337,10 +345,19 @@
           </div>
 
           <!-- Imagens -->
-          <div class="images">
+          {{!-- <div class="images">
             <img src="/img/simposio/2025/sobreSBC_1.png" alt="Imagem ilustrativa 1">
             <img src="/img/simposio/2025/sobreSBC_2.png" alt="Imagem ilustrativa 2">
-          </div>
+          </div> --}}
+            <!-- Coluna da Imagem -->
+      <div class="col-12 col-md-5 text-center">
+        <a class="imagelink" href="https://centraldesistemas.sbc.org.br/mom">
+          <img class="img-fluid editaimg" src="/img/simposio/2025/eb/cardcolorido.png" alt="Imagem icones">
+        </a>
+        <a class="imagelink" href="https://www.sbc.org.br/comissoes-especiasis/">
+          <img class="img-fluid editaimg2" src="/img/simposio/2025/eb/cardazul.png" alt="Imagem icones">
+        </a>     
+      </div>
         </div>
       </div>
     </section>
