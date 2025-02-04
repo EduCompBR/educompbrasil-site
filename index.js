@@ -61,6 +61,7 @@ var educomp_2025_equipe = require('./routes/simposio/2025/educomp/pt-BR/equipe')
 var sbc_eb_2025_principal = require('./routes/simposio/2025/sbc-eb/pt-BR/principal');
 var inscricoes_2025 = require('./routes/simposio/2025/comum/pt-BR/inscricoes');
 var como_chegar_2025 = require('./routes/simposio/2025/comum/pt-BR/como-chegar-jf');
+var onde_hospedar_2025 = require('./routes/simposio/2025/comum/pt-BR/onde-hospedar');
 
 
 //Giec
@@ -120,6 +121,9 @@ app.get('/simposio/2025/sbc-eb/inscricoes/combo/', inscricoes_2025.inscricoes_sb
 
 app.get('/simposio/2025/como-chegar/educomp', como_chegar_2025.como_chegar_jf_educomp);
 app.get('/simposio/2025/como-chegar/sbc-eb', como_chegar_2025.como_chegar_jf_sbc);
+
+app.get('/simposio/2025/onde-hospedar/educomp', onde_hospedar_2025.onde_hospedar_educomp);
+app.get('/simposio/2025/onde-hospedar/sbc-eb', onde_hospedar_2025.onde_hospedar_sbceb);
 
 //EduComp 2024 - pt-BR
 app.get('/simposio/2024', educomp_2024_main.index)
