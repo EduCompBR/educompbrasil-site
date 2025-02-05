@@ -1,12 +1,8 @@
 const express = require('express')
 const app = express()
-const handlebars = require('express-handlebars')
-// const methodOverride = require('method-override')
+const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser')
-const emailServer = require('./models/emailServer')
-// const PDFDocument = require('pdfkit')
-// const { GoogleSpreadsheet } = require('google-spreadsheet')
-//const creds = require('./educomp-novo-certificado.json')
+const emailServer = require('./models/emailServer');
 const fs = require('fs')
 
 //Routes
@@ -59,7 +55,7 @@ var educomp_2025_principal = require('./routes/simposio/2025/educomp/pt-BR/princ
 var educomp_2025_trabalhos = require('./routes/simposio/2025/educomp/pt-BR/trabalhos');
 var educomp_2025_equipe = require('./routes/simposio/2025/educomp/pt-BR/equipe');
 var sbc_eb_2025_principal = require('./routes/simposio/2025/sbc-eb/pt-BR/principal');
-var inscricoes_2025 = require('./routes/simposio/2025/inscricoes/pt-BR/inscricoes');
+var inscricoes_2025 = require('./routes/simposio/2025/comum/pt-BR/inscricoes');
 
 //Giec
 var giec_quem_somos = require('./routes/giec/quem_somos');
