@@ -1,12 +1,8 @@
 const express = require('express')
 const app = express()
-const handlebars = require('express-handlebars')
-// const methodOverride = require('method-override')
+const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser')
-const emailServer = require('./models/emailServer')
-// const PDFDocument = require('pdfkit')
-// const { GoogleSpreadsheet } = require('google-spreadsheet')
-//const creds = require('./educomp-novo-certificado.json')
+const emailServer = require('./models/emailServer');
 const fs = require('fs')
 
 //Routes
