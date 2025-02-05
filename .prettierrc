@@ -2,20 +2,23 @@
     "printWidth": 120,
     "tabWidth": 2,
     "useTabs": false,
-    "semi": true,
+    "semi": false,
     "singleQuote": true,
-    "trailingComma": "es5",
+    "quoteProps": "as-needed",
+    "trailingComma": "all",
     "bracketSpacing": true,
     "bracketSameLine": true,
     "arrowParens": "always",
     "proseWrap": "preserve",
-    "htmlWhitespaceSensitivity": "ignore",
+    "htmlWhitespaceSensitivity": "css",
     "endOfLine": "lf",
+    "singleAttributePerLine": false,
     "overrides": [
         {
-            "files": "*.hbs",
+            "files": "*.handlebars",
             "options": {
                 "parser": "html",
+                "proseWrap": "always",
                 "singleQuote": false
             }
         }
