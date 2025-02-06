@@ -62,7 +62,7 @@
 }
 
 .educomp-header .navbar .btn-inscricoes {
-    background-color: var(--edc-green);
+    background-color: var(--edc-blue);
     color: white;
     padding: 12px 24px;
     font-size: 16px;
@@ -73,7 +73,7 @@
 }
 
 .educomp-header .navbar .btn-inscricoes:hover {
-    background-color: var(--edc-blue);
+    background-color: var(--edc-green);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
     color: white;
 }

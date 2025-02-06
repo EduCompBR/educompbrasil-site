@@ -30,25 +30,17 @@
         <ul class="navbar-nav">
 
           <li class="nav-item dropdown">
-            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
-                  {{~#if principal}}
-                    active
-                  {{/if}}
-              ">HOME</a>
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if home}} active {{~/if}}">HOME</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="/simposio/2025/educomp/principal/sobre-educomp">Sobre o EduComp</a>
-              <a class="dropdown-item" href="/simposio/2025/educomp/principal/sobre-sbc">Sobre a SBC</a>
+              <a class="dropdown-item" href="#">Sobre o evento</a>
+              <a class="dropdown-item" href="#">Sobre a SBC</a>
               <!-- <hr class="dropdown-divider">
               <a class="dropdown-item" href="/simposio/2025/educomp/principal/edicoes-anteriores">Edições anteriores</a> -->
             </div>
           </li>
 
           <li class="nav-item dropdown">
-            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
-                  {{~#if trabalhos}}
-                    active
-                  {{/if}}
-              ">CHAMADAS</a>
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if chamadas}} active {{~/if}}">CHAMADAS</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="/simposio/2025/educomp/trabalhos/topicos-de-interesse">Tópicos de interesse</a>
               <hr class="dropdown-divider">
@@ -56,20 +48,16 @@
               <a class="dropdown-item" href="/simposio/2025/educomp/trabalhos/ctd">CTD-EduComp</a>
               <a class="dropdown-item" href="/simposio/2025/educomp/trabalhos/wtd">WTD-EduComp</a>
               <a class="dropdown-item" href="/simposio/2025/educomp/trabalhos/laboratorio-ideias">Laboratório de ideias</a>
-              <hr class="dropdown-divider">
               <a class="dropdown-item" href="/simposio/2025/educomp/trabalhos/minicursos">Minicursos</a>
               <a class="dropdown-item" href="/simposio/2025/educomp/trabalhos/mesas-tematicas">Mesas temáticas</a>
             </div>
           </li>
 
           <li class="nav-item dropdown">
-            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
-                  {{~#if local}}
-                    active
-                  {{/if}}
-              ">LOCAL</a>
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if local}} active {{~/if}}">LOCAL</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Conheça a UFJF</a>
+              <a class="dropdown-item" href="#">Local do evento</a>
+              <hr class="dropdown-divider">
               <a class="dropdown-item" href="#">Conheça Juiz de Fora</a>
               <a class="dropdown-item" href="#">Como chegar</a>
               <a class="dropdown-item" href="#">Onde se hospedar</a>
@@ -77,11 +65,7 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
-                  {{~#if equipe}}
-                    active
-                  {{/if}}
-              ">EQUIPES</a>
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if equipes}} active {{~/if}}">EQUIPES</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="/simposio/2025/educomp/equipe/comite-diretivo">Comitê diretivo</a>
               <a class="dropdown-item" href="/simposio/2025/educomp/equipe/comissao-especial">Comissão especial</a>
@@ -91,11 +75,7 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
-                  {{~#if anteriores}}
-                    active
-                  {{/if}}
-              ">EDIÇÕES</a>
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if edicoes}} active {{~/if}} ">EDIÇÕES</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="/simposio/2024/" target="_blank">EduComp 2024</a>
               <a class="dropdown-item" href="/simposio/2023/" target="_blank">EduComp 2023</a>
