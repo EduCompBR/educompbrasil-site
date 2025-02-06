@@ -7,7 +7,7 @@
   {{> simposio/2025/sbc-eb/pt-BR/head}}
   {{~/if}}
 
-  <body class="educomp">
+  <body>
  
     {{~#if isEducomp}}
     {{> simposio/2025/educomp/pt-BR/header}}
@@ -15,7 +15,7 @@
     {{> simposio/2025/sbc-eb/pt-BR/header}}
     {{~/if}}
 
-    <main class="content">
+    <main class="content {{~#if isEducomp}} educomp {{~else}} sbc-eb {{~/if}}">
     
       {{{ body }}}
     
