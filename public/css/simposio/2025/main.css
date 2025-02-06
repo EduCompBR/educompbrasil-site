@@ -18,17 +18,23 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;  
-  padding-top: 150px;
+}
+
+.navbar {
+  height: 100px;
 }
 
 .content {
   flex: 1;
-
   font-size: 1.1rem;
   line-height: 150%;
   text-align: left;
   font-family: 'Inter var', sans-serif;
   font-weight: 300;
+}
+
+.content .first-section {
+  padding-top: 100px;
 }
 
 .content a:hover {

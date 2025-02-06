@@ -2,7 +2,6 @@
     max-width: 100%;
     background-color: white !important;
     box-shadow: 0 2px 4px var(--gray);
-    height: 100px;
     justify-content: space-evenly;
 }
 
