@@ -1,55 +1,56 @@
-.eb-footer {
+.sbc-eb-footer {
     max-width: 100%;
-    background-color: #06487E;
+    background-color: var(--eb-green);
     color: white;
-    padding-top: 1em;
-    padding-bottom: 2em;
-}
-
-.eb-footer h5 {
     padding-top: 1.5em;
-    padding-bottom: 0.5em;
-    font-size: 1.4em;
-    font-weight: 4  00;
+    padding-bottom: 1.5em;
+    border-top: 0.5em solid var(--eb-yellow); 
 }
 
-.eb-footer .icon {
-    width: 25px;
-    height: 25px;
-    font-size: 25px;
-    display: inline-block;
-    line-height: 1;
-    vertical-align: middle;
-    text-align: center;
+.sbc-eb-footer .list-icons {
+  padding-left: 15px;
 }
 
-
-
-.eb-footer a#email {
-    color: inherit;
-    font-size: 1.1em;
-    text-decoration: underline;
-    text-underline-offset: 2.5px;
-    margin-top: 1em;
-    display: inline-block;
+.sbc-eb-footer .list-icons i {
+  font-size: 1.4em;
+  color: var(--eb-yellow);
+  width: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h5 {
-    font-weight: 600;
+.sbc-eb-footer .list-icons a {
+  font-size: 1.2em;
 }
 
-span{
-    color: white;
+.sbc-eb-footer .btn {
+  width: 200px; 
+  padding: 10px 10px;
+  border-radius: 11px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto; 
+  border: 2px solid var(--eb-yellow); 
+  text-align: center;
+}
+  
+.sbc-eb-footer .btn-incricoes {
+  background-color: var(--eb-yellow);
+  color: white;
+}
+
+.sbc-eb-footer .btn-programacao {
+  background-color: transparent;
+  color: white;
+}
+
+.sbc-eb-footer #logo-sbc-eb {
+    height: 60px;
     margin-top: 20px;
-    margin-left: 5px;
+    margin-bottom: 20px;
 }
-
-.align-vertical {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
- .eb-footer  img{
-    margin-top: 20px;
-  }
