@@ -1,24 +1,10 @@
 :root {
-  --edc-blue: #282E69;
-  --edc-green: rgb(37, 136, 115);
-  --edc-red: #E00914;
-  --edc-gray: #EEEEEE;
-}
-
-
-
-html {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100%;
-  display: flex;
-  overflow-x: hidden;
+  --eb-yellow: #F2C72C;
+  --eb-green: #258873;
+  --eb-blue-dark: #004BB3;
+  --eb-blue-medium: #2B7EC2;
+  --eb-blue-light: #E7F1FF;
+  --eb-gray: #B3B4B8;
 }
 
 nav{
@@ -41,10 +27,6 @@ nav{
   color: var(--edc-green);
 }
 
-.eb .content {
-  flex: 1;
-}
-
 .eb .imagelink {
   background-color: transparent;
 }
@@ -62,11 +44,11 @@ nav{
   padding-bottom: 2em;
 }
 
-.eb h1 {
+.sbc-eb h1 {
   padding: 3em 0.5em 0.25em 0.5em;
   border-bottom: 2px solid var(--edc-green);
   font-size: 3em;
-  color: var(--edc-blue);
+  color: var(--eb-green);
   font-weight: 900;
   line-height: 1.5em;
   text-align: center;

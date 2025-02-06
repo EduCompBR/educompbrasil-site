@@ -1,41 +1,20 @@
 :root {
-  --edc-blue: #282E69;
-  --edc-green: #098136;
-  --edc-red: #E00914;
+  --edc-blue: #282E68;
+  --edc-green: #0B8236;
+  --edc-red: #E00814;
   --edc-gray: #EEEEEE;
 }
 
-html {
-  height: 100%;
-  margin: 0;
+.educomp strong {
+  color: var(--edc-blue);
+  font-weight: 600;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100%;
-  display: flex;
-  overflow-x: hidden;
-}
-
-.educomp {
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;  
-}
-
-.educomp .content {
-  flex: 1;
-}
-
-.educomp .imagelink {
-  background-color: transparent;
-}
-
-.educomp .imagelink:hover {
-  background-color: transparent;
+.educomp a {
+  color: var(--edc-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 400;
 }
 
 .educomp .bg-gray {
@@ -43,14 +22,14 @@ body {
 }
 
 .educomp section {
-  padding-top: 3em;
-  padding-bottom: 2em;
+  padding-bottom: 2.5em;
 }
 
 .educomp h1 {
-  padding: 3em 0.5em 0.25em 0.5em;
+  padding: 0.25em 0.5em 0em 0.5em;
   border-bottom: 2px solid var(--edc-green);
-  font-size: 3em;
+  margin-bottom: 0.5em;
+  font-size: 2.5em;
   color: var(--edc-blue);
   font-weight: 900;
   line-height: 1.5em;
@@ -61,48 +40,24 @@ body {
 .educomp h2 {
   border-bottom: 2px solid var(--edc-red);
   margin-bottom: 1em;
-  font-size: 2.5em;
+  font-size: 2em;
   color: var(--edc-blue);
   font-weight: 450;
   line-height: 1.3em;
   text-align: left;
 }
 
-.educomp .edc-font {
-  font-size: 1.1rem;
-  line-height: 150%;
-  text-align: left;
-  font-family: 'Inter var', sans-serif;
-  font-weight: 300;
-}
-
-.educomp .edc-font strong {
-  color: var(--edc-blue);
-  font-weight: 600;
-}
-
-.educomp .edc-font a {
-  color: var(--edc-blue);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font-weight: 400;
-}
-
-.educomp .edc-font a:hover {
-  background-color: transparent;
-}
-
 .caixalogos {
   display: flex;
-  justify-content: space-around; /* Espaço ao redor das imagens */
-  align-items: center; /* Alinhamento vertical ao centro */
+  justify-content: space-around;
+  align-items: center;
   margin-top: 100px;
 }
 
 .imglogos {
-  max-width: 200px; /* Ajuste o tamanho conforme necessário */
-  height: auto; /* Mantém a proporção da imagem */
-  transition: transform 0.3s ease; /* Animação suave para o efeito de botão */
+  max-width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
 .imglogos:hover {

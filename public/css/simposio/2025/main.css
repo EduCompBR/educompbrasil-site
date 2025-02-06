@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  
+  padding-top: 150px;
+}
+
+.content {
+  flex: 1;
+
+  font-size: 1.1rem;
+  line-height: 150%;
+  text-align: left;
+  font-family: 'Inter var', sans-serif;
+  font-weight: 300;
+}
+
+.content a:hover {
+  background-color: transparent;
+}
+
+.content .imagelink {
+  background-color: transparent;
+}
+
+.content .imagelink:hover {
+  background-color: transparent;
+}
