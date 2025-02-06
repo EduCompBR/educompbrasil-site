@@ -1,123 +1,102 @@
-/* .educomp-header {
-    padding-top: 5em;
-} */
-
-.eb-header .navbar {
+.sbc-eb-header .navbar {
     max-width: 100%;
-}
-
-.eb-header .navbar-transparent {
-    background-color: white !important;
-    transition: background-color 0.5s ease;
-    border-bottom: none;
-}
-
-.eb-header .navbar-scrolled {
     background-color: white !important;
     box-shadow: 0 2px 4px var(--gray);
-    transition: background-color 0.5s ease;
+    height: 100px;
+    justify-content: space-evenly;
 }
 
-.eb-header .navbar .button-drop {
+.sbc-eb-header .navbar #logo-sbc {
+    height: 75px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sbc-eb-header .navbar #logo-sbc-eb {
+    height: 38px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sbc-eb-header .navbar .button-drop {
     color: var(--edc-blue);
     padding: 1em;
 }
 
-.eb-header .navbar .button-drop i {
+.sbc-eb-header .navbar .button-drop i {
     font-size: 1.5em;
 }
 
-.eb-header .navbar .nav-item>a {
-    color: var(--edc-blue);
+.sbc-eb-header .navbar .nav-item>a {
+    color: var(--eb-green);
     font-weight: bold;
-    transition: color 0.3s ease, font-size 0.3s ease; /* Adiciona transição para cor e tamanho da fonte */
 }
 
-.eb-header .navbar .nav-item a:hover {
-    color: black !important; /* Cor mais escura no hover */
-    background-color: white !important; /* Fundo branco no hover */
-    transition: color 0.3s ease, font-size 0.3s ease; /* Adiciona transição para cor e tamanho da fonte */
+.sbc-eb-header .navbar .nav-item a:hover {
+    background-color: var(--eb-green) !important;
+    color: white !important;
+    transition: background-color 0.3s ease;
 }
 
-.eb-header .navbar-transparent .nav-item .active {
-    color: var(--edc-green);
-    background-color: transparent !important;
-    transition: background-color 0.5s ease;
-    transition: border-bottom 0.5s ease;
-    border-bottom: 0.5em solid transparent; 
+.sbc-eb-header .navbar .nav-item .active {
+    /* color: var(--eb-blue-medium); */
+    color: var(--eb-yellow);
+    background-color: var(--menu-gray);
+    /* border-bottom: 0.5em solid var(--eb-blue-medium);  */
+    border-bottom: 0.5em solid var(--eb-yellow); 
 }
 
-.eb-header .navbar-scrolled .nav-item .active {
-    color: var(--edc-green);
-    background-color: var(--edc-gray);
-    transition: background-color 0.5s ease;
-    transition: border-bottom 0.5s ease;
-    border-bottom: 0.5em solid var(--edc-green); 
+.sbc-eb-header .navbar .navbar-collapse {
+    flex-grow: unset;
 }
 
-.eb-header .navbar-scrolled .nav-item .active:hover {
-    color: var(--edc-blue);
+.sbc-eb-header .navbar-scrolled .nav-item .active:hover {
+    background-color: var(--eb-yellow);
 }
 
-.navbar .navbar-brand {
-    margin-right: 0; /* Sem margem direita */
-    margin-left: 1em; /* Sem margem esquerda */
-    padding-bottom: 20px; /* Remover espaçamento interno */
-}
-
-/* Ajustar o logo */
-#logoeb {
-    height: 3.5em; /* Tamanho da imagem */
-    max-height: 100%; /* Garantir que não extrapole */
-    padding: 0; /* Sem espaçamento */
-    margin: 0; /* Sem margem */
-    display: block; /* Garantir comportamento previsível */
-}
-
-#logosbc {
-    height: 3.5em; /* Tamanho da imagem */
-    max-height: 100%; /* Garantir que não extrapole */
-    padding: 0; /* Sem espaçamento */
-    margin: 0; /* Sem margem */
-    display: block; /* Garantir comportamento previsível */ 
-}
-
-.inscricoes-container {
+.sbc-eb-header .navbar .inscricoes-container {
     display: flex;
-    justify-content: center; /* Centralizar horizontalmente */
-    align-items: center; /* Centralizar verticalmente */
-    margin-top: 2em; /* Espaçamento superior */
-    margin-bottom: 2em; /* Espaçamento inferior */
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
 }
 
-/* Ajustar o botão de inscrições */
-.btn-inscricoes {
-    background-color: var(--edc-green); /* Usar cor do tema se possível */
-    color: white; /* Texto branco */
-    padding: 12px 24px; /* Tamanho maior para botão */
-    font-size: 16px; /* Tamanho do texto maior */
-    border-radius: 50px; /* Bordas mais arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    text-decoration: none; /* Remover sublinhado */
+.sbc-eb-header .navbar .btn-inscricoes {
+    background-color: var(--eb-green);
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 50px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.btn-inscricoes:hover {
-    background-color: #218838; /* Tom mais escuro no hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumentar a sombra no hover */
+.sbc-eb-header .navbar .btn-inscricoes:hover {
+    /* background-color: var(--eb-blue-medium); */
+    background-color: var(--eb-yellow);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
     color: white;
 }
 
-/* Estilos para telas abaixo de 992px */
+/* Estilos para telas abaixo de 992px, quando o menu está fechado */
 @media (max-width: 991.98px) {
-    .eb-header .navbar .nav-link {
-        padding: 2em 1em !important;
+    .sbc-eb-header .navbar .nav-link {
+        padding: 1em 1em !important;
+        background-color: white;
+    }
+    .sbc-eb-header .inscricoes-container {
+        background-color: white;
     }
 }
 
-/* Estilos para telas acima de 992px */
+/* Estilos para telas acima de 992px, quando o menu está aberto */
 @media (min-width: 992px) {
-    .eb-header .navbar .nav-link {
-        padding: 4em 1em !important;
+    .sbc-eb-header .navbar .nav-link {
+        padding: 2.2em 1em !important;
     }
-}
+} 
+
+

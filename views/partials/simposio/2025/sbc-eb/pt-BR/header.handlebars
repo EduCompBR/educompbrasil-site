@@ -1,37 +1,90 @@
-<header class="eb-header">
-  <nav class="navbar navbar-expand-lg navbar-transparent fixed-top p-0">
-    
-    <a class="navbar-brand js-scroll-trigger imagelink" href="/simposio/2025/educomp"></a>
-          <img id="logoeb" src="/img/simposio/2025/eb/logos/eblogo22.png" />
-          <img id="logosbc" src="/img/simposio/2025/eb/logos/logosbc.png" />
-    </a>
-    
+<header class="sbc-eb-header">
+  <nav class="navbar navbar-expand-lg justify-content-center fixed-top">
     <div class="container">
-    
-      <button class="navbar-toggler button-drop" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-bars"></i>
+
+      <!-- Logos -->
+      <div id="logos-container">
+        <a class="navbar-brand js-scroll-trigger imagelink" href="https://www.sbc.org.br">
+          <img id="logo-sbc" src="/img/simposio/2025/logos/sbc-colorido.png" alt="Logo SBC"/>
+        </a>
+        <a class="navbar-brand js-scroll-trigger imagelink" href="/simposio/2025/sbc-eb">
+          <img id="logo-sbc-eb" src="/img/simposio/2025/eb/logos/eblogo22.png" />
+        </a>
+      </div>
+
+      <!-- Toggle button -->
+      <button 
+        class="navbar-toggler button-drop" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbarResponsive" 
+        aria-controls="navbarResponsive" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse m0" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
 
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger {{~#if faq}} active {{/if}}" href="/simposio/2025/sbc-eb">HOME</a>
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
+                  {{~#if home}}
+                    active
+                  {{/if}}
+              ">HOME</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Sobre o evento</a>
+              <a class="dropdown-item" href="#">Sobre a SBC</a>
+              <!-- <hr class="dropdown-divider">
+              <a class="dropdown-item" href="/simposio/2025/educomp/principal/edicoes-anteriores">Edições anteriores</a> -->
+            </div>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger {{~#if faq}} active {{/if}}" href="/simposio/2025/sbc-eb/principal/chamadas">CHAMADAS</a>
+            <a class="nav-link js-scroll-trigger {{~#if chamadas}} active {{/if}}" href="/simposio/2025/sbc-eb/principal/chamadas">CHAMADAS</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger {{~#if faq}} active {{/if}}" href="/simposio/2025/educomp">EDUCOMP 2025</a>
+           <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if local}} active {{~/if}}">LOCAIS</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Locais do evento</a>
+              <hr class="dropdown-divider">
+              <a class="dropdown-item" href="#">Conheça Juiz de Fora</a>
+              <a class="dropdown-item" href="#">Como chegar</a>
+              <a class="dropdown-item" href="#">Onde se hospedar</a>
+            </div>
           </li>
+
+          <!-- <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if equipes}} active {{~/if}}">EQUIPES</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2025/sbc-eb/equipe/">Comitê diretivo</a>
+              <a class="dropdown-item" href="/simposio/2025/sbc-eb/equipe/">Comissão especial</a>
+              <a class="dropdown-item" href="/simposio/2025/sbc-eb/equipe/">Comissão organizadora</a>
+              <a class="dropdown-item" href="/simposio/2025/sbc-eb/equipe/">Comitê de programa</a>
+            </div>
+          </li> -->
+
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if edicoes}} active {{~/if}} ">EDIÇÕES</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="https://www2.sbc.org.br/sbceb2024/" target="_blank">SBC-EB 2024</a>
+            </div>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="/simposio/2025/sbc-eb">SBC-EB</a>
+          </li> -->
 
           <div class="inscricoes-container">
-            <a href="/simposio/2025/inscricoes" class="btn btn-inscricoes">Inscrições</a>
+            <a href="/simposio/2025/inscricoes" class="btn btn-inscricoes">INSCRIÇÕES</a>
           </div>
-         
         </ul>
       </div>
+
     </div>
   </nav>
 </header>

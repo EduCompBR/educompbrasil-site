@@ -2,7 +2,7 @@
   --edc-blue: #282E68;
   --edc-green: #0B8236;
   --edc-red: #E00814;
-  --edc-gray: #EEEEEE;
+  --edc-gray: #F2F2F2;
 }
 
 .educomp strong {
@@ -15,10 +15,6 @@
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 400;
-}
-
-.educomp .bg-gray {
-  background-color: var(--edc-gray);
 }
 
 .educomp section {
