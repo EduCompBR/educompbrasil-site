@@ -1,21 +1,21 @@
-/* .educomp-header {
-    padding-top: 5em;
-} */
-
 .educomp-header .navbar {
     max-width: 100%;
-}
-
-.educomp-header .navbar-transparent {
-    background-color: transparent !important;
-    transition: background-color 0.5s ease;
-    border-bottom: none;
-}
-
-.educomp-header .navbar-scrolled {
     background-color: white !important;
     box-shadow: 0 2px 4px var(--gray);
-    transition: background-color 0.5s ease;
+    height: 100px;
+    justify-content: space-evenly;
+}
+
+.educomp-header .navbar #logo-sbc {
+    height: 75px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.educomp-header .navbar #logo-educomp {
+    height: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .educomp-header .navbar .button-drop {
@@ -25,11 +25,6 @@
 
 .educomp-header .navbar .button-drop i {
     font-size: 1.5em;
-}
-
-.educomp-header .navbar img {
-    height: 5em;
-    padding: 1em;
 }
 
 .educomp-header .navbar .nav-item>a {
@@ -43,36 +38,60 @@
     transition: background-color 0.3s ease;
 }
 
-.educomp-header .navbar-transparent .nav-item .active {
-    color: var(--edc-green);
-    background-color: transparent !important;
-    transition: background-color 0.5s ease;
-    transition: border-bottom 0.5s ease;
-    border-bottom: 0.5em solid transparent; 
-}
-
-.educomp-header .navbar-scrolled .nav-item .active {
+.educomp-header .navbar .nav-item .active {
     color: var(--edc-green);
     background-color: var(--edc-gray);
-    transition: background-color 0.5s ease;
-    transition: border-bottom 0.5s ease;
     border-bottom: 0.5em solid var(--edc-green); 
 }
 
-.educomp-header .navbar-scrolled .nav-item .active:hover {
-    background-color: var(--edc-blue);
+.educomp-header .navbar .navbar-collapse {
+    flex-grow: unset;
 }
 
-/* Estilos para telas abaixo de 992px */
+.educomp-header .navbar-scrolled .nav-item .active:hover {
+    background-color: var(--edc-red);
+}
+
+.educomp-header .navbar .inscricoes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.educomp-header .navbar .btn-inscricoes {
+    background-color: var(--edc-green);
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 50px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.educomp-header .navbar .btn-inscricoes:hover {
+    background-color: var(--edc-blue);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+/* Estilos para telas abaixo de 992px, quando o menu está fechado */
 @media (max-width: 991.98px) {
     .educomp-header .navbar .nav-link {
-        padding: 2em 1em !important;
+        padding: 1em 1em !important;
+        background-color: white;
+    }
+    .educomp-header .inscricoes-container {
+        background-color: white;
     }
 }
 
-/* Estilos para telas acima de 992px */
+/* Estilos para telas acima de 992px, quando o menu está aberto */
 @media (min-width: 992px) {
     .educomp-header .navbar .nav-link {
-        padding: 4em 1em !important;
+        padding: 2.2em 1em !important;
     }
-}
+} 
