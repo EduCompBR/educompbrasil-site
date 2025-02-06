@@ -1,56 +1,54 @@
-
 /* .educomp #logotipo .container {
     height: calc(80vh - 500px);
 } */
 
 .educomp #logotipo .landing-image {
-    margin-top: 80px;
-    height: auto;
-    width: auto;
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100vh;
+  margin-top: 80px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100vh;
 }
 
 /* Estilos para telas acima de 992px */
 @media (min-width: 992px) {
-    .educomp .landing-image {
-        content: url('/img/simposio/2025/landing_image_large.png');
-    }
+  .educomp .landing-image {
+    content: url('/img/simposio/2025/landing_image_large.png');
+  }
 }
-
 
 /* Estilos para telas abaixo de 768px */
 @media (max-width: 767.98px) {
-    .educomp .sobre #logotipo .container {
-        height: auto !important;
-        padding-top: 8em;
-        padding-bottom: 20px;
-    }
+  .educomp .sobre #logotipo .container {
+    height: auto !important;
+    padding-top: 8em;
+    padding-bottom: 20px;
+  }
 
-    .educomp .landing-image {
-        content: url('/img/simposio/2025/landing_image_tall.png');
-        max-height: 50vh;
-        margin: 0 auto;
-    }
+  .educomp .landing-image {
+    content: url('/img/simposio/2025/landing_image_tall.png');
+    max-height: 50vh;
+    margin: 0 auto;
+  }
 
-    .educomp .sobre h2 {
-        font-size: 2em;
-    }
+  .educomp .sobre h2 {
+    font-size: 2em;
+  }
 
-    .educomp .sobre .lead {
-        font-size: 1rem;
-    }
+  .educomp .sobre .lead {
+    font-size: 1rem;
+  }
 }
 
 /* Sobre */
 
 #educomp-home .blue-bg {
-    background-color: var(--edc-blue);
+  background-color: var(--edc-blue);
 }
 
 #educomp-home .text-white {
-    color: white;
+  color: white;
 }
 
 #educomp-home .sobre-title {
@@ -58,83 +56,80 @@
   padding: 3rem 0;
 }
 
-
-
 #custom-about {
-    background-color: #282E68;
-    padding: 3rem 0;
-  }
-  
-  #custom-about .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem; 
-  }
-  
-  #custom-about .text-left {
-    max-width: 50%;
-  }
-  
-  #custom-about .text-white {
-    color: white;
-  }
-  
-  #custom-about .text-left h2 {
-    text-align: left;
-    color: white; 
-    text-decoration: underline;
-    text-decoration-color: white; 
-    margin-bottom: 1rem;
-    text-decoration: none; 
-  }
+  background-color: var(--edc-blue);
+  padding: 3rem 0;
+}
 
-  .text-left .custom-title {
-    font-size: 2rem !important; 
-    font-weight: bold !important; 
-    color: #fff !important; 
-    margin-bottom: 1rem !important;
-    border-bottom: 2px solid #fff !important; 
-    display: inline-block !important; 
-    padding-bottom: 5px !important;
-  }
-  
-  
-  #custom-about .text-right img {
-    max-width: 100%;
-    height: auto;
-  }
+#custom-about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
 
-  
-  
-  /* Trilhas */
+#custom-about .text-left {
+  max-width: 50%;
+}
+
+#custom-about .text-white {
+  color: white;
+}
+
+#custom-about .text-left h2 {
+  text-align: left;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+#custom-about img {
+  box-shadow: inset 0 0 10px #311b0b;
+}
+
+.text-left .custom-title {
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  color: #fff !important;
+  margin-bottom: 1rem !important;
+  border-bottom: 2px solid #fff !important;
+  display: inline-block !important;
+  padding-bottom: 5px !important;
+}
+
+#custom-about .text-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Trilhas */
 #principais-trilhas .title-2 {
-    width: fit-content;
-    border-bottom: 2px solid #3DC0F0;
+  width: fit-content;
+  border-bottom: 2px solid #3dc0f0;
 
-    font-size: 3.4rem;
-    color: #1A1C3A;
-    font-weight: bolder;
-    line-height: 6rem;
-
-
+  font-size: 3.4rem;
+  color: #1a1c3a;
+  font-weight: bolder;
+  line-height: 6rem;
 }
 
 .custom-heading {
-  font-size: 2rem !important; 
+  font-size: 2rem !important;
   font-weight: bold !important;
-  text-align: center !important; 
-  margin: 0 auto 3rem auto !important; 
-  text-decoration: none !important; 
-  border-bottom: none !important; 
+  text-align: center !important;
+  margin: 0 auto 3rem auto !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
 .custom-heading .chamadas {
-  color: #282E68 !important;
+  color: #282e68 !important;
 }
 
 .custom-heading .trilhas {
-  color: #E00814 !important; 
+  color: #e00814 !important;
 }
 
 .trilha-card {
@@ -147,548 +142,509 @@
 }
 
 .row.justify-content-center {
-  gap: 2rem; 
+  gap: 2rem;
 }
 
 #sobre1 p {
-    width: 50%;
+  width: 50%;
 
-    font-size: 1.3rem;
-    line-height: 150%;
-    text-align: left;
-    font-family: 'Inter var', sans-serif;
+  font-size: 1.3rem;
+  line-height: 150%;
+  text-align: left;
+  font-family: 'Inter var', sans-serif;
 }
 
-#sobre1 .row>div {
-    padding-left: 3rem;
+#sobre1 .row > div {
+  padding-left: 3rem;
 }
 
 #principais-trilhas {
-    background-image: url(".img-fluid");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
+  background-image: url('.img-fluid');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 
-#principais-trilhas .row>div {
-    padding-left: 3rem;
+#principais-trilhas .row > div {
+  padding-left: 3rem;
 }
 
 #principais-trilhas .title-2 {
-    width: 100%;
-    border: none;
-    font-size: 3rem;
+  width: 100%;
+  border: none;
+  font-size: 3rem;
 }
 
 #principais-trilhas .card-wrapper-trilhas {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 #principais-trilhas .card-wrapper-trilhas .card {
-    max-width: 20rem;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border: none;
-    display: flex;
-    flex-direction: column;
+  max-width: 20rem;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
 
-    justify-content: center;
-
-
-
-
-
+  justify-content: center;
 }
 
 #principais-trilhas .card-wrapper-trilhas .card .card-img-top {
-    max-width: 80%;
-    margin: 0 auto;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-
 #principais-trilhas .card-wrapper-trilhas .card .card-body {
-    height: 20rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: .8rem;
-
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.8rem;
 }
 
 #principais-trilhas .card-wrapper-trilhas .card .card-title {
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    height: 3rem;
-
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  height: 3rem;
 }
 
 #principais-trilhas .card-wrapper-trilhas .card .card-text {
-    font-size: .8rem;
-    color: #544F4F;
-    font-weight: 600;
-    color: 544F4F;
-    text-align: center;
-    height: 9rem;
-
+  font-size: 0.8rem;
+  color: #544f4f;
+  font-weight: 600;
+  color: 544F4F;
+  text-align: center;
+  height: 9rem;
 }
-
 
 .card-1 .trilha-card {
-  background-color: #C7E3D1; 
+  background-color: #c7e3d1;
 }
 .card-2 .trilha-card {
-  background-color: #F3DCA9; 
+  background-color: #f3dca9;
 }
 .card-3 .trilha-card {
-  background-color: #CEC0F8; 
+  background-color: #cec0f8;
 }
 .card-4 .trilha-card {
-  background-color: #F5C0A4; 
+  background-color: #f5c0a4;
 }
 .card-5 .trilha-card {
-  background-color: #B8D1F1; 
+  background-color: #b8d1f1;
 }
-
 
 .btn-card {
-    color: #fff;
-    width: 60%;
-    margin: 0 auto;
-    background-color: #1A1C3A;
-    padding: .2rem;
-    border-radius: 40px;
-    text-align: center;
-    justify-content: center;
+  color: #fff;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #1a1c3a;
+  padding: 0.2rem;
+  border-radius: 40px;
+  text-align: center;
+  justify-content: center;
 }
 
-
 #quarta-edicao {
-    background-image: url("/img/simposio/2024/sobre-img-2.png");
-    background-repeat: no-repeat;
-    background-position: left;
-    padding: 8rem;
-
+  background-image: url('/img/simposio/2024/sobre-img-2.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 8rem;
 }
 
 #quarta-edicao .content {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
-
 
 #quarta-edicao h2 {
-    width: 100%;
-    border-bottom: 2px solid #3DC0F0;
+  width: 100%;
+  border-bottom: 2px solid #3dc0f0;
 
-    font-size: 3.4rem;
-    color: #1A1C3A;
-    font-weight: bolder;
-    line-height: 6rem;
-    text-align: right;
-
-
+  font-size: 3.4rem;
+  color: #1a1c3a;
+  font-weight: bolder;
+  line-height: 6rem;
+  text-align: right;
 }
-
 
 #quarta-edicao p {
-    width: 90%;
-    font-size: 1rem;
-    line-height: 150%;
-    text-align: left;
-    font-family: 'Inter var', sans-serif;
-    text-align: right;
+  width: 90%;
+  font-size: 1rem;
+  line-height: 150%;
+  text-align: left;
+  font-family: 'Inter var', sans-serif;
+  text-align: right;
 }
-
 
 @media screen and (min-width: 1026px) {
-    #sobre1 img {
-        display: none;
-    }
+  #sobre1 img {
+    display: none;
+  }
 }
 
-
-
-
-
-
 @media screen and (min-width: 321px) and (max-width: 1025px) {
+  /**/
+  #sobre1,
+  #quarta-edicao {
+    background-image: none;
+  }
 
-    /**/
-    #sobre1,
-    #quarta-edicao {
-        background-image: none;
+  #sobre1 {
+    margin-bottom: 40%;
+    padding: 10px 0;
+  }
 
-    }
+  #sobre1 p,
+  #quarta-edicao p {
+    width: 100%;
+    text-align: justify;
+  }
 
-    #sobre1 {
-        margin-bottom: 40%;
-        padding: 10px 0;
-    }
+  #sobre1 .row > div,
+  #quarta-edicao .content {
+    position: relative;
+    width: 100% !important;
+    padding-right: 15px;
+    padding-left: 15px;
 
-    #sobre1 p,
-    #quarta-edicao p {
+    margin-left: auto;
+    margin-right: auto;
 
-        width: 100%;
-        text-align: justify;
-    }
+    align-items: center;
+  }
 
-    #sobre1 .row>div,
-    #quarta-edicao .content {
-        position: relative;
-        width: 100% !important;
-        padding-right: 15px;
-        padding-left: 15px;
+  .principais-trilhas {
+    margin-top: 30rem;
+  }
 
-        margin-left: auto;
-        margin-right: auto;
+  #principais-trilhas .row > div {
+    padding-left: 15px;
+  }
 
-        align-items: center;
-    }
+  #principais-trilhas .card-wrapper-trilhas .card {
+    max-width: 10rem;
+  }
 
-    .principais-trilhas {
-        margin-top: 30rem;
-    }
+  #principais-trilhas .card-wrapper-trilhas {
+    flex-wrap: wrap;
+  }
 
-    #principais-trilhas .row>div {
-        padding-left: 15px;
-    }
+  #principais-trilhas h2,
+  #quarta-edicao h2 {
+    font-size: 2rem;
+    width: fit-content;
+    text-align: center;
+  }
 
+  #principais-trilhas .card-wrapper-trilhas .card {
+    max-width: 90%;
+    margin-bottom: 2rem;
+    border: #3dc0f06c 1px solid;
+    border-radius: 10px;
+  }
 
-    #principais-trilhas .card-wrapper-trilhas .card {
-        max-width: 10rem;
-    }
-
-    #principais-trilhas .card-wrapper-trilhas {
-
-        flex-wrap: wrap;
-    }
-
-    #principais-trilhas h2,
-    #quarta-edicao h2 {
-        font-size: 2rem;
-        width: fit-content;
-        text-align: center;
-
-    }
-
-    #principais-trilhas .card-wrapper-trilhas .card {
-        max-width: 90%;
-        margin-bottom: 2rem;
-        border: #3dc0f06c 1px solid;
-        border-radius: 10px;
-    }
-
-    #quarta-edicao {
-        background-image: none;
-        padding: 0;
-    }
+  #quarta-edicao {
+    background-image: none;
+    padding: 0;
+  }
 }
 /* trilhas */
 
 #trilhas {
-    background-color: var(--edc-gray);
-    padding: 3rem 0;
-  }
-  
-  .trilha-card {
-    position: relative; 
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 2rem 1rem 1rem; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .trilha-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .icon-circle {
-    position: absolute; 
-    top: -30px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 60px;
-    height: 60px;
-    background-color: var(--edc-blue);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .trilha-card p {
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 1.5rem 0 0; 
-    color: var(--edc-blue);
-  }
-  
-  .trilha-card .description {
-    font-size: 0.875rem; 
-    color: #555; 
-    margin-top: 0.5rem; 
-    font-weight: 400;
-    line-height: 1.4;
-  }
-  
-  
-  #section-cards {
-    background-color: #B8D1F1;
-    padding: 3rem 0;
-  }
+  background-color: var(--edc-gray);
+  padding: 3rem 0;
+}
 
-  #section-cards h2 {
-    text-decoration: none !important; 
-    border-bottom: none !important;
-    color: #272E68 !important; 
-    text-align: center !important;
-  }
-  
-  .card-custom {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .card-custom:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .card-custom .card-header {
-    padding: 1.5rem 1rem;
-  }
-  
-  .card-custom .card-title {
-    font-size: 1.5rem;
-    color: #282E69;
-    font-weight: 600;
-  }
-  
-  .card-custom .card-subtitle {
-    font-size: 1rem;
-    color: #555;
-    margin-top: 0.5rem;
-  }
-  
-  .card-custom .card-footer {
-    background-color: #0B8236;
-    color: white;
-    padding: 0.75rem;
-    margin-top: auto;
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
+.trilha-card {
+  position: relative;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem 1rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  #custom-edition {
-    padding: 3rem 0;
-    background-color: #f4f4f4; 
-  }
-  
-  #custom-edition .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  #custom-edition h2 {
-    color: #098136 !important; 
-    font-size: 2rem !important;
-    text-decoration: none !important; 
-    border-bottom: none !important;
-    text-align: center !important;
-    
-  }
-  
-  #custom-edition p {
-    color: #555; 
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-  
+.trilha-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icon-circle {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: var(--edc-blue);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trilha-card p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1.5rem 0 0;
+  color: var(--edc-blue);
+}
+
+.trilha-card .description {
+  font-size: 0.875rem;
+  color: #555;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+#section-cards {
+  background-color: #b8d1f1;
+  padding: 3rem 0;
+}
+
+#section-cards h2 {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  color: #272e68 !important;
+  text-align: center !important;
+}
+
+.card-custom {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-custom .card-header {
+  padding: 1.5rem 1rem;
+}
+
+.card-custom .card-title {
+  font-size: 1.5rem;
+  color: #282e69;
+  font-weight: 600;
+}
+
+.card-custom .card-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.card-custom .card-footer {
+  background-color: #0b8236;
+  color: white;
+  padding: 0.75rem;
+  margin-top: auto;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+#custom-edition {
+  padding: 3rem 0;
+  background-color: #f4f4f4;
+}
+
+#custom-edition .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#custom-edition h2 {
+  color: #098136 !important;
+  font-size: 2rem !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  text-align: center !important;
+}
+
+#custom-edition p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+#custom-edition .image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#custom-edition .image-container a {
+  display: inline-block !important;
+}
+
+#custom-edition .image-container img {
+  max-width: 45%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
   #custom-edition .image-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; 
-  }
-
-  #custom-edition .image-container a {
-    display: inline-block !important; 
-  }
-  
-  #custom-edition .image-container img {
-    max-width: 45%;
-    height: auto;
-  }
-  
-  @media (max-width: 768px) {
-    #custom-edition .image-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    #custom-edition .image-container img {
-      max-width: 100%; 
-    }
-  }
-  
-  
-  
-  
-
-  /* SBC-EB */
-
-  #custom-section {
-    background-color: #2B7EC2;
-    padding: 4rem 0;
-    color: white;
-    text-align: center; 
-  }
-  
-  #custom-section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: center; 
-    color: white; 
-    text-decoration: none; 
-    border: none; 
-  }
-  
-  
-  #custom-section h3 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    font-weight: 400;
-    text-decoration: none; 
-  }
-  
-  #custom-section .container-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 2rem;
-    justify-content: center; 
-  }
-  
-  #custom-section .image {
-    flex: 1 1 40%;
-  }
-  
-  #custom-section .image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  #custom-section .text {
-    flex: 1 1 50%;
-    text-align: left; 
-  }
-  
-  #custom-section .text h4 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  #custom-section .text p {
-    font-size: 1rem;
-    line-height: 1.6;
-    text-align: justify;
-  }
-  
-  
-  
-  /* Sobre o SBC */
-  #sobre-sbc {
-    background-color: #F5F5F5; 
-    padding: 4rem 0;
-  }
-  
-  #sobre-sbc .content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-  }
-  
-  #sobre-sbc .text-content {
-    flex: 1 1 50%;
-  }
-  
-  #sobre-sbc h2 {
-    font-size: 2rem;
-    color: #282E69;
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-  
-  #sobre-sbc p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-    text-align: justify;
-  }
-  
-  #sobre-sbc .images {
-    flex: 1 1 40%;
-    display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  #sobre-sbc .images img {
-    width: 100%;
-    height: auto;
-    margin: 0; 
-    border: none; 
-    box-shadow: none; 
-    border-radius: 0; 
-  }
-  
-  .editaimg {
-    transform: rotate(-2.02deg);
-  }
-  
-  .editaimg2 {
-    transform: rotate(4.03deg);
+    align-items: center;
   }
 
-  .editaimg, .editaimg2 {
-    transition: transform 0.3s ease-in-out;
+  #custom-edition .image-container img {
+    max-width: 100%;
   }
-  
+}
+
+/* SBC-EB */
+
+#custom-section {
+  background-color: #2b7ec2;
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+}
+
+#custom-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+#custom-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+#custom-section .container-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+#custom-section .image {
+  flex: 1 1 40%;
+}
+
+#custom-section .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#custom-section .text {
+  flex: 1 1 50%;
+  text-align: left;
+}
+
+#custom-section .text h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#custom-section .text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Sobre o SBC */
+#sobre-sbc {
+  background-color: #f5f5f5;
+  padding: 4rem 0;
+}
+
+#sobre-sbc .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+#sobre-sbc .text-content {
+  flex: 1 1 50%;
+}
+
+#sobre-sbc h2 {
+  font-size: 2rem;
+  color: #282e69;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+#sobre-sbc p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+
+#sobre-sbc .images {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#sobre-sbc .images img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.editaimg {
+  transform: rotate(-2.02deg);
+}
+
+.editaimg2 {
+  transform: rotate(4.03deg);
+}
+
+.editaimg,
+.editaimg2 {
+  transition: transform 0.3s ease-in-out;
+}
 
 /* Carousel */
 
 .carousel-indicators li {
-  background-color: #000; 
+  background-color: #000;
 }
 
 .carousel-indicators .active {
-  background-color: #007bff; 
+  background-color: #007bff;
 }
-  
+
 .custom-carousel-container {
   max-width: 1140px; /* Alinhado com o container padrão do Bootstrap */
   margin: 0 auto; /* Centraliza o contêiner */
