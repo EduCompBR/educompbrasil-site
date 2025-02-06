@@ -10,9 +10,9 @@
   <body>
  
     {{~#if isEducomp}}
-    {{> simposio/2025/educomp/pt-BR/header}}
+    {{> simposio/2025/educomp/pt-BR/navbar}}
     {{~else}}
-    {{> simposio/2025/sbc-eb/pt-BR/header}}
+    {{> simposio/2025/sbc-eb/pt-BR/navbar}}
     {{~/if}}
 
     <main class="content {{~#if isEducomp}} educomp {{~else}} sbc-eb {{~/if}}">
@@ -44,18 +44,5 @@
       })
     </script>
 
-    <!-- Navbar transparente -->
-    <script>
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar")
-        if (window.scrollY > 0) {
-          navbar.classList.add("navbar-scrolled")
-          navbar.classList.remove("navbar-transparent")
-        } else {
-          navbar.classList.add("navbar-transparent")
-          navbar.classList.remove("navbar-scrolled")
-        }
-      })
-    </script>
   </body>
 </html>
