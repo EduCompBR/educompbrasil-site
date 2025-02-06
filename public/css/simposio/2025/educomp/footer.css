@@ -1,68 +1,56 @@
 .educomp-footer {
-    max-width: 100%;
-    background-color: var(--edc-blue);
-    color: white;
-    padding-top: 1em;
-    padding-bottom: 2em;
-    border-top: 0.5em solid var(--edc-green); 
+  max-width: 100%;
+  background-color: var(--edc-blue);
+  color: white;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-top: 0.5em solid var(--edc-green);
 }
 
-.educomp-footer h5 {
-    padding-top: 1.5em;
-    padding-bottom: 0.5em;
-    font-size: 1.4em;
-    font-weight: 4  00;
+.educomp-footer .list-icons {
+  padding-left: 15px;
 }
 
-.educomp-footer .icon {
-    width: 25px;
-    height: 25px;
-    font-size: 25px;
-    display: inline-block;
-    line-height: 1;
-    vertical-align: middle;
-    text-align: center;
-    color: var(--edc-blue)
+.educomp-footer .list-icons i {
+  font-size: 1.4em;
+  color: var(--eb-yellow);
+  width: 50px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.educomp-footer .icon:hover {
-    background-color: transparent;
-    color: white;
+.educomp-footer .list-icons a {
+  font-size: 1.2em;
 }
 
-.educomp-footer a#email {
-    color: inherit;
-    font-size: 1.1em;
-    text-decoration: underline;
-    text-underline-offset: 2.5px;
-    margin-top: 1em;
-    display: inline-block;
+.educomp-footer .btn {
+  width: 200px;
+  padding: 10px 10px;
+  border-radius: 11px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid var(--edc-green);
+  text-align: center;
 }
 
-.footer-btn {
-    width: 200px; 
-    padding: 10px 20px;
-    border-radius: 11px;
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
-    display: block;
-    margin: 20px auto; 
-    border: 2px solid #0B8236; 
-    text-align: center;
-  }
+.educomp-footer .btn-incricoes {
+  background-color: var(--edc-green);
+  color: white;
+}
 
-  .footer-btn:first-child {
-    margin-top: 40px; 
-  }
-  
-  .primary-btn {
-    background-color: #0B8236;
-    color: white;
-  }
+.educomp-footer .btn-programacao {
+  background-color: transparent;
+  color: white;
+}
 
-  .secondary-btn {
-    background-color: transparent;
-    color: white;
-  }
-  
+.educomp-footer #logo-educomp {
+  height: 75px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

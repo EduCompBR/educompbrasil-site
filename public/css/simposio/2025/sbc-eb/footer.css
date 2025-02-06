@@ -1,10 +1,10 @@
 .sbc-eb-footer {
-    max-width: 100%;
-    background-color: var(--eb-green);
-    color: white;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    border-top: 0.5em solid var(--eb-yellow); 
+  max-width: 100%;
+  background-color: var(--eb-green);
+  color: white;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-top: 0.5em solid var(--eb-yellow);
 }
 
 .sbc-eb-footer .list-icons {
@@ -27,18 +27,18 @@
 }
 
 .sbc-eb-footer .btn {
-  width: 200px; 
+  width: 200px;
   padding: 10px 10px;
   border-radius: 11px;
   font-size: 1.1em;
   font-weight: bold;
   cursor: pointer;
   display: block;
-  margin: 20px auto; 
-  border: 2px solid var(--eb-yellow); 
+  margin: 20px auto;
+  border: 2px solid var(--eb-yellow);
   text-align: center;
 }
-  
+
 .sbc-eb-footer .btn-incricoes {
   background-color: var(--eb-yellow);
   color: white;
@@ -50,7 +50,7 @@
 }
 
 .sbc-eb-footer #logo-sbc-eb {
-    height: 60px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  height: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
