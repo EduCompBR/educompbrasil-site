@@ -81,7 +81,11 @@ app.get('/documentos', giec_main.documentos);
 app.get('/documentos/modelos/proposta-sede-educomp', giec_main.documentos_modelo_educomp);
 
 // EduComp + SBC-EB 2025 - pt-BR
-app.get('/simposio/2025', educomp_2025_principal.index);
+
+app.get('/simposio/2025/educomp/teste', educomp_2025_principal.teste_educomp)
+app.get('/simposio/2025/sbc-eb/teste', educomp_2025_principal.teste_sbceb)
+
+app.get('/simposio/2025', educomp_2025_principal.index)
 app.get('/simposio/2025/educomp', educomp_2025_principal.index);
 app.get('/simposio/2025/educomp/principal/sobre-educomp', educomp_2025_principal.sobre_educomp);
 app.get('/simposio/2025/educomp/principal/sobre-sbc', educomp_2025_principal.sobre_sbc);
