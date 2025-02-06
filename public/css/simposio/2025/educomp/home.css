@@ -45,6 +45,21 @@
 
 /* Sobre */
 
+#educomp-home .blue-bg {
+    background-color: var(--edc-blue);
+}
+
+#educomp-home .text-white {
+    color: white;
+}
+
+#educomp-home .sobre-title {
+  color: white;
+  padding: 3rem 0;
+}
+
+
+
 #custom-about {
     background-color: #282E68;
     padding: 3rem 0;
@@ -674,3 +689,7 @@
   background-color: #007bff; 
 }
   
+.custom-carousel-container {
+  max-width: 1140px; /* Alinhado com o container padrão do Bootstrap */
+  margin: 0 auto; /* Centraliza o contêiner */
+}
