@@ -660,3 +660,31 @@
   max-width: 1140px; /* Alinhado com o container padrão do Bootstrap */
   margin: 0 auto; /* Centraliza o contêiner */
 }
+
+.Cards{
+  display: flex;
+  justify-content: center ;
+  align-content: center;
+  padding-bottom: 0 !important; 
+  
+  .CardsOrgRel{
+      display: flex;
+
+      width: 100%;
+      height: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      justify-content: center;
+      
+      flex-direction: row;
+      background-color: gray;
+
+      .Card{
+          width: 150px;
+          height: 150px;
+          background-color: white;
+          border-radius: 15px;
+          margin: 0.5%;
+      }
+    }
+}
