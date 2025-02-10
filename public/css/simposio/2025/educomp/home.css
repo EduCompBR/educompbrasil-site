@@ -669,12 +669,16 @@
   background-color: gray;
   padding-top: 30px;
   gap: 15px;
-
+  h1{
+    color: #FFF;
+    font-weight: 600;
+    border: 0;
+  }
   h4{
     color: #FFF;
     font-weight: 600;
   }
-  .ContainerSecundarios{
+  .ContainerCards{
     display: flex;
       width: 100%;
       height: 100%;
@@ -716,7 +720,7 @@
       align-items: center;
       gap: 30px;
       flex-direction: row;
-      .ContainerSecundarios{
+      .ContainerCards{
         width: auto;
       }
     
