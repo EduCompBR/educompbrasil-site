@@ -139,6 +139,7 @@
   border-radius: 8px;
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
 }
 
 .row.justify-content-center {
@@ -370,6 +371,16 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.trilha-card .btn {
+  border-radius: 6px;
+  background-color: var(--edc-blue);
+  border: none;
+  font-weight: bold;
 }
 
 .trilha-card:hover {
