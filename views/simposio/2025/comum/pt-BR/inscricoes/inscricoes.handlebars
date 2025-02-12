@@ -20,15 +20,16 @@
       
 
             <div class="caixalogos">
-                <a class="imagelink" href="/simposio/2025/educomp/inscricoes/educomp"><img class="imglogos" src="/img/simposio/2025/logos/edc25_texto_colorido.png"/></a>
-                <a class="imagelink" href="/simposio/2025/educomp/inscricoes/combo"><img class="imglogos" src="/img/simposio/2025/logos/sbcedu.png" /></a>
-                <a class="imagelink" href="/simposio/2025/sbc-eb/inscricoes/sbc-eb"><img class="imglogos" src="/img/simposio/2025/eb/logos/eblogo22.png" /></a>
+                <a class="imagelink" href="{{~#if isEducomp}} /simposio/2025/educomp/inscricoes/valores-educomp {{~else}} {{~#if isSbceb}} /simposio/2025/sbc-eb/inscricoes/valores-educomp {{~/if}}{{~/if}}"><img class="imglogos" src="/img/simposio/2025/logos/edc25_texto_colorido.png"/></a>
+                <a class="imagelink" href="{{~#if isEducomp}} /simposio/2025/educomp/inscricoes/valores-combo {{~else}} {{~#if isSbceb}} /simposio/2025/sbc-eb/inscricoes/valores-combo {{~/if}}{{~/if}}"><img class="imglogos" src="/img/simposio/2025/logos/sbcedu.png" /></a>
+                <a class="imagelink" href="{{~#if isEducomp}} /simposio/2025/educomp/inscricoes/valores-sbc-eb {{~else}} {{~#if isSbceb}} /simposio/2025/sbc-eb/inscricoes/valores-sbc-eb {{~/if}}{{~/if}}"><img class="imglogos" src="/img/simposio/2025/eb/logos/eblogo22.png" /></a>
             </div>
             <div class="button-container btn-disabled">
                 <a class="imagelink" href="https://centraldesistemas.sbc.org.br/ecos/EduComp_SBC-EB%202025"><button class="botaoinscricao">FAÇA AQUI SUA INSCRIÇÃO</button></a>
             </div>
        </section>
     
+
         <!-- <section class="section">
             <h2>Benefícios de Registro</h2>
             <p>
