@@ -2,17 +2,21 @@
 <html lang="pt-BR">
   
   {{~#if isEducomp}}
-  {{> simposio/2025/educomp/pt-BR/head}}
+    {{> simposio/2025/educomp/pt-BR/head}}
   {{~else}}
-  {{> simposio/2025/sbc-eb/pt-BR/head}}
+    {{~#if isSbceb}}
+      {{> simposio/2025/sbc-eb/pt-BR/head}}
+    {{~/if}}
   {{~/if}}
 
   <body>
  
     {{~#if isEducomp}}
-    {{> simposio/2025/educomp/pt-BR/navbar}}
+      {{> simposio/2025/educomp/pt-BR/navbar}}
     {{~else}}
-    {{> simposio/2025/sbc-eb/pt-BR/navbar}}
+      {{~#if isSbceb}}
+        {{> simposio/2025/sbc-eb/pt-BR/navbar}}
+      {{~/if}}
     {{~/if}}
 
     <main class="content {{~#if isEducomp}} educomp {{~else}} sbc-eb {{~/if}}">
@@ -22,9 +26,11 @@
     </main>
 
     {{~#if isEducomp}}
-    {{> simposio/2025/educomp/pt-BR/footer}}
+      {{> simposio/2025/educomp/pt-BR/footer}}
     {{~else}}
-    {{> simposio/2025/sbc-eb/pt-BR/footer}}
+      {{~#if isSbceb}}
+        {{> simposio/2025/sbc-eb/pt-BR/footer}}
+      {{~/if}}
     {{~/if}}
 
     <!-- Bootstrap core JavaScript -->
