@@ -4,5 +4,6 @@ exports.trabalhos = function (req, res) {
     chamadas: true,
     isSbceb: true,
     titulo: 'Chamadas de trabalhos',
+    header: { titulo: 'Chamada de trabalhos' },
   })
 }

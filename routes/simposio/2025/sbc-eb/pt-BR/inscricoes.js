@@ -4,6 +4,7 @@ exports.inscricoes = function (req, res) {
     inscricoes: true,
     isSbceb: true,
     titulo: 'Inscrições',
+    header: { titulo: 'Definir' },
   })
 }
 
@@ -13,6 +14,7 @@ exports.valores_educomp = function (req, res) {
     inscricoes: true,
     isSbceb: true,
     titulo: 'Valores EduComp',
+    header: { titulo: 'Definir' },
   })
 }
 
@@ -22,6 +24,7 @@ exports.valores_sbc_eb = function (req, res) {
     inscricoes: true,
     isSbceb: true,
     titulo: 'Valores SBC-EB',
+    header: { titulo: 'Definir' },
   })
 }
 
@@ -31,5 +34,6 @@ exports.valores_combo = function (req, res) {
     inscricoes: true,
     isSbceb: true,
     titulo: 'Valores combo',
+    header: { titulo: 'Definir' },
   })
 }
