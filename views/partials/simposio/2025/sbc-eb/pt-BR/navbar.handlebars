@@ -30,21 +30,17 @@
         <ul class="navbar-nav">
 
           <li class="nav-item dropdown">
-            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle
-                  {{~#if home}}
-                    active
-                  {{/if}}
-              ">HOME</a>
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if home}} active {{~/if}}">HOME</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Sobre o evento</a>
-              <a class="dropdown-item" href="#">Sobre a SBC</a>
-              <!-- <hr class="dropdown-divider">
-              <a class="dropdown-item" href="/simposio/2025/educomp/principal/edicoes-anteriores">Edições anteriores</a> -->
+              <a class="dropdown-item" href="/simposio/2025/sbc-eb/">Início</a>
             </div>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger {{~#if chamadas}} active {{/if}}" href="/simposio/2025/sbc-eb/principal/chamadas">CHAMADAS</a>
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if chamadas}} active {{~/if}}">CHAMADAS</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/simposio/2025/sbc-eb/chamadas/trabalhos">Chamada de trabalhos</a>
+            </div>
           </li>
 
            <li class="nav-item dropdown">
@@ -80,7 +76,7 @@
           </li> -->
 
           <div class="inscricoes-container">
-            <a href="/simposio/2025/inscricoes" class="btn btn-inscricoes">INSCRIÇÕES</a>
+            <a href="/simposio/2025/sbc-eb/inscricoes" class="btn btn-inscricoes">INSCRIÇÕES</a>
           </div>
         </ul>
       </div>
