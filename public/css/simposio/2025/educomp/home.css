@@ -139,6 +139,7 @@
   border-radius: 8px;
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
 }
 
 .row.justify-content-center {
@@ -370,6 +371,16 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.trilha-card .btn {
+  border-radius: 6px;
+  background-color: var(--edc-blue);
+  border: none;
+  font-weight: bold;
 }
 
 .trilha-card:hover {
@@ -648,4 +659,82 @@
 .custom-carousel-container {
   max-width: 1140px; /* Alinhado com o container padrão do Bootstrap */
   margin: 0 auto; /* Centraliza o contêiner */
+}
+
+.CardsSession{
+  display: flex;
+  justify-content: center ;
+  align-content: center;
+  flex-direction: column;
+  background-color: gray;
+  padding-top: 30px;
+  gap: 15px;
+  h1{
+    color: #FFF;
+    font-weight: 600;
+    border: 0;
+  }
+  h4{
+    color: #FFF;
+    font-weight: 600;
+  }
+  .ContainerCards{
+    display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .Cards{
+        width: 100%;
+        max-width: 700px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        .Card{
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+          
+            img{
+              background-color:gainsboro;
+              border-radius: 15px;
+              padding: 20px;
+            }
+            .imgGrande{
+              height:  200px;
+            }
+            .imgMedia{
+              height:  150px;
+            }
+            .imgPequena{
+              height:  120px;
+            }
+        }
+      } 
+  }
+  .DestaqueContainer{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 70px;
+      flex-direction: row;
+      
+      .ContainerCards{
+        width: auto;
+        flex-wrap: wrap;
+
+      }
+    
+  }
 }
