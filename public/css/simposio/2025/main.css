@@ -5,6 +5,7 @@
 html {
   height: 100%;
   margin: 0;
+  font-family: 'Inter var', sans-serif;
 }
 
 body {
@@ -18,25 +19,24 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 100px;
+  font-size: clamp(14px, 1.5vw, 18px);
 }
-
 
 .navbar {
   height: 100px;
+  font-size: clamp(14px, 1.5vw, 15px);
 }
 
 .content {
   flex: 1;
-  font-size: 1.1rem;
   line-height: 150%;
   text-align: left;
-  font-family: 'Inter var', sans-serif;
   font-weight: 300;
-  font-size: clamp(14px, 1.5vw, 18px);
 }
 
-.content .first-section {
-  padding-top: 100px;
+.content a {
+  background-color: transparent;
 }
 
 .content a:hover {

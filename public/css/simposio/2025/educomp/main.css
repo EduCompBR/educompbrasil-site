@@ -5,38 +5,37 @@
   --edc-gray: #F2F2F2;
 }
 
-.educomp strong {
+.content-educomp strong {
   color: var(--edc-blue);
   font-weight: 600;
 }
 
-.educomp a {
+.content-educomp a {
   color: var(--edc-blue);
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 400;
 }
 
-.educomp section {
+.content-educomp section {
   padding-bottom: 2.5em;
 }
 
-.educomp h1 {
-  padding: 0.25em 0.5em 0em 0.5em;
-  border-bottom: 2px solid var(--edc-green);
+.header-educomp h1 {
+  padding-top: 1em;
+  border-bottom: 3px solid var(--edc-green);
   margin-bottom: 0.5em;
   font-size: 2.5em;
   color: var(--edc-blue);
   font-weight: 900;
   line-height: 1.5em;
-  text-align: center;
   display: inline-block;
 }
 
-.educomp h2 {
+.content-educomp h2 {
   border-bottom: 2px solid var(--edc-red);
   margin-bottom: 1em;
-  font-size: 2em;
+  font-size: 1.8em;
   color: var(--edc-blue);
   font-weight: 450;
   line-height: 1.3em;

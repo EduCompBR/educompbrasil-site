@@ -1,4 +1,4 @@
-.educomp-footer {
+.footer-educomp {
   max-width: 100%;
   background-color: var(--edc-blue);
   color: white;
@@ -7,13 +7,13 @@
   border-top: 0.5em solid var(--edc-green);
 }
 
-.educomp-footer .list-icons {
+.footer-educomp .list-icons {
   padding-left: 15px;
 }
 
-.educomp-footer .list-icons i {
+.footer-educomp .list-icons i {
   font-size: 1.4em;
-  color: var(--eb-yellow);
+  color: var(--edc-green);
   width: 50px;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -22,11 +22,11 @@
   align-items: center;
 }
 
-.educomp-footer .list-icons a {
+.footer-educomp .list-icons a {
   font-size: 1.2em;
 }
 
-.educomp-footer .btn {
+.footer-educomp .btn {
   width: 200px;
   padding: 10px 10px;
   border-radius: 11px;
@@ -39,17 +39,17 @@
   text-align: center;
 }
 
-.educomp-footer .btn-incricoes {
+.footer-educomp .btn-incricoes {
   background-color: var(--edc-green);
   color: white;
 }
 
-.educomp-footer .btn-programacao {
+.footer-educomp .btn-programacao {
   background-color: transparent;
   color: white;
 }
 
-.educomp-footer #logo-educomp {
+.footer-educomp #logo-educomp {
   height: 75px;
   margin-top: 20px;
   margin-bottom: 20px;
