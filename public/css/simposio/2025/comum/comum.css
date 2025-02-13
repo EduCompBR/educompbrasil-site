@@ -67,6 +67,18 @@
   .carousel-control-next i:hover {
       background: #457b9d; 
   }
+
+  @media (max-width: 576px) { 
+    .custom-align {
+      align-items: center !important;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .custom-align {
+      align-items: flex-start !important; 
+    }
+  }
   
   @media (max-width: 768px) {
     #carousel-imagens-jf {
