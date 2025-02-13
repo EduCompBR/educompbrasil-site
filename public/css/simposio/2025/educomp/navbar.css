@@ -1,96 +1,96 @@
 .navbar-educomp {
-    max-width: 100%;
-    background-color: white !important;
-    box-shadow: 0 2px 4px var(--gray);
-    justify-content: space-evenly;
+  max-width: 100%;
+  background-color: white !important;
+  box-shadow: 0 2px 4px var(--gray);
+  justify-content: space-evenly;
 }
 
 .navbar-educomp #logo-sbc {
-    height: 75px;
-    padding-left: 5px;
-    padding-right: 5px;
+  height: 75px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .navbar-educomp #logo-educomp {
-    height: 50px;
-    padding-left: 5px;
-    padding-right: 5px;
+  height: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .navbar-educomp .button-drop {
-    color: var(--edc-blue);
-    padding: 1em;
+  color: var(--edc-blue);
+  padding: 1em;
 }
 
 .navbar-educomp .button-drop i {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
-.navbar-educomp .nav-item>a {
-    color: var(--edc-blue);
-    font-weight: bold;
+.navbar-educomp .nav-item > a {
+  color: var(--edc-blue);
+  font-weight: bold;
 }
 
 .navbar-educomp .nav-item a:hover {
-    background-color: var(--edc-blue) !important;
-    color: white !important;
-    transition: background-color 0.3s ease;
+  background-color: var(--edc-blue) !important;
+  color: white !important;
+  transition: background-color 0.3s ease;
 }
 
 .navbar-educomp .nav-item .active {
-    color: var(--edc-green);
-    background-color: var(--edc-gray);
-    border-bottom: 0.5em solid var(--edc-green); 
+  color: var(--edc-green);
+  background-color: var(--edc-gray);
+  border-bottom: 0.5em solid var(--edc-green);
 }
 
 .navbar-educomp .navbar-collapse {
-    flex-grow: unset;
+  flex-grow: unset;
 }
 
 .navbar-educomp-scrolled .nav-item .active:hover {
-    background-color: var(--edc-red);
+  background-color: var(--edc-red);
 }
 
 .navbar-educomp .inscricoes-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 5px;
-    padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 5px;
+  padding-bottom: 10px;
 }
 
 .navbar-educomp .btn-inscricoes {
-    background-color: var(--edc-blue);
-    color: white;
-    padding: 12px 24px;
-    font-size: 16px;
-    border-radius: 50px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    transition: all 0.3s ease;
+  background-color: var(--edc-blue);
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .navbar-educomp .btn-inscricoes:hover {
-    background-color: var(--edc-green);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    color: white;
+  background-color: var(--edc-green);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  color: white;
 }
 
 /* Estilos para telas abaixo de 992px, quando o menu está fechado */
 @media (max-width: 991.98px) {
-    .navbar-educomp .nav-link {
-        padding: 1em 1em !important;
-        background-color: white;
-    }
-    .educomp-header .inscricoes-container {
-        background-color: white;
-    }
+  .navbar-educomp .nav-link {
+    padding: 1em 1em !important;
+    background-color: white;
+  }
+  .educomp-header .inscricoes-container {
+    background-color: white;
+  }
 }
 
 /* Estilos para telas acima de 992px, quando o menu está aberto */
 @media (min-width: 992px) {
-    .navbar-educomp .nav-link {
-        padding: 2.4em 1em !important;
-    }
-} 
+  .navbar-educomp .nav-link {
+    padding: 2.4em 1em !important;
+  }
+}

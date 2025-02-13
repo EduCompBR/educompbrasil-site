@@ -1,10 +1,10 @@
 :root {
-  --eb-yellow: #F2C72C;
+  --eb-yellow: #f2c72c;
   --eb-green: #258873;
-  --eb-blue-dark: #004BB3;
-  --eb-blue-medium: #2B7EC2;
-  --eb-blue-light: #E7F1FF;
-  --eb-gray: #B3B4B8;
+  --eb-blue-dark: #004bb3;
+  --eb-blue-medium: #2b7ec2;
+  --eb-blue-light: #e7f1ff;
+  --eb-gray: #b3b4b8;
 }
 
 .esbc-eb strong {
@@ -66,8 +66,7 @@
   margin-top: 50px;
 }
 
-
-.sbc-eb .fundoverde{
+.sbc-eb .fundoverde {
   background-color: var(--edc-green);
 }
 
@@ -84,12 +83,12 @@
   z-index: 0;
 }
 
-.sbc-eb #tracofooter{
+.sbc-eb #tracofooter {
   width: 100%;
 }
 
 .sbc-eb #principais-trilhas {
- /* background-image: url("../../../../img/simposio/2025/eb/retanguloverde.png"); */
+  /* background-image: url("../../../../img/simposio/2025/eb/retanguloverde.png"); */
   background-color: var(--edc-green);
   min-height: 600px;
 }
@@ -105,7 +104,7 @@
 
 .sbc-eb #principais-trilhas .card-img-top {
   width: 100%;
-  max-width: 120px; 
+  max-width: 120px;
   margin: 0 auto;
 }
 
@@ -123,16 +122,16 @@
   border-radius: 5px;
 }
 
-.sbc-eb .titulobranco{
+.sbc-eb .titulobranco {
   color: white;
 }
 
-.sbc-eb .size{
+.sbc-eb .size {
   font-size: 20px;
   font-weight: 100;
 }
 
-.sbc-eb .textsobresbc{
+.sbc-eb .textsobresbc {
   font-size: 14px;
   margin-bottom: 50px;
 }
