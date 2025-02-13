@@ -94,7 +94,7 @@
 /* Estilos para telas acima de 992px, quando o menu está aberto */
 @media (min-width: 992px) {
     .navbar-sbc-eb .nav-link {
-        padding: 2.4em 1em !important;
+        padding: 2.4em 0.5em !important;
     }
 } 
 
