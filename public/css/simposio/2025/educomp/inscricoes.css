@@ -118,3 +118,21 @@ table {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
   border-radius: 10px; /* Adiciona cantos arredondados */
 }
+
+.caixalogos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.imglogos {
+  max-width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.imglogos:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

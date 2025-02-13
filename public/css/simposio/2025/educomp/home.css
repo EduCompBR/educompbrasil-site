@@ -43,244 +43,245 @@
 
 /* Sobre */
 
-#educomp-home .blue-bg {
-  background-color: var(--edc-blue);
-}
+#educomp-home {
+  .blue-bg {
+    background-color: var(--edc-blue);
+  }
 
-#educomp-home .text-white {
-  color: white;
-}
+  .text-white {
+    color: white;
+  }
 
-#educomp-home .sobre-title {
-  color: white;
-  padding: 3rem 0;
-}
+  .sobre-title {
+    color: white;
+    padding: 3rem 0;
+  }
+  #custom-about {
+    background-color: var(--edc-blue);
+    padding: 3rem 0;
+  }
 
-#custom-about {
-  background-color: var(--edc-blue);
-  padding: 3rem 0;
-}
+  #custom-about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
 
-#custom-about .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-}
+  #custom-about .text-left {
+    max-width: 50%;
+  }
 
-#custom-about .text-left {
-  max-width: 50%;
-}
+  #custom-about .text-white {
+    color: white;
+  }
 
-#custom-about .text-white {
-  color: white;
-}
+  #custom-about .text-left h2 {
+    text-align: left;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+    margin-bottom: 1rem;
+    text-decoration: none;
+  }
 
-#custom-about .text-left h2 {
-  text-align: left;
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: white;
-  margin-bottom: 1rem;
-  text-decoration: none;
-}
+  #custom-about img {
+    box-shadow: inset 0 0 10px #311b0b;
+  }
 
-#custom-about img {
-  box-shadow: inset 0 0 10px #311b0b;
-}
+  .text-left .custom-title {
+    font-size: 2rem !important;
+    font-weight: bold !important;
+    color: #fff !important;
+    margin-bottom: 1rem !important;
+    border-bottom: 2px solid #fff !important;
+    display: inline-block !important;
+    padding-bottom: 5px !important;
+  }
 
-.text-left .custom-title {
-  font-size: 2rem !important;
-  font-weight: bold !important;
-  color: #fff !important;
-  margin-bottom: 1rem !important;
-  border-bottom: 2px solid #fff !important;
-  display: inline-block !important;
-  padding-bottom: 5px !important;
-}
+  #custom-about .text-right img {
+    max-width: 100%;
+    height: auto;
+  }
 
-#custom-about .text-right img {
-  max-width: 100%;
-  height: auto;
-}
+  /* Trilhas */
+  #principais-trilhas .title-2 {
+    width: fit-content;
+    border-bottom: 2px solid #3dc0f0;
 
-/* Trilhas */
-#principais-trilhas .title-2 {
-  width: fit-content;
-  border-bottom: 2px solid #3dc0f0;
+    font-size: 3.4rem;
+    color: #1a1c3a;
+    font-weight: bolder;
+    line-height: 6rem;
+  }
 
-  font-size: 3.4rem;
-  color: #1a1c3a;
-  font-weight: bolder;
-  line-height: 6rem;
-}
+  .custom-heading {
+    font-size: 2rem !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin: 0 auto 3rem auto !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
 
-.custom-heading {
-  font-size: 2rem !important;
-  font-weight: bold !important;
-  text-align: center !important;
-  margin: 0 auto 3rem auto !important;
-  text-decoration: none !important;
-  border-bottom: none !important;
-}
+  .custom-heading .chamadas {
+    color: #282e68 !important;
+  }
 
-.custom-heading .chamadas {
-  color: #282e68 !important;
-}
+  .custom-heading .trilhas {
+    color: #e00814 !important;
+  }
 
-.custom-heading .trilhas {
-  color: #e00814 !important;
-}
+  .trilha-card {
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+  }
 
-.trilha-card {
-  padding: 1rem;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  min-height: 400px;
-}
+  .row.justify-content-center {
+    gap: 2rem;
+  }
 
-.row.justify-content-center {
-  gap: 2rem;
-}
+  #sobre1 p {
+    width: 50%;
 
-#sobre1 p {
-  width: 50%;
+    font-size: 1.3rem;
+    line-height: 150%;
+    text-align: left;
+    font-family: 'Inter var', sans-serif;
+  }
 
-  font-size: 1.3rem;
-  line-height: 150%;
-  text-align: left;
-  font-family: 'Inter var', sans-serif;
-}
+  #sobre1 .row > div {
+    padding-left: 3rem;
+  }
 
-#sobre1 .row > div {
-  padding-left: 3rem;
-}
+  #principais-trilhas {
+    background-image: url('.img-fluid');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
 
-#principais-trilhas {
-  background-image: url('.img-fluid');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-}
+  #principais-trilhas .row > div {
+    padding-left: 3rem;
+  }
 
-#principais-trilhas .row > div {
-  padding-left: 3rem;
-}
+  #principais-trilhas .title-2 {
+    width: 100%;
+    border: none;
+    font-size: 3rem;
+  }
 
-#principais-trilhas .title-2 {
-  width: 100%;
-  border: none;
-  font-size: 3rem;
-}
+  #principais-trilhas .card-wrapper-trilhas {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 
-#principais-trilhas .card-wrapper-trilhas {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
+  #principais-trilhas .card-wrapper-trilhas .card {
+    max-width: 20rem;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
 
-#principais-trilhas .card-wrapper-trilhas .card {
-  max-width: 20rem;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  border: none;
-  display: flex;
-  flex-direction: column;
+    justify-content: center;
+  }
 
-  justify-content: center;
-}
+  #principais-trilhas .card-wrapper-trilhas .card .card-img-top {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 
-#principais-trilhas .card-wrapper-trilhas .card .card-img-top {
-  max-width: 80%;
-  margin: 0 auto;
-}
+  #principais-trilhas .card-wrapper-trilhas .card .card-body {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.8rem;
+  }
 
-#principais-trilhas .card-wrapper-trilhas .card .card-body {
-  height: 20rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0.8rem;
-}
+  #principais-trilhas .card-wrapper-trilhas .card .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    height: 3rem;
+  }
 
-#principais-trilhas .card-wrapper-trilhas .card .card-title {
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  height: 3rem;
-}
+  #principais-trilhas .card-wrapper-trilhas .card .card-text {
+    font-size: 0.8rem;
+    color: #544f4f;
+    font-weight: 600;
+    color: 544F4F;
+    text-align: center;
+    height: 9rem;
+  }
 
-#principais-trilhas .card-wrapper-trilhas .card .card-text {
-  font-size: 0.8rem;
-  color: #544f4f;
-  font-weight: 600;
-  color: 544F4F;
-  text-align: center;
-  height: 9rem;
-}
+  .card-1 .trilha-card {
+    background-color: #c7e3d1;
+  }
+  .card-2 .trilha-card {
+    background-color: #f3dca9;
+  }
+  .card-3 .trilha-card {
+    background-color: #cec0f8;
+  }
+  .card-4 .trilha-card {
+    background-color: #f5c0a4;
+  }
+  .card-5 .trilha-card {
+    background-color: #b8d1f1;
+  }
 
-.card-1 .trilha-card {
-  background-color: #c7e3d1;
-}
-.card-2 .trilha-card {
-  background-color: #f3dca9;
-}
-.card-3 .trilha-card {
-  background-color: #cec0f8;
-}
-.card-4 .trilha-card {
-  background-color: #f5c0a4;
-}
-.card-5 .trilha-card {
-  background-color: #b8d1f1;
-}
+  .btn-card {
+    color: #fff;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #1a1c3a;
+    padding: 0.2rem;
+    border-radius: 40px;
+    text-align: center;
+    justify-content: center;
+  }
 
-.btn-card {
-  color: #fff;
-  width: 60%;
-  margin: 0 auto;
-  background-color: #1a1c3a;
-  padding: 0.2rem;
-  border-radius: 40px;
-  text-align: center;
-  justify-content: center;
-}
+  #quarta-edicao {
+    background-image: url('/img/simposio/2024/sobre-img-2.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 8rem;
+  }
 
-#quarta-edicao {
-  background-image: url('/img/simposio/2024/sobre-img-2.png');
-  background-repeat: no-repeat;
-  background-position: left;
-  padding: 8rem;
-}
+  #quarta-edicao .content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
 
-#quarta-edicao .content {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-}
+  #quarta-edicao h2 {
+    width: 100%;
+    border-bottom: 2px solid #3dc0f0;
 
-#quarta-edicao h2 {
-  width: 100%;
-  border-bottom: 2px solid #3dc0f0;
+    font-size: 3.4rem;
+    color: #1a1c3a;
+    font-weight: bolder;
+    line-height: 6rem;
+    text-align: right;
+  }
 
-  font-size: 3.4rem;
-  color: #1a1c3a;
-  font-weight: bolder;
-  line-height: 6rem;
-  text-align: right;
-}
-
-#quarta-edicao p {
-  width: 90%;
-  font-size: 1rem;
-  line-height: 150%;
-  text-align: left;
-  font-family: 'Inter var', sans-serif;
-  text-align: right;
+  #quarta-edicao p {
+    width: 90%;
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: left;
+    font-family: 'Inter var', sans-serif;
+    text-align: right;
+  }
 }
 
 @media screen and (min-width: 1026px) {
@@ -354,10 +355,10 @@
     background-image: none;
     padding: 0;
   }
-}
+
 /* trilhas */
 
-#educomp-home #trilhas {
+ #trilhas {
   background-color: var(--edc-gray);
   padding: 3rem 0;
 }
@@ -514,6 +515,8 @@
   height: auto;
 }
 
+}
+
 @media (max-width: 768px) {
   #custom-edition .image-container {
     flex-direction: column;
@@ -661,80 +664,78 @@
   margin: 0 auto; /* Centraliza o contêiner */
 }
 
-.CardsSession{
+.CardsSession {
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   align-content: center;
   flex-direction: column;
   background-color: gray;
   padding-top: 30px;
   gap: 15px;
-  h1{
-    color: #FFF;
+  h1 {
+    color: #fff;
     font-weight: 600;
     border: 0;
   }
-  h4{
-    color: #FFF;
+  h4 {
+    color: #fff;
     font-weight: 600;
   }
-  .ContainerCards{
+  .ContainerCards {
     display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .Cards {
       width: 100%;
-      height: 100%;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      max-width: 700px;
 
-      .Cards{
-        width: 100%;
-        max-width: 700px;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 25px;
-        .Card{
-            width: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-          
-            img{
-              background-color:gainsboro;
-              border-radius: 15px;
-              padding: 20px;
-            }
-            .imgGrande{
-              height:  200px;
-            }
-            .imgMedia{
-              height:  150px;
-            }
-            .imgPequena{
-              height:  120px;
-            }
-        }
-      } 
-  }
-  .DestaqueContainer{
       display: flex;
-      width: 100%;
-      height: 100%;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 70px;
-      flex-direction: row;
-      
-      .ContainerCards{
+      gap: 25px;
+      .Card {
         width: auto;
-        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
 
+        img {
+          background-color: gainsboro;
+          border-radius: 15px;
+          padding: 20px;
+        }
+        .imgGrande {
+          height: 200px;
+        }
+        .imgMedia {
+          height: 150px;
+        }
+        .imgPequena {
+          height: 120px;
+        }
       }
-    
+    }
+  }
+  .DestaqueContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    flex-direction: row;
+
+    .ContainerCards {
+      width: auto;
+      flex-wrap: wrap;
+    }
   }
 }

@@ -33,20 +33,20 @@ body {
   line-height: 150%;
   text-align: left;
   font-weight: 300;
-}
 
-.content a {
-  background-color: transparent;
-}
+  a {
+    background-color: transparent;
+  }
 
-.content a:hover {
-  background-color: transparent;
-}
+  a:hover {
+    background-color: transparent;
+  }
 
-.content .imagelink {
-  background-color: transparent;
-}
+  .imagelink {
+    background-color: transparent;
+  }
 
-.content .imagelink:hover {
-  background-color: transparent;
+  .imagelink:hover {
+    background-color: transparent;
+  }
 }

@@ -7,22 +7,6 @@
   --edc-blue-bg: #b8d1f1;
 }
 
-.content-educomp strong {
-  color: var(--edc-blue);
-  font-weight: 600;
-}
-
-.content-educomp a {
-  color: var(--edc-blue);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font-weight: 400;
-}
-
-.content-educomp section {
-  padding-bottom: 2.5em;
-}
-
 .header-educomp h1 {
   padding-top: 1em;
   border-bottom: 3px solid var(--edc-green);
@@ -35,40 +19,40 @@
   display: inline-block;
 }
 
-.content-educomp h2 {
-  border-bottom: 2px solid var(--edc-red);
-  margin-bottom: 1em;
-  font-size: 1.8em;
-  color: var(--edc-blue);
-  font-weight: 450;
-  line-height: 1.3em;
-  text-align: left;
-}
+.content-educomp {
+  section {
+    padding-bottom: 2.5em;
+  }
 
-.content-educomp h3 {
-  margin-bottom: 0.5em;
-  margin-top: 1em;
-  font-size: 1.5em;
-  color: var(--edc-blue);
-  font-weight: 300;
-  line-height: 1.2em;
-  text-align: left;
-}
+  h2 {
+    border-bottom: 2px solid var(--edc-red);
+    margin-bottom: 1em;
+    font-size: 1.8em;
+    color: var(--edc-blue);
+    font-weight: 450;
+    line-height: 1.3em;
+    text-align: left;
+  }
 
-.caixalogos {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 100px;
-}
+  h3 {
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+    font-size: 1.5em;
+    color: var(--edc-blue);
+    font-weight: 300;
+    line-height: 1.2em;
+    text-align: left;
+  }
 
-.imglogos {
-  max-width: 200px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
+  strong {
+    color: var(--edc-blue);
+    font-weight: 600;
+  }
 
-.imglogos:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+  a {
+    color: var(--edc-blue);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 400;
+  }
 }
