@@ -534,11 +534,11 @@ exports.obterArquivoEducomp = async function (req, res) {
                 layout: 'landscape',  
                 size: [540, 800],               
             })
-            doc.image('resources/certificados/modelos/certificado-modelo.png', 0, 0,{
-                fit: [800, 600],
-            })
+            doc.image('resources/simposio/2021/pt-BR/modelos/educomp.png', 0, 0, {
+              fit: [800, 600],
+            });
             doc.fontSize(18)
-            doc.font('resources/fonts/trebuc.ttf')
+            doc.font('resources/simposio/2021/pt-BR/fonts/trebuc.ttf');
 
             if (rows[posicao].nome_completo) nome = rows[posicao].nome_completo
             if (rows[posicao].codigo) codigo = rows[posicao].codigo

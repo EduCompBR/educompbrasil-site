@@ -1,12 +1,8 @@
 const express = require('express')
 const app = express()
-const handlebars = require('express-handlebars')
-// const methodOverride = require('method-override')
+const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser')
-const emailServer = require('./models/emailServer')
-// const PDFDocument = require('pdfkit')
-// const { GoogleSpreadsheet } = require('google-spreadsheet')
-//const creds = require('./educomp-novo-certificado.json')
+const emailServer = require('./models/emailServer');
 const fs = require('fs')
 
 //Routes
@@ -109,6 +105,7 @@ app.get('/simposio/2025/educomp/equipe/comissao-especial', educomp_2025_equipe.c
 
 app.get('/simposio/2025/sbc-eb', sbc_eb_2025_principal.index);
 app.get('/simposio/2025/sbc-eb/principal/chamadas', sbc_eb_2025_principal.chamadas);
+app.get('/simposio/2025/sbc-eb/principal/forlic', sbc_eb_2025_principal.forlic);
 
 app.get('/simposio/2025/inscricoes', inscricoes_2025.inscricoes_gerais);
 app.get('/simposio/2025/educomp/inscricoes/educomp/', inscricoes_2025.inscricoes_educomp);

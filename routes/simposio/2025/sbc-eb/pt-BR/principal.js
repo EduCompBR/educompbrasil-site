@@ -13,3 +13,11 @@ exports.chamadas = function (req, res) {
     titulo: 'Chamadas',
   });
 };
+
+exports.forlic = function (req, res) {
+  res.render('simposio/2025/sbc-eb/pt-BR/principal/forlic', {
+    layout: 'simposio/2025/sbc-eb/pt-BR/layout',
+    principal: true,
+    titulo: 'Forlic',
+  });
+};
