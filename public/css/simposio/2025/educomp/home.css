@@ -357,7 +357,7 @@
 }
 /* trilhas */
 
-#trilhas {
+#educomp-home #trilhas {
   background-color: var(--edc-gray);
   padding: 3rem 0;
 }
