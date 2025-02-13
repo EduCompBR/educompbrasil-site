@@ -3,6 +3,10 @@
     padding-bottom: 2em;
   }
 
+  s {
+    color: var(--gray);
+  }
+
   #trilhas {
     .trilha-num {
       font-weight: 600;
@@ -59,12 +63,6 @@
     strong {
       color: var(--edc-red);
       font-weight: 400;
-    }
-
-    s {
-      color: car(--gray);
-      font-size: 0.7em;
-      font-weight: 300;
     }
 
     h2 {
@@ -175,7 +173,9 @@
         padding: 0.5em;
       }
 
-      .dia, .mes, .ano {
+      .dia,
+      .mes,
+      .ano {
         text-align: center;
       }
     }
