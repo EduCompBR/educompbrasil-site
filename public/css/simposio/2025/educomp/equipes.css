@@ -1,65 +1,61 @@
-.content-educomp #equipes .table {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  margin-bottom: 4em;
-}
-
-.content-educomp #equipes thead {
-  background-color: var(--edc-green-bg);
-}
-
-.content-educomp #equipes .col-nome {
-  width: 40%;
-}
-
-.content-educomp #equipes .col-inst {
-  width: 20%;
-}
-
-.content-educomp #equipes .col-mail {
-  width: 40%;
-}
-
-/* Estilos para telas pequenas */
-@media (max-width: 767.98px) {
-  .content-educomp #equipes {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+.content-educomp #equipes {
+  .table {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 4em;
   }
 
-  .content-educomp #equipes .table {
-    width: 100%;
-    border-radius: 0;
+  thead {
+    background-color: var(--edc-blue-bg);
   }
 
-  .content-educomp #equipes .col-nome,
-  .content-educomp #equipes .col-inst,
-  .content-educomp #equipes .col-mail {
-    width: auto;
-    display: block;
-    text-align: left;
+  .col-nome {
+    width: 40%;
   }
 
-  .content-educomp #equipes thead {
-    display: none;
+  .col-inst {
+    width: 20%;
   }
 
-  .content-educomp #equipes tbody tr {
-    display: block;
-    border-bottom: 1px solid var(--edc-green);
+  .col-mail {
+    width: 40%;
   }
 
-  .content-educomp #equipes tbody tr td {
-    display: block;
-    text-align: left;
-    padding: 0.5em;
-    border-bottom: 1px solid var(--edc-gray);
-  }
+  @media (max-width: 767.98px) {
+    .table {
+      width: 100%;
+      border-radius: 0;
+    }
 
-  .content-educomp #equipes tbody tr td:before {
-    content: attr(data-label);
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.5em;
+    .col-nome,
+    .col-inst,
+    .col-mail {
+      width: auto;
+      display: block;
+      text-align: left;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tbody tr {
+      display: block;
+      border-bottom: 1px solid var(--edc-green);
+
+      td {
+        display: block;
+        text-align: left;
+        padding: 0.5em;
+        border-bottom: 1px solid var(--edc-gray);
+      }
+
+      td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.5em;
+      }
+    }
   }
 }

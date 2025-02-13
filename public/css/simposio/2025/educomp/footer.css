@@ -5,52 +5,52 @@
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   border-top: 0.5em solid var(--edc-green);
-}
 
-.footer-educomp .list-icons {
-  padding-left: 15px;
-}
+  .list-icons {
+    padding-left: 15px;
 
-.footer-educomp .list-icons i {
-  font-size: 1.4em;
-  color: var(--edc-green);
-  width: 50px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    i {
+      font-size: 1.4em;
+      color: var(--edc-green);
+      width: 50px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.footer-educomp .list-icons a {
-  font-size: 1.2em;
-}
+    a {
+      font-size: 1.2em;
+    }
+  }
 
-.footer-educomp .btn {
-  width: 200px;
-  padding: 10px 10px;
-  border-radius: 11px;
-  font-size: 1.1em;
-  font-weight: bold;
-  cursor: pointer;
-  display: block;
-  margin: 20px auto;
-  border: 2px solid var(--edc-green);
-  text-align: center;
-}
+  .btn {
+    width: 200px;
+    padding: 10px 10px;
+    border-radius: 11px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid var(--edc-green);
+    text-align: center;
+  }
 
-.footer-educomp .btn-incricoes {
-  background-color: var(--edc-green);
-  color: white;
-}
+  .btn-incricoes {
+    background-color: var(--edc-green);
+    color: white;
+  }
 
-.footer-educomp .btn-programacao {
-  background-color: transparent;
-  color: white;
-}
+  .btn-programacao {
+    background-color: transparent;
+    color: white;
+  }
 
-.footer-educomp #logo-educomp {
-  height: 75px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  #logo-educomp {
+    height: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
