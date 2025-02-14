@@ -148,7 +148,7 @@
   }
 
   #presencial {
-    padding: 3rem 0;
+    padding: 3em 0;
     background-color: var(--edc-gray-bg);
     text-align: center;
 
@@ -170,7 +170,7 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
-      height: 300px;
+      aspect-ratio: 5/3;
     }
 
     .card::before {
@@ -258,7 +258,7 @@
   #sbc-eb {
     background-color: #2b7ec2;
     background-color: var(--eb-blue-medium);
-    padding: 4rem 0;
+    padding: 3em 0;
     color: white;
     text-align: center;
 
