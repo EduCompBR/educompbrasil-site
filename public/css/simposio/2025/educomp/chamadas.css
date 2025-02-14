@@ -35,8 +35,8 @@
       }
 
       .card {
-        border: 1px solid var(--gray-dark);
-        background-color: var(--edc-gray);
+        border: 1px solid var(--edc--gray);
+        background-color: var(--edc-gray-bg);
         transition: transform 0.2s;
         flex-direction: column;
         display: flex;
@@ -138,14 +138,6 @@
       font-weight: 400;
     }
 
-    .data-proxima {
-      color: var(--edc-blue);
-    }
-
-    .data-passado {
-      color: var(--gray);
-    }
-
     .prazo-firme {
       display: block;
       text-align: center;
@@ -162,6 +154,20 @@
 
     .card-text {
       margin-bottom: 0;
+    }
+
+    .card-passado {
+      .card-title {
+        color: var(--gray);
+      }
+
+      .prazo-firme {
+        color: var(--gray);
+      }
+      
+      .card-footer {
+        background-color: var(--gray);
+      }
     }
 
     @media (max-width: 575.98px) {

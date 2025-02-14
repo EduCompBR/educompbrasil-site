@@ -37,7 +37,7 @@
 
   .nav-item .active {
     color: var(--edc-green);
-    background-color: var(--edc-gray);
+    background-color: var(--edc-gray-bg);
     border-bottom: 0.5em solid var(--edc-green);
   }
 
