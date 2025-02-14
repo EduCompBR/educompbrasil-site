@@ -305,6 +305,34 @@
     }
   }
 
+  #sobre-sbc {
+    padding: 3em 0;
+
+    .card-sbc {
+      max-width: 400px;
+
+      .card-sbc-frente {
+        transform: rotate(-3deg);
+        position: relative;
+        right: 25px;
+        z-index: 1;
+      }
+
+      .card-sbc-verso {
+        transform: rotate(4deg);
+        position: relative;
+        top: -25px;
+        left: 25px;
+        z-index: 0;
+      }
+
+      img:hover {
+        transition: transform 0.5s ease, box-shadow 0.3s ease;
+        transform: scale(1.02);
+      }
+    }
+  }
+
   /* 
     .container-content {
       display: flex;
@@ -652,65 +680,6 @@
     #presencial .image-container img {
       max-width: 100%;
     }
-  }
-
-  /* Sobre o SBC */
-  #sobre-sbc {
-    background-color: #f5f5f5;
-    padding: 4rem 0;
-
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .text-content {
-      flex: 1 1 50%;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #282e69;
-      margin-bottom: 1rem;
-      font-weight: bold;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #555;
-      text-align: justify;
-    }
-
-    .images {
-      flex: 1 1 40%;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .images img {
-      width: 100%;
-      height: auto;
-      margin: 0;
-      border: none;
-      box-shadow: none;
-      border-radius: 0;
-    }
-  }
-  .editaimg {
-    transform: rotate(-2.02deg);
-  }
-
-  .editaimg2 {
-    transform: rotate(4.03deg);
-  }
-
-  .editaimg,
-  .editaimg2 {
-    transition: transform 0.3s ease-in-out;
   }
 
   /* Carousel */
