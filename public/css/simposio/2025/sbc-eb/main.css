@@ -1,12 +1,3 @@
-:root {
-  --eb-yellow: #f2c72c;
-  --eb-green: #258873;
-  --eb-blue-dark: #004bb3;
-  --eb-blue-medium: #2b7ec2;
-  --eb-blue-light: #e7f1ff;
-  --eb-gray: #b3b4b8;
-}
-
 .esbc-eb strong {
   color: var(--eb-green);
   font-weight: 600;
