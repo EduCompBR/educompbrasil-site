@@ -6,6 +6,8 @@ html {
   height: 100%;
   margin: 0;
   font-family: 'Inter var', sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
