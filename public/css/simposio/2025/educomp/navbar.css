@@ -82,9 +82,15 @@
     }
   }
 
-  @media (min-width: 992px) {
-    .nav-link {
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  .nav-link {
       padding: 2.4em 0.5em !important;
+    }
+}
+
+  @media (min-width: 1200px) {
+    .nav-link {
+      padding: 2.4em 1em !important;
     }
   }
 }
