@@ -255,6 +255,92 @@
     }
   }
 
+  #sbc-eb {
+    background-color: #2b7ec2;
+    background-color: var(--eb-blue-medium);
+    padding: 4rem 0;
+    color: white;
+    text-align: center;
+
+    strong {
+      font-weight: 600;
+      color: inherit;
+    }
+
+    h2 {
+      font-weight: 600;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      border: none;
+
+      .text-yellow {
+        color: var(--eb-yellow);
+      }
+    }
+
+    h3 {
+      color: var(--eb-yellow);
+      margin-bottom: 2rem;
+      font-weight: 500;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .btn {
+      color: white;
+      border-radius: 25px;
+      background-color: transparent;
+      border: 2px solid white;
+      text-decoration: none;
+      margin-top: 20px !important;
+      padding: 10px 35px;
+      font-size: 1em;
+    }
+
+    .btn:hover {
+      background-color: var(--eb-yellow);
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  /* 
+    .container-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+      justify-content: center;
+    } */
+
+  /* .image {
+      flex: 1 1 40%;
+    } */
+
+  /* .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    } */
+
+  /* .text {
+      flex: 1 1 50%;
+      text-align: left;
+    }
+
+    .text h4 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: justify;
+    } */
+
   /* .educomp #logotipo .container {
     height: calc(80vh - 500px);
 } */
@@ -565,66 +651,6 @@
 
     #presencial .image-container img {
       max-width: 100%;
-    }
-  }
-
-  /* SBC-EB */
-  #custom-section {
-    background-color: #2b7ec2;
-    padding: 4rem 0;
-    color: white;
-    text-align: center;
-
-    h2 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      text-align: center;
-      color: white;
-      text-decoration: none;
-      border: none;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-      font-weight: 400;
-      text-decoration: none;
-    }
-
-    .container-content {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2rem;
-      justify-content: center;
-    }
-
-    .image {
-      flex: 1 1 40%;
-    }
-
-    .image img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .text {
-      flex: 1 1 50%;
-      text-align: left;
-    }
-
-    .text h4 {
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    .text p {
-      font-size: 1rem;
-      line-height: 1.6;
-      text-align: justify;
     }
   }
 
