@@ -1,4 +1,21 @@
 .content-educomp #educomp-home {
+  #carrossel {
+    background-color: white;
+
+    .carousel-indicators li {
+      background-color: #000;
+    }
+
+    .carousel-indicators .active {
+      background-color: #007bff;
+    }
+
+    .custom-carousel-container {
+      max-width: 1140px; /* Alinhado com o container padrão do Bootstrap */
+      margin: 0 auto; /* Centraliza o contêiner */
+    }
+  }
+
   #sobre-educomp {
     background-color: var(--edc-blue);
     padding: 3em 0 0;
@@ -669,19 +686,6 @@
   }
 
   /* Carousel */
-
-  .carousel-indicators li {
-    background-color: #000;
-  }
-
-  .carousel-indicators .active {
-    background-color: #007bff;
-  }
-
-  .custom-carousel-container {
-    max-width: 1140px; /* Alinhado com o container padrão do Bootstrap */
-    margin: 0 auto; /* Centraliza o contêiner */
-  }
 
   .CardsSession {
     display: flex;
