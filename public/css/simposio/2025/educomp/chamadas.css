@@ -43,7 +43,7 @@
       }
 
       .card:hover {
-        transform: scale(1.02);
+        background-color: var(--edc-blue-bg);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
 
@@ -51,6 +51,10 @@
         display: flex;
         align-items: center;
         flex: 1;
+      }
+
+      .card-body {
+        background-color: whitesmoke;
       }
     }
   }
