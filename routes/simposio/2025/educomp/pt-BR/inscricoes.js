@@ -4,7 +4,7 @@ exports.inscricoes = function (req, res) {
     inscricoes: true,
     isEducomp: true,
     titulo: 'Inscrições',
-    header: { titulo: 'Definir' },
+    header: { titulo: 'Inscrições para o Educomp e SBC-EB' },
   })
 }
 
