@@ -15,6 +15,11 @@
         font-size: 1.2em;
       }
 
+      h4 {
+        padding-top: 1em;
+        color: var(--edc-red);
+      }
+
       .btn-link {
         color: var(--edc-blue);
         font-size: clamp(13px, 1.5vw, 16px);
@@ -39,7 +44,7 @@
       }
 
       .card:hover {
-        transform: scale(1.02);
+        background-color: var(--edc-blue-bg);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
 
@@ -47,151 +52,70 @@
         display: flex;
         align-items: center;
         flex: 1;
+
+        h3 {
+          font-weight: 600;
+        }
+      }
+
+      .card-body {
+        background-color: whitesmoke;
+      }
+
+      .collapse {
+        max-height: calc(80vh - 100px);
+        overflow-y: auto;
       }
     }
-  }
 
-  table {
-    width: 90%;
-    border-collapse: collapse;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-  }
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
 
-  th,
-  td {
-    padding: 15px;
-    text-align: left;
-  }
+    .table {
+      border-collapse: collapse;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      min-width: 600px;
 
-  thead {
-    background-color: #e9f7ef;
-    color: #1a5d1a;
-  }
+      .categoria {
+        color: var(--edc-blue);
+        text-align: left;
+      }
 
-  th {
-    font-weight: bold;
-    border-bottom: 2px solid #a9d0f5;
-  }
+      .prazo {
+        color: var(--edc-green);
+        text-align: center;
+        white-space: nowrap;
 
-  td {
-    border-bottom: 1px solid #a9d0f5;
-  }
+        .lote {
+          display: block;
+        }
 
-  tr:nth-child(even) {
-    background-color: #f7f9fb;
-  }
+        .data {
+          display: block;
+          font-weight: 400;
+        }
+      }
 
-  tr:hover {
-    background-color: rgba(255, 255, 204, 0.2);
-  }
+      th,
+      td {
+        vertical-align: middle;
+      }
 
-  tr:nth-child(4n + 1),
-  tr:nth-child(4n + 2) {
-    background-color: #f1f1ff;
-  }
+      thead {
+        background-color: var(--edc-blue-bg);
+        text-align: center;
+      }
 
-  tr:nth-child(4n + 3),
-  tr:nth-child(4n) {
-    background-color: #f1f1ff;
-  }
-
-  td:last-child {
-    color: #333;
-    font-weight: 500;
-  }
-
-  table,
-  th,
-  td {
-    border: 1px solid #e0e0e0;
-  }
-
-  th:first-child,
-  td:first-child {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-
-  th:last-child,
-  td:last-child {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-
-  .tabletitle {
-    text-align: center;
-    background-color: #b90009;
-
-    color: #ffffff;
-  }
-
-  .tableheader {
-    background-color: #1a5d1a;
-    color: #ffffff;
-    text-align: center;
-  }
-
-  .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-top: 50px;
-  }
-
-  .botaoinscricao {
-    border: none;
-    background: none;
-
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 12px 24px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background-color: #282e69;
-    border-radius: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .botaoinscricao:hover {
-    background-color: #2980b9;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-  }
-
-  .content-container {
-    max-width: 1200px; /* Define a largura máxima do container */
-    margin: 20px auto; /* Centraliza o container horizontalmente e adiciona margem vertical */
-    padding: 20px; /* Adiciona padding interno */
-    background-color: #ffffff; /* Define a cor de fundo do container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
-    border-radius: 10px; /* Adiciona cantos arredondados */
-  }
-
-  .caixalogos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 100px;
-  }
-
-  .imglogos {
-    max-width: 200px;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-
-  .imglogos:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+      .lote-1 {
+        color: gray !important;
+        text-decoration: line-through;
+      }
+    }
   }
 }
