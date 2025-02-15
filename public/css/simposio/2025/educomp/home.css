@@ -50,7 +50,7 @@
       position: relative;
       background: white;
       border: 1px solid #ddd;
-      border-radius: 8px;
+      border-radius: 20px;
       padding: 2rem 1rem 1rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
@@ -107,7 +107,7 @@
       }
 
       .btn {
-        border-radius: 20px;
+        border-radius: 25px;
         background-color: transparent;
         border: 1px solid var(--edc-blue);
         font-weight: bold;
@@ -154,9 +154,9 @@
 
     h2 {
       color: var(--edc-green);
-      text-decoration: none !important;
-      border-bottom: none !important;
-      text-align: center !important;
+      text-decoration: none;
+      border-bottom: none;
+      text-align: center;
       font-weight: 600;
     }
 
@@ -314,7 +314,7 @@
       .card-sbc-frente {
         transform: rotate(-3deg);
         position: relative;
-        right: 25px;
+        /* right: 25px; */
         z-index: 1;
       }
 
@@ -322,13 +322,172 @@
         transform: rotate(4deg);
         position: relative;
         top: -25px;
-        left: 25px;
+        /* left: 25px; */
         z-index: 0;
       }
 
       img:hover {
         transition: transform 0.5s ease, box-shadow 0.3s ease;
         transform: scale(1.02);
+      }
+    }
+  }
+
+  #parceiros {
+    background-color: var(--edc-gray-bg);
+    padding: 3em 0;
+
+    h2 {
+      color: var(--edc-green);
+      text-decoration: none;
+      border-bottom: none;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    h3 {
+      color: var(--edc-blue);
+      text-decoration: none;
+      border-bottom: none;
+      text-align: center;
+      margin: 5px 0;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid lightgrey;
+      border-radius: 20px;
+      padding: 1em;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      aspect-ratio: 6/3;  
+      
+      
+      /* .card-body {
+        padding: 0;
+      } */
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* .card-grande {
+      height: 200px;
+      aspect-ratio: 5/3;
+    }
+
+    .card-medio {
+      height: 175px;
+      aspect-ratio: 4/3;
+    }
+
+    .card-pequeno {
+      height: 150px;
+      aspect-ratio: 3/3;
+    } */
+  }
+
+  .CardsSession {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--edc-green-bg);
+    padding-top: 30px;
+    gap: 15px;
+    height: auto;
+
+    h2 {
+      color: var(--edc-blue);
+      text-decoration: none;
+      border-bottom: none;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .ContainerCards {
+      display: flex;
+      width: 90%;
+      height: auto;
+      flex-direction: row;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      max-width: 1000px;
+      .Grande {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gainsboro;
+        border-radius: 10px;
+        height: 190px;
+        width: 300px;
+      }
+      .Medio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gainsboro;
+        border-radius: 10px;
+        height: 160px;
+        width: 280px;
+      }
+      .Pequeno {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gainsboro;
+        border-radius: 10px;
+        height: 130px;
+        width: 220px;
+      }
+      .Card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        h4 {
+          color: #fff;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        .LogosCtn {
+          /* padding: 20px; */
+          /* height: 190px; */
+          gap: 15px;
+
+          width: 100%;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          img {
+            background-color: gainsboro;
+
+            height: 80px;
+          }
+          .caedLogo {
+            width: 270px;
+            height: 60px;
+          }
+        }
       }
     }
   }
@@ -416,7 +575,7 @@
     gap: 2rem;
   } */
 
-  #sobre1 p {
+  /* #sobre1 p {
     width: 50%;
 
     font-size: 1.3rem;
@@ -427,7 +586,7 @@
 
   #sobre1 .row > div {
     padding-left: 3rem;
-  }
+  } */
 
   /* #trilhas {
     background-image: url('.img-fluid');
@@ -492,7 +651,7 @@
     text-align: center;
     height: 9rem;
   } */
-
+  /* 
   .btn-card {
     color: #fff;
     width: 60%;
@@ -535,16 +694,15 @@
     text-align: left;
     font-family: 'Inter var', sans-serif;
     text-align: right;
-  }
+  } */
 
-  @media screen and (min-width: 1026px) {
+  /* @media screen and (min-width: 1026px) {
     #sobre1 img {
       display: none;
     }
-  }
+  } */
 
-  @media screen and (min-width: 321px) and (max-width: 1025px) {
-    /**/
+  /* @media screen and (min-width: 321px) and (max-width: 1025px) {
     #sobre1,
     #quarta-edicao {
       background-image: none;
@@ -609,12 +767,8 @@
       padding: 0;
     }
 
-    /* trilhas */
 
-    /* #trilhas {
-      background-color: var(--edc-gray-bg);
-      padding: 3rem 0;
-    } */
+
 
     #section-cards {
       background-color: #b8d1f1;
@@ -669,8 +823,8 @@
       font-size: 0.875rem;
       font-weight: 500;
     }
-  }
-
+  } */
+  /* 
   @media (max-width: 768px) {
     #presencial .image-container {
       flex-direction: column;
@@ -680,96 +834,5 @@
     #presencial .image-container img {
       max-width: 100%;
     }
-  }
-
-  /* Carousel */
-
-  .CardsSession {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: gray;
-    padding-top: 30px;
-    gap: 15px;
-    height: auto;
-    h1 {
-      color: #fff;
-      font-weight: 600;
-      border: 0;
-    }
-
-    .ContainerCards {
-      display: flex;
-      width: 90%;
-      height: auto;
-      flex-direction: row;
-      gap: 30px;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      max-width: 1000px;
-      .Grande {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: gainsboro;
-        border-radius: 10px;
-        height: 190px;
-        width: 300px;
-      }
-      .Medio {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: gainsboro;
-        border-radius: 10px;
-        height: 160px;
-        width: 280px;
-      }
-      .Pequeno {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: gainsboro;
-        border-radius: 10px;
-        height: 130px;
-        width: 220px;
-      }
-      .Card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        h4 {
-          color: #fff;
-          font-weight: 600;
-          margin: 0;
-        }
-
-        .LogosCtn {
-          /* padding: 20px; */
-          /* height: 190px; */
-          gap: 15px;
-
-          width: 100%;
-          border-radius: 10px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-wrap: wrap;
-          img {
-            background-color: gainsboro;
-
-            height: 80px;
-          }
-          .caedLogo {
-            width: 270px;
-            height: 60px;
-          }
-        }
-      }
-    }
-  }
+  } */
 }
