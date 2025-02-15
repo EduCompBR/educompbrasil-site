@@ -3,16 +3,34 @@
     background-color: white;
 
     .carousel-indicators li {
-      background-color: #000;
+      background-color: var(--edc-blue);
     }
 
     .carousel-indicators .active {
-      background-color: #007bff;
+      background-color: var(--edc-blue);
     }
 
-    .custom-carousel-container {
+    .carousel-container {
       max-width: 1140px;
       margin: 0 auto;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      text-decoration: none;
+      font-size: 150%;
+    }
+
+    .carousel-control-prev {
+      justify-content: flex-end;
+    }
+
+    .carousel-control-next {
+      justify-content: flex-start;
+    }
+
+    a:hover {
+      color: var(--edc-blue);
     }
   }
 
