@@ -24,14 +24,6 @@
     width: 40%;
   }
 
-  .table-striped tbody tr:nth-of-type(odd) {
-    background-color: white;
-  }
-
-  .table-striped tbody tr:nth-of-type(even) {
-    background-color: #ebf3fc;
-  }
-
   @media (max-width: 767.98px) {
     .table {
       width: 100%;

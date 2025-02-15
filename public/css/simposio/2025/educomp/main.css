@@ -35,6 +35,12 @@
     text-align: left;
   }
 
+  h4 {
+    color: var(--edc-blue);
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+
   strong {
     color: var(--edc-blue);
     font-weight: 600;
@@ -45,5 +51,13 @@
     text-decoration: underline;
     text-underline-offset: 3px;
     font-weight: 400;
+  }
+
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: white;
+  }
+
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: #ebf3fc;
   }
 }
