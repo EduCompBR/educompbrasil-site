@@ -35,7 +35,7 @@
       }
 
       .card {
-        border: 1px solid var(--edc--gray);
+        border: 1px solid var(--edc-gray);
         background-color: var(--edc-gray-bg);
         transition: transform 0.2s;
         flex-direction: column;
