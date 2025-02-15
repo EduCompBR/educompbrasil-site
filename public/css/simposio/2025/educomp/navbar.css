@@ -45,32 +45,6 @@
     flex-grow: unset;
   }
 
-  .inscricoes-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 5px;
-    padding-bottom: 10px;
-  }
-
-  .btn-inscricoes {
-    background-color: var(--edc-blue);
-    color: white;
-    padding: 12px 24px;
-    font-size: 16px;
-    border-radius: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .btn-inscricoes:hover {
-    background-color: var(--edc-green);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    color: white;
-  }
-
   @media (max-width: 991.98px) {
     .nav-link {
       padding: 1em 1em !important;
@@ -83,14 +57,50 @@
   }
 
   @media (min-width: 992px) and (max-width: 1199.98px) {
-  .nav-link {
+    .nav-link {
       padding: 2.4em 0.5em !important;
     }
-}
+
+    .nav-link.inscricoes {
+      padding: 1em 0.5em !important;
+      margin: 1.4em 0;
+      background-color: var(--edc-green);
+      color: white;
+      border: 0;
+      border-radius: 40px;
+    }
+
+    .nav-link.inscricoes.active {
+      padding: 2.4em 0.5em !important;
+      margin: 0;
+      background-color: var(--edc-gray-bg);
+      color: var(--edc-green);
+      border-bottom: 0.5em solid var(--edc-green);
+      border-radius: 0;
+    }
+  }
 
   @media (min-width: 1200px) {
     .nav-link {
       padding: 2.4em 1em !important;
+    }
+
+    .nav-link.inscricoes {
+      padding: 1em 1em !important;
+      margin: 1.4em 0;
+      background-color: var(--edc-green);
+      color: white;
+      border: 0;
+      border-radius: 40px;
+    }
+
+    .nav-link.inscricoes.active {
+      padding: 2.4em 1em !important;
+      margin: 0;
+      background-color: var(--edc-gray-bg);
+      color: var(--edc-green);
+      border-bottom: 0.5em solid var(--edc-green);
+      border-radius: 0;
     }
   }
 }
