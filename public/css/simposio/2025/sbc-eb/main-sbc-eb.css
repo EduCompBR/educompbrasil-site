@@ -10,6 +10,9 @@
   --navbar-link: var(--eb-green);
   --navbar-ativo: var(--eb-yellow);
   --navbar-ativo-bg: var(--eb-gray-bg);
+
+  --footer-bg: var(--eb-green);
+  --footer-border: var(--eb-yellow);
 }
 
 .esbc-eb strong {

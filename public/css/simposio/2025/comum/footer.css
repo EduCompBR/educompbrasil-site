@@ -1,17 +1,17 @@
-.footer-educomp {
+.footer {
   max-width: 100%;
-  background-color: var(--edc-blue);
+  background-color: var(--footer-bg);
   color: white;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
-  border-top: 0.5em solid var(--edc-green);
+  border-top: 0.5em solid var(--footer-border);
 
   .list-icons {
     padding-left: 15px;
 
     i {
       font-size: 1.4em;
-      color: var(--edc-green);
+      color: var(--footer-border);
       width: 50px;
       padding-top: 6px;
       padding-bottom: 6px;
@@ -34,12 +34,12 @@
     cursor: pointer;
     display: block;
     margin: 20px auto;
-    border: 2px solid var(--edc-green);
+    border: 2px solid var(--footer-border);
     text-align: center;
   }
 
   .btn-incricoes {
-    background-color: var(--edc-green);
+    background-color: var(--footer-border);
     color: white;
   }
 
@@ -50,6 +50,12 @@
 
   #logo-educomp {
     height: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #logo-sbc-eb {
+    height: 60px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
