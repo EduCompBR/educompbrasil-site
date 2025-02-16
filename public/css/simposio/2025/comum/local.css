@@ -1,4 +1,4 @@
-.content-educomp #local {
+.content #local {
   #como-chegar {
     h2 {
       margin-bottom: 3px;
@@ -63,7 +63,7 @@
 
       i {
         font-size: 1em;
-        color: var(--edc-blue);
+        color: var(--h3-color);
         width: 30px;
         padding-top: 6px;
         padding-bottom: 6px;
@@ -82,7 +82,7 @@
     .video-titulo {
       text-align: center;
       display: block;
-      color: var(--edc-blue);
+      color: var(--h2-color);
       font-size: 1.2em;
       font-weight: 400;
       padding: 0.25em ;
@@ -91,7 +91,7 @@
     .video-container {
       position: relative;
       width: 100%;
-      padding-top: 56.25%; /* 16:9 → 9 ÷ 16 × 100 */
+      padding-top: 56.25%;
       overflow: hidden;
     }
 
