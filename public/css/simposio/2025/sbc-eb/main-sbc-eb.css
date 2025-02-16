@@ -13,29 +13,26 @@
 
   --footer-bg: var(--eb-green);
   --footer-border: var(--eb-yellow);
-}
 
-.esbc-eb strong {
-  color: var(--eb-green);
-  font-weight: 600;
+  --h1-color: var(--eb-blue-dark);
+  --h2-color: var(--eb-green);
+  --h3-color: var(--eb-green);
+  --h4-color: var(--eb-green);
+  /* --strong-color: var(bl); */
+  --link-color: var(--eb-blue-dark);
+
+  /* --table-header-color: var(--edc-green); */
+  /* --table-header-color-bg: var(--edc-blue-bg); */
+  /* --table-striped-color-1: white; */
+  /* --table-striped-color-2: gray; */
 }
 
 .esbc-eb .highlight {
   color: var(--edc-green);
 }
 
-.sbc-eb a {
-  color: var(--eb-green);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font-weight: 400;
-}
 
-.sbc-eb section {
-  padding-bottom: 2.5em;
-}
-
-.sbc-eb h1 {
+/* .sbc-eb h1 {
   padding: 3em 0.5em 0.25em 0.5em;
   border-bottom: 2px solid var(--edc-green);
   font-size: 3em;
@@ -72,9 +69,9 @@
   font-weight: 650;
   text-align: left;
   margin-top: 50px;
-}
+} */
 
-.sbc-eb .fundoverde {
+/* .sbc-eb .fundoverde {
   background-color: var(--edc-green);
 }
 
@@ -93,15 +90,15 @@
 
 .sbc-eb #tracofooter {
   width: 100%;
-}
+} */
 
 .sbc-eb #principais-trilhas {
   /* background-image: url("../../../../img/simposio/2025/eb/retanguloverde.png"); */
-  background-color: var(--edc-green);
-  min-height: 600px;
+  /* background-color: var(--edc-green); */
+  /* min-height: 600px; */
 }
 
-.sbc-eb #principais-trilhas .card {
+/* .sbc-eb #principais-trilhas .card {
   background-color: transparent;
   border: none;
   display: flex;
@@ -142,4 +139,4 @@
 .sbc-eb .textsobresbc {
   font-size: 14px;
   margin-bottom: 50px;
-}
+} */

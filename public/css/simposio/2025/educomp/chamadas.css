@@ -3,10 +3,6 @@
     padding-bottom: 2em;
   }
 
-  s {
-    color: var(--gray);
-  }
-
   #trilhas {
     .trilha-num {
       font-weight: 600;

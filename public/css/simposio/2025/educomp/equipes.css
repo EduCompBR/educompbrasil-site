@@ -1,15 +1,6 @@
 .content-educomp #equipes {
   .table {
-    border-collapse: collapse;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
     margin-bottom: 4em;
-  }
-
-  thead {
-    background-color: var(--edc-blue-bg);
-    color: var(--edc-green);
   }
 
   .col-nome {

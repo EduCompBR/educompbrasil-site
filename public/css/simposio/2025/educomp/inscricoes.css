@@ -74,12 +74,7 @@
     }
 
     .table {
-      border-collapse: collapse;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       margin: 20px auto;
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
       min-width: 600px;
 
       .categoria {
