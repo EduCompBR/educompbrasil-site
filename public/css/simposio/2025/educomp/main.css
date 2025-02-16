@@ -1,5 +1,5 @@
 .header-educomp h1 {
-  padding-top: 1em;
+  padding: 1em 1em 0;
   border-bottom: 3px solid var(--edc-green);
   margin-bottom: 0.75em;
   text-align: center;

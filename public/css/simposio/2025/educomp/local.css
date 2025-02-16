@@ -1,0 +1,24 @@
+.content-educomp #local {
+  #como-chegar {
+    h2 {
+      margin-bottom: 3px;
+    }
+    
+    .figure-img {
+      max-width: 85%;
+      height: auto;
+      border-radius: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .figure-img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .figure-caption a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
