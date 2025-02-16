@@ -1,75 +1,17 @@
-.content-educomp #chamadas {
+.content #chamadas {
   .coordenacao {
     padding-bottom: 2em;
   }
 
-  #trilhas {
-    .trilha-num {
-      font-weight: 600;
-    }
-
-    .accordion {
-      h3 {
-        padding: 0.5em 0;
-        margin: 0;
-        font-size: 1.2em;
-      }
-
-      .btn-link {
-        color: var(--edc-blue);
-        font-size: clamp(13px, 1.5vw, 16px);
-        padding: 0;
-      }
-
-      .btn-link:hover {
-        text-decoration: none;
-      }
-
-      .btn-link:focus {
-        text-decoration: none;
-        box-shadow: none;
-      }
-
-      .card {
-        border: 1px solid var(--edc-gray);
-        background-color: var(--edc-gray-bg);
-        transition: transform 0.2s;
-        flex-direction: column;
-        display: flex;
-      }
-
-      .card:hover {
-        background-color: var(--edc-blue-bg);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-
-      .card-header {
-        display: flex;
-        align-items: center;
-        flex: 1;
-      }
-
-      .card-body {
-        background-color: whitesmoke;
-      }
-    }
-  }
-
   #datas-importantes {
-    background-color: var(--edc-blue-bg);
+    background-color: var(--table-header-color-bg);
     padding-top: 2em;
     margin-bottom: 2em;
-
-    strong {
-      color: var(--edc-red);
-      font-weight: 400;
-    }
 
     h2 {
       text-decoration: none !important;
       text-transform: uppercase;
       border-bottom: none !important;
-      color: var(--edc-blue) !important;
       text-align: center !important;
       font-weight: 400;
     }
@@ -92,7 +34,7 @@
     }
 
     .card-title {
-      color: var(--edc-blue);
+      color: var(--prazo-data-color);
       font-weight: 500;
       font-size: 1.5em;
       padding: 1em 1em 0;
@@ -106,7 +48,7 @@
     }
 
     .card-footer {
-      background-color: var(--edc-green);
+      background-color: var(--prazo-footer-color);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -141,7 +83,7 @@
     .prazo-firme {
       display: block;
       text-align: center;
-      color: var(--edc-red);
+      color: var(--prazo-firme-color);
       font-weight: 400;
       font-size: 0.7em;
       margin-top: 10px;

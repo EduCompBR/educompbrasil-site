@@ -27,11 +27,23 @@
   --table-striped-color-1: white;
   --table-striped-color-2: #f6fef6;
   --border-color: var(--eb-gray);
+
+  --prazo-firme-color: var(--edc-red);
+  --prazo-footer-color: var(--eb-blue-medium);
+  --prazo-data-color: var(--eb-blue-dark);
 }
 
 .content-sbc-eb {
   h2 {
     margin-bottom: 0.4em;
+  }
+
+  #chamadas {
+    #datas-importantes {
+      h2 {
+        margin-bottom: 1em;
+      }
+    }
   }
 
   #inscricoes {
