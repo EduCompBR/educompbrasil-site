@@ -1,4 +1,4 @@
-.content-educomp #equipes {
+.content #equipes {
   .table {
     margin-bottom: 4em;
   }
@@ -35,13 +35,13 @@
 
     tbody tr {
       display: block;
-      border-bottom: 1px solid var(--edc-green);
+      border-bottom: 1px solid var(--gray-dark);
 
       td {
         display: block;
         text-align: left;
         padding: 0.5em;
-        border-bottom: 1px solid var(--edc-gray-bg);
+        border-bottom: 1px solid var(--gray);
       }
 
       td:before {
