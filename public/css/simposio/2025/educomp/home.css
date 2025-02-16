@@ -275,7 +275,6 @@
 
   #sbc-eb {
     background-color: #2b7ec2;
-    background-color: var(--eb-blue-medium);
     padding: 3em 0;
     color: white;
     text-align: center;
@@ -293,12 +292,12 @@
       border: none;
 
       .text-yellow {
-        color: var(--eb-yellow);
+        color: #f2c72c;
       }
     }
 
     h3 {
-      color: var(--eb-yellow);
+      color: #f2c72c;
       margin-bottom: 2rem;
       font-weight: 500;
       text-decoration: none;
@@ -317,7 +316,7 @@
     }
 
     .btn:hover {
-      background-color: var(--eb-yellow);
+      background-color: #f2c72c;
       color: white;
       transition: background-color 0.3s ease;
     }
