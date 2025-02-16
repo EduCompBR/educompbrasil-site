@@ -87,7 +87,7 @@
 
     .nav-link.inscricoes {
       padding: 1em 1em !important;
-      margin: 1.4em 0;
+      margin: 1.4em 0 0 5px;
       background-color: var(--edc-green);
       color: white;
       border: 0;
