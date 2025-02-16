@@ -9,7 +9,7 @@ exports.conheca_jf = function (req, res) {
 }
 
 exports.como_chegar = function (req, res) {
-  res.render('simposio/2025/comum/pt-BR/local/como-chegar-jf', {
+  res.render('simposio/2025/comum/pt-BR/local/como-chegar', {
     layout: 'simposio/2025/pt-BR/layout',
     local: true,
     isSbceb: true,
@@ -29,7 +29,7 @@ exports.onde_hospedar = function (req, res) {
 }
 
 exports.local_evento = function (req, res) {
-  res.render('simposio/2025/comum/pt-BR/local/conheca-ufjf', {
+  res.render('simposio/2025/comum/pt-BR/local/local-evento', {
     layout: 'simposio/2025/pt-BR/layout',
     local: true,
     isSbceb: true,
