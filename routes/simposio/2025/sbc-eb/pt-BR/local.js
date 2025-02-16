@@ -13,8 +13,8 @@ exports.como_chegar = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     local: true,
     isSbceb: true,
-    titulo: 'Como chegar em Juiz de Fora',
-    header: { titulo: 'Como chegar em Juiz de Fora' },
+    titulo: 'Como chegar a Juiz de Fora',
+    header: { titulo: 'Como chegar a Juiz de Fora' },
   })
 }
 
