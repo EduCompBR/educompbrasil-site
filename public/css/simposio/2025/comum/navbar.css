@@ -1,4 +1,4 @@
-.navbar-educomp {
+.navbar {
   max-width: 100%;
   background-color: white !important;
   box-shadow: 0 2px 4px var(--gray);
@@ -16,8 +16,14 @@
     padding-right: 5px;
   }
 
+  #logo-sbc-eb {
+    height: 38px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
   .button-drop {
-    color: var(--edc-blue);
+    color: var(--navbar-link);
     padding: 1em;
 
     i {
@@ -25,20 +31,20 @@
     }
   }
   .nav-item > a {
-    color: var(--edc-blue);
+    color: var(--navbar-link);
     font-weight: bold;
   }
 
   .nav-item a:hover {
-    background-color: var(--edc-blue) !important;
+    background-color: var(--navbar-link) !important;
     color: white !important;
     transition: background-color 0.3s ease;
   }
 
   .nav-item .active {
-    color: var(--edc-green);
-    background-color: var(--edc-gray-bg);
-    border-bottom: 0.5em solid var(--edc-green);
+    color: var(--navbar-ativo);
+    background-color: var(--navbar-ativo-bg);
+    border-bottom: 0.5em solid var(--navbar-ativo);
   }
 
   .navbar-collapse {
@@ -64,7 +70,7 @@
     .nav-link.inscricoes {
       padding: 1em 0.5em !important;
       margin: 1.4em 0;
-      background-color: var(--edc-green);
+      background-color: var(--navbar-ativo);
       color: white;
       border: 0;
       border-radius: 40px;
@@ -73,9 +79,9 @@
     .nav-link.inscricoes.active {
       padding: 2.4em 0.5em !important;
       margin: 0;
-      background-color: var(--edc-gray-bg);
-      color: var(--edc-green);
-      border-bottom: 0.5em solid var(--edc-green);
+      background-color: var(--navbar-ativo-bg);
+      color: var(--navbar-ativo);
+      border-bottom: 0.5em solid var(--navbar-ativo);
       border-radius: 0;
     }
   }
@@ -88,7 +94,7 @@
     .nav-link.inscricoes {
       padding: 1em 1em !important;
       margin: 1.4em 0 0 5px;
-      background-color: var(--edc-green);
+      background-color: var(--navbar-ativo);
       color: white;
       border: 0;
       border-radius: 40px;
@@ -97,9 +103,9 @@
     .nav-link.inscricoes.active {
       padding: 2.4em 1em !important;
       margin: 0;
-      background-color: var(--edc-gray-bg);
-      color: var(--edc-green);
-      border-bottom: 0.5em solid var(--edc-green);
+      background-color: var(--navbar-ativo-bg);
+      color: var(--navbar-ativo);
+      border-bottom: 0.5em solid var(--navbar-ativo);
       border-radius: 0;
     }
   }
