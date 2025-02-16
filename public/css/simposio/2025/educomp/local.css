@@ -47,7 +47,7 @@
       align-items: center;
       justify-content: center;
     }
-    
+
     .hotel-foto {
       aspect-ratio: 4/3;
       object-fit: cover;
@@ -75,6 +75,32 @@
       a {
         font-size: 1em;
       }
+    }
+  }
+
+  #apresentacao-jf {
+    .video-titulo {
+      text-align: center;
+      display: block;
+      color: var(--edc-blue);
+      font-size: 1.2em;
+      font-weight: 400;
+      padding: 0.25em ;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 → 9 ÷ 16 × 100 */
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 }
