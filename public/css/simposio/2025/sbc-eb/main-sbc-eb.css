@@ -1,6 +1,7 @@
 :root {
   --eb-yellow: #f2c72c;
   --eb-green: #258873;
+  --eb-green-bg: #c7e3d1;
   --eb-blue-dark: #004bb3;
   --eb-blue-medium: #2b7ec2;
   --eb-blue-light: #e7f1ff;
@@ -14,23 +15,45 @@
   --footer-bg: var(--eb-green);
   --footer-border: var(--eb-yellow);
 
-  --h1-color: var(--eb-blue-dark);
+  --h1-color: var(--eb-green);
   --h2-color: var(--eb-green);
   --h3-color: var(--eb-green);
   --h4-color: var(--eb-green);
   /* --strong-color: var(bl); */
   --link-color: var(--eb-blue-dark);
 
-  /* --table-header-color: var(--edc-green); */
-  /* --table-header-color-bg: var(--edc-blue-bg); */
-  /* --table-striped-color-1: white; */
-  /* --table-striped-color-2: gray; */
+  --table-header-color: var(--eb-green);
+  --table-header-color-bg: var(--eb-green-bg);
+  --table-striped-color-1: white;
+  --table-striped-color-2: #f6fef6;
+  --border-color: var(--eb-gray);
 }
 
-.esbc-eb .highlight {
+.content-sbc-eb {
+  h2 {
+    margin-bottom: 0.4em;
+  }
+
+  #inscricoes {
+    #valores {
+      .accordion {
+        h4 {
+          color: #e00814;
+        }
+      }
+
+      .table {
+        .prazo {
+          color: var(--eb-blue-dark);
+        }
+      }
+    }
+  }
+}
+
+/* .esbc-eb .highlight {
   color: var(--edc-green);
-}
-
+} */
 
 /* .sbc-eb h1 {
   padding: 3em 0.5em 0.25em 0.5em;

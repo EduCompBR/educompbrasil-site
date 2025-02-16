@@ -1,9 +1,8 @@
-.content-educomp #inscricoes {
+.content #inscricoes {
   #promocional {
     .banner-inscricao {
       margin-bottom: 1em;
       position: relative;
-      top: -0.8em;
     }
   }
 
@@ -17,11 +16,10 @@
 
       h4 {
         padding-top: 1em;
-        color: var(--edc-red);
       }
 
       .btn-link {
-        color: var(--edc-blue);
+        color: var(--h2-color);
         font-size: clamp(13px, 1.5vw, 16px);
         padding: 0;
       }
@@ -36,15 +34,15 @@
       }
 
       .card {
-        border: 1px solid var(--edc-gray);
-        background-color: var(--edc-gray-bg);
+        border: 1px solid gray;
+        background-color: lightgray;
         transition: transform 0.2s;
         flex-direction: column;
         display: flex;
       }
 
       .card:hover {
-        background-color: var(--edc-blue-bg);
+        background-color: var(--table-header-color-bg);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
 
@@ -78,12 +76,11 @@
       min-width: 600px;
 
       .categoria {
-        color: var(--edc-blue);
+        color: var(--h2-color);
         text-align: left;
       }
 
       .prazo {
-        color: var(--edc-green);
         text-align: center;
         white-space: nowrap;
 
@@ -103,7 +100,7 @@
       }
 
       thead {
-        background-color: var(--edc-blue-bg);
+        background-color: var(--table-header-color-bg);
         text-align: center;
       }
 

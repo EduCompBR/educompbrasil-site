@@ -48,7 +48,6 @@ body {
   }
 
   h2 {
-    margin-bottom: 1em;
     font-size: 1.8em;
     color: var(--h2-color);
     font-weight: 450;

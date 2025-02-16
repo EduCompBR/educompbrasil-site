@@ -37,6 +37,29 @@
 
 .content-educomp {
   h2 {
+    margin-bottom: 1em;
     border-bottom: 2px solid var(--edc-red);
+  }
+
+  #inscricoes {
+    #promocional {
+      .banner-inscricao {
+        top: -0.8em;
+      }
+    }
+
+    #valores {
+      .accordion {
+        h4 {
+          color: var(--edc-red);
+        }
+      }
+
+      .table {
+        .prazo {
+          color: var(--edc-green);
+        }
+      }
+    }
   }
 }
