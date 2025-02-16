@@ -53,9 +53,6 @@ app.get('/simposio/2025/educomp/equipes/comite-programa', educomp_2025_equipes.c
 app.get('/simposio/2025/educomp/equipes/comite-diretivo', educomp_2025_equipes.comite_diretivo)
 app.get('/simposio/2025/educomp/equipes/comissao-especial', educomp_2025_equipes.comissao_especial)
 app.get('/simposio/2025/educomp/inscricoes', educomp_2025_inscricoes.inscricoes)
-app.get('/simposio/2025/educomp/inscricoes/valores-combo', educomp_2025_inscricoes.valores_combo)
-app.get('/simposio/2025/educomp/inscricoes/valores-educomp', educomp_2025_inscricoes.valores_educomp)
-app.get('/simposio/2025/educomp/inscricoes/valores-sbc-eb', educomp_2025_inscricoes.valores_sbc_eb)
 
 // SBC-EB 2025
 var sbc_eb_2025_home = require('./routes/simposio/2025/sbc-eb/pt-BR/home')
@@ -72,9 +69,6 @@ app.get('/simposio/2025/sbc-eb/local/onde-hospedar', sbc_eb_2025_local.onde_hosp
 app.get('/simposio/2025/sbc-eb/local/conheca-juiz-de-fora', sbc_eb_2025_local.conheca_jf)
 app.get('/simposio/2025/sbc-eb/local/local-evento', sbc_eb_2025_local.local_evento)
 app.get('/simposio/2025/sbc-eb/inscricoes', sbc_eb_2025_inscricoes.inscricoes)
-app.get('/simposio/2025/sbc-eb/inscricoes/valores-combo', sbc_eb_2025_inscricoes.valores_combo)
-app.get('/simposio/2025/sbc-eb/inscricoes/valores-educomp', sbc_eb_2025_inscricoes.valores_educomp)
-app.get('/simposio/2025/sbc-eb/inscricoes/valores-sbc-eb', sbc_eb_2025_inscricoes.valores_sbc_eb)
 
 // Educomp 2024
 var educomp_2024_main = require('./routes/simposio/2024/pt-BR/main')

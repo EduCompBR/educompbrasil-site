@@ -12,15 +12,7 @@
     </div>
 
     <!-- Toggle button -->
-    <button 
-      class="navbar-toggler button-drop" 
-      type="button" 
-      data-toggle="collapse" 
-      data-target="#navbarResponsive" 
-      aria-controls="navbarResponsive" 
-      aria-expanded="false" 
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler button-drop" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
     </button>
 
@@ -59,6 +51,13 @@
           </div>
         </li>
 
+        <li class="nav-item dropdown">
+          <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if forlic}} active {{~/if}}">FORLIC</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/simposio/2025/sbc-eb/forlic">Fórum das Licenciaturas</a>
+          </div>
+        </li>
+
         <!-- <li class="nav-item dropdown">
           <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if equipes}} active {{~/if}}">EQUIPES</a>
           <div class="dropdown-menu">
@@ -70,13 +69,6 @@
         </li> -->
 
         <li class="nav-item dropdown">
-          <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if forlic}} active {{~/if}}">FORLIC</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/simposio/2025/sbc-eb/forlic">Fórum das Licenciaturas</a>
-          </div>
-        </li>
-
-        <li class="nav-item dropdown">
           <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if edicoes}} active {{~/if}} ">EDIÇÕES</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="https://www2.sbc.org.br/sbceb2024/" target="_blank">SBC-EB 2024</a>
@@ -84,12 +76,21 @@
         </li>
 
         <!-- <li class="nav-item">
-          <a class="nav-link" href="/simposio/2025/sbc-eb">SBC-EB</a>
+          <a class="nav-link" href="/simposio/2025/educomp/">EDUCOMP</a>
         </li> -->
 
-        <div class="inscricoes-container">
-          <a href="/simposio/2025/sbc-eb/inscricoes" class="btn btn-inscricoes">INSCRIÇÕES</a>
-        </div>
+        <li class="nav-item dropdown">
+          <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link js-scroll-trigger dropdown-toggle {{~#if inscricoes}} active {{~/if}} inscricoes">INSCRIÇÕES</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/simposio/2025/sbc-eb/inscricoes/">Inscreva-se</a>
+            <a class="dropdown-item" href="/simposio/2025/sbc-eb/inscricoes/#promocional">Inscrição promocional</a>
+            <a class="dropdown-item" href="/simposio/2025/sbc-eb/inscricoes/#valores">Valores de inscrição</a>
+            <a class="dropdown-item" href="/simposio/2025/sbc-eb/inscricoes/#autores">Inscrições para autores</a>
+            <a class="dropdown-item" href="/simposio/2025/sbc-eb/inscricoes/#institucional">Inscrições institucionais</a>
+            <a class="dropdown-item" href="/simposio/2025/sbc-eb/inscricoes/#pagamento">Formas de pagamento</a>
+            <a class="dropdown-item" href="/simposio/2025/sbc-eb/inscricoes/#cancelamento">Política de cancelamento</a>
+          </div>
+        </li>
       </ul>
     </div>
 
