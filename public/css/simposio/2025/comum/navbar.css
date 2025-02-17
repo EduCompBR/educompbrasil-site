@@ -55,6 +55,10 @@
     flex-grow: unset;
   }
 
+  .nav-item .dropdown-header {
+    color: var(--h1-color);
+  }
+
   @media (max-width: 991.98px) {
     .nav-link {
       padding: 1em 1em !important;
