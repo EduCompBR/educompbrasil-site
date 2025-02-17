@@ -8,9 +8,35 @@
 <!-- Pesquisa e filtros -->
 <script src="/js/jquery.hideseek.js" type="text/javascript"></script>
 <script>
-    $(document).ready(function () {
+  $(document).ready(function () {
     $("#search").hideseek({
-        nodata: "Nenhum item encontrado!",
+      nodata: "Nenhum item encontrado!",
     })
-    })
+  })
 </script>
+
+{{~#if home}}
+<script>
+  $("#carrossel-parceiros").carousel({
+    interval: 4000,
+  })
+
+  $("#carrossel-parceiros .carousel-item").each(function () {
+    var minPerSlide = 3
+    var next = $(this).next()
+    if (!next.length) {
+      next = $(this).siblings(":first")
+    }
+    next.children(":first-child").clone().appendTo($(this))
+
+    for (var i = 0; i < minPerSlide; i++) {
+      next = next.next()
+      if (!next.length) {
+        next = $(this).siblings(":first")
+      }
+
+      next.children(":first-child").clone().appendTo($(this))
+    }
+  })
+</script>
+{{~/if}}

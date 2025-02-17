@@ -61,4 +61,12 @@
       }
     }
   }
+
+  #parceiros {
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      font-weight: 600;
+    }
+  }
 }
