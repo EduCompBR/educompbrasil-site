@@ -10,8 +10,8 @@
 .content #sbc-eb-home {
   .logo-bg-effect {
     position: relative;
-    background-image: url('/img/simposio/2025/comum/juiz-de-fora/vista.jpg'),
-      url('/img/simposio/2025/comum/juiz-de-fora/estacao.jpg'), url('/img/simposio/2025/comum/juiz-de-fora/mariano.jpg');
+    background-image: url('/img/simposio/2025/comum/jf/vista.jpg'),
+      url('/img/simposio/2025/comum/jf/estacao.jpg'), url('/img/simposio/2025/comum/jf/mariano.jpg');
     background-size: 120%;
     background-position: center;
     background-repeat: no-repeat;
