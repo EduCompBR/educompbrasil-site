@@ -8,9 +8,31 @@
 <!-- Pesquisa e filtros -->
 <script src="/js/jquery.hideseek.js" type="text/javascript"></script>
 <script>
-    $(document).ready(function () {
+  $(document).ready(function () {
     $("#search").hideseek({
-        nodata: "Nenhum item encontrado!",
+      nodata: "Nenhum item encontrado!",
     })
-    })
+  })
+</script>
+
+<script>
+  const carrossel = document.getElementById("carrossel-jf")
+  const imagens = [
+    "/img/simposio/2025/comum/juiz-de-fora/vista.jpg",
+    "/img/simposio/2025/comum/juiz-de-fora/estacao.jpg",
+    "/img/simposio/2025/comum/juiz-de-fora/mariano.jpg",
+  ]
+
+  let indice = 0
+
+  function trocarImagem() {
+    indice = (indice + 1) % imagens.length
+    carrossel.style.backgroundImage = `url(${imagens[indice]})`
+    carrossel.style.animation = "none"
+    carrossel.offsetHeight
+    carrossel.style.animation = "zoomOut 30s ease-out forwards"
+  }
+
+  // Troca de imagem a cada 15 segundos
+  setInterval(trocarImagem, 15000)
 </script>

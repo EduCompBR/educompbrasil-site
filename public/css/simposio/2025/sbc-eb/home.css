@@ -1,181 +1,292 @@
-#sobre-sbceb .container {
+@keyframes zoomOut {
+  from {
+    background-size: 110%;
+  }
+  to {
+    background-size: 100%;
+  }
+}
+
+.content #sbc-eb-home {
+  .logo-bg-effect {
+    position: relative;
+    background-image: url('/img/simposio/2025/comum/juiz-de-fora/vista.jpg'),
+      url('/img/simposio/2025/comum/juiz-de-fora/estacao.jpg'), url('/img/simposio/2025/comum/juiz-de-fora/mariano.jpg');
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: zoomOut 30s ease-out forwards;
+    clip-path: ellipse(100% 100% at 50% 0%);
+    z-index: 1;
+    padding-bottom: 2emcarrossel;
+  }
+
+  .logo-bg-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(34, 38, 60, 0.85);
+    z-index: 2;
+  }
+
+  .logo-evento {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+  }
+
+  .img-logo-evento {
+    margin-top: 100px;
+    width: 50%;
+  }
+
+  #sobre-sbc-eb .container {
     padding-top: 2em;
     padding-bottom: 2em;
     margin-top: 20px;
-}
 
-
-
-.custom-image {
-    width: 100%;
-}
-
-.custom-size {
-    width: 120%; /* Aumenta a largura da imagem para 120% do tamanho original */
-    max-width: none;
-}
-
-.editaimg{
-    width: 84%;
-    margin-right: 6rem;
-    position: relative;
-    top: 60px; /* Ajuste conforme necessário */
-    left: 30px; /* Ajuste conforme necessário */
-}
-
-.editaimg2{
-    width: 78%;
-    margin-left: 5rem;
-}
-
-
-#sobre-sbceb #sobre p {
-    color: red;
-    margin-bottom: 1.5em; 
-    line-height: 1.6; 
-}
-
-
-.section-content{
-    padding: 30px;
-    margin-top: 100px;
-}
-
-#tituloin{
-    font-size: 2rem;
-    margin: 20px ;
-   
-}
-
-/* Submeta seu Trabalho */
-.custom-section {
-    padding: 50px 0;
-    background-color: #F8F9FA;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #262D76;
-  }
-  
-  .section-subtitle {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 30px;
-  }
-  
-  .cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px; /* Espaçamento entre os cards */
-    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-  }
-  
-  .custom-card {
-    width: 300px;
-    background-color: #FFFFFF;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 8.27px 49.63px 0px rgba(38, 45, 118, 0.08);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 220px; /* Garante altura consistente */
-    justify-content: flex-start; /* Mantém o título no topo */
-    padding-top: 20px;
-  }
-  
-  .custom-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .custom-card h3 {
-    color: #262D76;
-    font-size: 1.5rem;
-    min-height: 70px; /* Mantém espaço para títulos de duas linhas */
-    display: flex;
-    align-items: center; /* Alinha verticalmente ao centro */
-    justify-content: center;
-    text-align: center;
-    width: 100%; /* Garante alinhamento correto */
-    padding: 0 10px; /* Evita quebra de linha inesperada */
-  }
-  
-  .custom-card p {
-    color: #666;
-    flex-grow: 1; /* Preenche o espaço disponível */
-    text-align: center;
-    padding: 10px;
-  }
-  
-  /* Locais do Evento */
-
-
-  
-  
-  .background-section {
-    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%230C497E" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,218.7C384,245,480,267,576,261.3C672,256,768,224,864,192C960,160,1056,128,1152,96C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z%22%3E%3C/path%3E%3C/svg%3E');
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 80px 0;
-    color: #fff;
-    
-  }
-  
-  .background-section::after {
-    content: '';
-    display: block;
-    height: 300px; /* Altura ajustada para o fundo abaixo */
-    background-color: #0C497E;
-  }
-  
-  
-  
-  .section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 900px;
-    margin: 0 auto;
-    gap: 40px; /* Espaço entre imagem e texto */
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente para legibilidade */
-    border-radius: 10px;
-  }
-  
-  .content-image {
-    width: 40%;
-    max-width: 300px;
-    border-radius: 10px;
-  }
-  
-  .content-text {
-    width: 60%;
-    font-size: 1.2rem;
-    text-align: left;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .content-wrapper {
-      flex-direction: column;
+    h2 {
       text-align: center;
+      font-size: 2.2em;
+      color: var(--eb-blue-dark);
+      font-weight: 800;
     }
-    
-    .content-image, .content-text {
+
+    .img-icones {
       width: 100%;
     }
   }
-  
-  
+
+  #locais {
+    background-color: var(--eb-green);
+    background-image: url('/img/simposio/2025/sbc-eb/separator.png');
+    background-repeat: repeat-x;
+    background-position: top;
+    padding-bottom: 4em;
+
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      color: white;
+      font-weight: 600;
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+
+    .card {
+      background-color: transparent;
+      border: 0;
+      text-align: center;
+      color: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+
+      .card-body {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .card-cidade {
+        font-weight: 600;
+        font-size: 1.2em;
+        margin-bottom: 0.1em;
+
+        .size {
+          font-size: 0.8em;
+          font-weight: 400;
+        }
+      }
+
+      .card-text {
+        font-size: 0.7em;
+        font-weight: 400;
+        border: 2px solid white;
+        border-radius: 20px;
+      }
+    }
+
+     .card:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  #submeta {
+    padding: 3em 0;
+
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      color: var(--eb-blue-dark);
+      font-weight: 600;
+    }
+
+    .espaco-vertical {
+      margin-bottom: 4em;
+    }
+
+    .highlight {
+      color: var(--eb-green);
+    }
+
+    .chamada-card {
+      position: relative;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 2rem 1rem 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .icon-circle {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        background-color: var(--edc-blue);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .icon-1 {
+        background-color: var(--eb-green);
+      }
+
+      .icon-2 {
+        background-color: var(--eb-yellow);
+      }
+
+      .icon-3 {
+        background-color: var(--eb-blue-dark);
+      }
+
+      .card-title {
+        margin-bottom: 0;
+
+        h3 {
+          font-size: 1.2em;
+          font-weight: 500;
+          color: inherit;
+          margin-top: 15px;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+      }
+
+      .card-body {
+        padding: 0.8rem;
+
+        p {
+          font-size: 0.9em;
+          color: #555;
+          margin: 0;
+          font-weight: 400;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    .chamada-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  #sbc-educomp {
+    background-color: #282e68;
+    padding: 3em 0;
+    color: whitesmoke;
+    text-align: center;
+
+    strong {
+      font-weight: 600;
+      color: inherit;
+    }
+
+    h2 {
+      font-size: 2.2em;
+      font-weight: 600;
+      text-align: center;
+      color: whitesmoke;
+      text-decoration: none;
+      border: none;
+
+      .text-highlight {
+        color: #0b8236;
+      }
+    }
+
+    h3 {
+      color: #0b8236;
+      font-size: 1.8em;
+      font-weight: 500;
+      text-decoration: none;
+      text-align: center;
+      margin: 0 3em 2rem 3em;
+      padding-bottom: 0.4em;
+      padding-top: 2em;
+      border-bottom: 2px solid #e00814;
+    }
+
+    .img-educomp {
+      width: 100%;
+    }
+
+    .btn {
+      color: white;
+      border-radius: 25px;
+      background-color: transparent;
+      border: 2px solid white;
+      text-decoration: none;
+      margin-top: 20px !important;
+      padding: 10px 35px;
+      font-size: 1em;
+    }
+
+    .btn:hover {
+      background-color: #0b8236;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  #sobre-sbc {
+    padding: 3em 0;
+
+    .card-sbc {
+      max-width: 400px;
+
+      .card-sbc-frente {
+        transform: rotate(-3deg);
+        position: relative;
+        z-index: 1;
+      }
+
+      .card-sbc-verso {
+        transform: rotate(4deg);
+        position: relative;
+        top: -25px;
+        z-index: 0;
+      }
+
+      img:hover {
+        transition: transform 0.5s ease, box-shadow 0.3s ease;
+        transform: scale(1.02);
+      }
+    }
+  }
+}
