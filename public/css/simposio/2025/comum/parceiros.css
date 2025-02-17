@@ -10,6 +10,10 @@
     text-decoration: none;
   }
 
+  .custom-width {
+    width: 90%;
+  }
+
   .card {
     background: white;
     border-radius: 20px;
@@ -49,7 +53,7 @@
     font-size: 1.1em;
     font-weight: 400;
   }
-  
+
   @media (max-width: 768px) {
     .carousel-inner .carousel-item > div {
       display: none;
@@ -80,5 +84,11 @@
   .carousel-inner .carousel-item-right,
   .carousel-inner .carousel-item-left {
     transform: translateX(0);
+  }
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 30px;
+    height: 30px;
   }
 }
