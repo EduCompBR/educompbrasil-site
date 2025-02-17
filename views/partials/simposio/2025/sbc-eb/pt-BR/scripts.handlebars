@@ -16,25 +16,49 @@
 </script>
 
 {{~#if home}}
-  <script>
-    const carrossel = document.getElementById("carrossel-jf")
-    const imagens = [
-      "/img/simposio/2025/comum/jf/vista.jpg",
-      "/img/simposio/2025/comum/jf/estacao.jpg",
-      "/img/simposio/2025/comum/jf/mariano.jpg",
-    ]
+<script>
+  const carrossel = document.getElementById("carrossel-jf")
+  const imagens = [
+    "/img/simposio/2025/comum/jf/vista.jpg",
+    "/img/simposio/2025/comum/jf/estacao.jpg",
+    "/img/simposio/2025/comum/jf/mariano.jpg",
+  ]
 
-    let indice = 0
+  let indice = 0
 
-    function trocarImagem() {
-      indice = (indice + 1) % imagens.length
-      carrossel.style.backgroundImage = `url(${imagens[indice]})`
-      carrossel.style.animation = "none"
-      carrossel.offsetHeight
-      carrossel.style.animation = "zoomOut 30s ease-out forwards"
+  function trocarImagem() {
+    indice = (indice + 1) % imagens.length
+    carrossel.style.backgroundImage = `url(${imagens[indice]})`
+    carrossel.style.animation = "none"
+    carrossel.offsetHeight
+    carrossel.style.animation = "zoomOut 30s ease-out forwards"
+  }
+
+  // Troca de imagem a cada 15 segundos
+  setInterval(trocarImagem, 15000)
+</script>
+
+<script>
+  $("#carrossel-parceiros").carousel({
+    interval: 4000,
+  })
+
+  $("#carrossel-parceiros .carousel-item").each(function () {
+    var minPerSlide = 3
+    var next = $(this).next()
+    if (!next.length) {
+      next = $(this).siblings(":first")
     }
+    next.children(":first-child").clone().appendTo($(this))
 
-    // Troca de imagem a cada 15 segundos
-    setInterval(trocarImagem, 15000)
-  </script>
+    for (var i = 0; i < minPerSlide; i++) {
+      next = next.next()
+      if (!next.length) {
+        next = $(this).siblings(":first")
+      }
+
+      next.children(":first-child").clone().appendTo($(this))
+    }
+  })
+</script>
 {{~/if}}
