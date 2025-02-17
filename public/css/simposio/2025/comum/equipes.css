@@ -1,0 +1,55 @@
+.content #equipes {
+  .table {
+    margin-bottom: 4em;
+  }
+
+  .col-nome {
+    width: 40%;
+  }
+
+  .col-inst {
+    width: 20%;
+  }
+
+  .col-mail {
+    width: 40%;
+  }
+
+  @media (max-width: 767.98px) {
+    .table {
+      width: 100%;
+      border-radius: 0;
+    }
+
+    .col-nome,
+    .col-inst,
+    .col-mail {
+      width: auto;
+      display: block;
+      text-align: left;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tbody tr {
+      display: block;
+      border-bottom: 1px solid var(--gray-dark);
+
+      td {
+        display: block;
+        text-align: left;
+        padding: 0.5em;
+        border-bottom: 1px solid var(--gray);
+      }
+
+      td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}

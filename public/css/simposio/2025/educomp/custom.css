@@ -1,0 +1,123 @@
+:root {
+  --edc-blue: #282e68;
+  --edc-green: #0b8236;
+  --edc-red: #e00814;
+  --edc-gray: #343a40;
+  --edc-gray-bg: #f2f2f2;
+  --edc-green-bg: #c7e3d1;
+  --edc-blue-bg: #b8d1f1;
+  --edc-yellow-bg: #f3dca9;
+  --edc-purple-bg: #cec0f8;
+  --edc-orange-bg: #f5c0a4;
+  --edc-pink-bg: #edbedf;
+
+  --navbar-link: var(--edc-blue);
+  --navbar-ativo: var(--edc-green);
+  --navbar-ativo-bg: var(--edc-gray-bg);
+
+  --footer-bg: var(--edc-blue);
+  --footer-border: var(--edc-green);
+
+  --h1-color: var(--edc-blue);
+  --h2-color: var(--edc-blue);
+  --h3-color: var(--edc-blue);
+  --h4-color: var(--edc-blue);
+  --strong-color: var(--edc-blue);
+  --link-color: var(--edc-blue);
+
+  --table-header-color: var(--edc-blue);
+  --table-header-color-bg: var(--edc-blue-bg);
+  --table-striped-color-1: white;
+  --table-striped-color-2: #ebf3fc;
+
+  --prazo-firme-color: var(--edc-red);
+  --prazo-footer-color: var(--edc-green);
+  --prazo-data-color: var(--edc-blue);
+}
+
+.header-educomp h1 {
+  border-bottom: 3px solid var(--edc-green);
+}
+
+.content-educomp {
+  h2 {
+    margin-bottom: 1em;
+    border-bottom: 2px solid var(--edc-red);
+  }
+
+  #chamadas {
+    #trilhas {
+      .trilha-num {
+        font-weight: 600;
+      }
+
+      .accordion {
+        h3 {
+          padding: 0.5em 0;
+          margin: 0;
+          font-size: 1.2em;
+        }
+
+        .btn-link {
+          color: var(--edc-blue);
+          font-size: clamp(13px, 1.5vw, 16px);
+          padding: 0;
+        }
+
+        .btn-link:hover {
+          text-decoration: none;
+        }
+
+        .btn-link:focus {
+          text-decoration: none;
+          box-shadow: none;
+        }
+
+        .card {
+          border: 1px solid var(--edc-gray);
+          background-color: var(--edc-gray-bg);
+          transition: transform 0.2s;
+          flex-direction: column;
+          display: flex;
+        }
+
+        .card:hover {
+          background-color: var(--edc-blue-bg);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+          display: flex;
+          align-items: center;
+          flex: 1;
+        }
+
+        .card-body {
+          background-color: whitesmoke;
+        }
+      }
+    }
+  }
+
+  #inscricoes {
+    #promocional {
+      .banner-inscricao {
+        top: -0.8em;
+      }
+    }
+
+    #valores {
+      .accordion {
+        h4 {
+          color: var(--edc-red);
+        }
+      }
+
+      .table {
+        .prazo {
+          color: var(--edc-green);
+        }
+      }
+    }
+  }
+}

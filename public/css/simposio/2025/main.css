@@ -1,0 +1,122 @@
+html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter var', sans-serif;
+  /* scroll-behavior: smooth; */
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 100px;
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+.navbar {
+  height: 100px;
+  font-size: clamp(14px, 1.5vw, 15px);
+}
+
+.header h1 {
+  padding: 1em 1em 0;
+  margin-bottom: 0.75em;
+  text-align: center;
+  font-size: 2.5em;
+  color: var(--h1-color);
+  font-weight: 800;
+  line-height: 1.5em;
+  display: inline-block;
+}
+
+.content {
+  flex: 1;
+  line-height: 150%;
+  text-align: left;
+  font-weight: 300;
+
+  section {
+    padding-bottom: 2.5em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    color: var(--h2-color);
+    font-weight: 450;
+    line-height: 1.3em;
+    text-align: left;
+  }
+
+  h3 {
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+    font-size: 1.5em;
+    color: var(--h3-color);
+    font-weight: 300;
+    line-height: 1.2em;
+    text-align: left;
+  }
+
+  h4 {
+    color: var(--h4-color);
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+
+  strong {
+    color: var(--strong-color);
+    font-weight: 600;
+  }
+
+  s {
+    color: var(--gray);
+  }
+
+  a {
+    background-color: transparent;
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 400;
+  }
+
+  a:hover {
+    background-color: transparent;
+  }
+
+  .imagelink {
+    background-color: transparent;
+  }
+
+  .imagelink:hover {
+    background-color: transparent;
+  }
+
+  .table {
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  thead {
+    color: var(--table-header-color);
+    background-color: var(--table-header-color-bg);
+  }
+
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--table-striped-color-1);
+  }
+
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: var(--table-striped-color-2);
+  }
+}
