@@ -150,6 +150,13 @@ body {
       margin: 1em 0;
       font-size: 0.9em;
       padding: 0.5em 1.5em;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-action:hover {
+      background-color: gray;
+      color: whitesmoke;
+      transition: background-color 0.3s ease;
     }
   }
 }
