@@ -119,4 +119,37 @@ body {
   .table-striped tbody tr:nth-of-type(even) {
     background-color: var(--table-striped-color-2);
   }
+
+  .call-to-action {
+    border-radius: 20px;
+    background-color: var(--navbar-ativo);
+    color: white;
+    padding: 1.5em;
+    margin: 0;
+
+    p {
+      margin: 0;
+      width: auto;
+    }
+
+    p.titulo {
+      font-weight: 600;
+      font-size: 1.3em;
+    }
+
+    p.subtitulo {
+      font-size: 0.8em;
+      color: whitesmoke;
+    }
+
+    .btn-action {
+      background-color: whitesmoke;
+      border-radius: 20px;
+      color: gray;
+      text-decoration: none;
+      margin: 1em 0;
+      font-size: 0.9em;
+      padding: 0.5em 1.5em;
+    }
+  }
 }
