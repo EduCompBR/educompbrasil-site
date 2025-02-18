@@ -69,4 +69,8 @@
       font-weight: 600;
     }
   }
+
+  .call-to-action {
+    background-color: var(--eb-blue-medium);
+  }
 }
