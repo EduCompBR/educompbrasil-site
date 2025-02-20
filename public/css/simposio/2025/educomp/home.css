@@ -17,6 +17,8 @@
 
     .carousel-control-prev,
     .carousel-control-next {
+
+
       text-decoration: none;
       font-size: 150%;
     }
@@ -347,4 +349,77 @@
       }
     }
   }
+}
+
+#carrossel-parceiros{
+  position: unset;
+  display: grid;
+  grid-template-columns: 30px 1fr 30px; 
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-content: center;
+  .carousel-control-prev{
+    position: unset !important;
+
+    grid-column: 1;
+    grid-row: 1;
+
+  }
+  .carousel-inner{
+    grid-column: 2;
+    grid-row: 1;
+
+  }
+  
+  .carousel-control-next {
+    grid-column: 3;
+    grid-row: 1;
+
+    position: unset !important;
+
+  }
+}
+@media only screen and (max-width: 800px) {
+  #carousel-controls{
+    margin-left: 60px !important;
+    margin-right: 60px !important;
+  }
+}
+#carousel-controls{
+    position: unset;
+    display: grid;
+    margin-left: 150px;
+    margin-right: 150px;
+    grid-template-columns: 30px 3fr 30px;
+    grid-template-rows: 1fr 15px 25px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    .carousel-control-prev{
+      position: unset;
+      grid-row: 1;
+      grid-column: 1;
+      color:rgb(40, 46, 104);
+    }
+    .carousel-control-next{
+      position: unset;
+      grid-row: 1;
+      grid-column: 3;
+      color:rgb(40, 46, 104);
+
+    }
+    .carousel-inner{
+      position: unset;
+      grid-row: 1;
+      grid-column: 2;
+      width: 100%;
+      background-color: #2b7ec2;
+    }
+    .carousel-indicators{
+      position: unset;
+      grid-row: 3;
+      grid-column-start: 0;
+      grid-column-end: 3;
+    }
 }
