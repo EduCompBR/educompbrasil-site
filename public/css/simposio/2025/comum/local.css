@@ -120,7 +120,7 @@
 
     @media (max-width: 768px) {
       .carousel-item img {
-        height: 200px;
+        height: 300px;
       }
     }
 
