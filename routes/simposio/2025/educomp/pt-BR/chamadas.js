@@ -117,3 +117,13 @@ exports.laboratorio_ideias = function (req, res) {
     header: { titulo: 'Laboratório de ideias' },
   })
 }
+
+exports.aceitos = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/chamadas/aceitos', {
+    layout: 'simposio/2025/pt-BR/layout',
+    chamadas: true,
+    isEducomp: true,
+    titulo: 'Trabalhos aceitos',
+    header: { titulo: 'Trabalhos aceitos' },
+  })
+}
