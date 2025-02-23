@@ -125,4 +125,20 @@
     }
 
   }
+
+  #cultura, #turismo {
+    .figure-img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #cultura, #turismo{
+      .figure-img {
+        height: 200px;
+      }
+    }
+  }
 }
