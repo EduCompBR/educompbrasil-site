@@ -104,29 +104,7 @@
     }
   }
 
-  #historia, #cultura, #turismo, #gastronomia{
-    .carousel-item img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-    }
-    
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      width: 35px; 
-      height: 35px;
-      background-size: contain;
-    }
-
-    @media (max-width: 768px) {
-      .carousel-item img {
-        height: 300px;
-      }
-    }
-
-  }
-
-  #cultura, #turismo, #historia {
+  #cultura, #turismo, #historia, #gastronomia {
     .figure-img {
       height: 300px;
       width: 100%;
@@ -134,13 +112,19 @@
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
       border-radius: 8px;
     }
-  }
 
+    .figure-caption a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  
   @media (max-width: 768px) {
-    #cultura, #turismo, #historia{
-      .figure-img {
-        height: 200px;
-      }
+    #cultura .figure-img,
+    #turismo .figure-img,
+    #historia .figure-img,
+    #gastronomia .figure-img {
+      height: 250px;
     }
   }
 }
