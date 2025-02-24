@@ -118,13 +118,22 @@
       color: inherit;
     }
   }
-  
+
   @media (max-width: 768px) {
     #cultura .figure-img,
     #turismo .figure-img,
     #historia .figure-img,
     #gastronomia .figure-img {
       height: 250px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #cultura .figure-img,
+    #turismo .figure-img,
+    #historia .figure-img,
+    #gastronomia .figure-img {
+      height: 200px;
     }
   }
 }
