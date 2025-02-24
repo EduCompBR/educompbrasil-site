@@ -126,16 +126,18 @@
 
   }
 
-  #cultura, #turismo {
+  #cultura, #turismo, #historia {
     .figure-img {
       height: 300px;
       width: 100%;
       object-fit: cover;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
     }
   }
 
   @media (max-width: 768px) {
-    #cultura, #turismo{
+    #cultura, #turismo, #historia{
       .figure-img {
         height: 200px;
       }
