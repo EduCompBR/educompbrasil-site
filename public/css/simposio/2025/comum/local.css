@@ -128,6 +128,28 @@
   }
 
   #introducao-ufjf {
-    padding-bottom:0%;
+    padding-bottom: 0%;
+  }
+
+  #historia{
+    .figure-img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+
+    .figure-caption {
+      padding: 0%;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #historia .figure-img{
+      height: 250px;
+    }
   }
 }
