@@ -37,3 +37,13 @@ exports.local_evento = function (req, res) {
     header: { titulo: 'Local do evento - UFJF' },
   })
 }
+
+exports.lista_lugares_jf = function (req, res) {
+  res.render('simposio/2025/comum/pt-BR/local/lugares-visitar', {
+     layout: 'simposio/2025/pt-BR/layout',
+     local: true,
+     isSbceb: true,
+     titulo: 'Lugares para visitar em Juiz de Fora',
+     header: { titulo: 'Lugares para visitar em Juiz de Fora' },
+   })
+ } 

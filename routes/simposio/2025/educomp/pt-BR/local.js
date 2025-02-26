@@ -39,11 +39,11 @@ exports.local_evento = function (req, res) {
 }
 
 exports.lista_lugares_jf = function (req, res) {
-  res.render('simposio/2025/comum/pt-BR/local/lista-lugares', {
+ res.render('simposio/2025/comum/pt-BR/local/lugares-visitar', {
     layout: 'simposio/2025/pt-BR/layout',
     local: true,
     isEducomp: true,
-    titulo: 'Lista de Lugares para Visitar - JF',
-    header: { titulo: 'Lista de Lugares para Visitar - JF' },
+    titulo: 'Lugares para visitar em Juiz de Fora',
+     header: { titulo: 'Lugares para visitar em Juiz de Fora' },
   })
-}
+} 
