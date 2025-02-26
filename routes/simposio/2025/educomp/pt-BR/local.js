@@ -37,3 +37,13 @@ exports.local_evento = function (req, res) {
     header: { titulo: 'Local do evento - UFJF' },
   })
 }
+
+exports.lista_lugares_jf = function (req, res) {
+  res.render('simposio/2025/comum/pt-BR/local/lista-lugares', {
+    layout: 'simposio/2025/pt-BR/layout',
+    local: true,
+    isEducomp: true,
+    titulo: 'Lista de Lugares para Visitar - JF',
+    header: { titulo: 'Lista de Lugares para Visitar - JF' },
+  })
+}

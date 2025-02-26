@@ -49,6 +49,7 @@ app.get('/simposio/2025/educomp/local/como-chegar', educomp_2025_local.como_cheg
 app.get('/simposio/2025/educomp/local/onde-hospedar', educomp_2025_local.onde_hospedar)
 app.get('/simposio/2025/educomp/local/conheca-juiz-de-fora', educomp_2025_local.conheca_jf)
 app.get('/simposio/2025/educomp/local/local-evento', educomp_2025_local.local_evento)
+app.get('/simposio/2025/educomp/local/lista-lugares-jf', educomp_2025_local.lista_lugares_jf)
 app.get('/simposio/2025/educomp/equipes/comissao-organizadora', educomp_2025_equipes.comissao_organizadora)
 app.get('/simposio/2025/educomp/equipes/comite-programa', educomp_2025_equipes.comite_programa)
 app.get('/simposio/2025/educomp/equipes/comite-diretivo', educomp_2025_equipes.comite_diretivo)
