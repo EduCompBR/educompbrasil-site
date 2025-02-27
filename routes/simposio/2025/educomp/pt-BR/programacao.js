@@ -4,6 +4,6 @@ exports.programacao = function (req, res) {
     programacao: true,
     isEducomp: true,
     titulo: 'Programação',
-    header: { titulo: 'Programação do EduComp + SBC-EB' },
+    header: { titulo: 'Programação preliminar' },
   })
 }
