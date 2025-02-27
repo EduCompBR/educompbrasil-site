@@ -8,12 +8,12 @@
       max-width: 85%;
       height: auto;
       border-radius: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
     }
 
     .figure-img:hover {
       transform: scale(1.02);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .figure-caption a {
@@ -101,6 +101,44 @@
       left: 0;
       width: 100%;
       height: 100%;
+    }
+  }
+
+  #cultura, #turismo, #historia, #gastronomia {
+    .figure-img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .figure-img:hover {
+      transform: scale(1.02);
+    }
+
+    .figure-caption a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #cultura .figure-img,
+    #turismo .figure-img,
+    #historia .figure-img,
+    #gastronomia .figure-img {
+      height: 250px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #cultura .figure-img,
+    #turismo .figure-img,
+    #historia .figure-img,
+    #gastronomia .figure-img {
+      height: 200px;
     }
   }
 }
