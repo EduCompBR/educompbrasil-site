@@ -29,6 +29,7 @@ var educomp_2025_chamadas = require('./routes/simposio/2025/educomp/pt-BR/chamad
 var educomp_2025_local = require('./routes/simposio/2025/educomp/pt-BR/local')
 var educomp_2025_equipes = require('./routes/simposio/2025/educomp/pt-BR/equipes')
 var educomp_2025_inscricoes = require('./routes/simposio/2025/educomp/pt-BR/inscricoes')
+var educomp_2025_programacao = require('./routes/simposio/2025/educomp/pt-BR/programacao')
 
 app.get('/simposio/2025', educomp_2025_home.home)
 app.get('/simposio/2025/educomp', educomp_2025_home.home)
@@ -55,6 +56,7 @@ app.get('/simposio/2025/educomp/equipes/comite-programa', educomp_2025_equipes.c
 app.get('/simposio/2025/educomp/equipes/comite-diretivo', educomp_2025_equipes.comite_diretivo)
 app.get('/simposio/2025/educomp/equipes/comissao-especial', educomp_2025_equipes.comissao_especial)
 app.get('/simposio/2025/educomp/inscricoes', educomp_2025_inscricoes.inscricoes)
+app.get('/simposio/2025/educomp/programacao', educomp_2025_programacao.programacao)
 
 // SBC-EB 2025
 var sbc_eb_2025_home = require('./routes/simposio/2025/sbc-eb/pt-BR/home')
@@ -63,6 +65,7 @@ var sbc_eb_2025_forlic = require('./routes/simposio/2025/sbc-eb/pt-BR/forlic')
 var sbc_eb_2025_local = require('./routes/simposio/2025/sbc-eb/pt-BR/local')
 var sbc_eb_2025_equipes = require('./routes/simposio/2025/sbc-eb/pt-BR/equipes')
 var sbc_eb_2025_inscricoes = require('./routes/simposio/2025/sbc-eb/pt-BR/inscricoes')
+var sbc_eb_2025_programacao = require('./routes/simposio/2025/sbc-eb/pt-BR/programacao')
 
 app.get('/simposio/2025/sbc-eb', sbc_eb_2025_home.home)
 app.get('/simposio/2025/sbc-eb/chamadas/trabalhos', sbc_eb_2025_chamadas.trabalhos)
@@ -75,6 +78,7 @@ app.get('/simposio/2025/sbc-eb/local/local-evento', sbc_eb_2025_local.local_even
 app.get('/simposio/2025/sbc-eb/equipes/comissao-organizadora', sbc_eb_2025_equipes.comissao_organizadora)
 app.get('/simposio/2025/sbc-eb/equipes/comite-programa', sbc_eb_2025_equipes.comite_programa)
 app.get('/simposio/2025/sbc-eb/inscricoes', sbc_eb_2025_inscricoes.inscricoes)
+app.get('/simposio/2025/sbc-eb/programacao', sbc_eb_2025_programacao.programacao)
 
 // Educomp 2024
 var educomp_2024_main = require('./routes/simposio/2024/pt-BR/main')
