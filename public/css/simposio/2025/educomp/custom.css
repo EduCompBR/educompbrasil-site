@@ -97,6 +97,75 @@
         }
       }
     }
+
+    #aceitos-completos,
+    #aceitos-formativas {
+      .accordion {
+        h3 {
+          border: 0;
+          margin: 0;
+          padding: 0.5em 0;
+          font-size: 1.2em;
+          color: var(--h3-color);
+          font-weight: 300;
+          line-height: 1.2em;
+          text-align: left;
+        }
+
+        h4.titulo-artigo {
+          border: 0;
+          margin: 0;
+          padding: 0.5em;
+          font-size: 1em;
+          color: var(--h3-color);
+          font-weight: 300;
+          line-height: 1.2em;
+          text-align: left;
+        }
+
+        .autores-artigo {
+          font-size: 0.9em;
+        }
+
+        .btn-link {
+          color: var(--edc-blue);
+          font-size: clamp(13px, 1.5vw, 16px);
+          padding: 0;
+        }
+
+        .btn-link:hover {
+          text-decoration: none;
+        }
+
+        .btn-link:focus {
+          text-decoration: none;
+          box-shadow: none;
+        }
+
+        .card {
+          border: 1px solid var(--edc-gray);
+          background-color: var(--edc-gray-bg);
+          transition: transform 0.2s;
+          flex-direction: column;
+          display: flex;
+        }
+
+        .card:hover {
+          background-color: var(--edc-blue-bg);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+          display: flex;
+          align-items: center;
+          flex: 1;
+        }
+
+        .card-body {
+          background-color: whitesmoke;
+        }
+      }
+    }
   }
 
   #inscricoes {
