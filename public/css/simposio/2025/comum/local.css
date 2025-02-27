@@ -1,24 +1,80 @@
 .content #local {
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5rem;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mapa-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  .mapa-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .figure-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    margin-top: 0.5em;
+  }
+
+  .figure-img:hover {
+    transform: scale(1.02);
+  }
+
+  .figure-caption {
+    padding: 0%;
+    text-decoration: none;
+    color: inherit;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .figure-img {
+      height: 250px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .figure-img {
+      height: 200px;
+    }
+  }
+
+  #apresentacao-video {
+    padding-bottom: 0;
+  }
+
   #como-chegar {
     h2 {
       margin-bottom: 3px;
-    }
-
-    .figure-img {
-      max-width: 85%;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .figure-img:hover {
-      transform: scale(1.02);
-    }
-
-    .figure-caption a {
-      text-decoration: none;
-      color: inherit;
     }
   }
 
@@ -58,7 +114,6 @@
 
     .list-icons {
       font-size: 0.85em;
-
       padding-left: 0px;
 
       i {
@@ -75,70 +130,6 @@
       a {
         font-size: 1em;
       }
-    }
-  }
-
-  #apresentacao-jf {
-    .video-titulo {
-      text-align: center;
-      display: block;
-      color: var(--h2-color);
-      font-size: 1.2em;
-      font-weight: 400;
-      padding: 0.25em ;
-    }
-
-    .video-container {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      overflow: hidden;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  #cultura, #turismo, #historia, #gastronomia {
-    .figure-img {
-      height: 300px;
-      width: 100%;
-      object-fit: cover;
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-      border-radius: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    .figure-img:hover {
-      transform: scale(1.02);
-    }
-
-    .figure-caption a {
-      text-decoration: none;
-      color: inherit;
-    }
-  }
-
-  @media (max-width: 768px) {
-    #cultura .figure-img,
-    #turismo .figure-img,
-    #historia .figure-img,
-    #gastronomia .figure-img {
-      height: 250px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    #cultura .figure-img,
-    #turismo .figure-img,
-    #historia .figure-img,
-    #gastronomia .figure-img {
-      height: 200px;
     }
   }
 }
