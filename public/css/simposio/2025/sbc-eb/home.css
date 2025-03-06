@@ -1,24 +1,22 @@
 @keyframes zoomOut {
   from {
-    background-size: 110%;
+    background-size: 120%;
   }
   to {
-    background-size: 100%;
+    background-size: 105%;
   }
 }
 
 .content #sbc-eb-home {
   .logo-bg-effect {
     position: relative;
-    background-image:  url('/img/simposio/2025/comum/jf/cidade/vista-parcial.jpg'), url('/img/simposio/2025/comum/jf/cidade/mariano-procopio.jpg'), url('/img/simposio/2025/comum/jf/ufjf/praca-civica-oeste.jpg'),
-     url('/img/simposio/2025/comum/jf/ufjf/ice-visao-da-praca.jpg');
-    background-size: 120%;
+    background-image: url('/img/simposio/2025/comum/jf/cidade/vista-parcial.jpg');
     background-position: center;
     background-repeat: no-repeat;
     animation: zoomOut 30s ease-out forwards;
     clip-path: ellipse(100% 100% at 50% 0%);
     z-index: 1;
-    padding-bottom: 2emcarrossel;
+    padding-bottom: 2em;
   }
 
   .logo-bg-effect::after {
@@ -46,7 +44,7 @@
 
   @media (max-width: 768px) {
     .img-logo-evento {
-      margin-top: 40px;
+      margin-top: 20px;
     }
   }
 
@@ -115,7 +113,7 @@
       }
     }
 
-     .card:hover {
+    .card:hover {
       transform: scale(1.02);
     }
   }
