@@ -1,9 +1,29 @@
-exports.programacao = function (req, res) {
-  res.render('simposio/2025/comum/pt-BR/programacao/programacao', {
+exports.geral = function (req, res) {
+  res.render('simposio/2025/comum/pt-BR/programacao/geral', {
     layout: 'simposio/2025/pt-BR/layout',
-    chamadas: true,
+    programacao: true,
     isSbceb: true,
-    titulo: 'Programação',
-    header: { titulo: 'Programação preliminar' },
+    titulo: 'Programação geral',
+    header: { titulo: 'Programação geral (preliminar)' },
+  })
+}
+
+exports.jantar = function (req, res) {
+  res.render('simposio/2025/comum/pt-BR/programacao/jantar', {
+    layout: 'simposio/2025/pt-BR/layout',
+    programacao: true,
+    isSbceb: true,
+    titulo: 'Jantar do evento',
+    header: { titulo: 'Jantar do evento (por adesão)' },
+  })
+}
+
+exports.fotos = function (req, res) {
+  res.render('simposio/2025/comum/pt-BR/programacao/fotos', {
+    layout: 'simposio/2025/pt-BR/layout',
+    programacao: true,
+    isSbceb: true,
+    titulo: 'Fotos do evento',
+    header: { titulo: 'Fotos do evento' },
   })
 }
