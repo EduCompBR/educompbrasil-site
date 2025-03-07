@@ -72,13 +72,24 @@
     background-position: top;
     padding-bottom: 4em;
 
+    #texto-inicial {
+      color: white;
+      text-align: center;
+      padding-bottom: 2em;
+      a {
+        color: var(--eb-blue-light);
+      }
+      strong {
+        color: var(--eb-yellow);
+      }
+    }
+
     h2 {
       text-align: center;
       font-size: 2.2em;
       color: white;
       font-weight: 600;
       padding-top: 2em;
-      padding-bottom: 2em;
     }
 
     .card {
