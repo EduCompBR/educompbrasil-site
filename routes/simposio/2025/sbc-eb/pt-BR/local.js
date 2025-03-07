@@ -14,7 +14,7 @@ exports.conheca_jf = function (req, res) {
     local: true,
     isSbceb: true,
     titulo: 'Conheça Juiz de Fora',
-    header: { titulo: 'Juiz de Fora - MG' },
+    header: { titulo: 'Conheça Juiz de Fora' },
   })
 }
 
@@ -43,7 +43,7 @@ exports.local_evento = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     local: true,
     isSbceb: true,
-    titulo: 'Local do evento - UFJF',
-    header: { titulo: 'Local do evento - UFJF' },
+    titulo: 'Conheça o local do evento',
+    header: { titulo: 'Conheça o local do evento' },
   })
 }
