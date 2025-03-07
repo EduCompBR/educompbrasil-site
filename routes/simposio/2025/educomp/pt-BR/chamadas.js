@@ -119,7 +119,7 @@ exports.laboratorio_ideias = function (req, res) {
 }
 
 exports.aceitos = function (req, res) {
-  res.render('simposio/2025/educomp/pt-BR/chamadas/aceitos', {
+  res.render('simposio/2025/educomp/pt-BR/chamadas/trabalhos-aceitos', {
     layout: 'simposio/2025/pt-BR/layout',
     chamadas: true,
     isEducomp: true,
