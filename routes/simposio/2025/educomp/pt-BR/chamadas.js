@@ -19,7 +19,7 @@ exports.artigos_completos = function (req, res) {
 }
 
 exports.criterios_trilha_1 = function (req, res) {
-  res.render('simposio/2025/educomp/pt-BR/chamadas/criterios-artigos-completos/criterios-trilha-1', {
+  res.render('simposio/2025/educomp/pt-BR/chamadas/criterios-trilhas/criterios-trilha-1', {
     layout: 'simposio/2025/pt-BR/layout',
     chamadas: true,
     isEducomp: true,
@@ -29,7 +29,7 @@ exports.criterios_trilha_1 = function (req, res) {
 }
 
 exports.criterios_trilha_2 = function (req, res) {
-  res.render('simposio/2025/educomp/pt-BR/chamadas/criterios-artigos-completos/criterios-trilha-2', {
+  res.render('simposio/2025/educomp/pt-BR/chamadas/criterios-trilhas/criterios-trilha-2', {
     layout: 'simposio/2025/pt-BR/layout',
     chamadas: true,
     isEducomp: true,
@@ -39,7 +39,7 @@ exports.criterios_trilha_2 = function (req, res) {
 }
 
 exports.criterios_trilha_3 = function (req, res) {
-  res.render('simposio/2025/educomp/pt-BR/chamadas/criterios-artigos-completos/criterios-trilha-3', {
+  res.render('simposio/2025/educomp/pt-BR/chamadas/criterios-trilhas/criterios-trilha-3', {
     layout: 'simposio/2025/pt-BR/layout',
     chamadas: true,
     isEducomp: true,
@@ -49,7 +49,7 @@ exports.criterios_trilha_3 = function (req, res) {
 }
 
 exports.criterios_trilha_4 = function (req, res) {
-  res.render('simposio/2025/educomp/pt-BR/chamadas/criterios-artigos-completos/criterios-trilha-4', {
+  res.render('simposio/2025/educomp/pt-BR/chamadas/criterios-trilhas/criterios-trilha-4', {
     layout: 'simposio/2025/pt-BR/layout',
     chamadas: true,
     isEducomp: true,
@@ -59,7 +59,7 @@ exports.criterios_trilha_4 = function (req, res) {
 }
 
 exports.criterios_trilha_5 = function (req, res) {
-  res.render('simposio/2025/educomp/pt-BR/chamadas/criterios-artigos-completos/criterios-trilha-5', {
+  res.render('simposio/2025/educomp/pt-BR/chamadas/criterios-trilhas/criterios-trilha-5', {
     layout: 'simposio/2025/pt-BR/layout',
     chamadas: true,
     isEducomp: true,
