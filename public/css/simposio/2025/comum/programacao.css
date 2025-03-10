@@ -39,4 +39,34 @@
       }
     }
   }
+  #palestra-nacional {
+    .palestra-titulo {
+      font-size: 1.5em;
+      font-weight: 600;
+      text-align: left;
+      margin-top: 0.5em;
+    }
+
+    .palestra-autor{
+      font-size: 1.2em;
+      font-weight: 500;
+      text-align: left;
+      margin-top: 0.5em;
+      color: rgb(0, 0, 0);
+      font-style: bold;
+    }
+
+    #palestra .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .palestra-foto {
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      width: 400px;
+      height: 300px;
+      border-radius: 20px;
+    }
+  }
 }
