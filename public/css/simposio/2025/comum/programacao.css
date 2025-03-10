@@ -56,17 +56,28 @@
       font-style: bold;
     }
 
-    #palestra .row {
+    .row.mb-5 {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
     }
-
+  
+    .palestra-foto-container {
+      text-align: center;
+    }
+  
     .palestra-foto {
       aspect-ratio: 4/3;
       object-fit: cover;
       width: 400px;
       height: 300px;
       border-radius: 20px;
+    }
+  
+    @media (max-width: 768px) {
+      .palestra-foto {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
