@@ -28,8 +28,8 @@ exports.fotos = function (req, res) {
   })
 }
 
-exports.palestras_nacionais = function (req, res) {
-  res.render('simposio/2025/educomp/pt-BR/programacao/palestras_nacionais', {
+exports.palestrasnacionais = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/programacao/palestras-nacionais', {
     layout: 'simposio/2025/pt-BR/layout',
     programacao: true,
     isEducomp: true,
