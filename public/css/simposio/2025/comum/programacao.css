@@ -75,7 +75,7 @@
   
     @media (max-width: 768px) {
       .palestra-foto {
-        width: 100%;
+        width: 50%;
         height: auto;
       }
     }
