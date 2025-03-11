@@ -60,6 +60,7 @@ app.get('/simposio/2025/educomp/programacao/palestras-nacionais', educomp_2025_p
 app.get('/simposio/2025/educomp/programacao/jantar', educomp_2025_programacao.jantar)
 app.get('/simposio/2025/educomp/programacao/fotos', educomp_2025_programacao.fotos)
 app.get('/simposio/2025/educomp/inscricoes', educomp_2025_inscricoes.inscricoes)
+app.get('/simposio/2025/educomp/camisas', educomp_2025_home.camisas)
 
 // SBC-EB 2025
 var sbc_eb_2025_home = require('./routes/simposio/2025/sbc-eb/pt-BR/home')
@@ -88,6 +89,7 @@ app.get('/simposio/2025/sbc-eb/programacao/geral', sbc_eb_2025_programacao.geral
 app.get('/simposio/2025/sbc-eb/programacao/jantar', sbc_eb_2025_programacao.jantar)
 app.get('/simposio/2025/sbc-eb/programacao/fotos', sbc_eb_2025_programacao.fotos)
 app.get('/simposio/2025/sbc-eb/inscricoes', sbc_eb_2025_inscricoes.inscricoes)
+app.get('/simposio/2025/sbc-eb/camisas', sbc_eb_2025_home.camisas)
 
 // Educomp 2024
 var educomp_2024_main = require('./routes/simposio/2024/pt-BR/main')
