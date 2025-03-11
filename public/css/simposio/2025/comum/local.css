@@ -158,3 +158,9 @@
     transform: scale(1.02);
   }
 }
+
+.imagem-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
