@@ -37,3 +37,13 @@ exports.palestras_nacionais = function (req, res) {
     header: { titulo: 'Palestras nacionais' },
   })
 }
+
+exports.sessoes_tecnicas = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/programacao/sessoes-tecnicas', {
+    layout: 'simposio/2025/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Sessões técnicas',
+    header: { titulo: 'Sessões técnicas' },
+  })
+}
