@@ -45,6 +45,11 @@
     transform: scale(1.02);
   }
 
+  .imagem-principal .figure-img {
+    max-width: 100%;
+    height: 450px;
+  }
+
   .figure-caption {
     padding: 0%;
     text-decoration: none;
@@ -58,13 +63,13 @@
 
   @media (max-width: 768px) {
     .figure-img {
-      height: 250px;
+      height: 250px !important;
     }
   }
 
   @media (max-width: 480px) {
     .figure-img {
-      height: 200px;
+      height: 200px !important;
     }
   }
 
