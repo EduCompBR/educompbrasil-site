@@ -1,10 +1,20 @@
+exports.conheca_ufjf = function (req, res) {
+  res.render('simposio/2025/comum/pt-BR/local/conheca-ufjf', {
+    layout: 'simposio/2025/pt-BR/layout',
+    local: true,
+    isSbceb: true,
+    titulo: 'Conheça a UFJF',
+    header: { titulo: 'Conheça a UFJF' },
+  })
+}
+
 exports.conheca_jf = function (req, res) {
   res.render('simposio/2025/comum/pt-BR/local/conheca-jf', {
     layout: 'simposio/2025/pt-BR/layout',
     local: true,
     isSbceb: true,
     titulo: 'Conheça Juiz de Fora',
-    header: { titulo: 'Juiz de Fora - MG' },
+    header: { titulo: 'Conheça Juiz de Fora' },
   })
 }
 
@@ -33,8 +43,8 @@ exports.local_evento = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     local: true,
     isSbceb: true,
-    titulo: 'Local do evento - UFJF',
-    header: { titulo: 'Local do evento - UFJF' },
+    titulo: 'Conheça o local do evento',
+    header: { titulo: 'Conheça o local do evento' },
   })
 }
 
@@ -45,5 +55,45 @@ exports.lista_lugares_jf = function (req, res) {
      isSbceb: true,
      titulo: 'Lugares para visitar em Juiz de Fora',
      header: { titulo: 'Lugares para visitar em Juiz de Fora' },
-   })
- } 
+  })
+} 
+
+exports.polo_itacoatiara = function (req, res) {
+  res.render('simposio/2025/sbc-eb/pt-BR/polos/itacoatiara', {
+    layout: 'simposio/2025/pt-BR/layout',
+    local: true,
+    isSbceb: true,
+    titulo: 'Polo Itacoatiara - AM',
+    header: { titulo: 'Polo Itacoatiara - AM' },
+  })
+}
+
+exports.polo_salvador = function (req, res) {
+  res.render('simposio/2025/sbc-eb/pt-BR/polos/salvador', {
+    layout: 'simposio/2025/pt-BR/layout',
+    local: true,
+    isSbceb: true,
+    titulo: 'Polo Salvador - BA',
+    header: { titulo: 'Polo Salvador - BA' },
+  })
+}
+
+exports.polo_campo_grande = function (req, res) {
+  res.render('simposio/2025/sbc-eb/pt-BR/polos/campo-grande', {
+    layout: 'simposio/2025/pt-BR/layout',
+    local: true,
+    isSbceb: true,
+    titulo: 'Polo Campo Grande - MS',
+    header: { titulo: 'Polo Campo Grande - MS' },
+  })
+}
+
+exports.polo_bandeirante = function (req, res) {
+  res.render('simposio/2025/sbc-eb/pt-BR/polos/bandeirante', {
+    layout: 'simposio/2025/pt-BR/layout',
+    local: true,
+    isSbceb: true,
+    titulo: 'Polo Bandeirante - PR',
+    header: { titulo: 'Polo Bandeirante - PR' },
+  })
+}

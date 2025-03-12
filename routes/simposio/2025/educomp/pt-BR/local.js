@@ -1,10 +1,20 @@
+exports.conheca_ufjf = function (req, res) {
+  res.render('simposio/2025/comum/pt-BR/local/conheca-ufjf', {
+    layout: 'simposio/2025/pt-BR/layout',
+    local: true,
+    isEducomp: true,
+    titulo: 'Conheça a UFJF',
+    header: { titulo: 'Conheça a UFJF' },
+  })
+}
+
 exports.conheca_jf = function (req, res) {
   res.render('simposio/2025/comum/pt-BR/local/conheca-jf', {
     layout: 'simposio/2025/pt-BR/layout',
     local: true,
     isEducomp: true,
-    titulo: 'Conheça Juiz de Fora - MG',
-    header: { titulo: 'Juiz de Fora - MG' },
+    titulo: 'Conheça Juiz de Fora',
+    header: { titulo: 'Conheça Juiz de Fora' },
   })
 }
 
@@ -33,8 +43,8 @@ exports.local_evento = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     local: true,
     isEducomp: true,
-    titulo: 'Local do evento - UFJF',
-    header: { titulo: 'Local do evento - UFJF' },
+    titulo: 'Conheça o local do evento',
+    header: { titulo: 'Conheça o local do evento' },
   })
 }
 
