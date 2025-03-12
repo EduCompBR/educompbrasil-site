@@ -1,24 +1,22 @@
 @keyframes zoomOut {
   from {
-    background-size: 110%;
+    background-size: 120%;
   }
   to {
-    background-size: 100%;
+    background-size: 105%;
   }
 }
 
 .content #sbc-eb-home {
   .logo-bg-effect {
     position: relative;
-    background-image: url('/img/simposio/2025/comum/jf/vista.jpg'),
-      url('/img/simposio/2025/comum/jf/estacao.jpg'), url('/img/simposio/2025/comum/jf/mariano.jpg');
-    background-size: 120%;
+    background-image: url('/img/simposio/2025/comum/jf/cidade/vista-parcial.jpg');
     background-position: center;
     background-repeat: no-repeat;
     animation: zoomOut 30s ease-out forwards;
     clip-path: ellipse(100% 100% at 50% 0%);
     z-index: 1;
-    padding-bottom: 2emcarrossel;
+    padding-bottom: 2em;
   }
 
   .logo-bg-effect::after {
@@ -46,7 +44,7 @@
 
   @media (max-width: 768px) {
     .img-logo-evento {
-      margin-top: 40px;
+      margin-top: 20px;
     }
   }
 
@@ -74,13 +72,24 @@
     background-position: top;
     padding-bottom: 4em;
 
+    #texto-inicial {
+      color: white;
+      text-align: center;
+      padding-bottom: 2em;
+      a {
+        color: var(--eb-blue-light);
+      }
+      strong {
+        color: var(--eb-yellow);
+      }
+    }
+
     h2 {
       text-align: center;
       font-size: 2.2em;
       color: white;
       font-weight: 600;
       padding-top: 2em;
-      padding-bottom: 2em;
     }
 
     .card {
@@ -115,7 +124,7 @@
       }
     }
 
-     .card:hover {
+    .card:hover {
       transform: scale(1.02);
     }
   }
