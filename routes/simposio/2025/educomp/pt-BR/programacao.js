@@ -47,3 +47,13 @@ exports.sessoes_tecnicas = function (req, res) {
     header: { titulo: 'Sessões técnicas' },
   })
 }
+
+exports.online = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/programacao/online', {
+    layout: 'simposio/2025/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Participação online',
+    header: { titulo: 'Participação online' },
+  })
+}
