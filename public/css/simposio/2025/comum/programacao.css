@@ -83,4 +83,86 @@
       }
     }
   }
+  #informacao-jantar {
+    .figure-img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+      margin-top: 0.5em;
+    }
+  
+    .figure-img:hover {
+      transform: scale(1.02);
+    }
+
+    .figure-caption {
+      padding: 0%;
+      text-decoration: none;
+      color: inherit;
+  
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .figure-img {
+        height: 250px !important;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .figure-img {
+        height: 200px !important;
+      }
+    }
+  }
+  .table {
+    margin-bottom: 4em;
+  }
+  .table {
+    .col-categoria {
+      width: 20%;
+    }
+
+    .col-itens {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .table {
+      width: 100%;
+      border-radius: 0;
+    }
+  
+    .col-categoria, .col-itens {
+      width: auto;
+      display: block;
+      text-align: left;
+    }
+  
+    tbody tr {
+      display: block;
+      border-bottom: 1px solid var(--gray-dark);
+    }
+  
+    tbody td {
+      display: block;
+      text-align: left;
+      padding: 0.5em;
+      border-bottom: 1px solid var(--gray);
+    }
+  
+    tbody td:before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.5em;
+    }
+  }
 }
