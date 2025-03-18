@@ -61,9 +61,7 @@ app.get('/simposio/2025/educomp/programacao/palestras-nacionais', educomp_2025_p
 app.get('/simposio/2025/educomp/programacao/sessoes-tecnicas', educomp_2025_programacao.sessoes_tecnicas)
 app.get('/simposio/2025/educomp/programacao/jantar', educomp_2025_programacao.jantar)
 app.get('/simposio/2025/educomp/programacao/fotos', educomp_2025_programacao.fotos)
-
 app.get('/simposio/2025/educomp/programacao/online', educomp_2025_programacao.online)
-
 app.get('/simposio/2025/educomp/inscricoes', educomp_2025_inscricoes.inscricoes)
 app.get('/simposio/2025/educomp/camisas', educomp_2025_home.camisas)
 
