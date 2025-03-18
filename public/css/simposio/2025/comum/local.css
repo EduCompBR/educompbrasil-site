@@ -151,6 +151,51 @@
       flex-wrap: wrap;
     }
 
+    .horarios {
+      display:flex;
+      flex-direction: row;
+    }
+
+    .horarios .horario-linha {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-left:3px;
+    }
+
+    #endereco-linha {
+      width: 95%;
+      margin:0px;
+      margin-left: 4px;
+      margin-bottom: 1em;
+      align-items: center;
+
+    }
+
+    @media (min-width: 768px) {
+      #endereco-linha {
+        width: 75%;
+      }
+
+      .horarios .horario-linha {
+        flex-direction: column;
+        margin-left: 4px;
+      }
+    }
+
+    .info{
+      display:flex;
+      align-items: center;
+    }
+
+    .info p{
+      margin-left:3px;
+      margin-right:3px;
+      margin-top: 0;
+      margin-bottom:0;
+    }
+
+
     .footnote {
       font-size: 0.7em;
       display: block;
