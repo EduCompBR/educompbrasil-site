@@ -14,7 +14,7 @@ exports.jantar = function (req, res) {
     programacao: true,
     isSbceb: true,
     titulo: 'Jantar do evento',
-    header: { titulo: 'Jantar do evento (por adesão)' },
+    header: { titulo: 'Jantar do evento' },
   })
 }
 
