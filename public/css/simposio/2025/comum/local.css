@@ -166,14 +166,13 @@
 
     .horario-linhas p {
       margin:0;
-      margin-right:2px;
+      margin-right:1em;
     }
 
     #endereco-linha {
       width: 95%;
-      margin:0px;
       margin-left: 4px;
-      margin-bottom: 0.5em;
+      margin-bottom: 2px;
       align-items: center;
 
     }
