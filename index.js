@@ -76,6 +76,8 @@ var sbc_eb_2025_programacao = require('./routes/simposio/2025/sbc-eb/pt-BR/progr
 
 app.get('/simposio/2025/sbc-eb', sbc_eb_2025_home.home)
 app.get('/simposio/2025/sbc-eb/chamadas/trabalhos', sbc_eb_2025_chamadas.trabalhos)
+app.get('/simposio/2025/sbc-eb/chamadas/aceitos', sbc_eb_2025_chamadas.aceitos)
+app.get('/simposio/2025/sbc-eb/chamadas/orientacoes-apresentacao', sbc_eb_2025_chamadas.orientacoes_apresentacao)
 app.get('/simposio/2025/sbc-eb/forlic', sbc_eb_2025_forlic.forlic)
 app.get('/simposio/2025/sbc-eb/local/como-chegar', sbc_eb_2025_local.como_chegar)
 app.get('/simposio/2025/sbc-eb/local/onde-hospedar', sbc_eb_2025_local.onde_hospedar)
