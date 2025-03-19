@@ -83,6 +83,32 @@
       }
     }
   }
+  #informacao-jantar {
+    .figure-img {
+      aspect-ratio: 3/4;
+      width: 100%;
+      object-fit: cover;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+      margin-top: 0.5em;
+    }
+
+    .figure-img:hover {
+      transform: scale(1.02);
+    }
+
+    .figure-caption {
+      padding: 0%;
+      text-decoration: none;
+      color: inherit;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
 }
 
 .content #programacao-online {

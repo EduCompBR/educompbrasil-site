@@ -14,7 +14,7 @@ exports.jantar = function (req, res) {
     programacao: true,
     isEducomp: true,
     titulo: 'Jantar do evento',
-    header: { titulo: 'Jantar do evento (por adesão)' },
+    header: { titulo: 'Jantar do evento' },
   })
 }
 
