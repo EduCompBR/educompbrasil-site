@@ -154,7 +154,7 @@
     .horarios {
       display:flex;
       flex-direction: row;
-      margin-bottom: 5px;
+      margin-bottom: 0.5em;
     }
 
     .horarios .horario-linhas {
@@ -169,12 +169,16 @@
       margin-right:1em;
     }
 
-    #endereco-linha {
-      width: 95%;
-      margin-left: 4px;
-      margin-bottom: 5px;
+    .endereco{
+      display: flex;
       align-items: center;
+      margin-bottom: 0.5em;
+    }
 
+    #endereco-linha {
+      width: 100%;
+      margin-left: 4px;
+      margin-bottom: 0px;
     }
 
     @media (min-width: 768px) {
@@ -190,7 +194,7 @@
     .info{
       display:flex;
       align-items:center;
-      margin-bottom: 5px;
+      margin-bottom: 0.5em;
     }
 
     .info p{
