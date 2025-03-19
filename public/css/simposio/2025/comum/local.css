@@ -154,20 +154,26 @@
     .horarios {
       display:flex;
       flex-direction: row;
+      margin-bottom: 0.5em;
     }
 
-    .horarios .horario-linha {
+    .horarios .horario-linhas {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      margin-left:3px;
+      margin-left:4px;
+    }
+
+    .horario-linhas p {
+      margin:0;
+      margin-right:2px;
     }
 
     #endereco-linha {
       width: 95%;
       margin:0px;
       margin-left: 4px;
-      margin-bottom: 1em;
+      margin-bottom: 0.5em;
       align-items: center;
 
     }
@@ -177,22 +183,21 @@
         width: 75%;
       }
 
-      .horarios .horario-linha {
+      .horarios .horario-linhas {
         flex-direction: column;
-        margin-left: 4px;
       }
     }
 
     .info{
       display:flex;
-      align-items: center;
+      align-items:center;
+      margin-bottom: 2px;
     }
 
     .info p{
       margin-left:3px;
-      margin-right:3px;
       margin-top: 0;
-      margin-bottom:0;
+      margin-bottom: 0px;
     }
 
 
