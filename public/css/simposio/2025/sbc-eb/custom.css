@@ -30,6 +30,8 @@
   --prazo-firme-color: var(--edc-red);
   --prazo-footer-color: var(--eb-blue-medium);
   --prazo-data-color: var(--eb-blue-dark);
+
+  --parceiros-color: var(--eb-green);
 }
 
 .content-sbc-eb {
