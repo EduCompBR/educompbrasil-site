@@ -33,6 +33,8 @@
   --prazo-firme-color: var(--edc-red);
   --prazo-footer-color: var(--edc-green);
   --prazo-data-color: var(--edc-blue);
+
+  --parceiros-color: #2b7ec2;
 }
 
 .header-educomp h1 {

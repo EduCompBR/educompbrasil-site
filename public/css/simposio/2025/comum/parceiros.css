@@ -44,7 +44,7 @@
   }
 
   .card-footer {
-    background-color: var(--prazo-footer-color);
+    background-color: var(--parceiros-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
