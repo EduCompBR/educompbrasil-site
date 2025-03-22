@@ -30,6 +30,7 @@ var educomp_2025_local = require('./routes/simposio/2025/educomp/pt-BR/local')
 var educomp_2025_equipes = require('./routes/simposio/2025/educomp/pt-BR/equipes')
 var educomp_2025_inscricoes = require('./routes/simposio/2025/educomp/pt-BR/inscricoes')
 var educomp_2025_programacao = require('./routes/simposio/2025/educomp/pt-BR/programacao')
+var educomp_2025_certificados_educomp = require('./routes/simposio/2025/educomp/pt-BR/certificado/educomp')
 
 app.get('/simposio/2025', educomp_2025_home.home)
 app.get('/simposio/2025/educomp', educomp_2025_home.home)
@@ -64,6 +65,12 @@ app.get('/simposio/2025/educomp/programacao/fotos', educomp_2025_programacao.fot
 app.get('/simposio/2025/educomp/programacao/online', educomp_2025_programacao.online)
 app.get('/simposio/2025/educomp/inscricoes', educomp_2025_inscricoes.inscricoes)
 app.get('/simposio/2025/educomp/camisas', educomp_2025_home.camisas)
+app.get('/simposio/2025/certificados/educomp', educomp_2025_certificados_educomp.opcoes)
+app.get('/simposio/2025/certificados/educomp/obter', educomp_2025_certificados_educomp.certificado)
+app.post('/simposio/2025/certificados/educomp/obter', educomp_2025_certificados_educomp.obter)
+app.post('/simposio/2025/certificados/educomp/obter/arquivo', educomp_2025_certificados_educomp.obterArquivo)
+app.get('/simposio/2025/certificados/educomp/validar', educomp_2025_certificados_educomp.formValidar)
+app.post('/simposio/2025/certificados/educomp/validar', educomp_2025_certificados_educomp.validar)
 
 // SBC-EB 2025
 var sbc_eb_2025_home = require('./routes/simposio/2025/sbc-eb/pt-BR/home')
