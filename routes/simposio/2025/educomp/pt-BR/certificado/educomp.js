@@ -9,7 +9,7 @@ const layout = 'simposio/2025/pt-BR/layout'
 const base_view = "simposio/2025/comum/pt-BR/certificados/" + base_name + "/"
 const template_url = "resources/simposio/2025/pt-BR/modelos/" + base_name + ".png"
 const font_url = 'resources/simposio/2025/pt-BR/fonts/trebuc.ttf'
-const codigo_planilha = '1AEJkO361ZPI7erBGLFCqbMVqYvWsl27r3yta8Zm3tks'
+const codigo_planilha = '1jgB_f2F-h8a2Nl9RHl3ZAcDx47dODoLAkxMSh6QmsMw'
 const endereco_validacao = "www.educompbrasil.org/simposio/2025/certificados/educomp/validar"
 
 //Educomp opcoes
@@ -19,6 +19,8 @@ exports.opcoes = function (req, res) {
         {
             layout: layout,
             certificado: true,
+            isEducomp: true,
+            chamadas: true,
             titulo: 'Certificado',
             header: {
                 endereco: 'certificados',
@@ -35,6 +37,8 @@ exports.certificado = function (req, res) {
         {
             layout: layout,
             certificado: true,
+            isEducomp: true,
+            chamadas: true,
             titulo: 'Certificado',
             header: {
                 endereco: 'certificados',
@@ -132,6 +136,8 @@ exports.obter = async function (req, res) {
                 {
                     layout: layout,
                     certificado: true,
+                    isEducomp: true,
+                    chamadas: true,
                     titulo: 'Certificados',
                     email: req.body.email,
                     data: plans,
@@ -146,6 +152,8 @@ exports.obter = async function (req, res) {
                 {
                     layout: layout,
                     certificado: true,
+                    isEducomp: true,
+                    chamadas: true,
                     mensagem: 'Email não encontrado na base de dados. Entre em contato com a organização',
                     header: {
                         endereco: 'certificados',
@@ -160,6 +168,8 @@ exports.obter = async function (req, res) {
                 {
                     layout: layout,
                     certificado: true,
+                    isEducomp: true,
+                    chamadas: true,
                     titulo: 'Certificado',
                     mensagem: 'Erro ao buscar certificado. Entre em contato com a organização',
                     header: {
@@ -212,14 +222,14 @@ exports.obterArquivo = async function (req, res) {
         novoTextoBase = novoTextoBase.replace(req.body.nome_completo, nome_completo)
 
       if(novoTextoBase.length > 400)
-          doc.fontSize(16)
-      doc.text(novoTextoBase, (doc.page.width - 550)/2, 250, {width: 550, align: 'justify'})
+          doc.fontSize(10)
+      doc.text(novoTextoBase, 270, 200, {width: 480, align: 'justify'})
       doc.fontSize(9.5)
 
       //Rotacionar para colocar o código
       //doc.rotate(270, { origin: [10,520] })
-      doc.text(`Use o código ${codigo} para validar o certificado em: `, 150, 515, {width:doc.page.width, align: 'left'})
-      doc.fillColor('blue').text(`${endereco_validacao}`, 397, 515, {link: endereco_validacao, underline: true})
+      doc.text(`Use o código ${codigo} para validar o certificado em: `, 145, 545, {width:doc.page.width, align: 'left'})
+      doc.fillColor('blue').text(`${endereco_validacao}`, 392, 545, {link: endereco_validacao, underline: true})
       //doc.rotate(-270, { origin: [10,520] })
 
       doc.end()
@@ -237,6 +247,8 @@ exports.obterArquivo = async function (req, res) {
             {
                 layout: layout,
                 certificado: true,
+                isEducomp: true,
+                chamadas: true,
                 titulo: 'Certificado',
                 mensagem: 'Erro ao buscar certificado. Entre em contato com a organização',
                 header: {
@@ -254,6 +266,8 @@ exports.formValidar = function (req, res) {
         {
             layout: layout,
             certificado: true,
+            isEducomp: true,
+            chamadas: true,
             titulo: 'Certificado',
             header: {
                 endereco: 'certificados',
@@ -277,7 +291,7 @@ exports.validar = async function (req, res) {
     var codigo = req.body.codigo
     console.log(codigo)
 
-    var codigoPlan = codigo.substring(9, 11)
+    var codigoPlan = codigo.substring(7,9)
     console.log(codigoPlan)
 
     let numberOfSheets = await doc.sheetCount;
@@ -338,6 +352,8 @@ exports.validar = async function (req, res) {
       res.render(base_view + 'validar-resultado', {
           layout: layout,
           certificado: true,
+          isEducomp: true,
+          chamadas: true,
           titulo: 'Certificado',
           dadosMensagem: dadosMensagem,
           header: {
@@ -348,6 +364,8 @@ exports.validar = async function (req, res) {
       } else {
           res.render(base_view + 'validar-resultado', {
               layout: layout,
+              isEducomp: true,
+              chamadas: true,
               certificado: true,
               titulo: 'Certificado',
               dadosMensagem: false,
@@ -362,6 +380,8 @@ exports.validar = async function (req, res) {
       {
           layout: layout,
           certificado: true,
+          isEducomp: true,
+          chamadas: true,
           titulo: 'Certificado',
           header: {
               endereco: 'certificados',
