@@ -2,15 +2,15 @@ const PDFDocument = require('pdfkit')
 const { GoogleSpreadsheet } = require('google-spreadsheet')
 const fs = require('fs')
 
-const nome_evento = "SBC-EB 2025"
-const data_evento = "09 a 11/04/2025"
-const base_name = "sbc-eb"
+const nome_evento = "EduComp 2025"
+const data_evento = "07 a 11/04/2025"
+const base_name = "educomp"
 const layout = 'simposio/2025/pt-BR/layout'
-const base_view = "simposio/2025/" + base_name + "/pt-BR/certificados/"
+const base_view = 'simposio/2025/' + base_name + '/pt-BR/certificados/'
 const template_url = "resources/simposio/2025/pt-BR/modelos/" + base_name + ".png"
 const font_url = 'resources/simposio/2025/pt-BR/fonts/trebuc.ttf'
-const codigo_planilha = '18nw1uosJY3ZuRzZas1BIWYBI5Uf5ugUscwPrMFAXxIU'
-const endereco_validacao = 'www.educompbrasil.org/simposio/2025/sbc-eb/certificados/validar'
+const codigo_planilha = '1jgB_f2F-h8a2Nl9RHl3ZAcDx47dODoLAkxMSh6QmsMw'
+const endereco_validacao = 'www.educompbrasil.org/simposio/2025/educomp/certificados/validar'
 
 //Educomp opcoes
 exports.opcoes = function (req, res) {
@@ -18,13 +18,11 @@ exports.opcoes = function (req, res) {
     res.render(base_view + 'opcoes',
         {
             layout: layout,
-            certificado: true,
-            isSbceb: true,
-            chamadas: true,
+            isEducomp: true,
+            home: true,
             titulo: 'Certificado',
             header: {
-                endereco: 'certificados',
-                descricao: 'Faixa de título dos certificados.'
+                titulo: 'Certificado',
             }
         }
     )
@@ -36,13 +34,11 @@ exports.certificado = function (req, res) {
     res.render(base_view + 'form-obter',
         {
             layout: layout,
-            certificado: true,
-            isSbceb: true,
-            chamadas: true,
+            isEducomp: true,
+            home: true,
             titulo: 'Certificado',
             header: {
-                endereco: 'certificados',
-                descricao: 'Faixa de título dos certificados.'
+                titulo: 'Certificado',
             }
         }
     )
@@ -135,15 +131,13 @@ exports.obter = async function (req, res) {
             res.render(base_view + 'obter-lista',
                 {
                     layout: layout,
-                    certificado: true,
-                    isSbceb: true,
-                    chamadas: true,
+                    isEducomp: true,
+                    home: true,
                     titulo: 'Certificados',
                     email: req.body.email,
                     data: plans,
                     header: {
-                        endereco: 'certificados',
-                        descricao: 'Faixa de título dos certificados.'
+                        titulo: 'Certificado',
                     }
                 }
             )
@@ -151,13 +145,11 @@ exports.obter = async function (req, res) {
             res.render(base_view + 'form-obter',
                 {
                     layout: layout,
-                    certificado: true,
-                    isSbceb: true,
-                    chamadas: true,
+                    isEducomp: true,
+                    home: true,
                     mensagem: 'Email não encontrado na base de dados. Entre em contato com a organização',
                     header: {
-                        endereco: 'certificados',
-                        descricao: 'Faixa de título dos certificados.'
+                        titulo: 'Certificado',
                     }
                 }
             )
@@ -167,14 +159,12 @@ exports.obter = async function (req, res) {
         res.render(base_view + 'obter-lista',
                 {
                     layout: layout,
-                    certificado: true,
-                    isSbceb: true,
-                    chamadas: true,
+                    isEducomp: true,
+                    home: true,
                     titulo: 'Certificado',
                     mensagem: 'Erro ao buscar certificado. Entre em contato com a organização',
                     header: {
-                        endereco: 'certificados',
-                        descricao: 'Faixa de título dos certificados.'
+                        titulo: 'Certificado',
                     }
                 }
         )
@@ -223,13 +213,13 @@ exports.obterArquivo = async function (req, res) {
 
       if(novoTextoBase.length > 400)
           doc.fontSize(10)
-      doc.text(novoTextoBase, 150, 200, {width: 550, align: 'justify'})
+      doc.text(novoTextoBase, 270, 200, {width: 480, align: 'justify'})
       doc.fontSize(9.5)
 
       //Rotacionar para colocar o código
       //doc.rotate(270, { origin: [10,520] })
-      doc.text(`Use o código ${codigo} para validar o certificado em: `, 145, 555, {width:doc.page.width, align: 'left'})
-      doc.fillColor('blue').text(`${endereco_validacao}`, 392, 555, {link: endereco_validacao, underline: true})
+      doc.text(`Use o código ${codigo} para validar o certificado em: `, 145, 545, {width:doc.page.width, align: 'left'})
+      doc.fillColor('blue').text(`${endereco_validacao}`, 392, 545, {link: endereco_validacao, underline: true})
       //doc.rotate(-270, { origin: [10,520] })
 
       doc.end()
@@ -246,14 +236,12 @@ exports.obterArquivo = async function (req, res) {
         res.render(base_view + 'obter-lista',
             {
                 layout: layout,
-                certificado: true,
-                isSbceb: true,
-                chamadas: true,
+                isEducomp: true,
+                home: true,
                 titulo: 'Certificado',
                 mensagem: 'Erro ao buscar certificado. Entre em contato com a organização',
                 header: {
-                    endereco: 'certificados',
-                    descricao: 'Faixa de título dos certificados.'
+                    titulo: 'Certificado',
                 }
             }
         )
@@ -265,13 +253,11 @@ exports.formValidar = function (req, res) {
     res.render(base_view + 'form-validar',
         {
             layout: layout,
-            certificado: true,
-            isSbceb: true,
-            chamadas: true,
+            isEducomp: true,
+            home: true,
             titulo: 'Certificado',
             header: {
-                endereco: 'certificados',
-                descricao: 'Faixa de título dos certificados.'
+                titulo: 'Certificado',
             }
         }
     )
@@ -351,27 +337,23 @@ exports.validar = async function (req, res) {
 
       res.render(base_view + 'validar-resultado', {
           layout: layout,
-          certificado: true,
-          isSbceb: true,
-          chamadas: true,
+          isEducomp: true,
+          home: true,
           titulo: 'Certificado',
           dadosMensagem: dadosMensagem,
           header: {
-              endereco: 'certificados',
-              descricao: 'Faixa de título dos certificados.'
+            titulo: 'Certificado',
           }
       })
       } else {
           res.render(base_view + 'validar-resultado', {
               layout: layout,
-              isSbceb: true,
-              chamadas: true,
-              certificado: true,
+              isEducomp: true,
+              home: true,
               titulo: 'Certificado',
               dadosMensagem: false,
               header: {
-                  endereco: 'certificados',
-                  descricao: 'Faixa de título dos certificados.'
+                  titulo: 'Certificado',
               }
           })
       }
@@ -379,13 +361,11 @@ exports.validar = async function (req, res) {
       res.render(base_view + 'form-validar',
       {
           layout: layout,
-          certificado: true,
-          isSbceb: true,
-          chamadas: true,
+          isEducomp: true,
+          home: true,
           titulo: 'Certificado',
           header: {
-              endereco: 'certificados',
-              descricao: 'Faixa de título dos certificados.'
+              titulo: 'Certificado',
           }
       })
     }
