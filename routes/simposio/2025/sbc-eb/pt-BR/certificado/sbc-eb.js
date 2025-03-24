@@ -10,7 +10,7 @@ const base_view = "simposio/2025/" + base_name + "/pt-BR/certificados/"
 const template_url = "resources/simposio/2025/pt-BR/modelos/" + base_name + ".png"
 const font_url = 'resources/simposio/2025/pt-BR/fonts/trebuc.ttf'
 const codigo_planilha = '18nw1uosJY3ZuRzZas1BIWYBI5Uf5ugUscwPrMFAXxIU'
-const endereco_validacao = "www.educompbrasil.org/simposio/2025/certificados/sbc-eb/validar"
+const endereco_validacao = 'www.educompbrasil.org/simposio/2025/sbc-eb/certificados/validar'
 
 //Educomp opcoes
 exports.opcoes = function (req, res) {
