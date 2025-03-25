@@ -51,3 +51,12 @@ exports.online = function (req, res) {
     titulo: 'Atividades online',
   })
 }
+
+exports.minicursos = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/programacao/minicursos', {
+    layout: 'simposio/2025/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Minicursos',
+  })
+}
