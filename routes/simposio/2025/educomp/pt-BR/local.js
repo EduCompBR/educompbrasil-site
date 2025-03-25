@@ -50,10 +50,10 @@ exports.local_evento = function (req, res) {
 
 exports.lugares_visitar = function (req, res) {
  res.render('simposio/2025/comum/pt-BR/local/lugares-visitar', {
-    layout: 'simposio/2025/pt-BR/layout',
-    local: true,
-    isEducomp: true,
-    titulo: 'Lugares para visitar em Juiz de Fora',
-     header: { titulo: 'Lugares para visitar em Juiz de Fora' },
-  })
+   layout: 'simposio/2025/pt-BR/layout',
+   local: true,
+   isEducomp: true,
+   titulo: 'Sugestões gastronômicas em Juiz de Fora',
+   header: { titulo: 'Sugestões gastronômicas em Juiz de Fora' },
+ })
 } 
