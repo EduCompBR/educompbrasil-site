@@ -4,7 +4,6 @@ exports.comissao_organizadora = function (req, res) {
     equipes: true,
     isEducomp: true,
     titulo: 'Comissão organizadora',
-    header: { titulo: 'Comissão organizadora' },
   })
 }
 
@@ -14,7 +13,6 @@ exports.comite_programa = function (req, res) {
     equipes: true,
     isEducomp: true,
     titulo: 'Comitê de programa',
-    header: { titulo: 'Comitê de programa' },
   })
 }
 
@@ -24,7 +22,6 @@ exports.comite_diretivo = function (req, res) {
     equipes: true,
     isEducomp: true,
     titulo: 'Comitê diretivo',
-    header: { titulo: 'Comitê diretivo' },
   })
 }
 
@@ -34,6 +31,5 @@ exports.comissao_especial = function (req, res) {
     equipes: true,
     isEducomp: true,
     titulo: 'Comissão especial',
-    header: { titulo: 'Comissão especial' },
   })
 }

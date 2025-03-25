@@ -4,6 +4,5 @@ exports.inscricoes = function (req, res) {
     inscricoes: true,
     isSbceb: true,
     titulo: 'Inscrições',
-    header: { titulo: 'Inscrições' },
   })
 }

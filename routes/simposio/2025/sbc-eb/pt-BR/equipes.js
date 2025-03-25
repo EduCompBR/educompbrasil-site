@@ -4,7 +4,6 @@ exports.comissao_organizadora = function (req, res) {
     equipes: true,
     isSbceb: true,
     titulo: 'Comissão organizadora',
-    header: { titulo: 'Comissão organizadora' },
   })
 }
 
@@ -14,7 +13,6 @@ exports.comite_programa = function (req, res) {
     equipes: true,
     isSbceb: true,
     titulo: 'Comitê de programa',
-    header: { titulo: 'Comitê de programa' },
   })
 }
 

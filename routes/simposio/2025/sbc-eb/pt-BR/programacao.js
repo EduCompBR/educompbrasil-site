@@ -4,7 +4,6 @@ exports.geral = function (req, res) {
     programacao: true,
     isSbceb: true,
     titulo: 'Programação geral',
-    header: { titulo: 'Programação geral (preliminar)' },
   })
 }
 
@@ -14,7 +13,6 @@ exports.jantar = function (req, res) {
     programacao: true,
     isSbceb: true,
     titulo: 'Jantar do evento',
-    header: { titulo: 'Jantar do evento' },
   })
 }
 
@@ -24,6 +22,5 @@ exports.fotos = function (req, res) {
     programacao: true,
     isSbceb: true,
     titulo: 'Fotos do evento',
-    header: { titulo: 'Fotos do evento' },
   })
 }

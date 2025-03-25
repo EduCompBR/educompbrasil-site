@@ -4,7 +4,6 @@ exports.trabalhos = function (req, res) {
     chamadas: true,
     isSbceb: true,
     titulo: 'Chamadas de trabalhos',
-    header: { titulo: 'Chamada de trabalhos' },
   })
 }
 
@@ -14,7 +13,6 @@ exports.aceitos = function (req, res) {
     chamadas: true,
     isSbceb: true,
     titulo: 'Trabalhos aceitos',
-    header: { titulo: 'Trabalhos aceitos' },
   })
 }
 
@@ -24,6 +22,5 @@ exports.orientacoes_apresentacao = function (req, res) {
     chamadas: true,
     isSbceb: true,
     titulo: 'Orientações para apresentação',
-    header: { titulo: 'Orientações para apresentação' },
   })
 }
