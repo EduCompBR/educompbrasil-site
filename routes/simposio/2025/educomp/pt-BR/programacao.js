@@ -4,7 +4,6 @@ exports.geral = function (req, res) {
     programacao: true,
     isEducomp: true,
     titulo: 'Programação geral',
-    header: { titulo: 'Programação geral (preliminar)' },
   })
 }
 
@@ -14,7 +13,6 @@ exports.jantar = function (req, res) {
     programacao: true,
     isEducomp: true,
     titulo: 'Jantar do evento',
-    header: { titulo: 'Jantar do evento' },
   })
 }
 
@@ -24,7 +22,6 @@ exports.fotos = function (req, res) {
     programacao: true,
     isEducomp: true,
     titulo: 'Fotos do evento',
-    header: { titulo: 'Fotos do evento' },
   })
 }
 
@@ -34,7 +31,6 @@ exports.palestras_nacionais = function (req, res) {
     programacao: true,
     isEducomp: true,
     titulo: 'Palestras nacionais',
-    header: { titulo: 'Palestras nacionais' },
   })
 }
 
@@ -44,7 +40,6 @@ exports.sessoes_tecnicas = function (req, res) {
     programacao: true,
     isEducomp: true,
     titulo: 'Sessões técnicas',
-    header: { titulo: 'Sessões técnicas' },
   })
 }
 
@@ -54,6 +49,5 @@ exports.online = function (req, res) {
     programacao: true,
     isEducomp: true,
     titulo: 'Atividades online',
-    header: { titulo: 'Atividades online' },
   })
 }

@@ -21,9 +21,6 @@ exports.opcoes = function (req, res) {
             isEducomp: true,
             home: true,
             titulo: 'Certificado',
-            header: {
-                titulo: 'Certificado',
-            }
         }
     )
 };
@@ -37,9 +34,6 @@ exports.certificado = function (req, res) {
             isEducomp: true,
             home: true,
             titulo: 'Certificado',
-            header: {
-                titulo: 'Certificado',
-            }
         }
     )
 };
@@ -136,9 +130,6 @@ exports.obter = async function (req, res) {
                     titulo: 'Certificados',
                     email: req.body.email,
                     data: plans,
-                    header: {
-                        titulo: 'Certificado',
-                    }
                 }
             )
         } else {
@@ -147,10 +138,8 @@ exports.obter = async function (req, res) {
                     layout: layout,
                     isEducomp: true,
                     home: true,
+                    titulo: 'Certificados',
                     mensagem: 'Email não encontrado na base de dados. Entre em contato com a organização',
-                    header: {
-                        titulo: 'Certificado',
-                    }
                 }
             )
         }
@@ -163,9 +152,6 @@ exports.obter = async function (req, res) {
                     home: true,
                     titulo: 'Certificado',
                     mensagem: 'Erro ao buscar certificado. Entre em contato com a organização',
-                    header: {
-                        titulo: 'Certificado',
-                    }
                 }
         )
     }
@@ -240,9 +226,6 @@ exports.obterArquivo = async function (req, res) {
                 home: true,
                 titulo: 'Certificado',
                 mensagem: 'Erro ao buscar certificado. Entre em contato com a organização',
-                header: {
-                    titulo: 'Certificado',
-                }
             }
         )
     }
@@ -256,9 +239,6 @@ exports.formValidar = function (req, res) {
             isEducomp: true,
             home: true,
             titulo: 'Certificado',
-            header: {
-                titulo: 'Certificado',
-            }
         }
     )
 };
@@ -341,9 +321,6 @@ exports.validar = async function (req, res) {
           home: true,
           titulo: 'Certificado',
           dadosMensagem: dadosMensagem,
-          header: {
-            titulo: 'Certificado',
-          }
       })
       } else {
           res.render(base_view + 'validar-resultado', {
@@ -352,9 +329,6 @@ exports.validar = async function (req, res) {
               home: true,
               titulo: 'Certificado',
               dadosMensagem: false,
-              header: {
-                  titulo: 'Certificado',
-              }
           })
       }
     } catch (error) {
@@ -364,9 +338,6 @@ exports.validar = async function (req, res) {
           isEducomp: true,
           home: true,
           titulo: 'Certificado',
-          header: {
-              titulo: 'Certificado',
-          }
       })
     }
 };

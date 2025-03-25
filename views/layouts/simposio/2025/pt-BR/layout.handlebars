@@ -20,10 +20,12 @@
         {{~/if}}
       {{~/if}}
       
-      {{~#if header.titulo }}
-        <div class="d-flex justify-content-center align-items-center page-title">
-          <h1>{{ header.titulo }}</h1>
-        </div>
+      {{~#if titulo }}
+        {{~#unless home }}
+          <div class="d-flex justify-content-center align-items-center page-title">
+            <h1>{{ titulo }}</h1>
+          </div>
+        {{~/unless}}
       {{~/if}}
     </header>
 

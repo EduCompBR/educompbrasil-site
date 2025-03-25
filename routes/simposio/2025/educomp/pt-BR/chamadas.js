@@ -4,7 +4,6 @@ exports.topicos_interesse = function (req, res) {
     chamadas: true,
     isEducomp: true,
     titulo: 'Tópicos de interesse',
-    header: { titulo: 'Tópicos de interesse' },
   })
 }
 
@@ -14,7 +13,6 @@ exports.artigos_completos = function (req, res) {
     chamadas: true,
     isEducomp: true,
     titulo: 'Artigos completos',
-    header: { titulo: 'Artigos completos' },
   })
 }
 
@@ -23,8 +21,7 @@ exports.criterios_trilha_1 = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     chamadas: true,
     isEducomp: true,
-    titulo: 'Critérios - Trilha 1',
-    header: { titulo: 'Critérios e diretivas para revisão' },
+    titulo: 'Critérios e diretivas para revisão - Trilha 1',
   })
 }
 
@@ -33,8 +30,7 @@ exports.criterios_trilha_2 = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     chamadas: true,
     isEducomp: true,
-    titulo: 'Critérios - Trilha 2',
-    header: { titulo: 'Critérios e diretivas para revisão' },
+    titulo: 'Critérios e diretivas para revisão - Trilha 2',
   })
 }
 
@@ -43,8 +39,7 @@ exports.criterios_trilha_3 = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     chamadas: true,
     isEducomp: true,
-    titulo: 'Critérios - Trilha 3',
-    header: { titulo: 'Critérios e diretivas para revisão' },
+    titulo: 'Critérios e diretivas para revisão - Trilha 3',
   })
 }
 
@@ -53,8 +48,7 @@ exports.criterios_trilha_4 = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     chamadas: true,
     isEducomp: true,
-    titulo: 'Critérios - Trilha 4',
-    header: { titulo: 'Critérios e diretivas para revisão' },
+    titulo: 'Critérios e diretivas para revisão - Trilha 4',
   })
 }
 
@@ -63,8 +57,7 @@ exports.criterios_trilha_5 = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     chamadas: true,
     isEducomp: true,
-    titulo: 'Critérios - Trilha 5',
-    header: { titulo: 'Critérios e diretivas para revisão' },
+    titulo: 'Critérios e diretivas para revisão - Trilha 5',
   })
 }
 
@@ -74,7 +67,6 @@ exports.ctd = function (req, res) {
     chamadas: true,
     isEducomp: true,
     titulo: 'Concurso de Teses e Dissertações',
-    header: { titulo: 'Concurso de Teses e Dissertações' },
   })
 }
 
@@ -84,7 +76,6 @@ exports.wtd = function (req, res) {
     chamadas: true,
     isEducomp: true,
     titulo: 'Workshop de Teses e Dissertações',
-    header: { titulo: 'Workshop de Teses e Dissertações' },
   })
 }
 
@@ -94,7 +85,6 @@ exports.minicursos = function (req, res) {
     chamadas: true,
     isEducomp: true,
     titulo: 'Minicursos',
-    header: { titulo: 'Minicursos' },
   })
 }
 
@@ -104,7 +94,6 @@ exports.mesas_tematicas = function (req, res) {
     chamadas: true,
     isEducomp: true,
     titulo: 'Mesas temáticas',
-    header: { titulo: 'Mesas temáticas' },
   })
 }
 
@@ -114,7 +103,6 @@ exports.laboratorio_ideias = function (req, res) {
     chamadas: true,
     isEducomp: true,
     titulo: 'Laboratório de ideias',
-    header: { titulo: 'Laboratório de ideias' },
   })
 }
 
@@ -124,7 +112,6 @@ exports.aceitos = function (req, res) {
     chamadas: true,
     isEducomp: true,
     titulo: 'Trabalhos aceitos',
-    header: { titulo: 'Trabalhos aceitos' },
   })
 }
 
@@ -134,6 +121,5 @@ exports.orientacoes_apresentacao = function (req, res) {
     chamadas: true,
     isEducomp: true,
     titulo: 'Orientações para apresentação',
-    header: { titulo: 'Orientações para apresentação' },
   })
 }

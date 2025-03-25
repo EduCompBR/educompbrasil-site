@@ -13,6 +13,5 @@ exports.camisas = function (req, res) {
     home: true,
     isEducomp: true,
     titulo: 'Camisas do evento',
-    header: { titulo: 'Camisas do evento' },
   })
 }
