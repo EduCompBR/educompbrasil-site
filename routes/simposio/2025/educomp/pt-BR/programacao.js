@@ -63,7 +63,7 @@ exports.informacoes_minicursos = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     programacao: true,
     isEducomp: true,
-    titulo: 'Minicursos EduComp',
-    header: { titulo: 'Minicursos EduComp' },
+    titulo: 'Detalhes dos Minicursos',
+    header: { titulo: 'Detalhes dos Minicursos' },
   })
 }
