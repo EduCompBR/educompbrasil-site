@@ -93,7 +93,7 @@ exports.polo_bandeirante = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     local: true,
     isSbceb: true,
-    titulo: 'Polo Bandeirante - PR',
-    header: { titulo: 'Polo Bandeirante - PR' },
+    titulo: 'Polo Bandeirantes - PR',
+    header: { titulo: 'Polo Bandeirantes - PR' },
   })
 }
