@@ -137,6 +137,111 @@
       }
     }
   }
+
+  #lugares-visitar {
+    h3 {
+      font-size: 1.2em;
+      font-weight: 500;
+      text-align: left;
+      margin-top: 0.5em;
+    }
+
+    #lugares-visitar .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .ultimo-sozinho{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .ultimo-sozinho h3 {
+        align-self:flex-start
+      }
+    }
+
+    .horarios {
+      display:flex;
+      flex-direction: row;
+      margin-bottom: 0.5em;
+    }
+
+    .horarios .horario-linhas {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-left:4px;
+    }
+
+    .horario-linhas p {
+      margin:0;
+      margin-right:1em;
+    }
+
+    .endereco{
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5em;
+    }
+
+    #endereco-linha {
+      width: 100%;
+      margin-left: 4px;
+      margin-bottom: 0px;
+    }
+
+    @media (min-width: 768px) {
+      #endereco-linha {
+        width: 75%;
+      }
+
+      .horarios .horario-linhas {
+        flex-direction: column;
+      }
+    }
+
+    .info{
+      display:flex;
+      align-items:center;
+      margin-bottom: 0.5em;
+    }
+
+    .info p{
+      margin-left:3px;
+      margin-top: 0;
+      margin-bottom: 0px;
+    }
+
+
+    .footnote {
+      font-size: 0.7em;
+      display: block;
+    }
+
+    .list-icons {
+      font-size: 0.85em;
+
+      padding-left: 0px;
+
+      i {
+        font-size: 1em;
+        color: var(--h3-color);
+        width: 30px;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      a {
+        font-size: 1em;
+      }
+    }
+  }
 }
 
 .content #camisas {
