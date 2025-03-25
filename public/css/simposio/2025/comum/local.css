@@ -151,6 +151,19 @@
       flex-wrap: wrap;
     }
 
+    .ultimo-sozinho{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .ultimo-sozinho h3 {
+        align-self:flex-start
+      }
+    }
+
     .horarios {
       display:flex;
       flex-direction: row;
