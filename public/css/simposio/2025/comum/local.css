@@ -155,12 +155,17 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+    }
+
+    @media (min-width:768px) {
+      .ultimo-sozinho {
+        align-items:center;
+      }
     }
 
     @media (max-width: 768px) {
       .ultimo-sozinho h3 {
-        align-self:flex-start
+        align-self:flex-start;
       }
     }
 
