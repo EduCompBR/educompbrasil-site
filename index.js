@@ -94,7 +94,7 @@ app.get('/simposio/2025/sbc-eb/local/conheca-juiz-de-fora', sbc_eb_2025_local.co
 app.get('/simposio/2025/sbc-eb/local/conheca-ufjf', sbc_eb_2025_local.conheca_ufjf)
 app.get('/simposio/2025/sbc-eb/local/local-evento', sbc_eb_2025_local.local_evento)
 app.get('/simposio/2025/sbc-eb/local/lugares-visitar', sbc_eb_2025_local.lugares_visitar)
-app.get('/simposio/2025/sbc-eb/local/polo-bandeirante', sbc_eb_2025_local.polo_bandeirante)
+app.get('/simposio/2025/sbc-eb/local/polo-bandeirantes', sbc_eb_2025_local.polo_bandeirantes)
 app.get('/simposio/2025/sbc-eb/local/polo-campo-grande', sbc_eb_2025_local.polo_campo_grande)
 app.get('/simposio/2025/sbc-eb/local/polo-itacoatiara', sbc_eb_2025_local.polo_itacoatiara)
 app.get('/simposio/2025/sbc-eb/local/polo-salvador', sbc_eb_2025_local.polo_salvador)
