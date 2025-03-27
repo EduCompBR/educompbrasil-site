@@ -48,7 +48,7 @@ exports.online = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     programacao: true,
     isEducomp: true,
-    titulo: 'Atividades online',
+    titulo: 'Programação online',
   })
 }
 
