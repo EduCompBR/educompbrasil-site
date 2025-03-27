@@ -112,23 +112,31 @@
 }
 
 .content #programacao-online {
-  td, th {
+  td,
+  th {
     vertical-align: middle;
   }
-  
+
   .time-cell {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
   }
- 
+
   .col-horario {
     width: 20%;
     align-items: center;
     text-align: center;
   }
- 
+
+  .col-segunda,
+  .col-terca {
+    width: 40%;
+    align-items: center;
+    text-align: center;
+  }
+
   .col-descricao {
     align-items: center;
   }
