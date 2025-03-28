@@ -52,6 +52,15 @@ exports.sessoes_tecnicas = function (req, res) {
   })
 }
 
+exports.laboratorio_ideias = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/programacao/laboratorio-ideias', {
+    layout: 'simposio/2025/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Laboratório de ideias',
+  })
+}
+
 exports.online = function (req, res) {
   res.render('simposio/2025/educomp/pt-BR/programacao/online', {
     layout: 'simposio/2025/pt-BR/layout',

@@ -61,6 +61,7 @@ app.get('/simposio/2025/educomp/equipes/comissao-especial', educomp_2025_equipes
 app.get('/simposio/2025/educomp/programacao/geral', educomp_2025_programacao.geral)
 app.get('/simposio/2025/educomp/programacao/presencial', educomp_2025_programacao.presencial)
 app.get('/simposio/2025/educomp/programacao/palestras-nacionais', educomp_2025_programacao.palestras_nacionais)
+app.get('/simposio/2025/educomp/programacao/laboratorio-ideias', educomp_2025_programacao.laboratorio_ideias)
 app.get('/simposio/2025/educomp/programacao/sessoes-tecnicas', educomp_2025_programacao.sessoes_tecnicas)
 app.get('/simposio/2025/educomp/programacao/minicursos', educomp_2025_programacao.minicursos)
 app.get('/simposio/2025/educomp/programacao/jantar', educomp_2025_programacao.jantar)
