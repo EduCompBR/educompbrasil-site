@@ -25,6 +25,15 @@ exports.fotos = function (req, res) {
   })
 }
 
+exports.presencial = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/programacao/presencial', {
+    layout: 'simposio/2025/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Programação presencial',
+  })
+}
+
 exports.palestras_nacionais = function (req, res) {
   res.render('simposio/2025/educomp/pt-BR/programacao/palestras-nacionais', {
     layout: 'simposio/2025/pt-BR/layout',
