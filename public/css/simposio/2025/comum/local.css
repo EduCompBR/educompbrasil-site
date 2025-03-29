@@ -136,6 +136,11 @@
         font-size: 1em;
       }
     }
+
+    .btn-primary {
+      background-color: var(--footer-bg);
+      border: none;
+    }
   }
 
   #lugares-visitar {
