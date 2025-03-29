@@ -96,3 +96,12 @@ exports.minicursos = function (req, res) {
     titulo: 'Minicursos',
   })
 }
+
+exports.mesas_tematicas = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/programacao/mesas-tematicas', {
+    layout: 'simposio/2025/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Mesas temáticas',
+  })
+}

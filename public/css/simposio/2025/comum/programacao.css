@@ -81,7 +81,6 @@
       width: 100%;
       height: auto;
       object-fit: cover;
-      /* aspect-ratio: 1/1; */
       border-radius: 20px;
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     }
@@ -107,7 +106,8 @@
   }
 
   #painel,
-  #minicurso {
+  #minicurso,
+  #mesa-tematica {
     .titulo {
       text-align: center;
       border: none;
