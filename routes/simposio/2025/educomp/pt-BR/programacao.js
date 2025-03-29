@@ -52,6 +52,15 @@ exports.palestras_nacionais = function (req, res) {
   })
 }
 
+exports.paineis = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/programacao/paineis', {
+    layout: 'simposio/2025/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Painéis',
+  })
+}
+
 exports.sessoes_tecnicas = function (req, res) {
   res.render('simposio/2025/educomp/pt-BR/programacao/sessoes-tecnicas', {
     layout: 'simposio/2025/pt-BR/layout',
