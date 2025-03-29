@@ -42,13 +42,13 @@
 
   #palestra-nacional,
   #keynote {
-    .palestra-titulo {
+    .titulo {
       text-align: center;
       border: none;
       margin-bottom: 0.4em;
     }
 
-    .palestra-horario {
+    .horario {
       text-align: center;
       border: none;
       font-size: 1.2em;
@@ -59,7 +59,7 @@
       color: var(--prazo-footer-color);
     }
 
-    .palestra-autor-nome {
+    .autor-nome {
       font-size: 1.5em;
       color: var(--h2-color);
       font-weight: 300;
@@ -69,7 +69,7 @@
       margin-bottom: 0.1em;
     }
 
-    .palestra-autor-filiacao {
+    .autor-filiacao {
       font-size: 1.2em;
       color: var(--h2-color);
       font-weight: 300;
@@ -77,7 +77,7 @@
       text-align: center;
     }
 
-    .palestra-autor-foto {
+    .autor-foto {
       width: 100%;
       height: auto;
       object-fit: cover;
@@ -86,7 +86,7 @@
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    .palestra-foto-container {
+    .foto-container {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -99,7 +99,7 @@
     }
 
     @media (max-width: 768px) {
-      .palestra-foto {
+      .foto {
         width: 50%;
         height: auto;
       }
