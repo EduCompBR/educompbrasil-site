@@ -39,26 +39,50 @@
       }
     }
   }
-  #palestra-nacional {
+  #palestra-nacional,
+  #keynote {
     .palestra-titulo {
-      font-size: 1.5em;
-      font-weight: 600;
-      text-align: left;
-      margin-top: 0.5em;
+      text-align: center;
+      border: none;
+      margin-bottom: 0.4em;
     }
 
-    .palestra-autor {
-      font-size: 1.5em;
-      font-weight: 500;
-      text-align: left;
-      margin-top: 0.5em;
-      color: rgb(0, 0, 0);
-      font-style: bold;
+    .palestra-horario {
+      text-align: center;
+      border: none;
+      font-size: 1.2em;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 2em;
+      font-style: italic;
+      color: var(--prazo-footer-color);
     }
 
-    .row.mb-5 {
-      display: flex;
-      align-items: center;
+    .palestra-autor-nome {
+      font-size: 1.5em;
+      color: var(--h2-color);
+      font-weight: 300;
+      line-height: 1.3em;
+      text-align: center;
+      margin-top: 0.5em;
+      margin-bottom: 0.1em;
+    }
+
+    .palestra-autor-filiacao {
+      font-size: 1.2em;
+      color: var(--h2-color);
+      font-weight: 300;
+      line-height: 1.3em;
+      text-align: center;
+    }
+
+    .palestra-autor-foto {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      /* aspect-ratio: 1/1; */
+      border-radius: 20px;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .palestra-foto-container {
@@ -68,12 +92,9 @@
       text-align: center;
     }
 
-    .palestra-foto {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      aspect-ratio: 1/1;
-      border-radius: 20px;
+    .row-vertical-center {
+      display: flex;
+      align-items: center;
     }
 
     @media (max-width: 768px) {
