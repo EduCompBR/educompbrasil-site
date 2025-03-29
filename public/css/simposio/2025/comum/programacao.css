@@ -3,7 +3,7 @@
     .container-calendario {
       position: relative;
       width: 100%;
-      height: calc(80vh - 130px);
+      height: calc(70vh - 130px);
       padding-top: 56.25%;
       overflow: hidden;
       margin-bottom: 2em;
@@ -39,26 +39,143 @@
       }
     }
   }
-  #palestra-nacional {
-    .palestra-titulo {
-      font-size: 1.5em;
-      font-weight: 600;
-      text-align: left;
-      margin-top: 0.5em;
+
+  #palestra-nacional,
+  #keynote {
+    .titulo {
+      text-align: center;
+      border: none;
+      margin-bottom: 0.4em;
     }
 
-    .palestra-autor {
-      font-size: 1.5em;
-      font-weight: 500;
-      text-align: left;
-      margin-top: 0.5em;
-      color: rgb(0, 0, 0);
-      font-style: bold;
+    .horario {
+      text-align: center;
+      border: none;
+      font-size: 1.2em;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 2em;
+      font-style: italic;
+      color: var(--prazo-footer-color);
     }
 
-    .row.mb-5 {
+    .autor-nome {
+      font-size: 1.5em;
+      color: var(--h2-color);
+      font-weight: 300;
+      line-height: 1.3em;
+      text-align: center;
+      margin-top: 0.5em;
+      margin-bottom: 0.1em;
+    }
+
+    .autor-filiacao {
+      font-size: 1.2em;
+      color: var(--h2-color);
+      font-weight: 300;
+      line-height: 1.3em;
+      text-align: center;
+    }
+
+    .autor-foto {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .foto-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .row-vertical-center {
       display: flex;
       align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .foto {
+        width: 50%;
+        height: auto;
+      }
+    }
+  }
+
+  #painel,
+  #minicurso,
+  #mesa-tematica {
+    .titulo {
+      text-align: center;
+      border: none;
+      margin-bottom: 0.4em;
+    }
+
+    .horario {
+      text-align: center;
+      border: none;
+      font-size: 1.2em;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 2em;
+      font-style: italic;
+      color: var(--prazo-footer-color);
+    }
+
+    .convidado-nome {
+      font-size: 1.2em;
+      color: var(--h2-color);
+      font-weight: 300;
+      line-height: 1.3em;
+      text-align: center;
+      margin-top: 0.5em;
+      margin-bottom: 0.1em;
+    }
+
+    .convidado-filiacao {
+      font-size: 1em;
+      color: var(--h2-color);
+      font-weight: 300;
+      line-height: 1.3em;
+      text-align: center;
+    }
+
+    .convidado-container {
+      text-align: center;
+    }
+
+    .btn {
+      border-radius: 25px;
+      background-color: whitesmoke;
+      border: 1px solid var(--edc-blue);
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 7px 35px;
+      color: var(--h2-color);
+      margin-bottom: 1.5em;
+    }
+
+    .btn:hover {
+      background-color: var(--edc-blue);
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .modal-body {
+      text-align: left;
+      font-size: 0.9em;
+    }
+
+    .convidado-foto {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      border-radius: 20px;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .palestra-foto-container {
@@ -68,12 +185,9 @@
       text-align: center;
     }
 
-    .palestra-foto {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      aspect-ratio: 1/1;
-      border-radius: 20px;
+    .row-vertical-center {
+      display: flex;
+      align-items: center;
     }
 
     @media (max-width: 768px) {
@@ -83,6 +197,7 @@
       }
     }
   }
+
   #informacao-jantar {
     .figure-img {
       aspect-ratio: 3/4;
