@@ -106,7 +106,8 @@
     }
   }
 
-  #painel {
+  #painel,
+  #minicurso {
     .titulo {
       text-align: center;
       border: none;
