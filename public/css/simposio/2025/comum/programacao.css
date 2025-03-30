@@ -3,7 +3,7 @@
     .container-calendario {
       position: relative;
       width: 100%;
-      height: calc(70vh - 130px);
+      height: calc(60vh - 130px);
       padding-top: 56.25%;
       overflow: hidden;
       margin-bottom: 2em;

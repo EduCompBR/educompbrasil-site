@@ -139,6 +139,119 @@
     }
   }
 
+  #programacao {
+    .accordion {
+      h3 {
+        border: 0;
+        margin: 0;
+        padding: 0.5em 0;
+        font-size: 1.2em;
+        color: var(--h3-color);
+        font-weight: 300;
+        line-height: 1.2em;
+        text-align: left;
+      }
+
+      h4.titulo-artigo {
+        border: 0;
+        margin: 0;
+        padding: 0.5em;
+        font-size: 1em;
+        color: var(--h3-color);
+        font-weight: 300;
+        line-height: 1.2em;
+        text-align: left;
+      }
+
+      .autores-artigo {
+        font-size: 0.9em;
+      }
+
+      .btn-link {
+        color: var(--eb-green);
+        font-size: clamp(13px, 1.5vw, 16px);
+        padding: 0;
+      }
+
+      .btn-link:hover {
+        text-decoration: none;
+      }
+
+      .btn-link:focus {
+        text-decoration: none;
+        box-shadow: none;
+      }
+
+      .card {
+        border: 1px solid var(--eb-gray);
+        background-color: var(--eb-gray-bg);
+        transition: transform 0.2s;
+        flex-direction: column;
+        display: flex;
+      }
+
+      .card:hover {
+        background-color: var(--eb-green-bg);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        flex: 1;
+      }
+
+      .card-body {
+        background-color: whitesmoke;
+      }
+
+      .autor-nome {
+        font-size: 1.5em;
+        color: var(--h2-color);
+        font-weight: 300;
+        line-height: 1.3em;
+        text-align: center;
+        margin-top: 0.5em;
+        margin-bottom: 0.1em;
+      }
+
+      .autor-filiacao {
+        font-size: 1.2em;
+        color: var(--h2-color);
+        font-weight: 300;
+        line-height: 1.3em;
+        text-align: center;
+      }
+
+      .autor-foto {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .foto-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .row-vertical-center {
+        display: flex;
+        align-items: center;
+      }
+
+      @media (max-width: 768px) {
+        .foto {
+          width: 50%;
+          height: auto;
+        }
+      }
+    }
+  }
+
   .call-to-action {
     background-color: var(--eb-blue-medium);
   }
