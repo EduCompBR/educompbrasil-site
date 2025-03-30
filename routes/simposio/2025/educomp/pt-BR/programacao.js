@@ -7,21 +7,12 @@ exports.geral = function (req, res) {
   })
 }
 
-exports.jantar = function (req, res) {
-  res.render('simposio/2025/comum/pt-BR/programacao/jantar', {
+exports.online = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/programacao/online', {
     layout: 'simposio/2025/pt-BR/layout',
     programacao: true,
     isEducomp: true,
-    titulo: 'Jantar do evento',
-  })
-}
-
-exports.fotos = function (req, res) {
-  res.render('simposio/2025/comum/pt-BR/programacao/fotos', {
-    layout: 'simposio/2025/pt-BR/layout',
-    programacao: true,
-    isEducomp: true,
-    titulo: 'Fotos do evento',
+    titulo: 'Programação online',
   })
 }
 
@@ -61,30 +52,12 @@ exports.paineis = function (req, res) {
   })
 }
 
-exports.sessoes_tecnicas = function (req, res) {
-  res.render('simposio/2025/educomp/pt-BR/programacao/sessoes-tecnicas', {
+exports.mesas_tematicas = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/programacao/mesas-tematicas', {
     layout: 'simposio/2025/pt-BR/layout',
     programacao: true,
     isEducomp: true,
-    titulo: 'Sessões técnicas',
-  })
-}
-
-exports.laboratorio_ideias = function (req, res) {
-  res.render('simposio/2025/educomp/pt-BR/programacao/laboratorio-ideias', {
-    layout: 'simposio/2025/pt-BR/layout',
-    programacao: true,
-    isEducomp: true,
-    titulo: 'Laboratório de ideias',
-  })
-}
-
-exports.online = function (req, res) {
-  res.render('simposio/2025/educomp/pt-BR/programacao/online', {
-    layout: 'simposio/2025/pt-BR/layout',
-    programacao: true,
-    isEducomp: true,
-    titulo: 'Programação online',
+    titulo: 'Mesas temáticas',
   })
 }
 
@@ -97,11 +70,29 @@ exports.minicursos = function (req, res) {
   })
 }
 
-exports.mesas_tematicas = function (req, res) {
-  res.render('simposio/2025/educomp/pt-BR/programacao/mesas-tematicas', {
+exports.laboratorio_ideias = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/programacao/laboratorio-ideias', {
     layout: 'simposio/2025/pt-BR/layout',
     programacao: true,
     isEducomp: true,
-    titulo: 'Mesas temáticas',
+    titulo: 'Laboratório de ideias',
+  })
+}
+
+exports.sessoes_tecnicas = function (req, res) {
+  res.render('simposio/2025/educomp/pt-BR/programacao/sessoes-tecnicas', {
+    layout: 'simposio/2025/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Sessões técnicas',
+  })
+}
+
+exports.jantar = function (req, res) {
+  res.render('simposio/2025/comum/pt-BR/programacao/jantar', {
+    layout: 'simposio/2025/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Jantar do evento',
   })
 }
