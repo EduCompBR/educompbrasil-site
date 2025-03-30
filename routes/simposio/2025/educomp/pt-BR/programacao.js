@@ -16,15 +16,6 @@ exports.jantar = function (req, res) {
   })
 }
 
-exports.fotos = function (req, res) {
-  res.render('simposio/2025/comum/pt-BR/programacao/fotos', {
-    layout: 'simposio/2025/pt-BR/layout',
-    programacao: true,
-    isEducomp: true,
-    titulo: 'Fotos do evento',
-  })
-}
-
 exports.presencial = function (req, res) {
   res.render('simposio/2025/educomp/pt-BR/programacao/presencial', {
     layout: 'simposio/2025/pt-BR/layout',
