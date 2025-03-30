@@ -25,12 +25,11 @@ exports.fotos = function (req, res) {
   })
 }
 
-
-exports.forlic = function (req, res) {
-  res.render('simposio/2025/sbc-eb/pt-BR/programacao/forlic', {
+exports.sede = function (req, res) {
+  res.render('simposio/2025/sbc-eb/pt-BR/programacao/sede', {
     layout: 'simposio/2025/pt-BR/layout',
     programacao: true,
     isSbceb: true,
-    titulo: 'Programação ForLic',
+    titulo: 'Programação Juiz de Fora - MG',
   })
 }
