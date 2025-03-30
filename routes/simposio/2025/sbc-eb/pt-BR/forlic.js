@@ -3,7 +3,6 @@ exports.forlic = function (req, res) {
     layout: 'simposio/2025/pt-BR/layout',
     forlic: true,
     isSbceb: true,
-    titulo: 'Forlic',
-    header: { titulo: 'Fórum das Licenciaturas em Computação' },
+    titulo: 'Fórum das Licenciaturas em Computação',
   })
 }

@@ -4,7 +4,6 @@ exports.conheca_ufjf = function (req, res) {
     local: true,
     isSbceb: true,
     titulo: 'Conheça a UFJF',
-    header: { titulo: 'Conheça a UFJF' },
   })
 }
 
@@ -14,7 +13,6 @@ exports.conheca_jf = function (req, res) {
     local: true,
     isSbceb: true,
     titulo: 'Conheça Juiz de Fora',
-    header: { titulo: 'Conheça Juiz de Fora' },
   })
 }
 
@@ -24,7 +22,6 @@ exports.como_chegar = function (req, res) {
     local: true,
     isSbceb: true,
     titulo: 'Como chegar a Juiz de Fora',
-    header: { titulo: 'Como chegar a Juiz de Fora' },
   })
 }
 
@@ -34,7 +31,6 @@ exports.onde_hospedar = function (req, res) {
     local: true,
     isSbceb: true,
     titulo: 'Onde se hospedar em Juiz de Fora',
-    header: { titulo: 'Onde se hospedar em Juiz de Fora' },
   })
 }
 
@@ -44,7 +40,6 @@ exports.local_evento = function (req, res) {
     local: true,
     isSbceb: true,
     titulo: 'Conheça o local do evento',
-    header: { titulo: 'Conheça o local do evento' },
   })
 }
 
@@ -54,9 +49,8 @@ exports.lugares_visitar = function (req, res) {
     local: true,
     isSbceb: true,
     titulo: 'Sugestões gastronômicas em Juiz de Fora',
-    header: { titulo: 'Sugestões gastronômicas em Juiz de Fora' },
   })
-} 
+}
 
 exports.polo_itacoatiara = function (req, res) {
   res.render('simposio/2025/sbc-eb/pt-BR/polos/itacoatiara', {
@@ -64,7 +58,6 @@ exports.polo_itacoatiara = function (req, res) {
     local: true,
     isSbceb: true,
     titulo: 'Polo Itacoatiara - AM',
-    header: { titulo: 'Polo Itacoatiara - AM' },
   })
 }
 
@@ -74,7 +67,6 @@ exports.polo_salvador = function (req, res) {
     local: true,
     isSbceb: true,
     titulo: 'Polo Salvador - BA',
-    header: { titulo: 'Polo Salvador - BA' },
   })
 }
 
@@ -84,7 +76,6 @@ exports.polo_campo_grande = function (req, res) {
     local: true,
     isSbceb: true,
     titulo: 'Polo Campo Grande - MS',
-    header: { titulo: 'Polo Campo Grande - MS' },
   })
 }
 
@@ -94,6 +85,5 @@ exports.polo_bandeirantes = function (req, res) {
     local: true,
     isSbceb: true,
     titulo: 'Polo Bandeirantes - PR',
-    header: { titulo: 'Polo Bandeirantes - PR' },
   })
 }
