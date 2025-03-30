@@ -24,3 +24,13 @@ exports.fotos = function (req, res) {
     titulo: 'Fotos do evento',
   })
 }
+
+
+exports.forlic = function (req, res) {
+  res.render('simposio/2025/sbc-eb/pt-BR/programacao/forlic', {
+    layout: 'simposio/2025/pt-BR/layout',
+    programacao: true,
+    isSbceb: true,
+    titulo: 'Programação ForLic',
+  })
+}

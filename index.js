@@ -107,6 +107,7 @@ app.get('/simposio/2025/sbc-eb/local/polo-salvador', sbc_eb_2025_local.polo_salv
 app.get('/simposio/2025/sbc-eb/equipes/comissao-organizadora', sbc_eb_2025_equipes.comissao_organizadora)
 app.get('/simposio/2025/sbc-eb/equipes/comite-programa', sbc_eb_2025_equipes.comite_programa)
 app.get('/simposio/2025/sbc-eb/programacao/geral', sbc_eb_2025_programacao.geral)
+app.get('/simposio/2025/sbc-eb/programacao/forlic', sbc_eb_2025_programacao.forlic)
 app.get('/simposio/2025/sbc-eb/programacao/jantar', sbc_eb_2025_programacao.jantar)
 app.get('/simposio/2025/sbc-eb/programacao/fotos', sbc_eb_2025_programacao.fotos)
 app.get('/simposio/2025/sbc-eb/inscricoes', sbc_eb_2025_inscricoes.inscricoes)
