@@ -112,7 +112,6 @@ app.get('/simposio/2025/sbc-eb/programacao/bandeirantes', sbc_eb_2025_programaca
 app.get('/simposio/2025/sbc-eb/programacao/campo-grande', sbc_eb_2025_programacao.campo_grande)
 app.get('/simposio/2025/sbc-eb/programacao/itacoatiara', sbc_eb_2025_programacao.itacoatiara)
 app.get('/simposio/2025/sbc-eb/programacao/salvador', sbc_eb_2025_programacao.salvador)
-app.get('/simposio/2025/sbc-eb/programacao/sessoes-tecnicas', sbc_eb_2025_programacao.sessoes_tecnicas)
 app.get('/simposio/2025/sbc-eb/programacao/jantar', sbc_eb_2025_programacao.jantar)
 app.get('/simposio/2025/sbc-eb/inscricoes', sbc_eb_2025_inscricoes.inscricoes)
 app.get('/simposio/2025/sbc-eb/camisas', sbc_eb_2025_home.camisas)

@@ -52,15 +52,6 @@ exports.salvador = function (req, res) {
   })
 }
 
-exports.sessoes_tecnicas = function (req, res) {
-  res.render('simposio/2025/sbc-eb/pt-BR/programacao/sessoes-tecnicas', {
-    layout: 'simposio/2025/pt-BR/layout',
-    programacao: true,
-    isSbceb: true,
-    titulo: 'Sessões técnicas',
-  })
-}
-
 exports.jantar = function (req, res) {
   res.render('simposio/2025/comum/pt-BR/programacao/jantar', {
     layout: 'simposio/2025/pt-BR/layout',
