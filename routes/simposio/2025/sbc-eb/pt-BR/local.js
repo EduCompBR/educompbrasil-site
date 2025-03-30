@@ -79,11 +79,11 @@ exports.polo_campo_grande = function (req, res) {
   })
 }
 
-exports.polo_bandeirante = function (req, res) {
-  res.render('simposio/2025/sbc-eb/pt-BR/polos/bandeirante', {
+exports.polo_bandeirantes = function (req, res) {
+  res.render('simposio/2025/sbc-eb/pt-BR/polos/bandeirantes', {
     layout: 'simposio/2025/pt-BR/layout',
     local: true,
     isSbceb: true,
-    titulo: 'Polo Bandeirante - PR',
+    titulo: 'Polo Bandeirantes - PR',
   })
 }
