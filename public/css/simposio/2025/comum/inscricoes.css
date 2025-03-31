@@ -5,7 +5,7 @@
       position: relative;
     }
   }
-  
+
   #valores {
     .accordion {
       h3 {
@@ -113,5 +113,40 @@
         text-decoration: line-through;
       }
     }
+  }
+}
+
+.content #certificados {
+  h2 {
+    margin-bottom: 2em;
+    margin-top: 1em;
+    font-size: 1.3em;
+    color: var(--h3-color);
+    font-weight: 300;
+    line-height: 1.2em;
+    text-align: left;
+    border: none;
+    text-align: center;
+  }
+
+  .btn {
+    width: 200px;
+    padding: 10px 10px;
+    border-radius: 11px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px 40px;
+    border: 2px solid var(--footer-border);
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .btn-certificado {
+    background-color: var(--footer-border);
+    color: white;
+  }
+  .form-group {
+    text-align: left;
   }
 }
