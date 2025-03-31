@@ -118,7 +118,7 @@
 
 .content #certificados {
   h2 {
-    margin-bottom: 0.5em;
+    margin-bottom: 2em;
     margin-top: 1em;
     font-size: 1.3em;
     color: var(--h3-color);
@@ -145,5 +145,8 @@
   .btn-certificado {
     background-color: var(--footer-border);
     color: white;
+  }
+  .form-group {
+    text-align: left;
   }
 }
