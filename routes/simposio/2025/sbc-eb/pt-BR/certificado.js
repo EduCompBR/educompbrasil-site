@@ -19,7 +19,7 @@ exports.opcoes = function (req, res) {
         {
             layout: layout,
             isSbceb: true,
-            home: true,
+            certificados: true,
             titulo: 'Certificado',
         }
     )
@@ -32,7 +32,7 @@ exports.certificado = function (req, res) {
         {
             layout: layout,
             isSbceb: true,
-            home: true,
+            certificados: true,
             titulo: 'Certificado',
         }
     )
@@ -126,7 +126,7 @@ exports.obter = async function (req, res) {
                 {
                     layout: layout,
                     isSbceb: true,
-                    home: true,
+                    certificados: true,
                     titulo: 'Certificados',
                     email: req.body.email,
                     data: plans,
@@ -137,7 +137,7 @@ exports.obter = async function (req, res) {
                 {
                     layout: layout,
                     isSbceb: true,
-                    home: true,
+                    certificados: true,
                     titulo: 'Certificado',
                     mensagem: 'Email não encontrado na base de dados. Entre em contato com a organização',
                 }
@@ -149,7 +149,7 @@ exports.obter = async function (req, res) {
                 {
                     layout: layout,
                     isSbceb: true,
-                    home: true,
+                    certificados: true,
                     titulo: 'Certificado',
                     mensagem: 'Erro ao buscar certificado. Entre em contato com a organização',
                 }
@@ -223,7 +223,7 @@ exports.obterArquivo = async function (req, res) {
             {
                 layout: layout,
                 isSbceb: true,
-                home: true,
+                certificados: true,
                 titulo: 'Certificado',
                 mensagem: 'Erro ao buscar certificado. Entre em contato com a organização',
             }
@@ -237,7 +237,7 @@ exports.formValidar = function (req, res) {
         {
             layout: layout,
             isSbceb: true,
-            home: true,
+            certificados: true,
             titulo: 'Certificado',
         }
     )
@@ -318,7 +318,7 @@ exports.validar = async function (req, res) {
       res.render(base_view + 'validar-resultado', {
           layout: layout,
           isSbceb: true,
-          home: true,
+          certificados: true,
           titulo: 'Certificado',
           dadosMensagem: dadosMensagem,
       })
@@ -326,7 +326,7 @@ exports.validar = async function (req, res) {
           res.render(base_view + 'validar-resultado', {
               layout: layout,
               isSbceb: true,
-              home: true,
+              certificados: true,
               titulo: 'Certificado',
               dadosMensagem: false,
           })
@@ -336,7 +336,7 @@ exports.validar = async function (req, res) {
       {
           layout: layout,
           isSbceb: true,
-          home: true,
+          certificados: true,
           titulo: 'Certificado',
       })
     }
