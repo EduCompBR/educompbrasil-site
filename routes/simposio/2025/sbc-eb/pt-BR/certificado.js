@@ -139,7 +139,7 @@ exports.obter = async function (req, res) {
                     isSbceb: true,
                     certificados: true,
                     titulo: 'Certificado',
-                    mensagem: 'Email não encontrado na base de dados. Entre em contato com a organização',
+                    mensagem: 'Endereço de e-mail não encontrado na base de dados. Se entender que isto é um erro, entre em contato com a organização.',
                 }
             )
         }
@@ -151,7 +151,7 @@ exports.obter = async function (req, res) {
                     isSbceb: true,
                     certificados: true,
                     titulo: 'Certificado',
-                    mensagem: 'Erro ao buscar certificado. Entre em contato com a organização',
+                    mensagem: 'Erro ao buscar por certificados. Tente novamente mais tarde. Se o problema persistir, entre em contato com a organização do evento.',
                 }
         )
     }
@@ -225,7 +225,7 @@ exports.obterArquivo = async function (req, res) {
                 isSbceb: true,
                 certificados: true,
                 titulo: 'Certificado',
-                mensagem: 'Erro ao buscar certificado. Entre em contato com a organização',
+                mensagem: 'Erro ao buscar por certificados. Tente novamente mais tarde. Se o problema persistir, entre em contato com a organização do evento.',
             }
         )
     }

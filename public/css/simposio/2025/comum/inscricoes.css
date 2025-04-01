@@ -166,6 +166,7 @@
     background-color: var(--navbar-ativo);
     font-weight: normal;
     color: white;
+    width: 100%;
   }
 
   .btn-pdf-certificado:hover {
