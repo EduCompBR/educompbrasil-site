@@ -9,14 +9,14 @@
           {{#each data}}
             {{#if registros}}
               <ul class="list-group">
-                <li class="list-group-item list-group-item-light" style="font-size: x-large;">{{nome}}</li>
+                <li class="list-group-certificado">{{nome}}</li>
                 {{#each registros as |registro|}}
                   <form method="POST" action="/simposio/2025/educomp/certificados/obter/arquivo">
                     <input name="texto_base" type="hidden" value="{{registro.texto_base}}" />
                     {{#each campos as |campo|}}
                       <input name="{{campo}}" type="hidden" value="{{lookup registro campo}}" />
                     {{/each}}
-                    <button type="submit" style="text-align: left;" class="btn btn-info btn-lg btn-block">
+                    <button type="submit" class="btn btn-info btn-block btn-pdf-certificado">
                       <i class="fas fa-file-pdf"></i> {{registro.descricao}}
                     </button>
                   </form>
