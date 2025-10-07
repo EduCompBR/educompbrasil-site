@@ -1,0 +1,280 @@
+.content #local {
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5rem;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mapa-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  .mapa-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .figure-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    margin-top: 0.5em;
+  }
+
+  .figure-img:hover {
+    transform: scale(1.02);
+  }
+
+  .imagem-principal .figure-img {
+    max-width: 100%;
+    height: 450px;
+  }
+
+  .figure-caption {
+    padding: 0%;
+    text-decoration: none;
+    color: inherit;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .figure-img {
+      height: 250px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .figure-img {
+      height: 200px !important;
+    }
+  }
+
+  #apresentacao-video {
+    padding-bottom: 0;
+  }
+
+  #como-chegar {
+    h2 {
+      margin-bottom: 3px;
+    }
+  }
+
+  #hoteis {
+    h3 {
+      font-size: 1.2em;
+      font-weight: 500;
+      text-align: left;
+      margin-top: 0.5em;
+    }
+
+    #hoteis .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .footnote {
+      font-size: 0.7em;
+      display: block;
+    }
+
+    .hotel-foto-container {
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hotel-foto {
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
+
+    .list-icons {
+      font-size: 0.85em;
+      padding-left: 0px;
+
+      i {
+        font-size: 1em;
+        color: var(--h3-color);
+        width: 30px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      a {
+        font-size: 1em;
+      }
+    }
+
+    .btn-primary {
+      background-color: var(--footer-bg);
+      border: none;
+    }
+  }
+
+  #lugares-visitar {
+    h3 {
+      font-size: 1.2em;
+      font-weight: 500;
+      text-align: left;
+      margin-top: 0.5em;
+    }
+
+    #lugares-visitar .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .ultimo-sozinho{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (min-width:768px) {
+      .ultimo-sozinho {
+        align-items:center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .ultimo-sozinho h3 {
+        align-self:flex-start;
+      }
+    }
+
+    .horarios {
+      display:flex;
+      flex-direction: row;
+      margin-bottom: 0.5em;
+    }
+
+    .horarios .horario-linhas {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-left:4px;
+    }
+
+    .horario-linhas p {
+      margin:0;
+      margin-right:1em;
+    }
+
+    .endereco{
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5em;
+    }
+
+    #endereco-linha {
+      width: 100%;
+      margin-left: 4px;
+      margin-bottom: 0px;
+    }
+
+    @media (min-width: 768px) {
+      #endereco-linha {
+        width: 75%;
+      }
+
+      .horarios .horario-linhas {
+        flex-direction: column;
+      }
+    }
+
+    .info{
+      display:flex;
+      align-items:center;
+      margin-bottom: 0.5em;
+    }
+
+    .info p{
+      margin-left:3px;
+      margin-top: 0;
+      margin-bottom: 0px;
+    }
+
+
+    .footnote {
+      font-size: 0.7em;
+      display: block;
+    }
+
+    .list-icons {
+      font-size: 0.85em;
+
+      padding-left: 0px;
+
+      i {
+        font-size: 1em;
+        color: var(--h3-color);
+        width: 30px;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      a {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+.content #camisas {
+  .modelos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+  }
+
+  .modelos img {
+    text-align: center;
+    position: relative;
+    width: 80%;
+    aspect-ratio: 1/1;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .modelos img:hover {
+    transform: scale(1.02);
+  }
+}

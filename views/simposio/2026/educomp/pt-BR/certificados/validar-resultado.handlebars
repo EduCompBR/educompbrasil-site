@@ -1,0 +1,28 @@
+<div id="certificados">
+
+  <section id="validar-resultado">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h2><strong>Valide</strong> um certificado do EduComp 2025</h2>
+          {{#if dadosMensagem}}
+            <div class="alert alert-success">
+              <b>Código Encontrado!</b> <br/>
+              <ul>
+              {{#each dadosMensagem}}
+                <li>{{this}}</li>
+              {{/each}}
+              </ul>
+            </div>
+          {{else}}
+              <div class="alert alert-danger">Este código não é válido para o evento EduComp 2025</div>
+          {{/if}}
+          <form method="POST" action="/simposio/2025/educomp/certificados/validar">
+            <p> <a href="/simposio/2025/educomp/certificados/validar" class="btn btn-primary btn-lg" >Validar outro certificado...</a> </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</div>

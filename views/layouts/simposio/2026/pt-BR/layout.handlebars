@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  
+  {{~#if isEducomp}}
+    {{> simposio/2026/educomp/pt-BR/head}}
+  {{~else}}
+    {{~#if isSbceb}}
+      {{> simposio/2026/sbc-eb/pt-BR/head}}
+    {{~/if}}
+  {{~/if}}
+
+  <body>
+ 
+    <header class="header {{~#if isEducomp}} header-educomp {{~else}}{{~#if isSbceb}} header-sbc-eb {{~/if}}{{~/if}}">
+      {{~#if isEducomp}}
+        {{> simposio/2026/educomp/pt-BR/navbar}}
+      {{~else}}
+        {{~#if isSbceb}}
+          {{> simposio/2026/sbc-eb/pt-BR/navbar}}
+        {{~/if}}
+      {{~/if}}
+      
+      {{~#if titulo }}
+        {{~#unless home }}
+          <div class="d-flex justify-content-center align-items-center page-title">
+            <h1>{{ titulo }}</h1>
+          </div>
+        {{~/unless}}
+      {{~/if}}
+    </header>
+
+    <main class="content {{~#if isEducomp}} content-educomp {{~else}}{{~#if isSbceb}} content-sbc-eb {{~/if}}{{~/if}}">
+      {{{ body }}}
+    </main>
+
+    {{~#if isEducomp}}
+      {{> simposio/2026/educomp/pt-BR/footer}}
+    {{~else}}
+      {{~#if isSbceb}}
+        {{> simposio/2026/sbc-eb/pt-BR/footer}}
+      {{~/if}}
+    {{~/if}}
+
+    {{~#if isEducomp}}
+      {{> simposio/2026/educomp/pt-BR/scripts}}
+    {{~else}}
+      {{~#if isSbceb}}
+        {{> simposio/2026/sbc-eb/pt-BR/scripts}}
+      {{~/if}}
+    {{~/if}}
+
+  </body>
+</html>

@@ -1,0 +1,62 @@
+.footer {
+  max-width: 100%;
+  background-color: var(--footer-bg);
+  color: white;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-top: 0.5em solid var(--footer-border);
+
+  .list-icons {
+    padding-left: 15px;
+
+    i {
+      font-size: 1.4em;
+      color: var(--footer-border);
+      width: 50px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      font-size: 1.2em;
+    }
+  }
+
+  .btn {
+    width: 200px;
+    padding: 10px 10px;
+    border-radius: 11px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid var(--footer-border);
+    text-align: center;
+  }
+
+  .btn-incricoes {
+    background-color: var(--footer-border);
+    color: white;
+  }
+
+  .btn-programacao {
+    background-color: transparent;
+    color: white;
+  }
+
+  #logo-educomp {
+    height: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #logo-sbc-eb {
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
