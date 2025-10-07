@@ -1,0 +1,38 @@
+<div id="certificados">
+  
+  <section id="obter">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h2><strong>Obtenha</strong> seu certificado do SBC-EB 2025</h2>
+          
+          <form method="POST" action="/simposio/2025/sbc-eb/certificados/obter" id="form1">
+            <div class="form-group">
+              <label for="email1">Email usado na inscrição:</label>
+              <input type="email" class="form-control" name="email" id="email"/>
+            </div>
+            <p>
+              <input type="submit" value="Obter" class="btn btn-certificado" id="submit1"/>
+            </p>
+            <div id="divLoading" style="display: none">
+              <span>Buscando...</span>
+              <div class="spinner-border" style="width: 2rem; height: 2rem;" role="status"></div>
+            </div>
+          </form>
+
+          {{#if mensagem}}
+            <div class="alert alert-danger">{{mensagem}}</div>
+          {{/if}}
+
+          <script type="text/javascript">
+            document.getElementById('submit1').addEventListener('click', mudarEstilo)
+            function mudarEstilo(evt) {
+              document.getElementById('divLoading').style.display = 'block'
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

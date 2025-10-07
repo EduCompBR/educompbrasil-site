@@ -23,6 +23,14 @@ app.get('/quem-somos/gts', giec_quem_somos.gts)
 app.get('/documentos', giec_main.documentos)
 app.get('/documentos/modelos/proposta-sede-educomp', giec_main.documentos_modelo_educomp)
 
+// Educomp 2026
+var educomp_2026_home = require('./routes/simposio/2026/educomp/pt-BR/home')
+var educomp_2026_comming = require('./routes/simposio/2026/educomp/pt-BR/comming')
+
+app.get('/simposio/2026', educomp_2026_home.home)
+app.get('/simposio/2026/educomp', educomp_2026_home.home)
+app.get(/\/simposio\/2026\/(.*)/gi, educomp_2026_comming.comming)
+
 // Educomp 2025
 var educomp_2025_home = require('./routes/simposio/2025/educomp/pt-BR/home')
 var educomp_2025_chamadas = require('./routes/simposio/2025/educomp/pt-BR/chamadas')
