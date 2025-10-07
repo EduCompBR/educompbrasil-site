@@ -365,6 +365,18 @@ app.post('/simposio/2021/contato/email', async (req, res) => {
 
 // Worker do servidor
 var porta = process.env.PORT || 3000
-app.listen(porta, () => {
+const server = app.listen(porta, () => {
   console.log('App rodando na porta: ' + porta)
 })
+
+// Graceful shutdown
+function shutdown(signal) {
+  console.log(`${signal} recebido, fechando servidor...`)
+  server.close(() => {
+    console.log('Servidor fechado')
+    process.exit(0)
+  })
+}
+
+process.on('SIGTERM', () => shutdown('SIGTERM'))
+process.on('SIGINT', () => shutdown('SIGINT'))
