@@ -54,6 +54,11 @@
     font-weight: 400;
   }
 
+  .subtitulo > a {
+    color: var(--edc-yellow);
+    text-decoration: underline;
+  }
+
   @media (max-width: 768px) {
     .carousel-inner .carousel-item > div {
       display: none;
