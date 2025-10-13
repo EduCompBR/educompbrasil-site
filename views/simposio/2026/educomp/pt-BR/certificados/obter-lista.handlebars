@@ -1,0 +1,37 @@
+<div id="certificados">
+
+  <section id="obter-lista"">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h2><strong>Lista de certificados para o EduComp 2025</h2>
+
+          {{#each data}}
+            {{#if registros}}
+              <ul class="list-group">
+                <li class="list-group-certificado">{{nome}}</li>
+                {{#each registros as |registro|}}
+                  <form method="POST" action="/simposio/2025/educomp/certificados/obter/arquivo">
+                    <input name="texto_base" type="hidden" value="{{registro.texto_base}}" />
+                    {{#each campos as |campo|}}
+                      <input name="{{campo}}" type="hidden" value="{{lookup registro campo}}" />
+                    {{/each}}
+                    <button type="submit" class="btn btn-info btn-block btn-pdf-certificado">
+                      <i class="fas fa-file-pdf"></i> {{registro.descricao}}
+                    </button>
+                  </form>
+                {{/each}}
+              </ul>
+            {{/if}}
+          {{/each}}
+
+          {{#if mensagem}}
+            <div class="alert alert-danger">{{mensagem}}</div>
+          {{/if}}
+
+        </div>  
+      </div>
+    </div>
+  </section>
+
+</div>

@@ -23,6 +23,17 @@ app.get('/quem-somos/gts', giec_quem_somos.gts)
 app.get('/documentos', giec_main.documentos)
 app.get('/documentos/modelos/proposta-sede-educomp', giec_main.documentos_modelo_educomp)
 
+// Educomp 2026
+var educomp_2026_home = require('./routes/simposio/2026/educomp/pt-BR/home')
+var educomp_2026_comming = require('./routes/simposio/2026/educomp/pt-BR/comming')
+var educomp_2026_chamadas = require('./routes/simposio/2026/educomp/pt-BR/chamadas')
+
+app.get('/simposio/2026', educomp_2026_home.home)
+app.get('/simposio/2026/educomp', educomp_2026_home.home)
+app.get('/simposio/2026/educomp/chamadas/topicos-de-interesse', educomp_2026_chamadas.topicos_interesse)
+app.get('/simposio/2026/educomp/chamadas/artigos-completos', educomp_2026_chamadas.artigos_completos)
+app.get(new RegExp('/simposio/2026/educomp/(.*)', 'i'), educomp_2026_comming.comming)
+
 // Educomp 2025
 var educomp_2025_home = require('./routes/simposio/2025/educomp/pt-BR/home')
 var educomp_2025_chamadas = require('./routes/simposio/2025/educomp/pt-BR/chamadas')
@@ -357,6 +368,18 @@ app.post('/simposio/2021/contato/email', async (req, res) => {
 
 // Worker do servidor
 var porta = process.env.PORT || 3000
-app.listen(porta, () => {
+const server = app.listen(porta, () => {
   console.log('App rodando na porta: ' + porta)
 })
+
+// Graceful shutdown
+function shutdown(signal) {
+  console.log(`${signal} recebido, fechando servidor...`)
+  server.close(() => {
+    console.log('Servidor fechado')
+    process.exit(0)
+  })
+}
+
+process.on('SIGTERM', () => shutdown('SIGTERM'))
+process.on('SIGINT', () => shutdown('SIGINT'))

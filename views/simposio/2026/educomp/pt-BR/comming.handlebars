@@ -1,0 +1,136 @@
+<div id="educomp-coming-soon" class="content-educomp">
+  <section id="coming-soon" class="d-flex align-items-center justify-content-center min-vh-100">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <!-- Título Principal -->
+          <h2 class="h4 coming-soon-subtitle text-center mb-4">Página em Construção</h2>
+
+          <!-- Mensagem -->
+          <div class="mb-5 coming-soon-message">
+            <p class="coming-soon-description">
+              O 6º Simpósio Brasileiro de Educação em Computação está sendo preparado com muito carinho. 
+              Em breve, mais informações estarão disponíveis.
+            </p>
+          </div>
+
+          <!-- Ícone de Construção -->
+          <div class="mb-4 coming-soon-icon">
+            <i class="fa fa-tools fa-3x"></i>
+          </div>
+
+          <!-- Botão de Voltar -->
+          <div class="mt-5">
+            <a href="javascript:history.back()" class="btn btn-educomp btn-lg">
+              <i class="fa fa-arrow-left me-2"></i>
+              Voltar
+            </a>
+          </div>
+
+          <!-- Informações de Contato -->
+          <div class="mt-5 pt-4 coming-soon-footer">
+            <p class="coming-soon-contact">
+              Para mais informações, entre em contato conosco em 
+              <a href="mailto:educomp2026@gmail.com" target="_blank" class="sbc-link">educomp2026@gmail.com</a>
+              ou em nossas redes sociais.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+#educomp-coming-soon {
+  background: linear-gradient(135deg, var(--edc-gray-bg) 0%, var(--edc-blue-bg) 100%);
+  min-height: 100vh;
+}
+
+#coming-soon {
+  padding: 2rem 0;
+}
+
+.educomp-title {
+  color: var(--h1-color);
+  font-weight: 700;
+  border-bottom: 3px solid var(--edc-green);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.coming-soon-subtitle {
+  color: var(--h2-color);
+  border-bottom: 2px solid var(--edc-red);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.coming-soon-message {
+  color: var(--edc-gray);
+}
+
+.coming-soon-description {
+  color: var(--edc-gray);
+  opacity: 0.8;
+}
+
+.coming-soon-icon {
+  color: var(--edc-yellow);
+}
+
+.btn-educomp {
+  background-color: var(--edc-blue);
+  border-color: var(--edc-blue);
+  color: white;
+  padding: 12px 30px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.btn-educomp:hover {
+  background-color: var(--edc-green);
+  border-color: var(--edc-green);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(23, 103, 141, 0.3);
+}
+
+.coming-soon-footer {
+  border-top: 1px solid var(--edc-blue);
+}
+
+.coming-soon-contact {
+  color: var(--edc-gray);
+  font-size: 0.9rem;
+}
+
+.sbc-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.sbc-link:hover {
+  color: var(--edc-green);
+  text-decoration: underline;
+}
+
+.fa-tools {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+</style>

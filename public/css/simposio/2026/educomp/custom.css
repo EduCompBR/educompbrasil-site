@@ -1,0 +1,330 @@
+:root {
+  --edc-blue: #17678d;
+  --edc-dark-blue: #0f4c75;
+  --edc-yellow: #fbb924;
+  --edc-green: #098036;
+  --edc-green-secondary: #66b552;
+  --edc-red: #e00814;
+  --edc-gray: #343a40;
+  --edc-gray-bg: #f2f2f2;
+  --edc-green-bg: #c7e3d1;
+  --edc-blue-bg: #b8d1f1;
+  --edc-yellow-bg: #f3dca9;
+  --edc-purple-bg: #cec0f8;
+  --edc-orange-bg: #f5c0a4;
+  --edc-pink-bg: #edbedf;
+
+  --navbar-link: var(--edc-blue);
+  --navbar-ativo: var(--edc-green);
+  --navbar-ativo-bg: var(--edc-gray-bg);
+
+  --footer-bg: var(--edc-blue);
+  --footer-border: var(--edc-green);
+
+  --h1-color: var(--edc-blue);
+  --h2-color: var(--edc-blue);
+  --h3-color: var(--edc-blue);
+  --h4-color: var(--edc-blue);
+  --strong-color: var(--edc-blue);
+  --link-color: var(--edc-blue);
+
+  --table-header-color: var(--edc-blue);
+  --table-header-color-bg: var(--edc-blue-bg);
+  --table-striped-color-1: white;
+  --table-striped-color-2: #ebf3fc;
+
+  --prazo-firme-color: var(--edc-red);
+  --prazo-footer-color: var(--edc-green);
+  --prazo-data-color: var(--edc-blue);
+
+  --parceiros-color: #2b7ec2;
+}
+
+.header-educomp h1 {
+  border-bottom: 3px solid var(--edc-green);
+}
+
+.content-educomp {
+
+  #chamadas {
+    #trilhas {
+      .trilha-num {
+        font-weight: 600;
+      }
+
+      .accordion {
+        h3 {
+          padding: 0.5em 0;
+          margin: 0;
+          font-size: 1.2em;
+        }
+
+        .btn-link {
+          color: var(--edc-blue);
+          font-size: clamp(13px, 1.5vw, 16px);
+          padding: 0;
+        }
+
+        .btn-link:hover {
+          text-decoration: none;
+        }
+
+        .btn-link:focus {
+          text-decoration: none;
+          box-shadow: none;
+        }
+
+        .card {
+          border: 1px solid var(--edc-gray);
+          background-color: var(--edc-gray-bg);
+          transition: transform 0.2s;
+          flex-direction: column;
+          display: flex;
+        }
+
+        .card:hover {
+          background-color: var(--edc-blue-bg);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+          display: flex;
+          align-items: center;
+          flex: 1;
+        }
+
+        .card-body {
+          background-color: whitesmoke;
+        }
+      }
+    }
+
+    #aceitos-completos,
+    #aceitos-formativas {
+      .accordion {
+        h3 {
+          border: 0;
+          margin: 0;
+          padding: 0.5em 0;
+          font-size: 1.2em;
+          color: var(--h3-color);
+          font-weight: 300;
+          line-height: 1.2em;
+          text-align: left;
+        }
+
+        h4.titulo-artigo {
+          border: 0;
+          margin: 0;
+          padding: 0.5em;
+          font-size: 1em;
+          color: var(--h3-color);
+          font-weight: 300;
+          line-height: 1.2em;
+          text-align: left;
+        }
+
+        .autores-artigo {
+          font-size: 0.9em;
+        }
+
+        .btn-link {
+          color: var(--edc-blue);
+          font-size: clamp(13px, 1.5vw, 16px);
+          padding: 0;
+        }
+
+        .btn-link:hover {
+          text-decoration: none;
+        }
+
+        .btn-link:focus {
+          text-decoration: none;
+          box-shadow: none;
+        }
+
+        .card {
+          border: 1px solid var(--edc-gray);
+          background-color: var(--edc-gray-bg);
+          transition: transform 0.2s;
+          flex-direction: column;
+          display: flex;
+        }
+
+        .card:hover {
+          background-color: var(--edc-blue-bg);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+          display: flex;
+          align-items: center;
+          flex: 1;
+        }
+
+        .card-body {
+          background-color: whitesmoke;
+        }
+      }
+    }
+  }
+
+  #programacao-online {
+    #calendario-google {
+      .container-calendario {
+        position: relative;
+        width: 100%;
+        height: calc(60vh - 130px);
+        padding-top: 56.25%;
+        overflow: hidden;
+        margin-bottom: 2em;
+      }
+
+      .container-calendario iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .programacao {
+        border-radius: 20px;
+      }
+
+      .programacao-semana {
+        display: block;
+      }
+
+      .programacao-agenda {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .programacao-semana {
+          display: none;
+        }
+
+        .programacao-agenda {
+          display: block;
+        }
+      }
+    }
+    #sessao-tecnica,
+    #ctd,
+    #wtd {
+      h3 {
+        border: 0;
+        margin: 0;
+        padding: 0.5em 0;
+        font-size: 1.2em;
+        color: var(--h3-color);
+        font-weight: 300;
+        line-height: 1.2em;
+        text-align: left;
+      }
+
+      h4.titulo-artigo {
+        border: 0;
+        margin: 0;
+        padding: 0.5em;
+        font-size: 1em;
+        color: var(--h3-color);
+        font-weight: 300;
+        line-height: 1.2em;
+        text-align: left;
+      }
+
+      .autores-artigo {
+        font-size: 0.9em;
+      }
+    }
+    .accordion {
+      h3 {
+        border: 0;
+        margin: 0;
+        padding: 0.5em 0;
+        font-size: 1.2em;
+        color: var(--h3-color);
+        font-weight: 300;
+        line-height: 1.2em;
+        text-align: left;
+      }
+
+      h4.titulo-artigo {
+        border: 0;
+        margin: 0;
+        padding: 0.5em;
+        font-size: 1em;
+        color: var(--h3-color);
+        font-weight: 300;
+        line-height: 1.2em;
+        text-align: left;
+      }
+
+      .autores-artigo {
+        font-size: 0.9em;
+      }
+
+      .btn-link {
+        color: var(--edc-blue);
+        font-size: clamp(13px, 1.5vw, 16px);
+        padding: 0;
+      }
+
+      .btn-link:hover {
+        text-decoration: none;
+      }
+
+      .btn-link:focus {
+        text-decoration: none;
+        box-shadow: none;
+      }
+
+      .card {
+        border: 1px solid var(--edc-gray);
+        background-color: var(--edc-gray-bg);
+        transition: transform 0.2s;
+        flex-direction: column;
+        display: flex;
+      }
+
+      .card:hover {
+        background-color: var(--edc-blue-bg);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        flex: 1;
+      }
+
+      .card-body {
+        background-color: whitesmoke;
+      }
+    }
+  }
+
+  #inscricoes {
+    #promocional {
+      .banner-inscricao {
+        top: -0.8em;
+      }
+    }
+
+    #valores {
+      .accordion {
+        h4 {
+          color: var(--edc-red);
+        }
+      }
+
+      .table {
+        .prazo {
+          color: var(--edc-green);
+        }
+      }
+    }
+  }
+}
