@@ -36,6 +36,7 @@ app.get('/simposio/2026/educomp/chamadas/artigos-completos', educomp_2026_chamad
 app.get('/simposio/2026/educomp/equipes/comissao-organizadora', educomp_2026_equipes.comissao_organizadora)
 app.get('/simposio/2026/educomp/equipes/comite-programa', educomp_2026_equipes.comite_programa)
 app.get('/simposio/2026/educomp/equipes/comissao-especial', educomp_2026_equipes.comissao_especial)
+app.get('/simposio/2026/educomp/equipes/comite-diretivo', educomp_2026_equipes.comite_diretivo)
 app.get(new RegExp('/simposio/2026/educomp/(.*)', 'i'), educomp_2026_comming.comming)
 
 
