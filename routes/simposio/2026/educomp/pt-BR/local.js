@@ -8,7 +8,7 @@ exports.conheca_ufms = function (req, res) {
 }
 
 exports.conheca_cg = function (req, res) {
-  res.render('simposio/2026/comum/pt-BR/local/conheca-cg', {
+  res.render('simposio/2026/comum/pt-BR/local/conheca-campo-grande', {
     layout: 'simposio/2026/pt-BR/layout',
     local: true,
     isEducomp: true,
@@ -50,4 +50,4 @@ exports.lugares_visitar = function (req, res) {
     isEducomp: true,
     titulo: 'Sugestões gastronômicas em Campo Grande',
   })
-} 
+}
