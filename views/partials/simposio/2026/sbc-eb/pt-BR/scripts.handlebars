@@ -17,29 +17,6 @@
 
 {{~#if home}}
 <script>
-  const carrossel = document.getElementById("carrossel-jf")
-  const imagens = [
-    '/img/simposio/2025/comum/jf/cidade/vista-parcial.jpg',
-    '/img/simposio/2025/comum/jf/cidade/cine-theatro-central.jpg',
-    '/img/simposio/2025/comum/ufjf/aerea-praca-civica.jpg',
-    '/img/simposio/2025/comum/jf/cidade/estacao.jpg',
-  ]
-
-  let indice = 0
-
-  function trocarImagem() {
-    indice = (indice + 1) % imagens.length
-    carrossel.style.backgroundImage = `url(${imagens[indice]})`
-    carrossel.style.animation = "none"
-    carrossel.offsetHeight
-    carrossel.style.animation = "zoomOut 30s ease-out forwards"
-  }
-
-  // Troca de imagem a cada 15 segundos
-  setInterval(trocarImagem, 15000)
-</script>
-
-<script>
   $("#carrossel-parceiros").carousel({
     interval: 4000,
   })

@@ -32,9 +32,10 @@ var educomp_2026_equipes = require('./routes/simposio/2026/educomp/pt-BR/equipes
 
 // SBC-EB 2026 
 var sbc_eb_2026_home = require('./routes/simposio/2026/sbc-eb/pt-BR/home')
+var sbc_eb_2026_comming = require('./routes/simposio/2026/sbc-eb/pt-BR/comming')
 
 app.get('/simposio/2026/sbc-eb', sbc_eb_2026_home.home)
-app.get('/simposio/2026/sbc-eb/camisas', sbc_eb_2026_home.camisas)
+app.get(new RegExp('/simposio/2026/sbc-eb/(.*)', 'i'), sbc_eb_2026_comming.comming)
 
 // Educomp 2026
 app.get('/simposio/2026', educomp_2026_home.home)
