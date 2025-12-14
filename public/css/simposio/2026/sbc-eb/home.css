@@ -10,7 +10,7 @@
 .content #sbc-eb-home {
   .logo-bg-effect {
     position: relative;
-    background-image: url('/img/simposio/2025/comum/jf/cidade/vista-parcial.jpg');
+    background-image: url('/img/simposio/2026/comum/cg/cidade/vista-parcial.jpg');
     background-position: center;
     background-repeat: no-repeat;
     animation: zoomOut 30s ease-out forwards;
@@ -67,7 +67,7 @@
 
   #locais {
     background-color: var(--eb-green);
-    background-image: url('/img/simposio/2025/sbc-eb/separator.png');
+    background-image: url('/img/simposio/2026/sbc-eb/separator.png');
     background-repeat: repeat-x;
     background-position: top;
     padding-bottom: 4em;
