@@ -1,8 +1,8 @@
 # Use uma imagem Node.js LTS otimizada e mais leve
 FROM node:22-alpine
 
-# Instalar tini para lidar com sinais corretamente
-RUN apk add --no-cache tini
+# Instalar tini e curl para lidar com sinais e healthcheck
+RUN apk add --no-cache tini curl
 
 # Definir variáveis de ambiente para otimização
 ENV NODE_ENV=production
