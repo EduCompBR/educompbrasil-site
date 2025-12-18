@@ -22,6 +22,7 @@ app.get('/quem-somos/membros', giec_quem_somos.membros)
 app.get('/quem-somos/gts', giec_quem_somos.gts)
 app.get('/documentos', giec_main.documentos)
 app.get('/documentos/modelos/proposta-sede-educomp', giec_main.documentos_modelo_educomp)
+app.get('/simposio', (_, res) => res.redirect('/simposio/2026')); // Redireciona para a edição mais recente
 
 // Educomp 2026
 var educomp_2026_home = require('./routes/simposio/2026/educomp/pt-BR/home')
