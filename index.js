@@ -35,9 +35,12 @@ var educomp_2026_equipes = require('./routes/simposio/2026/educomp/pt-BR/equipes
 var sbc_eb_2026_home = require('./routes/simposio/2026/sbc-eb/pt-BR/home')
 var sbc_eb_2026_comming = require('./routes/simposio/2026/sbc-eb/pt-BR/comming')
 var sbc_eb_2026_chamadas = require('./routes/simposio/2026/sbc-eb/pt-BR/chamadas')
+var sbc_eb_2026_forlic = require('./routes/simposio/2026/sbc-eb/pt-BR/forlic')
 
 app.get('/simposio/2026/sbc-eb', sbc_eb_2026_home.home)
 app.get('/simposio/2026/sbc-eb/chamadas/trabalhos', sbc_eb_2026_chamadas.trabalhos)
+app.get('/simposio/2026/sbc-eb/forlic/sobre', sbc_eb_2026_forlic.sobre)
+// app.get('/simposio/2026/sbc-eb/forlic/programacao', sbc_eb_2026_forlic.programacao)
 app.get(new RegExp('/simposio/2026/sbc-eb/(.*)', 'i'), sbc_eb_2026_comming.comming)
 
 // Educomp 2026
