@@ -58,7 +58,7 @@ app.get('/simposio/2026/educomp/chamadas/laboratorio-ideias', educomp_2026_chama
 app.get('/simposio/2026/educomp/chamadas/mesas-tematicas', educomp_2026_chamadas.mesas_tematicas)
 app.get('/simposio/2026/educomp/chamadas/wtd', educomp_2026_chamadas.wtd)
 app.get('/simposio/2026/educomp/chamadas/ctd', educomp_2026_chamadas.ctd)
-app.get('/simposio/2026/educomp/chamadas/ctdcc', educomp_2026_chamadas.ctcc)
+app.get('/simposio/2026/educomp/chamadas/ctcc', educomp_2026_chamadas.ctcc)
 app.get('/simposio/2026/educomp/local/como-chegar', educomp_2026_local.como_chegar)
 app.get('/simposio/2026/educomp/local/onde-hospedar', educomp_2026_local.onde_hospedar)
 app.get('/simposio/2026/educomp/local/conheca-campo-grande', educomp_2026_local.conheca_cg)
