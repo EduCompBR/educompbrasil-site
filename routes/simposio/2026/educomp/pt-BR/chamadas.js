@@ -1,3 +1,4 @@
+
 exports.topicos_interesse = function (req, res) {
   res.render('simposio/2026/educomp/pt-BR/chamadas/topicos-interesse', {
     layout: 'simposio/2026/pt-BR/layout',
@@ -121,5 +122,14 @@ exports.orientacoes_apresentacao = function (req, res) {
     chamadas: true,
     isEducomp: true,
     titulo: 'Orientações para apresentação',
+  })
+}
+
+exports.ctcc = function (req, res) {
+  res.render('simposio/2026/educomp/pt-BR/chamadas/ctcc', {
+    layout: 'simposio/2026/pt-BR/layout',
+    chamadas: true,
+    isEducomp: true,
+    titulo: 'Concurso de Trabalhos de Conclusão de Curso',
   })
 }
