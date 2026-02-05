@@ -28,6 +28,7 @@ app.get('/simposio', (_, res) => res.redirect('/simposio/2026')); // Redireciona
 var educomp_2026_home = require('./routes/simposio/2026/educomp/pt-BR/home')
 var educomp_2026_comming = require('./routes/simposio/2026/educomp/pt-BR/comming')
 var educomp_2026_chamadas = require('./routes/simposio/2026/educomp/pt-BR/chamadas')
+var educomp_2026_inscricoes = require('./routes/simposio/2026/educomp/pt-BR/inscricoes')
 var educomp_2026_local = require('./routes/simposio/2026/educomp/pt-BR/local')
 var educomp_2026_equipes = require('./routes/simposio/2026/educomp/pt-BR/equipes')
 
@@ -59,6 +60,7 @@ app.get('/simposio/2026/educomp/chamadas/mesas-tematicas', educomp_2026_chamadas
 app.get('/simposio/2026/educomp/chamadas/wtd', educomp_2026_chamadas.wtd)
 app.get('/simposio/2026/educomp/chamadas/ctd', educomp_2026_chamadas.ctd)
 app.get('/simposio/2026/educomp/chamadas/ctcc', educomp_2026_chamadas.ctcc)
+app.get('/simposio/2026/educomp/inscricoes', educomp_2026_inscricoes.inscricoes)
 app.get('/simposio/2026/educomp/local/como-chegar', educomp_2026_local.como_chegar)
 app.get('/simposio/2026/educomp/local/onde-hospedar', educomp_2026_local.onde_hospedar)
 app.get('/simposio/2026/educomp/local/conheca-campo-grande', educomp_2026_local.conheca_cg)
