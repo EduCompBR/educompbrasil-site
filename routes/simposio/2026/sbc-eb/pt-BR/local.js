@@ -7,6 +7,15 @@ exports.conheca_cg = function (req, res) {
   })
 }
 
+exports.conheca_ufms = function (req, res) {
+  res.render('simposio/2026/comum/pt-BR/local/conheca-ufms', {
+    layout: 'simposio/2026/pt-BR/layout',
+    local: true,
+    isSbceb: true,
+    titulo: 'Conheça a UFMS',
+  })
+}
+
 exports.como_chegar = function (req, res) {
   res.render('simposio/2026/comum/pt-BR/local/como-chegar', {
     layout: 'simposio/2026/pt-BR/layout',
