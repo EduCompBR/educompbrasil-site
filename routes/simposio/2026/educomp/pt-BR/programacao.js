@@ -15,3 +15,12 @@ exports.presencial = function (req, res) {
     titulo: 'Programação presencial',
   })
 }
+
+exports.sessoes_tecnicas = function (req, res) {
+  res.render('simposio/2026/educomp/pt-BR/programacao/sessoes-tecnicas', {
+    layout: 'simposio/2026/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Sessões técnicas',
+  })
+}

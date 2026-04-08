@@ -77,6 +77,7 @@ app.get('/simposio/2026/educomp/chamadas/orientacoes-apresentacao', educomp_2026
 app.get('/simposio/2026/educomp/inscricoes', educomp_2026_inscricoes.inscricoes)
 app.get('/simposio/2026/educomp/programacao', educomp_2026_programacao.geral)
 app.get('/simposio/2026/educomp/programacao/presencial', educomp_2026_programacao.presencial)
+app.get('/simposio/2026/educomp/programacao/sessoes-tecnicas', educomp_2026_programacao.sessoes_tecnicas)
 app.get('/simposio/2026/educomp/local/como-chegar', educomp_2026_local.como_chegar)
 app.get('/simposio/2026/educomp/local/onde-hospedar', educomp_2026_local.onde_hospedar)
 app.get('/simposio/2026/educomp/local/conheca-campo-grande', educomp_2026_local.conheca_cg)
