@@ -16,6 +16,15 @@ exports.presencial = function (req, res) {
   })
 }
 
+exports.mesas_tematicas = function (req, res) {
+  res.render('simposio/2026/educomp/pt-BR/programacao/mesas-tematicas', {
+    layout: 'simposio/2026/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Mesas temáticas',
+  })
+}
+
 exports.minicursos = function (req, res) {
   res.render('simposio/2026/educomp/pt-BR/programacao/minicursos', {
     layout: 'simposio/2026/pt-BR/layout',
