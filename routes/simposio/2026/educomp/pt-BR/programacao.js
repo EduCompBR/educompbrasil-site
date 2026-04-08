@@ -16,6 +16,15 @@ exports.presencial = function (req, res) {
   })
 }
 
+exports.laboratorio_ideias = function (req, res) {
+  res.render('simposio/2026/educomp/pt-BR/programacao/laboratorio-ideias', {
+    layout: 'simposio/2026/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Laboratório de ideias',
+  })
+}
+
 exports.sessoes_tecnicas = function (req, res) {
   res.render('simposio/2026/educomp/pt-BR/programacao/sessoes-tecnicas', {
     layout: 'simposio/2026/pt-BR/layout',
