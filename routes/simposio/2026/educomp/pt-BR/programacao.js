@@ -16,6 +16,15 @@ exports.presencial = function (req, res) {
   })
 }
 
+exports.minicursos = function (req, res) {
+  res.render('simposio/2026/educomp/pt-BR/programacao/minicursos', {
+    layout: 'simposio/2026/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Minicursos',
+  })
+}
+
 exports.laboratorio_ideias = function (req, res) {
   res.render('simposio/2026/educomp/pt-BR/programacao/laboratorio-ideias', {
     layout: 'simposio/2026/pt-BR/layout',
