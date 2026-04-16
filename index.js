@@ -77,6 +77,7 @@ app.get('/simposio/2026/educomp/chamadas/orientacoes-apresentacao', educomp_2026
 app.get('/simposio/2026/educomp/inscricoes', educomp_2026_inscricoes.inscricoes)
 app.get('/simposio/2026/educomp/programacao', educomp_2026_programacao.geral)
 app.get('/simposio/2026/educomp/programacao/presencial', educomp_2026_programacao.presencial)
+app.get('/simposio/2026/educomp/programacao/keynote', educomp_2026_programacao.keynote)
 app.get('/simposio/2026/educomp/programacao/palestras-nacionais', educomp_2026_programacao.palestras_nacionais)
 app.get('/simposio/2026/educomp/programacao/mesas-tematicas', educomp_2026_programacao.mesas_tematicas)
 app.get('/simposio/2026/educomp/programacao/minicursos', educomp_2026_programacao.minicursos)
