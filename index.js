@@ -52,6 +52,7 @@ app.get('/simposio/2026/sbc-eb/local/conheca-campo-grande', sbc_eb_2026_local.co
 app.get('/simposio/2026/sbc-eb/local/conheca-ufms', sbc_eb_2026_local.conheca_ufms)
 app.get('/simposio/2026/sbc-eb/local/como-chegar', sbc_eb_2026_local.como_chegar)
 app.get('/simposio/2026/sbc-eb/local/onde-hospedar', sbc_eb_2026_local.onde_hospedar)
+app.get('/simposio/2026/sbc-eb/local/almocos-e-dicas', sbc_eb_2026_local.almocos_e_dicas)
 app.get('/simposio/2026/sbc-eb/local/local-evento', sbc_eb_2026_local.local_evento)
 // app.get('/simposio/2026/sbc-eb/forlic/programacao', sbc_eb_2026_forlic.programacao)
 app.get(new RegExp('/simposio/2026/sbc-eb/(.*)', 'i'), sbc_eb_2026_comming.comming)
