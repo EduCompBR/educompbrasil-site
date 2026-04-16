@@ -16,6 +16,15 @@ exports.presencial = function (req, res) {
   })
 }
 
+exports.keynote = function (req, res) {
+  res.render('simposio/2026/educomp/pt-BR/programacao/keynote', {
+    layout: 'simposio/2026/pt-BR/layout',
+    programacao: true,
+    isEducomp: true,
+    titulo: 'Keynote',
+  })
+}
+
 exports.palestras_nacionais = function (req, res) {
   res.render('simposio/2026/educomp/pt-BR/programacao/palestras-nacionais', {
     layout: 'simposio/2026/pt-BR/layout',
