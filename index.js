@@ -86,6 +86,7 @@ app.get('/simposio/2026/educomp/programacao/laboratorio-ideias', educomp_2026_pr
 app.get('/simposio/2026/educomp/programacao/sessoes-tecnicas', educomp_2026_programacao.sessoes_tecnicas)
 app.get('/simposio/2026/educomp/local/como-chegar', educomp_2026_local.como_chegar)
 app.get('/simposio/2026/educomp/local/onde-hospedar', educomp_2026_local.onde_hospedar)
+app.get('/simposio/2026/educomp/local/almocos-e-dicas', educomp_2026_local.almocos_e_dicas)
 app.get('/simposio/2026/educomp/local/conheca-campo-grande', educomp_2026_local.conheca_cg)
 app.get('/simposio/2026/educomp/local/local-evento', educomp_2026_local.local_evento)
 app.get('/simposio/2026/educomp/local/conheca-ufms', educomp_2026_local.conheca_ufms)
