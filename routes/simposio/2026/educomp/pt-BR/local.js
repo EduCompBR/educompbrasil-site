@@ -34,6 +34,15 @@ exports.onde_hospedar = function (req, res) {
   })
 }
 
+exports.almocos_e_dicas = function (req, res) {
+  res.render('simposio/2026/comum/pt-BR/local/almocos-e-dicas', {
+    layout: 'simposio/2026/pt-BR/layout',
+    local: true,
+    isEducomp: true,
+    titulo: 'Almoços e dicas',
+  })
+}
+
 exports.local_evento = function (req, res) {
   res.render('simposio/2026/comum/pt-BR/local/local-evento', {
     layout: 'simposio/2026/pt-BR/layout',
