@@ -44,6 +44,7 @@ var sbc_eb_2026_local = require('./routes/simposio/2026/sbc-eb/pt-BR/local')
 
 app.get('/simposio/2026/sbc-eb', sbc_eb_2026_home.home)
 app.get('/simposio/2026/sbc-eb/chamadas/trabalhos', sbc_eb_2026_chamadas.trabalhos)
+app.get('/simposio/2026/sbc-eb/chamadas/aceitos', sbc_eb_2026_chamadas.aceitos)
 app.get('/simposio/2026/sbc-eb/chamadas/orientacoes-apresentacao', sbc_eb_2026_chamadas.orientacoes_apresentacao)
 app.get('/simposio/2026/sbc-eb/forlic/sobre', sbc_eb_2026_forlic.sobre)
 app.get('/simposio/2026/sbc-eb/programacao/campo-grande', sbc_eb_2026_programacao.campo_grande)
