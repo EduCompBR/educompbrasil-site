@@ -438,7 +438,7 @@ const server = app.listen(porta, () => {
   console.log('App rodando na porta: ' + porta)
 })
 
-// Graceful shutdown
+// Graceful shutdown3
 function shutdown(signal) {
   console.log(`${signal} recebido, fechando servidor...`)
   server.close(() => {
