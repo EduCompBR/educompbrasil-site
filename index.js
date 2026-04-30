@@ -41,6 +41,7 @@ var sbc_eb_2026_forlic = require('./routes/simposio/2026/sbc-eb/pt-BR/forlic')
 var sbc_eb_2026_programacao = require('./routes/simposio/2026/sbc-eb/pt-BR/programacao')
 var sbc_eb_2026_inscricoes = require('./routes/simposio/2026/sbc-eb/pt-BR/inscricoes')
 var sbc_eb_2026_local = require('./routes/simposio/2026/sbc-eb/pt-BR/local')
+var sbc_eb_2026_equipes = require('./routes/simposio/2026/sbc-eb/pt-BR/equipes')
 
 app.get('/simposio/2026/sbc-eb', sbc_eb_2026_home.home)
 app.get('/simposio/2026/sbc-eb/chamadas/trabalhos', sbc_eb_2026_chamadas.trabalhos)
@@ -58,6 +59,8 @@ app.get('/simposio/2026/sbc-eb/local/como-chegar', sbc_eb_2026_local.como_chegar
 app.get('/simposio/2026/sbc-eb/local/onde-hospedar', sbc_eb_2026_local.onde_hospedar)
 app.get('/simposio/2026/sbc-eb/local/almocos-e-dicas', sbc_eb_2026_local.almocos_e_dicas)
 app.get('/simposio/2026/sbc-eb/local/local-evento', sbc_eb_2026_local.local_evento)
+app.get('/simposio/2026/sbc-eb/equipes/comissao-organizadora', sbc_eb_2026_equipes.comissao_organizadora)
+app.get('/simposio/2026/sbc-eb/equipes/comite-programa', sbc_eb_2026_equipes.comite_programa)
 // app.get('/simposio/2026/sbc-eb/forlic/programacao', sbc_eb_2026_forlic.programacao)
 app.get(new RegExp('/simposio/2026/sbc-eb/(.*)', 'i'), sbc_eb_2026_comming.comming)
 
