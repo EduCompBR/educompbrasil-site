@@ -33,3 +33,12 @@ exports.sao_carlos = function (req, res) {
     titulo: 'Programação São Carlos - SP',
   })
 }
+
+exports.recife = function (req, res) {
+  res.render('simposio/2026/sbc-eb/pt-BR/programacao/recife', {
+    layout: 'simposio/2026/pt-BR/layout',
+    programacao: true,
+    isSbceb: true,
+    titulo: 'Programação Recife - PE',
+  })
+}

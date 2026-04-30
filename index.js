@@ -52,6 +52,7 @@ app.get('/simposio/2026/sbc-eb/programacao/campo-grande', sbc_eb_2026_programaca
 app.get('/simposio/2026/sbc-eb/programacao/porto-alegre', sbc_eb_2026_programacao.porto_alegre)
 app.get('/simposio/2026/sbc-eb/programacao/maraba', sbc_eb_2026_programacao.maraba)
 app.get('/simposio/2026/sbc-eb/programacao/sao-carlos', sbc_eb_2026_programacao.sao_carlos)
+app.get('/simposio/2026/sbc-eb/programacao/recife', sbc_eb_2026_programacao.recife)
 app.get('/simposio/2026/sbc-eb/inscricoes', sbc_eb_2026_inscricoes.inscricoes)
 app.get('/simposio/2026/sbc-eb/local/conheca-campo-grande', sbc_eb_2026_local.conheca_cg)
 app.get('/simposio/2026/sbc-eb/local/conheca-ufms', sbc_eb_2026_local.conheca_ufms)
