@@ -433,10 +433,27 @@ app.post('/simposio/2021/contato/email', async (req, res) => {
 })
 
 // Worker do servidor
-var porta = process.env.PORT || 3000
-const server = app.listen(porta, () => {
-  console.log('App rodando na porta: ' + porta)
-})
+const portaInicial = Number(process.env.PORT) || 3000
+
+function iniciarServidor(porta) {
+  const server = app.listen(porta, () => {
+    console.log('App rodando na porta: ' + porta)
+  })
+
+  server.on('error', (error) => {
+    if (error.code === 'EADDRINUSE' && !process.env.PORT) {
+      console.warn(`Porta ${porta} em uso, tentando ${porta + 1}...`)
+      iniciarServidor(porta + 1)
+      return
+    }
+
+    throw error
+  })
+
+  return server
+}
+
+const server = iniciarServidor(portaInicial)
 
 // Graceful shutdown3
 function shutdown(signal) {
