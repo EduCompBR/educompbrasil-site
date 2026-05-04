@@ -51,3 +51,39 @@ exports.local_evento = function (req, res) {
     titulo: 'Conheça o local do evento',
   })
 }
+
+exports.polo_maraba = function (req, res) {
+  res.render('simposio/2026/comum/pt-BR/local/polo-maraba', {
+    layout: 'simposio/2026/pt-BR/layout',
+    local: true,
+    isSbceb: true,
+    titulo: 'Polo Marabá',
+  })
+}
+
+exports.polo_porto_alegre = function (req, res) {
+  res.render('simposio/2026/comum/pt-BR/local/polo-porto-alegre', {
+    layout: 'simposio/2026/pt-BR/layout',
+    local: true,
+    isSbceb: true,
+    titulo: 'Polo Porto Alegre',
+  })
+}
+
+exports.polo_recife = function (req, res) {
+  res.render('simposio/2026/comum/pt-BR/local/polo-recife', {
+    layout: 'simposio/2026/pt-BR/layout',
+    local: true,
+    isSbceb: true,
+    titulo: 'Polo Nordeste',
+  })
+}
+
+exports.polo_sao_carlos = function (req, res) {
+  res.render('simposio/2026/comum/pt-BR/local/polo-sao-carlos', {
+    layout: 'simposio/2026/pt-BR/layout',
+    local: true,
+    isSbceb: true,
+    titulo: 'Polo Sudeste',
+  })
+}
