@@ -55,6 +55,7 @@ app.get('/simposio/2026/sbc-eb/programacao/sao-carlos', sbc_eb_2026_programacao.
 app.get('/simposio/2026/sbc-eb/programacao/recife', sbc_eb_2026_programacao.recife)
 app.get('/simposio/2026/sbc-eb/programacao/abertura', sbc_eb_2026_programacao.abertura)
 app.get('/simposio/2026/sbc-eb/programacao/paineis', sbc_eb_2026_programacao.paineis)
+app.get('/simposio/2026/sbc-eb/programacao/competicao-computacao', sbc_eb_2026_programacao.competicao_computacao)
 app.get('/simposio/2026/sbc-eb/programacao/palestras', sbc_eb_2026_programacao.palestras)
 app.get('/simposio/2026/sbc-eb/programacao/oficinas', sbc_eb_2026_programacao.oficinas)
 app.get('/simposio/2026/sbc-eb/programacao/sessoes-tecnicas', sbc_eb_2026_programacao.sessoes_tecnicas)
