@@ -61,6 +61,15 @@ exports.paineis = function (req, res) {
   })
 }
 
+exports.competicao_computacao = function (req, res) {
+  res.render('simposio/2026/sbc-eb/pt-BR/programacao/competicao-computacao', {
+    layout: 'simposio/2026/pt-BR/layout',
+    programacao: true,
+    isSbceb: true,
+    titulo: 'Competição de Atividades de Computação - SBC-EB 2026',
+  })
+}
+
 exports.palestras = function (req, res) {
   res.render('simposio/2026/sbc-eb/pt-BR/programacao/palestras', {
     layout: 'simposio/2026/pt-BR/layout',
